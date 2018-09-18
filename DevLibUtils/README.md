@@ -16,6 +16,7 @@
       - image       | 图片相关处理
       - info        | App信息, PackageInfo 等
       - logger      | 日志库 DevLogger
+      - player      | 多媒体(视频、音频)播放封装
       - share       | SharedPreferences 封装
       - toast       | Toast
          - cus      | Toasty
@@ -63,6 +64,7 @@ DevUtils.openDebug();
       - [image](#devutilsappimage)                 | 图片相关处理
       - [info](#devutilsappinfo)                   | App信息, PackageInfo 等
       - [logger](#devutilsapplogger)               | 日志库 DevLogger
+      - [player](#devutilsappplayer)               | 多媒体(视频、音频)播放封装
       - [share](#devutilsappshare)                 | SharedPreferences 封装
       - [toast](#devutilsapptoast)                 | Toast
          - [cus](#devutilsapptoastcus)             | Toasty
@@ -1479,6 +1481,75 @@ DevUtils.openDebug();
 | wtfTag | Log.ASSERT |
 | jsonTag | 格式化Json格式数据,并打印 |
 | xmlTag | 格式化xml格式数据,并打印 |
+
+
+## <span id="devutilsappplayer">**`dev.utils.app.player`**</span>
+
+
+* **MediaPlayer 统一管理类 ->** [DevMediaManager.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/player/DevMediaManager.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| getInstance | getInstance |
+| setAudioStreamType | 设置流类型 |
+| playPrepareRaw | 播放 Raw 资源 |
+| playPrepareAssets | 播放 Assets 资源 |
+| playPrepare | 预加载播放 - (file-path or http/rtsp URL) http资源, 本地资源 |
+| isPlaying | 是否播放中(判断null) |
+| pause | 暂停操作(判断null) |
+| stop | 停止操作(判断null) - 销毁MediaPlayer |
+| isIgnoreWhat | 是否忽略错误类型 |
+| onError | 播放出错回调 |
+| onVideoSizeChanged | 视频大小改变回调 |
+| onPrepared | 使用 mMediaPlayer.prepareAsync(); 异步播放准备成功回调 |
+| onCompletion | 视频播放结束回调 |
+| onBufferingUpdate | MediaPlayer 缓冲更新回调 |
+| onSeekComplete | 滑动加载完成回调 |
+| setMeidaListener | 设置MediaPlayer回调 |
+| isNullMediaPlayer | 判断 MediaPlayer 是否为null |
+| isNotNullMediaPlayer | 判断 MediaPlayer 是否不为null |
+| getMediaPlayer | 获取 MediaPlayer 对象 |
+| setMediaPlayer | 设置 MediaPlayer 对象 |
+| setTAG | 设置Tag打印 |
+| getVolume | 获取播放音量 |
+| setVolume | 设置播放音量 |
+| getPlayRawId | 获取播放的资源id |
+| getPlayUri | 获取当前播放的地址 |
+| getVideoWidth | 获取视频宽度 |
+| getVideoHeight | 获取视频高度 |
+| getCurrentPosition | 获取当前播放时间 |
+| getDuration | 获取资源总时间 |
+| getPlayPercent | 获取播放进度百分比 |
+| isLooping | 是否循环播放 - 默认不循环 |
+
+
+* **视频播放控制器 ->** [DevVideoPlayerControl.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/player/DevVideoPlayerControl.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| surfaceChanged | surfaceChanged |
+| surfaceCreated | surfaceCreated |
+| surfaceDestroyed | surfaceDestroyed |
+| onPrepared | onPrepared |
+| onCompletion | onCompletion |
+| onBufferingUpdate | onBufferingUpdate |
+| onSeekComplete | onSeekComplete |
+| onError | onError |
+| onVideoSizeChanged | onVideoSizeChanged |
+| setMediaListener | 设置播放监听事件 |
+| pausePlayer | 暂停播放 |
+| stopPlayer | 停止播放 |
+| startPlayer | 开始播放 |
+| getSurfaceview | 获取显示的SurfaceView |
+| isPlaying | 是否播放中 |
+| isAutoPlay | 判断是否自动播放 |
+| setAutoPlay | 设置自动播放 |
+| getPlayUri | 获取当前播放的地址 |
+| getVideoWidth | 获取视频宽度 |
+| getVideoHeight | 获取视频高度 |
+| getCurrentPosition | 获取当前播放时间 |
+| getDuration | 获取资源总时间 |
+| getPlayPercent | 获取播放进度百分比 |
 
 
 ## <span id="devutilsappshare">**`dev.utils.app.share`**</span>
