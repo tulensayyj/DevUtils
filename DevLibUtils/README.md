@@ -161,7 +161,7 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| getWindowManager | 通过上下文获取 WindowManager |
+| getWindowManager | 通过 Context 获取 WindowManager |
 | getMetaData | 获取 Manifest Meta Data |
 | getView | 获取View |
 | getResources | getResources |
@@ -771,13 +771,13 @@ DevUtils.openDebug();
 | :- | :- |
 | getScreenWidth | 获取屏幕的宽度（单位：px） |
 | getScreenHeight | 获取屏幕的高度（单位：px） |
-| getScreenWidthHeightToPoint | 通过上下文获取屏幕宽度高度 |
-| getScreenWidthHeight | 通过上下文获取屏幕宽度高度 |
+| getScreenWidthHeightToPoint | 通过 Context 获取屏幕宽度高度 |
+| getScreenWidthHeight | 通过 Context 获取屏幕宽度高度 |
 | getScreenSize | 获取屏幕分辨率 |
 | getScreenSizeOfDevice | 获取屏幕英寸 例5.5英寸 |
-| getDensity | 通过上下文获取屏幕密度 |
-| getDensityDpi | 通过上下文获取屏幕密度Dpi |
-| getScaledDensity | 通过上下文获取屏幕缩放密度 |
+| getDensity | 通过 Context 获取屏幕密度 |
+| getDensityDpi | 通过 Context 获取屏幕密度Dpi |
+| getScaledDensity | 通过 Context 获取屏幕缩放密度 |
 | getXDpi | 获取 X轴 dpi |
 | getYDpi | 获取 Y轴 dpi |
 | getWidthDpi | 获取 宽度比例 dpi 基准 |
@@ -908,7 +908,7 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| getColorStateList | 通过上下文获取 |
+| getColorStateList | 通过 Context 获取 ColorStateList |
 | createColorStateList | 创建 颜色状态列表 => createColorStateList("#ffffffff", "#ff44e6ff") |
 | newSelector | 创建 Drawable选择切换 list => view.setBackground(Drawable) |
 
@@ -951,7 +951,7 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| getContext | 获取上下文 |
+| getContext | 获取 Context |
 | isEmpty | 判断View 是否为null |
 | isVisibility | 判断View 是否显示 |
 | isVisibilitys | 判断 View 是否都显示显示 |
@@ -971,7 +971,7 @@ DevUtils.openDebug();
 | measureView | 测量 view |
 | getViewWidth | 获取view的宽度 |
 | getViewHeight | 获取view的高度 |
-| getActivity | 获取view的上下文 |
+| getActivity | 获取 View 的 Context |
 | calcListViewItemHeight | 计算ListView Item 高度 |
 | calcGridViewItemHeight | 计算GridView Item 高度 |
 | getItemHeighet | 获取单独一个Item 高度 |
@@ -1119,7 +1119,7 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | getInstance | 获取 ActivityManager 实例 ,单例模式 |
-| getActivity | 通过上下文 获取Activity |
+| getActivity | 通过 Context 获取Activity |
 | isFinishing | 判断页面是否关闭 |
 | isFinishingCtx | 判断页面是否关闭 |
 | getActivityStacks | 获取 Activity 栈 |
@@ -1521,6 +1521,7 @@ DevUtils.openDebug();
 | getDuration | 获取资源总时间 |
 | getPlayPercent | 获取播放进度百分比 |
 | isLooping | 是否循环播放 - 默认不循环 |
+| setMediaConfig | 设置播放配置 uri等 |
 
 
 * **视频播放控制器 ->** [DevVideoPlayerControl.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/player/DevVideoPlayerControl.java)
@@ -1644,6 +1645,16 @@ DevUtils.openDebug();
 | setTextSize | setTextSize |
 | setTintIcon | setTintIcon |
 | setNewToast | setNewToast |
+| getTextColor | getTextColor |
+| getNormalColor | getNormalColor |
+| getErrorColor | getErrorColor |
+| getInfoColor | getInfoColor |
+| getSuccessColor | getSuccessColor |
+| getWarningColor | getWarningColor |
+| getTypeface | getTypeface |
+| getTextSize | getTextSize |
+| isTintIcon | isTintIcon |
+| isNewToast | isNewToast |
 | apply | 应用配置参数生效 |
 | reset | 重置默认参数 |
 
