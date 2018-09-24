@@ -32,7 +32,7 @@
 
 ## 事项
 
-- 内部存在两个日志工具类
+- 内部存在两个日志工具类(工具类内部调用)， 对外使用 [DevLogger](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/logger/DevLogger.java)
 
 ```java
 // dev.utils.app - App 打印日志工具类
@@ -48,6 +48,8 @@ DevUtils.openLog();
 // 标示 debug 模式
 DevUtils.openDebug();
 ```
+
+- 工具类部分模块配置, 使用 - [Use Config - API](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/USE_CONFIG.md)
 
 - 部分api更新不及时或有遗漏等，`具体以对应的工具类为准`
 
@@ -1859,7 +1861,7 @@ DevUtils.openDebug();
 | get12Hour | 获取时 - 12 |
 | getMinute | 获取分 |
 | getSecond | 获取秒 |
-| convertTime | convertTime |
+| convertTime | 转换时间处理, 小于10, 则自动补充 0x |
 | isLeapYear | 判断是否闰年 |
 | getMonthDayNumber | 获取月份 - 对应天数 |
 | secToTimeRetain | 传入时间，获取时间(00:00:00 格式) - 不处理大于一天 |
