@@ -1065,7 +1065,7 @@ DevUtils.openDebug();
 ## <span id="devutilsappassistcamera">**`dev.utils.app.assist.camera`**</span>
 
 
-* **自动获取焦点 辅助类 ->** [AutoFocusAssist.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/assistcamera/AutoFocusAssist.java)
+* **自动获取焦点 辅助类 ->** [AutoFocusAssist.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/assist/camera/AutoFocusAssist.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -1076,7 +1076,7 @@ DevUtils.openDebug();
 | stop | 停止对焦 |
 
 
-* **摄像头辅助类 ->** [CameraAssist.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/assistcamera/CameraAssist.java)
+* **摄像头辅助类 ->** [CameraAssist.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/assist/camera/CameraAssist.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -1101,7 +1101,7 @@ DevUtils.openDebug();
 | startPreviewNotify | 开始预览通知 |
 
 
-* **摄像头 预览、输出大小 辅助类 ->** [CameraSizeAssist.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/assistcamera/CameraSizeAssist.java)
+* **摄像头 预览、输出大小 辅助类 ->** [CameraSizeAssist.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/assist/camera/CameraSizeAssist.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -1116,7 +1116,7 @@ DevUtils.openDebug();
 ## <span id="devutilsappassistmanager">**`dev.utils.app.assist.manager`**</span>
 
 
-* **应用程序Activity管理类：用于Activity管理和应用程序 ->** [ActivityManager.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/assistmanager/ActivityManager.java)
+* **应用程序Activity管理类：用于Activity管理和应用程序 ->** [ActivityManager.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/assist/manager/ActivityManager.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -1135,7 +1135,7 @@ DevUtils.openDebug();
 | restartApplication | 重启app |
 
 
-* **线程管理类 - 统一使用DevThreadManager, 抛弃该类 ->** [ThreadManager.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/assistmanager/ThreadManager.java)
+* **线程管理类 - 统一使用DevThreadManager, 抛弃该类 ->** [ThreadManager.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/assist/manager/ThreadManager.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -1147,7 +1147,7 @@ DevUtils.openDebug();
 | isTerminated | 若关闭后所有任务都已完成,则返回true. |
 
 
-* **定时器工具类 ->** [TimerManager.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/assistmanager/TimerManager.java)
+* **定时器工具类 ->** [TimerManager.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/assist/manager/TimerManager.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -1626,7 +1626,7 @@ DevUtils.openDebug();
 ## <span id="devutilsapptoastcus">**`dev.utils.app.toast.cus`**</span>
 
 
-* **Toast 工具类(美化后,使用Layout显示) ->** [Toasty.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/toastcus/Toasty.java)
+* **Toast 工具类(美化后,使用Layout显示) ->** [Toasty.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/toast/cus/Toasty.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -1661,7 +1661,7 @@ DevUtils.openDebug();
 | reset | 重置默认参数 |
 
 
-* **Toasty 快捷操作工具类 ->** [ToastyUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/toastcus/ToastyUtils.java)
+* **Toasty 快捷操作工具类 ->** [ToastyUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/toast/cus/ToastyUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
