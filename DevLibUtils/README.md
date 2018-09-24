@@ -49,7 +49,7 @@ DevUtils.openLog();
 DevUtils.openDebug();
 ```
 
-- 工具类部分模块配置, 使用 - [Use Config - API](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/USE_CONFIG.md)
+- 工具类部分模块配置与使用 - [Use Config](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/USE_CONFIG.md)
 
 - 部分api更新不及时或有遗漏等，`具体以对应的工具类为准`
 
