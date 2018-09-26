@@ -49,7 +49,7 @@ DevUtils.openLog();
 DevUtils.openDebug();
 ```
 
-- 工具类部分模块配置与使用 - [Use Config](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/USE_CONFIG.md)
+- 工具类部分模块配置与使用 - [Use and Config](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/USE_CONFIG.md)
 
 - 部分api更新不及时或有遗漏等，`具体以对应的工具类为准`
 
@@ -550,7 +550,11 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| getMetaData | 获取 Manifest Meta Data |
+| getMetaData | 获取 Application Meta Data |
+| getMetaDataInActivity | 获取 Activity Meta Data |
+| getMetaDataInService | 获取 Service Meta Data |
+| getMetaDataInReceiver | 获取 Receiver Meta Data |
+| getMetaDataInProvider | 获取 ContentProvider Meta Data |
 | getAppVersion | 获取app版本信息 |
 | getAppVersionCode | 获取app版本号 |
 | getAppVersionName | 获取app版本信息 |
@@ -760,8 +764,8 @@ DevUtils.openDebug();
 | readStringFromAssets | 读取字符串 来自 Assets文件 |
 | readBytesFromRaw | 从res/raw 中获取内容。 |
 | readStringFromRaw | 读取字符串 来自Raw 文件 |
-| geFileToListFromAssets | 获取 Assets 资源文件数据(返回ArrayList<String> 一行的全部内容属于一个索引) |
-| geFileToListFromRaw | 从res/raw 中获取内容。(返回ArrayList<String> 一行的全部内容属于一个索引) |
+| geFileToListFromAssets | 获取 Assets 资源文件数据(返回List<String> 一行的全部内容属于一个索引) |
+| geFileToListFromRaw | 从res/raw 中获取内容。(返回List<String>一行的全部内容属于一个索引) |
 | saveAssetsFormFile | 从Assets 资源中获取内容并保存到本地 |
 | saveRawFormFile | 从res/raw 中获取内容并保存到本地 |
 
@@ -2313,56 +2317,62 @@ DevUtils.openDebug();
 | decrypt | DES 解密 |
 
 
-* **加密工具类 ->** [EncryptUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/encrypt/EncryptUtils.java)
+* **加/解密工具类 ->** [EncryptUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/encrypt/EncryptUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
-| encryptMD2ToString | Return the hex string of MD2 encryption. |
-| encryptMD2 | Return the bytes of MD2 encryption. |
-| encryptMD5ToString | Return the hex string of MD5 encryption. |
-| encryptMD5 | Return the bytes of MD5 encryption. |
-| encryptMD5File2String | Return the hex string of file's MD5 encryption. |
-| encryptMD5File | Return the bytes of file's MD5 encryption. |
-| encryptSHA1ToString | Return the hex string of SHA1 encryption. |
-| encryptSHA1 | Return the bytes of SHA1 encryption. |
-| encryptSHA224ToString | Return the hex string of SHA224 encryption. |
-| encryptSHA224 | Return the bytes of SHA224 encryption. |
-| encryptSHA256ToString | Return the hex string of SHA256 encryption. |
-| encryptSHA256 | Return the bytes of SHA256 encryption. |
-| encryptSHA384ToString | Return the hex string of SHA384 encryption. |
-| encryptSHA384 | Return the bytes of SHA384 encryption. |
-| encryptSHA512ToString | Return the hex string of SHA512 encryption. |
-| encryptSHA512 | Return the bytes of SHA512 encryption. |
-| encryptHmacMD5ToString | Return the hex string of HmacMD5 encryption. |
-| encryptHmacMD5 | Return the bytes of HmacMD5 encryption. |
-| encryptHmacSHA1ToString | Return the hex string of HmacSHA1 encryption. |
-| encryptHmacSHA1 | Return the bytes of HmacSHA1 encryption. |
-| encryptHmacSHA224ToString | Return the hex string of HmacSHA224 encryption. |
-| encryptHmacSHA224 | Return the bytes of HmacSHA224 encryption. |
-| encryptHmacSHA256ToString | Return the hex string of HmacSHA256 encryption. |
-| encryptHmacSHA256 | Return the bytes of HmacSHA256 encryption. |
-| encryptHmacSHA384ToString | Return the hex string of HmacSHA384 encryption. |
-| encryptHmacSHA384 | Return the bytes of HmacSHA384 encryption. |
-| encryptHmacSHA512ToString | Return the hex string of HmacSHA512 encryption. |
-| encryptHmacSHA512 | Return the bytes of HmacSHA512 encryption. |
-| encryptDES2Base64 | Return the Base64-encode bytes of DES encryption. |
-| encryptDES2HexString | Return the hex string of DES encryption. |
-| encryptDES | Return the bytes of DES encryption. |
-| decryptBase64DES | Return the bytes of DES decryption for Base64-encode bytes. |
-| decryptHexStringDES | Return the bytes of DES decryption for hex string. |
-| decryptDES | Return the bytes of DES decryption. |
-| encrypt3DES2Base64 | Return the Base64-encode bytes of 3DES encryption. |
-| encrypt3DES2HexString | Return the hex string of 3DES encryption. |
-| encrypt3DES | Return the bytes of 3DES encryption. |
-| decryptBase64_3DES | Return the bytes of 3DES decryption for Base64-encode bytes. |
-| decryptHexString3DES | Return the bytes of 3DES decryption for hex string. |
-| decrypt3DES | Return the bytes of 3DES decryption. |
-| encryptAES2Base64 | Return the Base64-encode bytes of AES encryption. |
-| encryptAES2HexString | Return the hex string of AES encryption. |
-| encryptAES | Return the bytes of AES encryption. |
-| decryptBase64AES | Return the bytes of AES decryption for Base64-encode bytes. |
-| decryptHexStringAES | Return the bytes of AES decryption for hex string. |
-| decryptAES | Return the bytes of AES decryption. |
+| encryptMD2ToString | MD2 加密 |
+| encryptMD2 | MD2 加密 |
+| encryptMD5ToString | MD5 加密 |
+| encryptMD5 | MD5 加密 |
+| encryptMD5File2String | MD5 加密文件 |
+| encryptMD5File | MD5 加密文件 |
+| encryptSHA1ToString | SHA1 加密 |
+| encryptSHA1 | SHA1 加密 |
+| encryptSHA224ToString | SHA224 加密 |
+| encryptSHA224 | SHA224 加密 |
+| encryptSHA256ToString | SHA256 加密 |
+| encryptSHA256 | SHA256 加密 |
+| encryptSHA384ToString | SHA384 加密 |
+| encryptSHA384 | SHA384 加密 |
+| encryptSHA512ToString | SHA512 加密 |
+| encryptSHA512 | SHA512 加密 |
+| encryptHmacMD5ToString | HmacMD5 加密 |
+| encryptHmacMD5 | HmacMD5 加密 |
+| encryptHmacSHA1ToString | HmacSHA1 加密 |
+| encryptHmacSHA1 | HmacSHA1 加密 |
+| encryptHmacSHA224ToString | HmacSHA224 加密 |
+| encryptHmacSHA224 | HmacSHA224 加密 |
+| encryptHmacSHA256ToString | HmacSHA256 加密 |
+| encryptHmacSHA256 | HmacSHA256 加密 |
+| encryptHmacSHA384ToString | HmacSHA384 加密 |
+| encryptHmacSHA384 | HmacSHA384 加密 |
+| encryptHmacSHA512ToString | HmacSHA512 加密 |
+| encryptHmacSHA512 | HmacSHA512 加密 |
+| encryptDES2Base64 | DES 加密 |
+| encryptDES2HexString | DES 加密 |
+| encryptDES | DES 加密 |
+| decryptBase64DES | DES 解密 |
+| decryptHexStringDES | DES 解密 |
+| decryptDES | DES 解密 |
+| encrypt3DES2Base64 | 3DES 加密 |
+| encrypt3DES2HexString | 3DES 加密 |
+| encrypt3DES | 3DES 加密 |
+| decryptBase64_3DES | 3DES 解密 |
+| decryptHexString3DES | 3DES 解密 |
+| decrypt3DES | 3DES 解密 |
+| encryptAES2Base64 | AES 加密 |
+| encryptAES2HexString | AES 加密 |
+| encryptAES | AES 加密 |
+| decryptBase64AES | AES 解密 |
+| decryptHexStringAES | AES 解密 |
+| decryptAES | AES 解密 |
+| encryptRSA2Base64 | RSA 加密 |
+| encryptRSA2HexString | RSA 加密 |
+| encryptRSA | RSA 加密 |
+| decryptBase64RSA | RSA 解密 |
+| decryptHexStringRSA | RSA 解密 |
+| decryptRSA | RSA 解密 |
 
 
 * **解码,编码 ->** [EscapeUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/encrypt/EscapeUtils.java)
