@@ -164,7 +164,6 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | getWindowManager | 通过 Context 获取 WindowManager |
-| getMetaData | 获取 Manifest Meta Data |
 | getView | 获取View |
 | getResources | getResources |
 | getString | getString |
