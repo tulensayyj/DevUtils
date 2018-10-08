@@ -1271,6 +1271,7 @@ DevUtils.openDebug();
 | bitmapToDrawable | Bitmap 转换成 Drawable |
 | byteToDrawable | byte数组转换成Drawable |
 | drawable2Bitmap | Drawable 转换 Bitmap |
+| drawable3Bitmap | Drawable 转换 Bitmap |
 | saveBitmapToSDCardJPEG | 保存图片到SD卡 - JPEG |
 | saveBitmapToSDCardPNG | 保存图片到SD卡 - PNG |
 | saveBitmapToSDCard | 保存图片到SD卡 - PNG |
@@ -1288,7 +1289,7 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| doBlur | 对图片进行毛玻璃化 |
+| blur | 对图片进行毛玻璃化 |
 
 
 * **图片Buf转换 - 转换BMP图片 ->** [ImageBmpUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/image/ImageBmpUtils.java)
@@ -1352,6 +1353,13 @@ DevUtils.openDebug();
 | compressByScale | 按缩放压缩 |
 | compressByQuality | 按质量压缩 |
 | compressBySampleSize | 按采样大小压缩 |
+
+
+* **Android 自己的 RenderScript 实现图片模糊 ->** [RSBlurUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/image/RSBlurUtils.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| blur | RenderScript 实现图片模糊 |
 
 
 ## <span id="devutilsappinfo">**`dev.utils.app.info`**</span>
@@ -2413,6 +2421,15 @@ DevUtils.openDebug();
 | initKey | 生成密钥 |
 | encrypt | 3DES 加密 |
 | decrypt | 3DES 解密 |
+
+
+* **异或加密工具类 ->** [XorUtil.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/encrypt/XorUtil.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| encryptAsFix | 固定 key 的方式加密 |
+| encrypt | 非固定 key 的方式加密 |
+| decrypt | 解密 |
 
 
 ## <span id="devutilscommonthread">**`dev.utils.common.thread`**</span>
