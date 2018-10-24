@@ -1536,11 +1536,11 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | getSignleToast | 获取内部唯一Toast对象 |
-| showShort | showShort |
-| showLong | showLong |
+| showShort | 显示 一个短Toast |
+| showLong | 显示 一个长Toast |
 | showToast | 显示Toast |
-| showShortNew | showShortNew |
-| showLongNew | showLongNew |
+| showShortNew | 显示 一个新的短Toast |
+| showLongNew | 显示 一个新的长Toast |
 | showToastNew | 显示新的 Toast |
 
 
@@ -1559,13 +1559,14 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| normal | normal |
-| warning | warning |
-| info | info |
-| success | success |
-| error | error |
-| custom | custom |
+| normal | 显示 normal 样式 Toast |
+| warning | 显示 warning 样式 Toast |
+| info | 显示 info 样式 Toast |
+| success | 显示 success 样式 Toast |
+| error | 显示 error 样式 Toast |
+| custom | 显示 通用自定义Toast |
 | showToasty | 最终显示Toast方法 |
+| getInstance | 获取 Toasty 配置实例 |
 | setTextColor | 设置 Toast 默认字体颜色 |
 | setErrorColor | 设置 Toast Error 字体颜色 |
 | setInfoColor | 设置 Toast Info 字体颜色 |
@@ -1648,7 +1649,6 @@ DevUtils.openDebug();
 | formatSSID | 判断是否存在\"ssid\"，存在则裁剪返回 |
 | getPassword | 获取密码(经过处理) |
 | isHexWepKey | 判断是否 wep 加密 |
-| isHex | isHex |
 | getWifiType | 获取加密类型(int常量) - 判断String |
 | getWifiTypeInt | 获取加密类型(int常量) - 判断int(String) |
 | getWifiTypeStr | 获取加密类型(String) |
@@ -2040,9 +2040,9 @@ DevUtils.openDebug();
 | method | 设置反射的方法 |
 | type | 获取类型 |
 | get | 获取反射想要获取的 |
-| hashCode | hashCode |
-| equals | equals |
-| toString | toString |
+| hashCode | 获取 HashCode |
+| equals | 判断反射的两个对象是否一样 |
+| toString | 获取反射获取的对象 toString |
 
 
 * **计算比例方法 ->** [ScaleUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/ScaleUtils.java)
