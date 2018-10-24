@@ -99,7 +99,7 @@ DevUtils.openDebug();
 | :- | :- |
 | isActivityExists | 判断是否存在指定的Activity |
 | startHomeActivity | 回到桌面 -> 同点击Home键效果 |
-| getLauncherActivity | 获取 launcher activity |
+| getLauncherActivity | 获取 Launcher activity |
 | getActivityIcon | 返回 Activity 对应的图标 |
 | getActivityLogo | 返回 Activity 对应的Logo |
 
@@ -393,14 +393,14 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| urlEncode | url编码 - UTF-8 |
+| urlEncode | url 编码 - UTF-8 |
 | urlDecode | url 解码 - UTF-8 |
 | base64Encode | base64 编码 => 去除\n 替换 + 和 - 号 |
 | base64Encode2String | base64 编码 |
 | base64Decode | base64 解码 |
 | base64DecodeToString | base64 解码 |
-| htmlEncode | html编码 |
-| htmlDecode | html解码 |
+| htmlEncode | html 编码 |
+| htmlDecode | html 解码 |
 
 
 * **错误信息处理工具类 ->** [ErrorUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/ErrorUtils.java)
@@ -533,7 +533,7 @@ DevUtils.openDebug();
 | isLocationEnabled | 判断定位是否可用 |
 | openGpsSettings | 打开Gps设置界面 |
 | register | 注册 - 使用完记得调用{@link #unregister()} |
-| unregister | 注销 |
+| unregister | 注销监听 |
 | getAddress | 根据经纬度获取地理位置 |
 | getCountryName | 根据经纬度获取所在国家 |
 | getLocality | 根据经纬度获取所在地 |
@@ -731,7 +731,7 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | getProcessName | 获取进程号对应的进程名 |
-| getCurProcessName | 获得当前进程的名字 |
+| getCurProcessName | 获取当前进程的名字 |
 | getForegroundProcessName | 获取前台线程包名 |
 | getAllBackgroundProcesses | 获取后台服务进程 |
 | killAllBackgroundProcesses | 杀死所有的后台服务进程 |
@@ -742,20 +742,20 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| getString | 获得字符串 |
-| getColor | 获得颜色 |
-| getDrawable | 获得Drawable |
-| getResourceId | 根据资源名获得资源id |
-| getDrawableId2 | 获取资源id |
-| getLayoutId | 获取 layout 布局文件 |
-| getStringId | 获取 string 值 |
-| getDrawableId | 获取 drawable |
-| getMipmapId | 获取 mipmap |
-| getStyleId | 获取 style |
-| getStyleableId | 获取 styleable |
-| getAnimId | 获取 anim |
+| getString | 获取字符串 |
+| getColor | 获取 Color |
+| getDrawable | 获取 Drawable |
+| getResourceId | 根据资源名获取资源id |
+| getDrawableId2 | 获取 drawable id |
+| getLayoutId | 获取 layout 布局文件 id |
+| getStringId | 获取 string id |
+| getDrawableId | 获取 drawable id |
+| getMipmapId | 获取 mipmap id |
+| getStyleId | 获取 style id |
+| getStyleableId | 获取 styleable id |
+| getAnimId | 获取 anim id |
 | getId | 获取 id |
-| getColorId | 获取 Color id |
+| getColorId | 获取 color id |
 | readBytesFromAssets | 获取 Assets 资源文件数据 |
 | readStringFromAssets | 读取字符串 来自 Assets文件 |
 | readBytesFromRaw | 从res/raw 中获取内容。 |
@@ -792,7 +792,7 @@ DevUtils.openDebug();
 | getScreenRotation | 获取屏幕旋转角度 |
 | isScreenLock | 判断是否锁屏 |
 | isTablet | 判断是否是平板 |
-| getStatusHeight | 获得状态栏的高度(无关 android:theme 获取状态栏高度) |
+| getStatusHeight | 获取状态栏的高度(无关 android:theme 获取状态栏高度) |
 | getStatusBarHeight | 获取应用区域 TitleBar 高度 (顶部灰色TitleBar高度，没有设置 android:theme 的 NoTitleBar 时会显示) |
 | setSleepDuration | 设置进入休眠时长 - 需添加权限 <uses-permission android:name="android.permission.WRITE_SETTINGS" /> |
 | getSleepDuration | 获取进入休眠时长 |
@@ -815,10 +815,10 @@ DevUtils.openDebug();
 | getAvailableBlocks | 返回对应路径的空闲空间(byte 字节大小) |
 | getAlreadyBlock | 返回对应路径,已使用的空间大小 |
 | getBlockSizeInfos | 返回对应路径的空间大小信息 |
-| getSDTotalSize | 获得 SD 卡总大小 |
-| getSDAvailableSize | 获得 SD 卡剩余容量，即可用大小 |
-| getRomTotalSize | 获得机身内存总大小 |
-| getRomAvailableSize | 获得机身可用内存 |
+| getSDTotalSize | 获取 SD 卡总大小 |
+| getSDAvailableSize | 获取 SD 卡剩余容量，即可用大小 |
+| getRomTotalSize | 获取机身内存总大小 |
+| getRomAvailableSize | 获取机身可用内存 |
 | getDiskCacheDir | 获取缓存地址 |
 | getCacheFile | 获取缓存资源地址 |
 | getCachePath | 获取缓存资源地址 |
@@ -946,7 +946,7 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | vibrate | 震动 |
-| cancel | 取消振动 |
+| cancel | 取消震动 |
 
 
 * **View 操作相关工具类 ->** [ViewUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/ViewUtils.java)
@@ -1031,7 +1031,7 @@ DevUtils.openDebug();
 | isVibrate | 获取是否允许震动 |
 | setVibrate | 设置是否允许震动 |
 | setMediaPlayer | 设置播放资源对象 |
-| playBeepSoundAndVibrate | 进行播放声音, 并且振动 |
+| playBeepSoundAndVibrate | 进行播放声音, 并且震动 |
 | close | 关闭震动、提示声, 并释放资源 |
 | buildMediaPlayer | 创建 MediaPlayer 对象 |
 
@@ -1216,8 +1216,8 @@ DevUtils.openDebug();
 | combineImages | 合并Bitmap |
 | combineImagesToSameSize | 合并Bitmap |
 | zoom | 放大缩小图片 |
-| getRoundedCornerBitmap | 获得圆角图片的方法 |
-| createReflectionBitmap | 获得带倒影的图片方法 |
+| getRoundedCornerBitmap | 获取圆角图片的方法 |
+| createReflectionBitmap | 获取带倒影的图片方法 |
 | compressImage | 压缩图片大小 |
 | convertGreyImg | 将彩色图转换为灰度图 |
 | getRoundBitmap | 转换图片成圆形 |
@@ -1885,9 +1885,9 @@ DevUtils.openDebug();
 | getPath | 获取文件路径 |
 | getAbsolutePath | 获取文件绝对路径 |
 | getName | 获取文件名 |
-| getFileSuffix | 获得文件后缀名(无.,单独后缀) |
-| getFileNotSuffix | 获得文件名(无后缀) |
-| getFileNotSuffixToPath | 获得文件名(无后缀) |
+| getFileSuffix | 获取文件后缀名(无.,单独后缀) |
+| getFileNotSuffix | 获取文件名(无后缀) |
+| getFileNotSuffixToPath | 获取文件名(无后缀) |
 | getFileNameNoExtension | 获取全路径中的不带拓展名的文件名 |
 | getFileExtension | 获取全路径中的文件拓展名 |
 | isFileExists | 检查是否存在某个文件 |
@@ -2164,9 +2164,9 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| start | Count start. |
-| durationRestart | Get duration and restart. |
-| duration | Get duration. |
+| start | 开始计时 |
+| durationRestart | 获取持续的时间并重新启动。 |
+| duration | 获取持续的时间 |
 
 
 * **时间堵塞保留 ->** [TimeKeeper.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/assist/TimeKeeper.java)
@@ -2389,7 +2389,7 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | checkBankCard | 校验银行卡卡号 是否合法 |
-| getBankCardCheckCode | 从不含校验位的银行卡卡号采用 Luhm 校验算法获得校验位 |
+| getBankCardCheckCode | 从不含校验位的银行卡卡号采用 Luhm 校验算法获取校验位 |
 | getNameOfBank | 通过银行卡 的前六位确定 判断银行开户行及卡种 |
 
 
@@ -2398,7 +2398,7 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | getPowerSum | 将身份证的每位和对应位的加权因子相乘之后，再获取和值 |
-| getCheckCode18 | 将power和值与1 1取模获得余数进行校验码判断 |
+| getCheckCode18 | 将power和值与1 1取模获取余数进行校验码判断 |
 | converCharToInt | 将字符数组转换成数字数组 |
 | validateIdCard18 | 身份证校验规则,验证18位身份编码是否合法 |
 | validateIdCard15 | 身份证校验规则,验证15位身份编码是否合法 |
