@@ -358,8 +358,10 @@ DevUtils.openDebug();
 | closeDialogs | 关闭多个Dialog |
 | closePopupWindow | 关闭PopupWindow |
 | closePopupWindows | 关闭多个PopupWindow |
-| creDialog | 创建加载 Dialog |
-| creAutoCloseDialog | 创建自动关闭dialog |
+| createAlertDialog | 创建提示 Dialog (原生样式) |
+| createProgressDialog | 创建加载中 Dialog (原生样式) |
+| autoCloseDialog | 自动关闭dialog |
+| autoClosePopupWindow | 自动关闭 PopupWindow |
 
 
 * **EditText 工具类 ->** [EditTextUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/EditTextUtils.java)
@@ -600,8 +602,8 @@ DevUtils.openDebug();
 | cancelAll | 移除通知 - 移除所有通知(只是针对当前Context下的Notification) |
 | cancel | 移除通知 - 移除标记为id的通知 (只是针对当前Context下的所有Notification) |
 | notify | 进行通知 |
-| crePendingIntent | 获取跳转id |
-| creNotification | 创建通知栏对象 |
+| createPendingIntent | 获取跳转id |
+| createNotification | 创建通知栏对象 |
 | obtain | 获取 Led 配置参数 |
 | isEmpty | 判断是否为null |
 
@@ -1152,7 +1154,7 @@ DevUtils.openDebug();
 | closeAll | 关闭全部任务 |
 | closeInfiniteTask | 关闭所有无限循环的任务 |
 | closeMark | 关闭所有符合对应的字符串标记的定时器任务 |
-| creTimer | 创建定时器 => 立即执行,无限循环,通知默认what |
+| createTimer | 创建定时器 => 立即执行,无限循环,通知默认what |
 | getMarkId | 获取标记id |
 | getMarkStr | 获取标记字符串 |
 | setMarkId | 设置标记id |
