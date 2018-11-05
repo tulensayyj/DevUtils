@@ -23,6 +23,7 @@
       - wifi        | wifi、热点工具类
    - common         | java工具类, 不依赖android api
       - assist      | 各种快捷辅助类
+         - search   | 搜索相关(文件搜索等)
       - cipher      | 编/解码工具类
       - encrypt     | 加密工具类
       - thread      | 线程相关
@@ -73,6 +74,7 @@ DevUtils.openDebug();
       - [wifi](#devutilsappwifi)                   | wifi、热点工具类
    - [common](#devutilscommon)                     | java工具类, 不依赖android api
       - [assist](#devutilscommonassist)            | 各种快捷辅助类
+         - [search](#devutilscommonassistsearch)   | 搜索相关(文件搜索等)
       - [cipher](#devutilscommoncipher)            | 编/解码工具类
       - [encrypt](#devutilscommonencrypt)          | 加密工具类
       - [thread](#devutilscommonthread)            | 线程相关
@@ -2180,6 +2182,45 @@ DevUtils.openDebug();
 | startNow | 开始计时 |
 | waitForEnd | 设置等待一段时间后, 通知方法 |
 | onEnd | 结束触发通知方法 |
+
+
+## <span id="devutilscommonassistsearch">**`dev.utils.common.assist.search`**</span>
+
+
+* **文件广度优先搜索算法 (多线程 + 队列搜索) ->** [FileBreadthFirstSearchUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/assist/search/FileBreadthFirstSearchUtils.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| setSearchHandle | 设置搜索处理接口 |
+| getQueueSameTimeNumber | 获取任务队列同时进行数量 |
+| setQueueSameTimeNumber | 任务队列同时进行数量 |
+| isRuning | 是否搜索中 |
+| stop | 停止搜索 |
+| isStop | 是否停止搜索 |
+| getStartTime | 获取开始搜索时间 |
+| getEndTime | 获取结束搜索时间 |
+| getDelayTime | 获取延迟校验时间 |
+| setDelayTime | 设置延迟校验时间 |
+| query | 查询 |
+| isHandleFile | 判断是否处理该文件 |
+| isAddToList | 是否添加到集合 |
+| OnEndListener | 搜索结束监听 |
+
+
+* **文件深度优先搜索算法 (搜索某个目录下的全部文件) ->** [FileDepthFirstSearchUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/assist/search/FileDepthFirstSearchUtils.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| setSearchHandle | 设置搜索处理接口 |
+| isRuning | 是否搜索中 |
+| stop | 停止搜索 |
+| isStop | 是否停止搜索 |
+| getStartTime | 获取开始搜索时间 |
+| getEndTime | 获取结束搜索时间 |
+| query | 查询 |
+| isHandleFile | 判断是否处理该文件 |
+| isAddToList | 是否添加到集合 |
+| OnEndListener | 搜索结束监听 |
 
 
 ## <span id="devutilscommoncipher">**`dev.utils.common.cipher`**</span>
