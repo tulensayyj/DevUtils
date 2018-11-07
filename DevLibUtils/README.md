@@ -90,9 +90,26 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
+| getService | 获取 AccessibilityService 对象 |
+| setService | 设置 AccessibilityService 对象 |
 | checkAccessibility | 检查是否开启无障碍功能 |
 | isAccessibilitySettingsOn | 判断是否开启无障碍功能 |
 | printAccessibilityEvent | 打印 AccessibilityEvent 信息日志 |
+| findAccessibilityNodeInfosByText | 查找符合条件的节点 |
+| findAccessibilityNodeInfosByViewId | 查找符合条件的节点 |
+| performClick | 点击指定的节点 |
+| performLongClick | 长按指定的节点 |
+| preformActionBack | 触发返回键 |
+| preformActionHome | 触发Home键 |
+| preformActionPowerDialog | 启动长按电源按钮 Dialog |
+| preformActionLockScreen | 锁定屏幕 -> 非锁屏 |
+| preformActionTakeScreenshot | 截图 |
+| preformActionNotifications | 打开通知栏 |
+| preformActionRecents | 最近打开应用列表 |
+| preformActionQuickSettings | 打开设置 |
+| preformActionSplitScreen | 分屏 |
+| preformAction | 模拟对应 Action 操作 |
+| performGlobalAction | 模拟全局对应 Action 操作 |
 
 
 * **Acitivty 工具类 ->** [ActivityUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/ActivityUtils.java)
@@ -104,6 +121,32 @@ DevUtils.openDebug();
 | getLauncherActivity | 获取 Launcher activity |
 | getActivityIcon | 返回 Activity 对应的图标 |
 | getActivityLogo | 返回 Activity 对应的Logo |
+
+
+* **ADB shell 工具类 ->** [ADBUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/ADBUtils.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| requestRoot | 请求 root 权限 |
+| getAppList | 获取 App 列表(包名) |
+| getInstallAppList | 获取 App 安装列表(包名) |
+| getUserAppList | 获取用户安装的应用列表(包名) |
+| getSystemAppList | 获取系统应用列表(包名) |
+| getEnableAppList | 获取启用的应用列表(包名) |
+| getDisableAppList | 获取禁用的应用列表(包名) |
+| isInstalledApp | 判断是否安装应用 |
+| getVersionCode | 获取 App versionCode |
+| getVersionName | 获取 App versionName |
+| tap | 点击某个区域 |
+| swipeClick | 按压某个区域(点击) |
+| swipe | 滑动到某个区域 |
+| text | 输入文本 - 不支持中文 |
+| keyevent | 触发某些按键 |
+| getAppActivityToCurrent | 获取当前页面 Activity |
+| getAppActivityToPack | 获取已经启动的 App 当前页面 Activity |
+| getAppActivityToMain | 获取对应包名的 App 启动页 => android.intent.action.MAIN |
+| startActivity | 跳转页面 Activity |
+| kill | 销毁进程 |
 
 
 * **AlarmManager (全局定时器/闹钟)指定时长或以周期形式执行某项操作 ->** [AlarmUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/AlarmUtils.java)
@@ -2171,6 +2214,7 @@ DevUtils.openDebug();
 | start | 开始计时 |
 | durationRestart | 获取持续的时间并重新启动。 |
 | duration | 获取持续的时间 |
+| getStartTime | 获取开始时间 |
 
 
 * **时间堵塞保留 ->** [TimeKeeper.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/assist/TimeKeeper.java)
