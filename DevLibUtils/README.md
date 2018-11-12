@@ -121,19 +121,23 @@ DevUtils.openDebug();
 | getLauncherActivity | 获取 Launcher activity |
 | getActivityIcon | 返回 Activity 对应的图标 |
 | getActivityLogo | 返回 Activity 对应的Logo |
+| getActivityToLauncher | 获取对应包名应用启动 Activity |
 
 
 * **ADB shell 工具类 ->** [ADBUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/ADBUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
-| requestRoot | 请求 root 权限 |
+| isDeviceRooted | 判断设备是否 root |
+| requestRoot | 请求 Root 权限 |
+| isGrantedRoot | 判断 App 是否授权 Root 权限 |
 | getAppList | 获取 App 列表(包名) |
 | getInstallAppList | 获取 App 安装列表(包名) |
 | getUserAppList | 获取用户安装的应用列表(包名) |
 | getSystemAppList | 获取系统应用列表(包名) |
 | getEnableAppList | 获取启用的应用列表(包名) |
 | getDisableAppList | 获取禁用的应用列表(包名) |
+| getAppListToFilter | 获取包名包含字符串 xxx 的应用列表 |
 | isInstalledApp | 判断是否安装应用 |
 | getVersionCode | 获取 App versionCode |
 | getVersionName | 获取 App versionName |
@@ -142,9 +146,11 @@ DevUtils.openDebug();
 | swipe | 滑动到某个区域 |
 | text | 输入文本 - 不支持中文 |
 | keyevent | 触发某些按键 |
-| getAppActivityToCurrent | 获取当前页面 Activity |
-| getAppActivityToPack | 获取已经启动的 App 当前页面 Activity |
-| getAppActivityToMain | 获取对应包名的 App 启动页 => android.intent.action.MAIN |
+| getActivityToLauncher | 获取对应包名应用启动 Activity |
+| getWindowCurrent | 获取当前显示的 Window |
+| getWindowCurrent2 | 获取当前显示的 Window |
+| getWindowCurrentToPackage | 获取对应包名 显示的 Window |
+| getActivityCurrent | 获取当前显示的 Activity |
 | startActivity | 跳转页面 Activity |
 | kill | 销毁进程 |
 
@@ -227,7 +233,7 @@ DevUtils.openDebug();
 | getAppName | 获取 App 名 |
 | getAppVersionName | 获取 App 版本名 - 对外显示 |
 | getAppVersionCode | 获取 App 版本号 - 内部判断 |
-| setLanguage | 对内设置指定语言 ( App 多语言,单独改变 App 语言) |
+| setLanguage | 对内设置指定语言 (App 多语言,单独改变 App 语言) |
 | installApp | 安装 App(支持 8.0)的意图 |
 | installAppSilent | 静默安装 App |
 | uninstallApp | 卸载 App |
