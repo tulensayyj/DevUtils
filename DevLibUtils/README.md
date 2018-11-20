@@ -26,6 +26,7 @@
          - search   | 搜索相关(文件搜索等)
       - cipher      | 编/解码工具类
       - encrypt     | 加密工具类
+      - random      | 随机概率算法工具类
       - thread      | 线程相关
       - validator   | 数据校验工具类
 ```
@@ -77,6 +78,7 @@ DevUtils.openDebug();
          - [search](#devutilscommonassistsearch)   | 搜索相关(文件搜索等)
       - [cipher](#devutilscommoncipher)            | 编/解码工具类
       - [encrypt](#devutilscommonencrypt)          | 加密工具类
+      - [random](#devutilscommonrandom)            | 随机概率算法工具类
       - [thread](#devutilscommonthread)            | 线程相关
       - [validator](#devutilscommonvalidator)      | 数据校验工具类
 
@@ -139,20 +141,70 @@ DevUtils.openDebug();
 | getDisableAppList | 获取禁用的应用列表(包名) |
 | getAppListToFilter | 获取包名包含字符串 xxx 的应用列表 |
 | isInstalledApp | 判断是否安装应用 |
+| getAppInstallPath | 查看应用安装路径 |
+| clearAppDataCache | 清除应用数据与缓存 - 相当于在设置里的应用信息界面点击了「清除缓存」和「清除数据」 |
+| getAppMessage | 查看应用详细信息 |
 | getVersionCode | 获取 App versionCode |
 | getVersionName | 获取 App versionName |
-| tap | 点击某个区域 |
-| swipeClick | 按压某个区域(点击) |
-| swipe | 滑动到某个区域 |
-| text | 输入文本 - 不支持中文 |
-| keyevent | 触发某些按键 |
+| installApp | 安装应用 |
+| installAppSilent | 静默安装 App |
+| uninstallApp | 卸载 App |
+| uninstallAppSilent | 静默卸载 App |
 | getActivityToLauncher | 获取对应包名应用启动 Activity |
 | getWindowCurrent | 获取当前显示的 Window |
 | getWindowCurrent2 | 获取当前显示的 Window |
 | getWindowCurrentToPackage | 获取对应包名 显示的 Window |
 | getActivityCurrent | 获取当前显示的 Activity |
+| getActivitys | 获取 activity 栈 |
+| getActivitysToPackage | 获取对应包名的 Activity 栈 |
+| getActivitysToPackageLists | 获取对应包名的 Activity 栈 (处理成 List), 最新的 Activity 越靠后 |
+| getServices | 查看正在运行的 Services |
 | startActivity | 跳转页面 Activity |
 | kill | 销毁进程 |
+| sendTrimMemory | 收紧内存 |
+| tap | 点击某个区域 |
+| swipeClick | 按压某个区域(点击) |
+| swipe | 滑动到某个区域 |
+| text | 输入文本 - 不支持中文 |
+| keyevent | 触发某些按键 |
+| screencap | 屏幕截图 |
+| screenrecord | 录制屏幕 (以 mp4 格式保存到 /sdcard) |
+| wifiConf | 查看连接过的 WiFi 密码 |
+| wifiSwitch | 开启/关闭 WiFi |
+| setSystemTime | 设置系统时间 |
+| shutdown | 关机 (需要 root 权限) |
+| reboot | 重启设备 (需要 root 权限) |
+| reboot2Recovery | 重启引导到 recovery (需要 root 权限) |
+| reboot2Bootloader | 重启引导到 bootloader (需要 root 权限) |
+| sendEventSlide | 发送事件滑动 |
+| getSDKVersion | 获取 SDK 版本 |
+| getAndroidVersion | 获取 Android 系统版本 |
+| getModel | 获取设备型号 如 RedmiNote4X |
+| getBrand | 获取品牌 |
+| getDeviceName | 获取设备名 |
+| getCpuAbiList | 获取 CPU 支持的 abi 列表 |
+| getAppHeapsize | 每个应用程序的内存上限 |
+| getBattery | 获取电池状况 |
+| getDensity | 获取屏幕密度 |
+| getScreenSize | 获取屏幕分辨率 |
+| getDisplays | 获取显示屏参数 |
+| getAndroidId | 获取 Android id |
+| getIMEI | 获取 IMEI 码 |
+| getIPAddress | 获取 ip 地址 |
+| getMac | 获取 Mac 地址 |
+| getCPU | 获取 CPU 信息 |
+| getMeminfo | 获取内存信息 |
+| setScreenSize | 设置屏幕大小 |
+| resetScreen | 恢复原分辨率命令 |
+| setDensity | 设置屏幕密度 |
+| resetDensity | 恢复原屏幕密度 |
+| setOverscan | 显示区域 (设置留白边距) |
+| resetOverscan | 恢复原显示区域 |
+| disableADB | 关闭 USB 调试模式 |
+| putHiddenApi | 允许访问非 SDK API |
+| deleteHiddenApi | 禁止访问非 SDK API |
+| openAccessibility | 开启无障碍辅助功能 |
+| closeAccessibility | 关闭无障碍辅助功能 |
 
 
 * **AlarmManager (全局定时器/闹钟)指定时长或以周期形式执行某项操作 ->** [AlarmUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/AlarmUtils.java)
@@ -393,10 +445,10 @@ DevUtils.openDebug();
 | getMacAddress | 获取设备 MAC 地址 |
 | getManufacturer | 获取设备厂商 如 Xiaomi |
 | getModel | 获取设备型号 如 RedmiNote4X |
-| shutdown | 关机(需要 root 权限或者系统权限) |
-| reboot | 重启(需要 root 权限或者系统权限) |
-| reboot2Recovery | 重启到 recovery 需要 root 权限 |
-| reboot2Bootloader | 重启到 bootloader 需要 root 权限 |
+| shutdown | 关机 (需要 root 权限) |
+| reboot | 重启设备 (需要 root 权限) |
+| reboot2Recovery | 重启引导到 recovery (需要 root 权限) |
+| reboot2Bootloader | 重启引导到 bootloader (需要 root 权限) |
 | getBaseband_Ver | 获取 基带版本 BASEBAND-VER |
 | getLinuxCore_Ver | 获取 内核版本 CORE-VER |
 
@@ -783,8 +835,10 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| getProcessName | 获取进程号对应的进程名 |
 | getCurProcessName | 获取当前进程的名字 |
+| getProcessName | 获取进程号对应的进程名 |
+| getPid | 根据包名获取进程id |
+| getRunningAppProcessInfo | 根据 pid 获取进程信息 |
 | getForegroundProcessName | 获取前台线程包名 |
 | getAllBackgroundProcesses | 获取后台服务进程 |
 | killAllBackgroundProcesses | 杀死所有的后台服务进程 |
@@ -914,6 +968,10 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | execCmd | 是否是在 root 下执行命令 |
+| isSuccess | 判断是否执行成功 |
+| isSuccess2 | 判断是否执行成功(判断 errorMsg) |
+| isSuccess3 | 判断是否执行成功(判断 successMsg) |
+| isSuccess4 | 判断是否执行成功(判断 successMsg) , 并且 successMsg 是否包含某个字符串 |
 
 
 * **创建删除快捷图标工具类 ->** [ShortCutUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/ShortCutUtils.java)
@@ -2039,6 +2097,10 @@ DevUtils.openDebug();
 | :- | :- |
 | converHideMobile | 转换手机号 |
 | timeRecord | 耗时时间记录 |
+| getFormatString | 获取格式化字符串(可变参数) |
+| getFormatString2 | 获取格式化字符串(可变参数) |
+| getOperateTime | 获取操作时间 |
+| sleepOperate | 堵塞操作 |
 
 
 * **随机生成工具类 ->** [RandomUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/RandomUtils.java)
@@ -2441,6 +2503,16 @@ DevUtils.openDebug();
 | encryptAsFix | 固定 key 的方式加密 |
 | encrypt | 非固定 key 的方式加密 |
 | decrypt | 解密 |
+
+
+## <span id="devutilscommonrandom">**`dev.utils.common.random`**</span>
+
+
+* **随机概率采样算法 ->** [AliasMethod.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/random/AliasMethod.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| next | 获取随机索引(对应几率索引) |
 
 
 ## <span id="devutilscommonthread">**`dev.utils.common.thread`**</span>
