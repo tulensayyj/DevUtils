@@ -158,8 +158,14 @@ DevUtils.openDebug();
 | getActivitys | 获取 activity 栈 |
 | getActivitysToPackage | 获取对应包名的 Activity 栈 |
 | getActivitysToPackageLists | 获取对应包名的 Activity 栈 (处理成 List), 最新的 Activity 越靠后 |
+| isActivityTopRepeat | 判断 Activity 栈顶 是否重复 |
+| getActivityTopRepeatCount | 获取 Activity 栈顶 重复总数 |
 | getServices | 查看正在运行的 Services |
 | startActivity | 跳转页面 Activity |
+| startService | 启动服务 |
+| stopService | 停止服务 |
+| sendBroadcastToAll | 发送广播(向所有组件发送) |
+| sendBroadcast | 发送广播 |
 | kill | 销毁进程 |
 | sendTrimMemory | 收紧内存 |
 | tap | 点击某个区域 |
