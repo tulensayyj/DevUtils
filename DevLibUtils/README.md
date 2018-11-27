@@ -10,9 +10,9 @@
    - app            | app相关工具类
       - anim        | 动画工具类
       - assist      | 辅助类
-         - camera   | 摄像头相关
          - manager  | 管理器 如: ActivityManager
       - cache       | 缓存工具类
+      - camera1     | 摄像头相关 android.hardware.Camera
       - image       | 图片相关处理
       - info        | App信息, PackageInfo 等
       - logger      | 日志库 DevLogger
@@ -62,9 +62,9 @@ DevUtils.openDebug();
    - [app](#devutilsapp)                           | app相关工具类
       - [anim](#devutilsappanim)                   | 动画工具类
       - [assist](#devutilsappassist)               | 辅助类
-         - [camera](#devutilsappassistcamera)      | 摄像头相关
          - [manager](#devutilsappassistmanager)    | 管理器 如: ActivityManager
       - [cache](#devutilsappcache)                 | 缓存工具类
+      - [camera1](#devutilsappcamera1)             | 摄像头相关 android.hardware.Camera
       - [image](#devutilsappimage)                 | 图片相关处理
       - [info](#devutilsappinfo)                   | App信息, PackageInfo 等
       - [logger](#devutilsapplogger)               | 日志库 DevLogger
@@ -124,6 +124,10 @@ DevUtils.openDebug();
 | getActivityIcon | 返回 Activity 对应的图标 |
 | getActivityLogo | 返回 Activity 对应的Logo |
 | getActivityToLauncher | 获取对应包名应用启动 Activity |
+| getLauncherCategoryHomeToResolveInfo | 获取系统桌面信息 |
+| getLauncherCategoryHomeToPackageName | 获取系统桌面信息 -> packageName |
+| getLauncherCategoryHomeToActivityName | 获取系统桌面信息 -> activityName |
+| getLauncherCategoryHomeToPackageAndName | 获取系统桌面信息 -> package/activityName |
 
 
 * **ADB shell 工具类 ->** [ADBUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/ADBUtils.java)
@@ -346,20 +350,6 @@ DevUtils.openDebug();
 | setBrightness | 设置屏幕亮度 |
 | setWindowBrightness | 设置窗口亮度 |
 | getWindowBrightness | 获取窗口亮度 |
-
-
-* **摄像头相关工具类 ->** [CameraUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/CameraUtils.java)
-
-| 方法 | 注释 |
-| :- | :- |
-| isSupportReverse | 判断是否支持反转摄像头(是否存在前置摄像头) |
-| checkCameraFacing | 检查是否有摄像头 |
-| isFrontCamera | 判断是否使用前置摄像头 |
-| isBackCamera | 判断是否使用后置摄像头 |
-| isUseCameraFacing | 判断使用的视像头 |
-| freeCameraResource | 释放摄像头资源 |
-| initCamera | 初始化摄像头 |
-| open | 打开摄像头 |
 
 
 * **本应用数据清除管理器 ->** [CleanUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/CleanUtils.java)
@@ -1173,58 +1163,6 @@ DevUtils.openDebug();
 | isAllowChange | 是否允许切屏 |
 
 
-## <span id="devutilsappassistcamera">**`dev.utils.app.assist.camera`**</span>
-
-
-* **自动获取焦点 辅助类 ->** [AutoFocusAssist.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/assist/camera/AutoFocusAssist.java)
-
-| 方法 | 注释 |
-| :- | :- |
-| setFocusModes | 设置对焦模式 |
-| isAutoFocus | 是否允许自动对焦 |
-| setAutoFocus | 设置是否开启自动对焦 |
-| onAutoFocus | 对焦回调 {@link Camera.AutoFocusCallback} 重写方法 |
-| start | 开始对焦 |
-| stop | 停止对焦 |
-
-
-* **摄像头辅助类 ->** [CameraAssist.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/assist/camera/CameraAssist.java)
-
-| 方法 | 注释 |
-| :- | :- |
-| openDriver | 打开摄像头程序 |
-| closeDriver | 关闭相机驱动程 |
-| startPreview | 开始将Camera画面预览到手机上 |
-| stopPreview | 停止 Camera 画面预览 |
-| getCameraResolution | 获取相机分辨率 |
-| getPreviewSize | 获取预览大小 |
-| getCameraSizeAssist | 获取 Camera.Size 计算辅助类 |
-| getCamera | 获取摄像头 |
-| setCamera | 设置摄像头 |
-| setPreviewNotify | 设置预览回调 |
-| setAutoFocus | 设置是否开启自动对焦 |
-| isPreviewing | 是否预览中 |
-| setAutoInterval | 设置自动对焦时间间隔 |
-| setFlashlightOn | 打开闪光灯 |
-| setFlashlightOff | 关闭闪光灯 |
-| isFlashlightOn | 是否打开闪光灯 |
-| isFlashlightEnable | 是否支持手机闪光灯 |
-| stopPreviewNotify | 停止预览通知 |
-| startPreviewNotify | 开始预览通知 |
-
-
-* **摄像头 预览、输出大小 辅助类 ->** [CameraSizeAssist.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/assist/camera/CameraSizeAssist.java)
-
-| 方法 | 注释 |
-| :- | :- |
-| getCamera | 获取摄像头 |
-| setPreviewSize | 设置预览大小 |
-| getPreviewSize | 根据手机支持的预览分辨率计算，设置预览尺寸 |
-| setPictureSize | 设置拍照图片大小 |
-| getPictureSize | 根据手机支持的拍照分辨率计算 |
-| getVideoSize | 根据手机支持的视频录制分辨率计算 |
-
-
 ## <span id="devutilsappassistmanager">**`dev.utils.app.assist.manager`**</span>
 
 
@@ -1308,6 +1246,72 @@ DevUtils.openDebug();
 | file | 获取缓存文件 |
 | remove | 移除某个key |
 | clear | 清除所有数据 |
+
+
+## <span id="devutilsappcamera1">**`dev.utils.app.camera1`**</span>
+
+
+* **自动获取焦点 辅助类 ->** [AutoFocusAssist.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/camera1/AutoFocusAssist.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| setFocusModes | 设置对焦模式 |
+| isAutoFocus | 是否允许自动对焦 |
+| setAutoFocus | 设置是否开启自动对焦 |
+| onAutoFocus | 对焦回调 {@link Camera.AutoFocusCallback} 重写方法 |
+| start | 开始对焦 |
+| stop | 停止对焦 |
+
+
+* **摄像头辅助类 ->** [CameraAssist.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/camera1/CameraAssist.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| openDriver | 打开摄像头程序 |
+| closeDriver | 关闭相机驱动程 |
+| startPreview | 开始将Camera画面预览到手机上 |
+| stopPreview | 停止 Camera 画面预览 |
+| getCameraResolution | 获取相机分辨率 |
+| getPreviewSize | 获取预览大小 |
+| getCameraSizeAssist | 获取 Camera.Size 计算辅助类 |
+| getCamera | 获取摄像头 |
+| setCamera | 设置摄像头 |
+| setPreviewNotify | 设置预览回调 |
+| setAutoFocus | 设置是否开启自动对焦 |
+| isPreviewing | 是否预览中 |
+| setAutoInterval | 设置自动对焦时间间隔 |
+| setFlashlightOn | 打开闪光灯 |
+| setFlashlightOff | 关闭闪光灯 |
+| isFlashlightOn | 是否打开闪光灯 |
+| isFlashlightEnable | 是否支持手机闪光灯 |
+| stopPreviewNotify | 停止预览通知 |
+| startPreviewNotify | 开始预览通知 |
+
+
+* **摄像头 预览、输出大小 辅助类 ->** [CameraSizeAssist.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/camera1/CameraSizeAssist.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| getCamera | 获取摄像头 |
+| setPreviewSize | 设置预览大小 |
+| getPreviewSize | 根据手机支持的预览分辨率计算，设置预览尺寸 |
+| setPictureSize | 设置拍照图片大小 |
+| getPictureSize | 根据手机支持的拍照分辨率计算 |
+| getVideoSize | 根据手机支持的视频录制分辨率计算 |
+
+
+* **摄像头相关工具类 ->** [CameraUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/camera1/CameraUtils.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| isSupportReverse | 判断是否支持反转摄像头(是否存在前置摄像头) |
+| checkCameraFacing | 检查是否有摄像头 |
+| isFrontCamera | 判断是否使用前置摄像头 |
+| isBackCamera | 判断是否使用后置摄像头 |
+| isUseCameraFacing | 判断使用的视像头 |
+| freeCameraResource | 释放摄像头资源 |
+| initCamera | 初始化摄像头 |
+| open | 打开摄像头 |
 
 
 ## <span id="devutilsappimage">**`dev.utils.app.image`**</span>
