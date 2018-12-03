@@ -235,6 +235,8 @@ DevUtils.openDebug();
 | record | 日志记录 |
 | isHandler | 是否处理日志记录 |
 | setHandler | 设置是否处理日志记录 |
+| isAppendSpace | 是否追加空格 |
+| setAppendSpace | 设置是否追加空格 |
 | getLogFolderName | 获取文件日志名 |
 | setLogFolderName | 设置日志文件夹名 |
 | getLogStoragePath | 获取日志存储路径 |
@@ -999,11 +1001,17 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | dipConvertPx | 根据手机的分辨率从 dp 的单位 转成为 px(像素) |
+| dipConvertPxf | 根据手机的分辨率从 dp 的单位 转成为 px(像素) - float |
 | pxConvertDip | 根据手机的分辨率从 px(像素) 的单位 转成为 dp |
+| pxConvertDipf | 根据手机的分辨率从 px(像素) 的单位 转成为 dp - float |
 | pxConvertSp | 根据手机的分辨率从 px(像素) 的单位 转成为 sp |
+| pxConvertSpf | 根据手机的分辨率从 px(像素) 的单位 转成为 sp - float |
 | spConvertPx | 根据手机的分辨率从 sp 的单位 转成为 px |
+| spConvertPxf | 根据手机的分辨率从 sp 的单位 转成为 px - float |
 | dipConvertPx2 | 根据手机的分辨率从 dp 的单位 转成为 px(像素) 第二种 |
+| dipConvertPx2f | 根据手机的分辨率从 dp 的单位 转成为 px(像素) 第二种 - float |
 | spConvertPx2 | 根据手机的分辨率从 sp 的单位 转成为 px 第二种 |
+| spConvertPx2f | 根据手机的分辨率从 sp 的单位 转成为 px 第二种 - float |
 | applyDimension | 各种单位转换 - 该方法存在于 TypedValue |
 | forceGetViewSize | 在 onCreate 中获取视图的尺寸 - 需回调 onGetSizeListener 接口，在 onGetSize 中获取 view 宽高 |
 | measureView | 测量视图尺寸 |
