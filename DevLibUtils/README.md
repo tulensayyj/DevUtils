@@ -165,6 +165,7 @@ DevUtils.openDebug();
 | isActivityTopRepeat | 判断 Activity 栈顶 是否重复 |
 | getActivityTopRepeatCount | 获取 Activity 栈顶 重复总数 |
 | getServices | 查看正在运行的 Services |
+| startSelfApp | 启动自身应用 |
 | startActivity | 跳转页面 Activity |
 | startService | 启动服务 |
 | stopService | 停止服务 |
@@ -210,6 +211,14 @@ DevUtils.openDebug();
 | resetDensity | 恢复原屏幕密度 |
 | setOverscan | 显示区域 (设置留白边距) |
 | resetOverscan | 恢复原显示区域 |
+| getScreenBrightnessMode | 获取亮度是否为自动获取(自动调节亮度) |
+| setScreenBrightnessMode | 设置亮度是否为自动获取(自动调节亮度) |
+| getScreenBrightness | 获取当前亮度值 |
+| setScreenBrightness | 更改亮度值（亮度值在0—255之间） |
+| getScreenOffTimeout | 获取自动锁屏休眠时间 (单位毫秒) |
+| setScreenOffTimeout | 设置自动锁屏休眠时间 (单位毫秒) |
+| getGlobalAutoTime | 获取日期时间选项中通过网络获取时间的状态， |
+| setGlobalAutoTime | 修改日期时间选项中通过网络获取时间的状态, 设置是否开启 |
 | disableADB | 关闭 USB 调试模式 |
 | putHiddenApi | 允许访问非 SDK API |
 | deleteHiddenApi | 禁止访问非 SDK API |
@@ -225,6 +234,10 @@ DevUtils.openDebug();
 | stopAlarmIntent | 关闭定时器 |
 | startAlarmService | 开启轮询服务 |
 | stopAlarmService | 停止轮询服务 |
+| startAlarmBroadcast | 开启轮询广播 |
+| stopAlarmBroadcast | 停止轮询广播 |
+| startAlarmActivity | 开启轮询 Activity |
+| stopAlarmActivity | 停止轮询 Activity |
 
 
 * **分析记录工具类 ->** [AnalysisRecordUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/AnalysisRecordUtils.java)
@@ -265,6 +278,8 @@ DevUtils.openDebug();
 | isIceCreamSandwich | 是否在4.0版本及以上 |
 | isIceCreamSandwichMR1 | 是否在4.0.3版本及以上 |
 | isJellyBean | 是否在4.1版本及以上 |
+| isJellyBeanMR1 | 是否在4.2版本及以上 |
+| isJellyBeanMR2 | 是否在4.3版本及以上 |
 | isKitkat | 是否在4.4.2版本及以上 |
 | isLollipop | 是否在5.0.1版本及以上 |
 | isM | 是否在6.0版本及以上 |
@@ -1925,6 +1940,11 @@ DevUtils.openDebug();
 | secToTimeRetain | 传入时间，获取时间(00:00:00 格式) - 不处理大于一天 |
 | convertTimeArys | 传入时间,时间参数(小时、分钟、秒) |
 | millis2FitTimeSpan | 转换时间 |
+| isInTimeHHmm | 判断时间是否在[startTime, endTime]区间，注意时间格式要一致 |
+| isInTime | 判断时间是否在[startTime, endTime]区间，注意时间格式要一致 |
+| isInDate | 判断时间是否在[startTime, endTime]区间，注意时间格式要一致 |
+| getEndTimeDiffHHmm | 获取指定时间距离该时间第二天的指定时段的时间 (判断凌晨情况) |
+| getEndTimeDiff | 获取指定时间距离该时间第二天的指定时段的时间 (判断凌晨情况) |
 
 
 * **开发常用方法 - 工具类 ->** [DevCommonUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/DevCommonUtils.java)
