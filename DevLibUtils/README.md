@@ -329,6 +329,8 @@ DevUtils.openDebug();
 | getAppPath | 获取 App 路径 /data/data/包名/.apk |
 | getAppSignature | 获取 App 签名 |
 | getAppSignatureSHA1 | 获取 App sha1值 |
+| getAppSignatureSHA256 | 获取应用签名的的 SHA256 值 |
+| getAppSignatureMD5 | 获取应用签名的的 MD5 值 |
 | openPDFFile | 启动本地应用打开PDF |
 | openWordFile | 启动本地应用打开PDF |
 | openOfficeByWPS | 调用WPS打开office文档 |
@@ -373,13 +375,13 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| cleanInternalCache | 清除本应用内部缓存(/data/data/com.xxx.xxx/cache) |
-| cleanDatabases | 清除本应用所有数据库(/data/data/com.xxx.xxx/databases) |
-| cleanSharedPreference | 清除本应用SharedPreference(/data/data/com.xxx.xxx/shared_prefs) |
-| cleanDatabaseByName | 按名字清除本应用数据库 |
-| cleanFiles | 清除/data/data/com.xxx.xxx/files下的内容 |
-| cleanExternalCache | 清除外部cache下的内容(/mnt/sdcard/android/data/com.xxx.xxx/cache) |
-| cleanCustomCache | 清除自定义路径下的文件，使用需小心，请不要误删。而且只支持目录下的文件删除 |
+| cleanInternalCache | 清除内部缓存 - path /data/data/package/cache |
+| cleanInternalFiles | 清除内部文件 - path /data/data/package/files |
+| cleanInternalDbs | 清除内部数据库 - path /data/data/package/databases |
+| cleanInternalDbByName | 根据名称清除数据库 - path /data/data/package/databases/dbName |
+| cleanInternalSp | 清除内部 SP - path /data/data/package/shared_prefs |
+| cleanExternalCache | 清除外部缓存 - path /storage/emulated/0/android/data/package/cache |
+| cleanCustomDir | 清除自定义路径下的文件，使用需小心，请不要误删。而且只支持目录下的文件删除 |
 | cleanApplicationData | 清除本应用所有的数据 |
 | getFolderSize | 获取文件夹大小 |
 | getCacheSize | 获取缓存文件大小 |
@@ -455,6 +457,8 @@ DevUtils.openDebug();
 | getSDKVersion | 获取当前SDK 版本号 |
 | getAndroidId | 获取Android id |
 | isDeviceRooted | 判断设备是否 root |
+| isAdbEnabled | 返回是否启用了 ADB |
+| getABIs | 获取支持的指令集 如: [arm64-v8a, armeabi-v7a, armeabi] |
 | getMacAddress | 获取设备 MAC 地址 |
 | getManufacturer | 获取设备厂商 如 Xiaomi |
 | getModel | 获取设备型号 如 RedmiNote4X |
@@ -519,6 +523,8 @@ DevUtils.openDebug();
 | base64DecodeToString | base64 解码 |
 | htmlEncode | html 编码 |
 | htmlDecode | html 解码 |
+| binEncode | 返回二进制编码后的字符串 |
+| binDecode | 返回 UTF-8 字符串的二进制数据 |
 
 
 * **错误信息处理工具类 ->** [ErrorUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/ErrorUtils.java)
@@ -581,6 +587,7 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
+| isIntentAvailable | 判断 Intent 是否可用 |
 | getInstallAppIntent | 获取安装 App(支持 8.0)的意图 |
 | getUninstallAppIntent | 获取卸载 App 的意图 |
 | getLaunchAppIntent | 获取打开 App 的意图 |
@@ -737,37 +744,41 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| getRootPath | 获取 Android 系统根目录 - path: /system |
-| getDataPath | 获取 data 目录 - path: /data |
-| getIntDownloadCachePath | 获取缓存目录 - path: data/cache |
-| getAppIntCachePath | 获取此应用的缓存目录 - path: /data/data/package/cache |
-| getAppIntFilesPath | 获取此应用的文件目录 - path: /data/data/package/files |
-| getAppIntDbPath | 获取此应用的数据库文件目录 - path: /data/data/package/databases/name |
-| getExtStoragePath | 获取 Android 外置储存的根目录 - path: /storage/emulated/0 |
-| getExtAlarmsPath | 获取闹钟铃声目录 - path: /storage/emulated/0/Alarms |
-| getExtDcimPath | 获取相机拍摄的照片和视频的目录 - path: /storage/emulated/0/DCIM |
-| getExtDocumentsPath | 获取文档目录 - path: /storage/emulated/0/Documents |
-| getExtDownloadsPath | 获取下载目录 - path: /storage/emulated/0/Download |
-| getExtMoviesPath | 获取视频目录 - path: /storage/emulated/0/Movies |
-| getExtMusicPath | 获取音乐目录 - path: /storage/emulated/0/Music |
-| getExtNotificationsPath | 获取提示音目录 - path: /storage/emulated/0/Notifications |
-| getExtPicturesPath | 获取图片目录 - path: /storage/emulated/0/Pictures |
-| getExtPodcastsPath | 获取 Podcasts 目录 - path: /storage/emulated/0/Podcasts |
-| getExtRingtonesPath | 获取铃声目录 - path: /storage/emulated/0/Ringtones |
-| getAppExtCachePath | 获取此应用在外置储存中的缓存目录 - path: /storage/emulated/0/Android/data/package/cache |
-| getAppExtFilePath | 获取此应用在外置储存中的文件目录 - path: /storage/emulated/0/Android/data/package/files |
-| getAppExtAlarmsPath | 获取此应用在外置储存中的闹钟铃声目录 - path: /storage/emulated/0/Android/data/package/files/Alarms |
-| getAppExtDcimPath | 获取此应用在外置储存中的相机目录 - path: /storage/emulated/0/Android/data/package/files/DCIM |
-| getAppExtDocumentsPath | 获取此应用在外置储存中的文档目录 - path: /storage/emulated/0/Android/data/package/files/Documents |
-| getAppExtDownloadPath | 获取此应用在外置储存中的闹钟目录 - path: /storage/emulated/0/Android/data/package/files/Download |
-| getAppExtMoviesPath | 获取此应用在外置储存中的视频目录 - path: /storage/emulated/0/Android/data/package/files/Movies |
-| getAppExtMusicPath | 获取此应用在外置储存中的音乐目录 - path: /storage/emulated/0/Android/data/package/files/Music |
-| getAppExtNotificationsPath | 获取此应用在外置储存中的提示音目录 - path: /storage/emulated/0/Android/data/package/files/Notifications |
-| getAppExtPicturesPath | 获取此应用在外置储存中的图片目录 - path: /storage/emulated/0/Android/data/package/files/Pictures |
-| getAppExtPodcastsPath | 获取此应用在外置储存中的 Podcasts 目录 - path: /storage/emulated/0/Android/data/package/files/Podcasts |
-| getAppExtRingtonesPath | 获取此应用在外置储存中的铃声目录 - path: /storage/emulated/0/Android/data/package/files/Ringtones |
-| getObbPath | 获取此应用的 Obb 目录 - path: /storage/emulated/0/Android/obb/package |
-| getFilePathByUri | 通过 Uri 获取 文件路径 |
+| getRootPath | 获取 Android 系统根目录 - path /system |
+| getDataPath | 获取 data 目录 - path /data |
+| getDownloadCachePath | 获取下载缓存目录 - path data/cache |
+| getInternalAppDataPath | 获取内存应用数据路径 - path /data/data/package |
+| getInternalAppCodeCacheDir | 获取内存应用代码缓存路径 - path /data/data/package/code_cache |
+| getInternalAppDbsPath | 获取内存应用数据库路径 - path /data/data/package/databases. |
+| getInternalAppDbPath | 获取内存应用数据库路径 - path /data/data/package/databases/name. |
+| getInternalAppFilesPath | 获取内存应用文件路径 - path/data/data/package/files. |
+| getInternalAppSpPath | 获取内存应用 SP 路径 - path/data/data/package/shared_prefs. |
+| getInternalAppNoBackupFilesPath | 获取内存应用未备份文件路径 - path/data/data/package/no_backup. |
+| getExternalStoragePath | 获取外存路径 - path/storage/emulated/0. |
+| getExternalMusicPath | 获取外存音乐路径 - path/storage/emulated/0/Music. |
+| getExternalPodcastsPath | 获取外存播客路径 - path/storage/emulated/0/Podcasts. |
+| getExternalRingtonesPath | 获取外存铃声路径 - path/storage/emulated/0/Ringtones. |
+| getExternalAlarmsPath | 获取外存闹铃路径 - path/storage/emulated/0/Alarms. |
+| getExternalNotificationsPath | 获取外存通知路径 - path/storage/emulated/0/Notifications. |
+| getExternalPicturesPath | 获取外存图片路径 - path/storage/emulated/0/Pictures. |
+| getExternalMoviesPath | 获取外存影片路径 - path/storage/emulated/0/Movies. |
+| getExternalDownloadsPath | 获取外存下载路径 - path/storage/emulated/0/Download. |
+| getExternalDcimPath | 获取外存数码相机图片路径 - path/storage/emulated/0/DCIM. |
+| getExternalDocumentsPath | 获取外存文档路径 - path/storage/emulated/0/Documents. |
+| getExternalAppDataPath | 获取外存应用数据路径 - path/storage/emulated/0/Android/data/package. |
+| getExternalAppCachePath | 获取外存应用缓存路径 - path/storage/emulated/0/Android/data/package/cache. |
+| getExternalAppFilesPath | 获取外存应用文件路径 - path/storage/emulated/0/Android/data/package/files. |
+| getExternalAppMusicPath | 获取外存应用音乐路径 - path/storage/emulated/0/Android/data/package/files/Music. |
+| getExternalAppPodcastsPath | 获取外存应用播客路径 - path/storage/emulated/0/Android/data/package/files/Podcasts. |
+| getExternalAppRingtonesPath | 获取外存应用铃声路径 - path/storage/emulated/0/Android/data/package/files/Ringtones. |
+| getExternalAppAlarmsPath | 获取外存应用闹铃路径 - path/storage/emulated/0/Android/data/package/files/Alarms. |
+| getExternalAppNotificationsPath | 获取外存应用通知路径 - path/storage/emulated/0/Android/data/package/files/Notifications. |
+| getExternalAppPicturesPath | 获取外存应用图片路径 - path/storage/emulated/0/Android/data/package/files/Pictures. |
+| getExternalAppMoviesPath | 获取外存应用影片路径 - path/storage/emulated/0/Android/data/package/files/Movies. |
+| getExternalAppDownloadPath | 获取外存应用下载路径 - path/storage/emulated/0/Android/data/package/files/Download. |
+| getExternalAppDcimPath | 获取外存应用数码相机图片路径 - path/storage/emulated/0/Android/data/package/files/DCIM. |
+| getExternalAppDocumentsPath | 获取外存应用文档路径 - path/storage/emulated/0/Android/data/package/files/Documents. |
+| getExternalAppObbPath | 获取外存应用 OBB 路径 - path/storage/emulated/0/Android/obb/package. |
 
 
 * **权限请求工具类 ->** [PermissionUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/PermissionUtils.java)
@@ -792,6 +803,7 @@ DevUtils.openDebug();
 | getUserCountry | 获取Sim卡所属地区，非国内地区暂不支持播放 |
 | judgeArea | 判断地区，是否属于国内 |
 | isPhone | 判断设备是否是手机 |
+| getMEID | 获取 MEID 移动设备识别码 |
 | getIMEI | 获取 IMEI 码 |
 | getIMSI | 获取 IMSI 码 |
 | getIMSIIDName | 获取IMSI处理过后的简称 |
@@ -848,6 +860,7 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
+| isCurProcess | 判断是否当前进程 |
 | getCurProcessName | 获取当前进程的名字 |
 | getProcessName | 获取进程号对应的进程名 |
 | getPid | 根据包名获取进程id |
@@ -1069,6 +1082,7 @@ DevUtils.openDebug();
 | :- | :- |
 | getUriForFileToName | 返回处理后的Uri, 单独传递名字, 自动添加包名 ${applicationId} |
 | getUriForFile | Return a content URI for a given file. |
+| getFilePathByUri | 通过 Uri 获取 文件路径 |
 
 
 * **震动相关工具类 ->** [VibrationUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/VibrationUtils.java)
@@ -1505,31 +1519,31 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| obtainUri | 通过 Apk 路径 初始化 App 信息实体类 |
-| obtainPck | 通过包名 初始化 App 信息实体类 |
-| obtain | 初始化当前 App 信息实体类 |
+| obtain | 获取 AppInfoBean |
 | getAppPackName | 获取 App 包名 |
 | getAppName | 获取 App 名 |
 | getAppIcon | 获取 App 图标 |
 | getAppType | 获取 App 类型 |
-| isSystemApp | 是否系统程序 |
-| isSystemUpdateApp | 是否系统程序被手动更新后，也成为第三方应用程序 |
 | getVersionCode | 获取 versionCode |
 | getVersionName | 获取 versionName |
-| getFirstInstallTime | 获取首次安装时间 |
-| getLastUpdateTime | 获取最后更新时间 |
+| getFirstInstallTime | 获取 App 首次安装时间 |
+| getLastUpdateTime | 获取 App 最后更新时间 |
 | getSourceDir | 获取 Apk 地址 |
 | getApkSize | 获取 Apk 大小 |
-| getApkPermissionsArys | 获取 Apk 注册的权限 |
+| isSystemApp | 是否系统程序 |
+| isSystemUpdateApp | 是否系统程序被手动更新后，也成为第三方应用程序 |
 
 
 * **App 信息获取工具类 ->** [AppInfoUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/info/AppInfoUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
-| obtainUri | 通过 Apk 路径 初始化 App 信息实体类 |
-| obtainPck | 通过包名 初始化 App 信息实体类 |
-| obtain | 初始化当前 App 信息实体类 |
+| getPackageInfoToFile | 通过 Apk 路径 初始化 PackageInfo |
+| getPackageInfoToPath | 通过 Apk 路径 初始化 PackageInfo |
+| getPackageInfo | 获取当前应用 PackageInfo |
+| getAppInfoBeanToFile | 通过 Apk 路径 获取 AppInfoBean |
+| getAppInfoBeanToPath | 通过 Apk 路径 获取 AppInfoBean |
+| getAppInfoBean | 获取当前应用 AppInfoBean |
 | getApkInfoItem | 获取 Apk 详细信息 |
 | getAppInfoItem | 获取 App 详细信息 |
 | getAppLists | 获取全部 App 列表 |
@@ -1944,7 +1958,7 @@ DevUtils.openDebug();
 | isInTime | 判断时间是否在[startTime, endTime]区间，注意时间格式要一致 |
 | isInDate | 判断时间是否在[startTime, endTime]区间，注意时间格式要一致 |
 | getEndTimeDiffHHmm | 获取指定时间距离该时间第二天的指定时段的时间 (判断凌晨情况) |
-| getEndTimeDiff | 获取指定时间距离该时间第二天的指定时段的时间 (判断凌晨情况) |
+| getEndTimeDiff | 获取指定时间距离该时间第二天的指定时段的时间差 (判断凌晨情况) |
 
 
 * **开发常用方法 - 工具类 ->** [DevCommonUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/DevCommonUtils.java)
@@ -2191,6 +2205,7 @@ DevUtils.openDebug();
 | getDeclaredField | 通过反射获取全部字段 |
 | getDeclaredFieldBase | 循环向上转型, 获取对象的 DeclaredField |
 | method | 设置反射的方法 |
+| proxy | 根据类, 代理创建并返回对象 |
 | type | 获取类型 |
 | get | 获取反射想要获取的 |
 | hashCode | 获取 HashCode |
