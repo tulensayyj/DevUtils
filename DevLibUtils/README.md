@@ -183,6 +183,7 @@ DevUtils.openDebug();
 | wifiConf | 查看连接过的 WiFi 密码 |
 | wifiSwitch | 开启/关闭 WiFi |
 | setSystemTime | 设置系统时间 |
+| setSystemTime2 | 设置系统时间 |
 | shutdown | 关机 (需要 root 权限) |
 | reboot | 重启设备 (需要 root 权限) |
 | reboot2Recovery | 重启引导到 recovery (需要 root 权限) |
@@ -345,18 +346,20 @@ DevUtils.openDebug();
 | isStatusBarVisible | 判断状态栏是否显示 |
 | setStatusBarLightMode | 设置状态是否高亮模式 |
 | addMarginTopEqualStatusBarHeight | 添加状态栏同等高度到View的顶部 |
-| subtractMarginTopEqualStatusBarHeight | 减去状态栏同等高度 |
+| subtractMarginTopEqualStatusBarHeight | 添加状态栏同等高度到View的顶部 |
 | setStatusBarColor | 设置状态栏颜色 |
 | setStatusBarAlpha | 设置状态栏透明度 |
+| setStatusBarCustom | 设置自定义状态栏 |
 | setStatusBarColor4Drawer | 设置状态栏的颜色 |
 | setStatusBarAlpha4Drawer | 设置状态栏透明度 |
 | getActionBarHeight | 返回 ActionBase 高度 |
 | setNotificationBarVisibility | 设置通知栏是否显示 |
 | getNavBarHeight | 获取 NavigationView 高度 |
 | setNavBarVisibility | 设置导航栏是否可见(图标显示) |
-| setNavBarImmersive | 设置沉浸模式 |
-| isNavBarVisible | 判断顶部状态栏(图标)是否显示 |
-| setNavBar | 设置是否显示状态栏图标等 |
+| isNavBarVisible | 判断导航栏是否可见 |
+| setNavBarColor | 设置导航栏颜色 |
+| getNavBarColor | 设置导航栏颜色 |
+| isSupportNavBar | 判断是否支持导航栏 |
 
 
 * **亮度相关工具类 ->** [BrightnessUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/BrightnessUtils.java)
@@ -860,6 +863,7 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
+| kill | 销毁自身进程 |
 | isCurProcess | 判断是否当前进程 |
 | getCurProcessName | 获取当前进程的名字 |
 | getProcessName | 获取进程号对应的进程名 |
@@ -1218,6 +1222,7 @@ DevUtils.openDebug();
 | finishActivity | 结束最后一个(当前)Activity |
 | finishAllActivityToIgnore | 结束全部Activity 除忽略的页面外 |
 | finishAllActivity | 结束所有Activity |
+| appExitRestart | 退出应用程序, 并重启 |
 | appExit | 退出应用程序 |
 | restartApplication | 重启 App |
 
@@ -1408,6 +1413,10 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
+| tintIcon | 图片着色 |
+| tint9PatchDrawableFrame | .9 图片着色 |
+| setBackground | 设置背景 |
+| getDrawable | 获取 Drawable |
 | getBitmapFromResources | 通过Resources获取Bitmap |
 | getDrawableFromResources | 通过Resources获取Drawable |
 | getSDCardBitmapStream | 获取本地SDCard 图片 |
@@ -1955,6 +1964,7 @@ DevUtils.openDebug();
 | convertTimeArys | 传入时间,时间参数(小时、分钟、秒) |
 | millis2FitTimeSpan | 转换时间 |
 | isInTimeHHmm | 判断时间是否在[startTime, endTime]区间，注意时间格式要一致 |
+| isInTimeHHmmss | 判断时间是否在[startTime, endTime]区间，注意时间格式要一致 |
 | isInTime | 判断时间是否在[startTime, endTime]区间，注意时间格式要一致 |
 | isInDate | 判断时间是否在[startTime, endTime]区间，注意时间格式要一致 |
 | getEndTimeDiffHHmm | 获取指定时间距离该时间第二天的指定时段的时间 (判断凌晨情况) |
@@ -2172,7 +2182,8 @@ DevUtils.openDebug();
 | getRandomLetters | 获取大小写字母自定义长度的随机数 |
 | getRandomNumbersAndLetters | 获取数字、大小写字母自定义长度的随机数 |
 | getRandom | 获取自定义数据自定义长度的随机数 |
-| shuffle | 洗牌算法，随机置换指定的数组使用的默认源的随机性 |
+| shuffle | 洗牌算法(第一种)，随机置换指定的数组使用的默认源的随机性(随机数据源小于三个, 则无效) |
+| shuffle2 | 洗牌算法(第二种)，随机置换指定的数组使用的默认源的随机性 |
 
 
 * **反射相关工具类 ->** [Reflect2Utils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/Reflect2Utils.java)
