@@ -1702,21 +1702,15 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
+| setHandler | 设置是否使用 Handler 显示 Toast |
 | getSignleToast | 获取内部唯一Toast对象 |
 | showShort | 显示 一个短Toast |
 | showLong | 显示 一个长Toast |
 | showToast | 显示Toast |
+| newToast | 获取一个新的 Toast |
 | showShortNew | 显示 一个新的短Toast |
 | showLongNew | 显示 一个新的长Toast |
 | showToastNew | 显示新的 Toast |
-
-
-* **自定义Toast 使用View 工具类 ->** [ToastViewUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/toast/ToastViewUtils.java)
-
-| 方法 | 注释 |
-| :- | :- |
-| getSignleToast | 获取内部唯一Toast对象 |
-| showToast | 最终显示Toast方法 |
 
 
 ## <span id="devutilsapptoastcus">**`dev.utils.app.toast.cus`**</span>
@@ -1742,7 +1736,7 @@ DevUtils.openDebug();
 | setToastTypeface | 设置 Toast 字体(样式) |
 | setTextSize | 设置 Toast 字体大小 |
 | setTintIcon | 设置图标是否着色 |
-| setNewToast | 是否适用新的 Toast |
+| setNewToast | 是否使用新的 Toast |
 | getTextColor | 获取 Toast 默认字体颜色 |
 | getNormalColor | 获取 Toast Normal 字体颜色 |
 | getErrorColor | 获取 Toast Error 字体颜色 |
@@ -2184,6 +2178,12 @@ DevUtils.openDebug();
 | getRandom | 获取自定义数据自定义长度的随机数 |
 | shuffle | 洗牌算法(第一种)，随机置换指定的数组使用的默认源的随机性(随机数据源小于三个, 则无效) |
 | shuffle2 | 洗牌算法(第二种)，随机置换指定的数组使用的默认源的随机性 |
+| nextIntRange | 获取指定范围 Int 值 |
+| nextLongRange | 获取指定范围 long 值 |
+| nextDoubleRange | 获取指定范围 double 值 |
+| ints | 获取随机 int 数组 |
+| longs | 获取随机 long 数组 |
+| doubles | 获取随机 double 数组 |
 
 
 * **反射相关工具类 ->** [Reflect2Utils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/Reflect2Utils.java)
