@@ -271,6 +271,7 @@ DevUtils.openDebug();
 | :- | :- |
 | getUUID | 获取设备唯一id |
 | getRandomUUID | 获取随机数 唯一id |
+| getFormatRes | 获取 R.string 资源的格式化字符串 |
 | isFroyo | 是否在2.2版本及以上 |
 | isGingerbread | 是否在2.3版本及以上 |
 | isGingerbreadMR1 | 是否在2.3.3版本及以上 |
@@ -455,7 +456,7 @@ DevUtils.openDebug();
 | getSysLanguage | 获取当前操作系统的语言 |
 | getDeviceInfo | 获取设备信息 |
 | getDeviceInfo2 | 获取设备信息 |
-| handleDeviceInfo | 处理设备信息 |
+| handlerDeviceInfo | 处理设备信息 |
 | getSDKVersionName | 获取设备系统版本号 |
 | getSDKVersion | 获取当前SDK 版本号 |
 | getAndroidId | 获取Android id |
@@ -543,10 +544,10 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| appInit | App 初始化调用方法 |
+| init | 初始化调用方法 |
 | saveErrorLog | 保存 App 错误日志 |
 | saveLog | 保存 App 日志 |
-| handleVariable | 处理可变参数 |
+| handlerVariable | 处理可变参数 |
 
 
 * **手电筒工具类 ->** [FlashlightUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/FlashlightUtils.java)
@@ -1592,7 +1593,7 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| appInit | App 初始化调用方法(获取版本号) |
+| init | 初始化调用方法(获取版本号) |
 | getReleaseLogConfig | 获取发布 Log 配置(打印线程信息,显示方法总数3,从0开始,不进行排序, 默认属于ERROR级别日志) |
 | getDebugLogConfig | 获取调试 Log 配置(打印线程信息,显示方法总数3,从0开始,不进行排序, 默认属于ERROR级别日志) |
 | getSortLogConfig | 获取 Log 配置(打印线程信息,显示方法总数3,从0开始,并且美化日志信息, 默认属于DEBUG级别日志) |
@@ -1969,6 +1970,8 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
+| getFormatString | 获取格式化字符串 |
+| getFormatString2 | 获取格式化字符串 |
 | isHttpRes | 判断是否网络资源 |
 | isSpace | 判断字符串是否为 null 或全为空白字符 |
 | isEmpty | 判断是否为null |
@@ -2367,7 +2370,7 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| setSearchHandle | 设置搜索处理接口 |
+| setSearchHandler | 设置搜索处理接口 |
 | getQueueSameTimeNumber | 获取任务队列同时进行数量 |
 | setQueueSameTimeNumber | 任务队列同时进行数量 |
 | isRuning | 是否搜索中 |
@@ -2378,7 +2381,7 @@ DevUtils.openDebug();
 | getDelayTime | 获取延迟校验时间 |
 | setDelayTime | 设置延迟校验时间 |
 | query | 查询 |
-| isHandleFile | 判断是否处理该文件 |
+| isHandlerFile | 判断是否处理该文件 |
 | isAddToList | 是否添加到集合 |
 | OnEndListener | 搜索结束监听 |
 
@@ -2387,14 +2390,14 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| setSearchHandle | 设置搜索处理接口 |
+| setSearchHandler | 设置搜索处理接口 |
 | isRuning | 是否搜索中 |
 | stop | 停止搜索 |
 | isStop | 是否停止搜索 |
 | getStartTime | 获取开始搜索时间 |
 | getEndTime | 获取结束搜索时间 |
 | query | 查询 |
-| isHandleFile | 判断是否处理该文件 |
+| isHandlerFile | 判断是否处理该文件 |
 | isAddToList | 是否添加到集合 |
 | OnEndListener | 搜索结束监听 |
 
