@@ -717,8 +717,13 @@ DevUtils.openDebug();
 | isWifiAvailable | 判断wifi数据是否可用 |
 | getNetworkOperatorName | 获取网络运营商名称 - 中国移动、如中国联通、中国电信 |
 | getNetworkType | 获取当前网络类型 |
+| getBroadcastIpAddress | 获取广播 ip 地址 |
 | getDomainAddress | 获取域名ip地址 |
 | getIPAddress | 获取IP地址 |
+| getIpAddressByWifi | 根据 WiFi 获取网络 IP 地址 |
+| getGatewayByWifi | 根据 WiFi 获取网关 IP 地址 |
+| getNetMaskByWifi | 根据 WiFi 获取子网掩码 IP 地址 |
+| getServerAddressByWifi | 根据 WiFi 获取服务端 IP 地址 |
 
 
 * **通知栏管理类 ->** [NotificationUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/NotificationUtils.java)
