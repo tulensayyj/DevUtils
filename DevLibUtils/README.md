@@ -1704,19 +1704,23 @@ DevUtils.openDebug();
 ## <span id="devutilsapptoast">**`dev.utils.app.toast`**</span>
 
 
-* **自定义Toast工具类 ->** [ToastUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/toast/ToastUtils.java)
+* **Simple Toast 工具类(简单的 Toast 工具类, 直接使用系统Toast) ->** [ToastUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/toast/ToastUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
-| setHandler | 设置是否使用 Handler 显示 Toast |
-| getSignleToast | 获取内部唯一Toast对象 |
-| showShort | 显示 一个短Toast |
-| showLong | 显示 一个长Toast |
-| showToast | 显示Toast |
-| newToast | 获取一个新的 Toast |
-| showShortNew | 显示 一个新的短Toast |
-| showLongNew | 显示 一个新的长Toast |
+| setIsHandler | 设置是否使用 Handler 显示 Toast |
+| setNullText | 设置 Text 为 null 的文本 |
+| setGravity | 设置 Toast 显示在屏幕上的位置。 |
+| setMargin | 设置边距 |
+| showShort | 显示 LENGTH_SHORT Toast |
+| showLong | 显示 LENGTH_LONG Toast |
+| showToast | 显示 Toast |
+| showShortNew | 显示 new LENGTH_SHORT Toast |
+| showLongNew | 显示 new LENGTH_LONG Toast |
 | showToastNew | 显示新的 Toast |
+| newToastText | 获取一个新的 Text Toast |
+| showToastView | 显示 View Toast 方法 |
+| newToastView | 获取一个新的 View Toast |
 
 
 ## <span id="devutilsapptoastcus">**`dev.utils.app.toast.cus`**</span>
