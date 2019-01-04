@@ -2100,7 +2100,6 @@ DevUtils.openDebug();
 | encodeHex | 将字节数组转换为十六进制字符数组 |
 | encodeHexStr | 将字节数组转换为十六进制字符串 |
 | decodeHex | 将十六进制字符数组转换为字节数组 |
-| toDigit | 将十六进制字符转换成一个整数 |
 
 
 * **Http 参数工具类 ->** [HttpParamsUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/HttpParamsUtils.java)
