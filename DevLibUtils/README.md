@@ -19,7 +19,6 @@
       - player      | 多媒体(视频、音频)播放封装
       - share       | SharedPreferences 封装
       - toast       | Toast
-         - cus      | Toasty
       - wifi        | wifi、热点工具类
    - common         | java工具类, 不依赖android api
       - assist      | 各种快捷辅助类
@@ -71,7 +70,6 @@ DevUtils.openDebug();
       - [player](#devutilsappplayer)               | 多媒体(视频、音频)播放封装
       - [share](#devutilsappshare)                 | SharedPreferences 封装
       - [toast](#devutilsapptoast)                 | Toast
-         - [cus](#devutilsapptoastcus)             | Toasty
       - [wifi](#devutilsappwifi)                   | wifi、热点工具类
    - [common](#devutilscommon)                     | java工具类, 不依赖android api
       - [assist](#devutilscommonassist)            | 各种快捷辅助类
@@ -1704,10 +1702,42 @@ DevUtils.openDebug();
 ## <span id="devutilsapptoast">**`dev.utils.app.toast`**</span>
 
 
-* **Simple Toast 工具类(简单的 Toast 工具类, 直接使用系统Toast) ->** [ToastUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/toast/ToastUtils.java)
+* **自定义View着色美化 Toast 工具类 ->** [ToastTintUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/toast/ToastTintUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
+| reset | 重置默认参数 |
+| setIsHandler | 设置是否使用 Handler 显示 Toast |
+| setNullText | 设置 Text 为 null 的文本 |
+| setGravity | 设置 Toast 显示在屏幕上的位置。 |
+| setMargin | 设置边距 |
+| getNormalStyle | 获取 Normal 样式 |
+| getInfoStyle | 获取 Info 样式 |
+| getWarningStyle | 获取 Warning 样式 |
+| getErrorStyle | 获取 Error 样式 |
+| getSuccessStyle | 获取 Success 样式 |
+| setNormalStyle | 设置 Normal 样式 |
+| setInfoStyle | 设置 Info 样式 |
+| setWarningStyle | 设置 Warning 样式 |
+| setErrorStyle | 设置 Error 样式 |
+| setSuccessStyle | 设置 Success 样式 |
+| getInfoDrawable | 获取 Info 样式 icon |
+| getWarningDrawable | 获取 Warning 样式 icon |
+| getErrorDrawable | 获取 Error 样式 icon |
+| getSuccessDrawable | 获取 Success 样式 icon |
+| normal | normal 样式 Toast |
+| info | info 样式 Toast |
+| warning | warning 样式 Toast |
+| error | error 样式 Toast |
+| success | success 样式 Toast |
+| custom | custom Toast |
+
+
+* **Simple Toast 工具类(简单的 Toast 工具类, 支持子线程弹出 Toast) ->** [ToastUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/toast/ToastUtils.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| reset | 重置默认参数 |
 | setIsHandler | 设置是否使用 Handler 显示 Toast |
 | setNullText | 设置 Text 为 null 的文本 |
 | setGravity | 设置 Toast 显示在屏幕上的位置。 |
@@ -1721,54 +1751,6 @@ DevUtils.openDebug();
 | newToastText | 获取一个新的 Text Toast |
 | showToastView | 显示 View Toast 方法 |
 | newToastView | 获取一个新的 View Toast |
-
-
-## <span id="devutilsapptoastcus">**`dev.utils.app.toast.cus`**</span>
-
-
-* **Toast 工具类(美化后,使用Layout显示) ->** [Toasty.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/toast/cus/Toasty.java)
-
-| 方法 | 注释 |
-| :- | :- |
-| normal | 显示 normal 样式 Toast |
-| warning | 显示 warning 样式 Toast |
-| info | 显示 info 样式 Toast |
-| success | 显示 success 样式 Toast |
-| error | 显示 error 样式 Toast |
-| custom | 显示 通用自定义Toast |
-| showToasty | 最终显示Toast方法 |
-| getInstance | 获取 Toasty 配置实例 |
-| setTextColor | 设置 Toast 默认字体颜色 |
-| setErrorColor | 设置 Toast Error 字体颜色 |
-| setInfoColor | 设置 Toast Info 字体颜色 |
-| setSuccessColor | 设置 Toast Success 字体颜色 |
-| setWarningColor | 设置 Toast Warning 字体颜色 |
-| setToastTypeface | 设置 Toast 字体(样式) |
-| setTextSize | 设置 Toast 字体大小 |
-| setTintIcon | 设置图标是否着色 |
-| setNewToast | 是否使用新的 Toast |
-| getTextColor | 获取 Toast 默认字体颜色 |
-| getNormalColor | 获取 Toast Normal 字体颜色 |
-| getErrorColor | 获取 Toast Error 字体颜色 |
-| getInfoColor | 获取 Toast Info 字体颜色 |
-| getSuccessColor | 获取 Toast Success 字体颜色 |
-| getWarningColor | 获取 Toast Warning 字体颜色 |
-| getTypeface | 获取 Toast 字体(样式) |
-| getTextSize | 获取 Toast 字体大小 |
-| isTintIcon | 获取图片是否着色 |
-| isNewToast | 是否使用新的 Toast |
-| apply | 应用配置参数生效 |
-| reset | 重置默认参数 |
-
-
-* **Toasty 快捷操作工具类 ->** [ToastyUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/toast/cus/ToastyUtils.java)
-
-| 方法 | 注释 |
-| :- | :- |
-| tintIcon | 图片着色 |
-| tint9PatchDrawableFrame | .9 图片着色 |
-| setBackground | 设置背景 |
-| getDrawable | 获取 Drawable |
 
 
 ## <span id="devutilsappwifi">**`dev.utils.app.wifi`**</span>
