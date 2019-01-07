@@ -1709,8 +1709,10 @@ DevUtils.openDebug();
 | reset | 重置默认参数 |
 | setIsHandler | 设置是否使用 Handler 显示 Toast |
 | setNullText | 设置 Text 为 null 的文本 |
+| setUseConfig | 判断是否使用配置 |
 | setGravity | 设置 Toast 显示在屏幕上的位置。 |
 | setMargin | 设置边距 |
+| getDefaultStyle | 获取默认样式 |
 | getNormalStyle | 获取 Normal 样式 |
 | getInfoStyle | 获取 Info 样式 |
 | getWarningStyle | 获取 Warning 样式 |
@@ -1740,6 +1742,7 @@ DevUtils.openDebug();
 | reset | 重置默认参数 |
 | setIsHandler | 设置是否使用 Handler 显示 Toast |
 | setNullText | 设置 Text 为 null 的文本 |
+| setUseConfig | 判断是否使用配置 |
 | setGravity | 设置 Toast 显示在屏幕上的位置。 |
 | setMargin | 设置边距 |
 | showShort | 显示 LENGTH_SHORT Toast |
