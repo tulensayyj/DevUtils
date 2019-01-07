@@ -2140,6 +2140,7 @@ DevUtils.openDebug();
 | requireNonNull | 检查对象非空 |
 | getOrDefault | 获取非空或默认对象 |
 | hashCode | 获取对象哈希值 |
+| getObjectTag | 获取一个对象的独一无二的标记 |
 | converObj | 获取转换对象 |
 
 
