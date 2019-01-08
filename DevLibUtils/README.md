@@ -19,6 +19,7 @@
       - player      | 多媒体(视频、音频)播放封装
       - share       | SharedPreferences 封装
       - toast       | Toast
+         - toaster  | Toaster 处理无通知权限
       - wifi        | wifi、热点工具类
    - common         | java工具类, 不依赖android api
       - assist      | 各种快捷辅助类
@@ -70,6 +71,7 @@ DevUtils.openDebug();
       - [player](#devutilsappplayer)               | 多媒体(视频、音频)播放封装
       - [share](#devutilsappshare)                 | SharedPreferences 封装
       - [toast](#devutilsapptoast)                 | Toast
+         - [toaster](#devutilsapptoasttoaster)     | Toaster 处理无通知权限
       - [wifi](#devutilsappwifi)                   | wifi、热点工具类
    - [common](#devutilscommon)                     | java工具类, 不依赖android api
       - [assist](#devutilscommonassist)            | 各种快捷辅助类
@@ -1754,6 +1756,28 @@ DevUtils.openDebug();
 | newToastText | 获取一个新的 Text Toast |
 | showToastView | 显示 View Toast 方法 |
 | newToastView | 获取一个新的 View Toast |
+
+
+## <span id="devutilsapptoasttoaster">**`dev.utils.app.toast.toaster`**</span>
+
+
+* **Toast 工具类 (支持子线程弹出 Toast, 处理无通知权限) ->** [DevToast.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/toast/toaster/DevToast.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| reset | 重置默认参数 |
+| setIsHandler | 设置是否使用 Handler 显示 Toast |
+| setNullText | 设置 Text 为 null 的文本 |
+| setTextLength | 设置 Toast 文案长度转换 显示时间 |
+| init | Application 初始化调用 (必须调用 -> 内部已经调用) |
+| style | 使用单次 Toast 样式配置 |
+| defaultStyle | 使用默认 Toast 样式 |
+| getToastStyle | 获取 Toast 样式配置 |
+| initStyle | 初始化 Toast 样式配置(非单次,一直持续) |
+| initToastFilter | 初始化 Toast 过滤器 |
+| setView | 设置 Toast 显示的View |
+| show | 显示 Toast |
+| cancel | 取消当前显示的 Toast |
 
 
 ## <span id="devutilsappwifi">**`dev.utils.app.wifi`**</span>
