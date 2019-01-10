@@ -1709,6 +1709,7 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | reset | 重置默认参数 |
+| setToastFilter | 设置 Toast 过滤器 |
 | setIsHandler | 设置是否使用 Handler 显示 Toast |
 | setNullText | 设置 Text 为 null 的文本 |
 | setUseConfig | 判断是否使用配置 |
@@ -1742,6 +1743,7 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | reset | 重置默认参数 |
+| setToastFilter | 设置 Toast 过滤器 |
 | setIsHandler | 设置是否使用 Handler 显示 Toast |
 | setNullText | 设置 Text 为 null 的文本 |
 | setUseConfig | 判断是否使用配置 |
@@ -1972,7 +1974,9 @@ DevUtils.openDebug();
 | getSecond | 获取秒 |
 | convertTime | 转换时间处理, 小于10, 则自动补充 0x |
 | isLeapYear | 判断是否闰年 |
-| getMonthDayNumber | 获取月份 - 对应天数 |
+| getMonthDayNumberAll | 根据年份、月份，获取对应的天数 (完整天数, 无判断是否属于未来日期) |
+| getYearMonthNumber | 根据年份，获取对应的月份 |
+| getMonthDayNumber | 根据年份、月份，获取对应的天数 |
 | secToTimeRetain | 传入时间，获取时间(00:00:00 格式) - 不处理大于一天 |
 | convertTimeArys | 传入时间,时间参数(小时、分钟、秒) |
 | millis2FitTimeSpan | 转换时间 |
