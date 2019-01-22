@@ -1058,6 +1058,33 @@ DevUtils.openDebug();
 | onGetSize | 获取到 View 尺寸 通知 |
 
 
+* **Snackbar 工具类 ->** [SnackbarUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/SnackbarUtils.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| with | 获取 SnackbarUtils 对象 |
+| getStyle | 获取样式 |
+| setStyle | 设置样式 |
+| getSnackbar | 获取 Snackbar |
+| getSnackbarView | 获取 Snackbar View |
+| getTextView | 获取 Snackbar TextView(snackbar_text) |
+| getActionButton | 获取 Snackbar Action Button(snackbar_action) |
+| addView | 向 Snackbar 布局中添加View (Google不建议,复杂的布局应该使用DialogFragment进行展示) |
+| setCallback | 设置 Snackbar 展示完成 及 隐藏完成 的监听 |
+| setAction | 设置 Action 按钮文字内容 及 点击监听 |
+| dismiss | 关闭 Snackbar |
+| showShort | 显示 Short Snackbar |
+| showLong | 显示 Long Snackbar |
+| showIndefinite | 显示 Indefinite Snackbar (无限时, 一直显示) |
+| setSnackbarStyle | 设置 Snackbar 样式配置 |
+| getShadowMargin | 获取阴影边距 |
+| setShadowMargin | 设置阴影边距 |
+| isAutoCalc | 判断是否自动计算边距 (如: 显示在 View 下面, 但是下方距离不够, 自动设置为在 View 上方显示) |
+| setAutoCalc | 设置是否自动计算边距 (如: 显示在 View 下面, 但是下方距离不够, 自动设置为在 View 上方显示) |
+| above | 设置 Snackbar 显示在指定 View 的上方 |
+| bellow | 设置 Snackbar 显示在指定 View 的下方 |
+
+
 * **颜色状态列表 工具类 ->** [StateListUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/StateListUtils.java)
 
 | 方法 | 注释 |
@@ -1124,7 +1151,7 @@ DevUtils.openDebug();
 | removeSelfFromParent | 把自身从父View中移除 |
 | isTouchInView | 判断触点是否落在该View上 |
 | requestLayoutParent | View 改变请求 |
-| measureView | 测量 view |
+| measureView | 测量 View |
 | getViewWidth | 获取view的宽度 |
 | getViewHeight | 获取view的高度 |
 | getActivity | 获取 View 的 Context |
@@ -1939,7 +1966,7 @@ DevUtils.openDebug();
 | chars2Bytes | char 数组 转换 byte 数组 |
 
 
-* **坐标相关工具类 ->** [CoordinateUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/CoordinateUtils.java)
+* **坐标相关工具类 - GPS 纠偏 ->** [CoordinateUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/CoordinateUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
