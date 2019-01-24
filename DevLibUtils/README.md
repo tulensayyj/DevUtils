@@ -36,9 +36,9 @@
 
 - 内部存在两个日志工具类(工具类内部调用)， 对外使用 [DevLogger](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/logger/DevLogger.java)
 
-```java
-// 整个工具类内部日志信息, 都通过以下两个工具类输出打印, 并且通过 DevUtils.openLog() 控制开关
+- 整个工具类内部日志信息, 都通过以下两个工具类输出打印, 并且通过 DevUtils.openLog() 控制开关
 
+```java
 // dev.utils.app - App 打印日志工具类
 LogPrintUtils
 // dev.utils.common - Java Common 日志打印工具类
@@ -47,7 +47,7 @@ JCLogUtils
 
 - 需要开启日志, 单独调用
 ```java
-// 打开 lib 内部日志 -  线上环境, 不调用方法就行
+// 打开 lib 内部日志 - 线上环境, 不调用方法就行
 DevUtils.openLog();
 // 标示 debug 模式
 DevUtils.openDebug();
