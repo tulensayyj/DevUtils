@@ -118,6 +118,7 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
+| getActivityByView | 返回 View context 所属的 Activity |
 | isActivityExists | 判断是否存在指定的Activity |
 | startHomeActivity | 回到桌面 -> 同点击Home键效果 |
 | getLauncherActivity | 获取 Launcher activity |
@@ -937,7 +938,7 @@ DevUtils.openDebug();
 | isTablet | 判断是否是平板 |
 | getStatusHeight | 获取状态栏的高度(无关 android:theme 获取状态栏高度) |
 | getStatusBarHeight | 获取应用区域 TitleBar 高度 (顶部灰色TitleBar高度，没有设置 android:theme 的 NoTitleBar 时会显示) |
-| setSleepDuration | 设置进入休眠时长 - 需添加权限 <uses-permission android:name="android.permission.WRITE_SETTINGS" /> |
+| setSleepDuration | 设置进入休眠时长 |
 | getSleepDuration | 获取进入休眠时长 |
 | snapShotWithStatusBar | 获取当前屏幕截图，包含状态栏 (顶部灰色TitleBar高度，没有设置 android:theme 的 NoTitleBar 时会显示) |
 | snapShotWithoutStatusBar | 获取当前屏幕截图，不包含状态栏 (如果 android:theme 全屏了，则截图无状态栏) |
@@ -1255,7 +1256,6 @@ DevUtils.openDebug();
 | finishActivity | 结束最后一个(当前)Activity |
 | finishAllActivityToIgnore | 结束全部Activity 除忽略的页面外 |
 | finishAllActivity | 结束所有Activity |
-| appExitRestart | 退出应用程序, 并重启 |
 | appExit | 退出应用程序 |
 | restartApplication | 重启 App |
 
