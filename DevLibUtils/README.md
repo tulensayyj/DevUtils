@@ -417,7 +417,7 @@ DevUtils.openDebug();
 | getIntent | 获取剪贴板的意图 |
 
 
-* **颜色工具类 包括常用的色值 ->** [ColorsUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/ColorsUtils.java)
+* **颜色工具类 包括常用的色值 ->** [ColorUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/ColorUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
