@@ -2653,7 +2653,7 @@ DevUtils.openDebug();
 | decrypt | 3DES 解密 |
 
 
-* **异或加密工具类 ->** [XorUtil.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/encrypt/XorUtil.java)
+* **异或加密工具类 ->** [XorUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/encrypt/XorUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
