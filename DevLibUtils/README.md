@@ -417,6 +417,42 @@ DevUtils.openDebug();
 | getIntent | 获取剪贴板的意图 |
 
 
+* **颜色工具类 包括常用的色值 ->** [ColorsUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/ColorsUtils.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| getColor | 根据颜色资源Id，获取颜色 |
+| percent | 计算百分比值 |
+| clamp | 返回的 value 介于 max、min之间，若 value 小于min，返回min，若大于max，返回max |
+| alpha | 返回一个颜色中的透明度值(返回10进制) |
+| alphaPercent | 返回一个颜色中的透明度百分比值 |
+| red | 返回一个颜色中红色的色值(返回10进制) |
+| redPercent | 返回一个颜色中红色的百分比值 |
+| green | 返回一个颜色中绿色的色值(返回10进制) |
+| greenPercent | 返回一个颜色中绿色的百分比值 |
+| blue | 返回一个颜色中蓝色的色值(返回10进制) |
+| bluePercent | 返回一个颜色中蓝色的百分比值 |
+| rgb | 根据对应的 red、green、blue 生成一个颜色值 |
+| argb | 根据对应的 alpha, red、green、blue 生成一个颜色值 (含透明度) |
+| isRGB | 判断颜色 RGB 是否有效 |
+| isARGB | 判断颜色 ARGB 是否有效 |
+| setAlpha | 设置透明度 |
+| setRed | 改变颜色值中的红色色值 |
+| setGreen | 改变颜色值中的绿色色值 |
+| setBlue | 改变颜色值中的蓝色色值 |
+| parseColor | 解析颜色字符串, 返回对应的颜色值 |
+| int2RgbString | 颜色值 转换 RGB颜色 字符串 |
+| int2ArgbString | 颜色值 转换 ARGB颜色 字符串 |
+| getRandomColor | 获取随机颜色值 |
+| judgeColorString | 判断是否为ARGB格式的十六进制颜色，例如：FF990587 |
+| intToDrawable | 将10进制颜色（Int）转换为Drawable对象 |
+| stringToDrawable | 将16进制颜色（String）转化为Drawable对象 |
+| setDark | 颜色加深(单独修改 RGB值, 不变动透明度) |
+| setLight | 颜色变浅, 变亮(单独修改 RGB值, 不变动透明度) |
+| setAlphaDark | 设置透明度加深 |
+| setAlphaLight | 设置透明度变浅 |
+
+
 * **ContentResolver 工具类 ->** [ContentResolverUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/ContentResolverUtils.java)
 
 | 方法 | 注释 |
@@ -2021,6 +2057,9 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
+| percent | 计算百分比值 (最大 100%) |
+| percent2 | 计算百分比值 (可超出 100%) |
+| clamp | 返回的 value 介于 max、min之间，若 value 小于min，返回min，若大于max，返回max |
 | getFormatString | 获取格式化字符串 |
 | getFormatString2 | 获取格式化字符串 |
 | isHttpRes | 判断是否网络资源 |
