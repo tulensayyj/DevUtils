@@ -458,7 +458,6 @@ DevUtils.openDebug();
 | :- | :- |
 | getSysLanguage | 获取当前操作系统的语言 |
 | getDeviceInfo | 获取设备信息 |
-| getDeviceInfo2 | 获取设备信息 |
 | handlerDeviceInfo | 处理设备信息 |
 | getSDKVersionName | 获取设备系统版本号 |
 | getSDKVersion | 获取当前SDK 版本号 |
