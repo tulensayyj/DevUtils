@@ -1261,18 +1261,6 @@ DevUtils.openDebug();
 | restartApplication | 重启 App |
 
 
-* **线程管理类 - 统一使用DevThreadManager, 抛弃该类 ->** [ThreadManager.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/assist/manager/ThreadManager.java)
-
-| 方法 | 注释 |
-| :- | :- |
-| getInstance | 获取 ThreadManager 实例 ,单例模式 |
-| addTask | 加入到线程池任务队列 |
-| shutdown | shutdown() 会等待所有提交的任务执行完成，不管是正在执行还是保存在任务队列中的已提交任务 |
-| shutdownNow | shutdownNow 会尝试中断正在执行的任务(其主要是中断一些指定方法如sleep方法)，并且停止执行等待队列中提交的任务。 |
-| isShutdown | isShutDown 当调用 shutdown() 方法后返回为true。 |
-| isTerminated | 若关闭后所有任务都已完成,则返回true. |
-
-
 * **定时器工具类 ->** [TimerManager.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/assist/manager/TimerManager.java)
 
 | 方法 | 注释 |
