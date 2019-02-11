@@ -337,7 +337,7 @@ DevUtils.openDebug();
 | getAppSignatureSHA256 | 获取应用签名的的 SHA256 值 |
 | getAppSignatureMD5 | 获取应用签名的的 MD5 值 |
 | openPDFFile | 启动本地应用打开PDF |
-| openWordFile | 启动本地应用打开PDF |
+| openWordFile | 启动本地应用打开Word |
 | openOfficeByWPS | 调用WPS打开office文档 |
 
 
