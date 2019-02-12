@@ -2243,13 +2243,13 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| nextBoolean | nextBoolean |
-| nextBytes | nextBytes |
-| nextDouble | nextDouble |
-| nextGaussian | nextGaussian |
-| nextFloat | nextFloat |
-| nextInt | nextInt |
-| nextLong | nextLong |
+| nextBoolean | 获取伪随机 boolean 值 |
+| nextBytes | 获取伪随机 byte[] |
+| nextDouble | 获取伪随机 double 值 |
+| nextGaussian | 获取伪随机高斯分布值 |
+| nextFloat | 获取伪随机 float 值 |
+| nextInt | 获取伪随机 int 值 |
+| nextLong | 获取伪随机 long 值 |
 | getRandomNumbers | 获取数字自定义长度的随机数 |
 | getRandomLowerCaseLetters | 获取小写字母自定义长度的随机数 |
 | getRandomCapitalLetters | 获取大写字母自定义长度的随机数 |
