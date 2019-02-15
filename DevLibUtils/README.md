@@ -403,6 +403,9 @@ DevUtils.openDebug();
 | initConfig | 初始化配置信息 |
 | putConfig | 添加配置信息 |
 | removeConfig | 移除配置信息 |
+| removeRecord | 移除点击记录 |
+| clearRecord | 清空点击记录 |
+| addTouchArea | 增加控件的触摸范围，最大范围只能是父布局所包含的的区域 |
 
 
 * **剪贴板相关工具类 ->** [ClipboardUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/ClipboardUtils.java)
@@ -1137,6 +1140,7 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | getContext | 获取 Context |
+| getView | 获取 View |
 | isEmpty | 判断View 是否为null |
 | isVisibility | 判断View 是否显示 |
 | isVisibilitys | 判断 View 是否都显示显示 |
@@ -2032,6 +2036,7 @@ DevUtils.openDebug();
 | secToTimeRetain | 传入时间，获取时间(00:00:00 格式) - 不处理大于一天 |
 | convertTimeArys | 传入时间,时间参数(小时、分钟、秒) |
 | millis2FitTimeSpan | 转换时间 |
+| millis2TimeArys | 转换时间为数组 |
 | isInTimeHHmm | 判断时间是否在[startTime, endTime]区间，注意时间格式要一致 |
 | isInTimeHHmmss | 判断时间是否在[startTime, endTime]区间，注意时间格式要一致 |
 | isInTime | 判断时间是否在[startTime, endTime]区间，注意时间格式要一致 |
