@@ -291,6 +291,8 @@ DevUtils.openDebug();
 | isN | 是否在7.0版本及以上 |
 | isN_MR1 | 是否在7.1.1版本及以上 |
 | isO | 是否在8.0版本及以上 |
+| isO_MR1 | 是否在8.1版本及以上 |
+| isP | 是否在9.0版本及以上 |
 | convertSDKVersion | 转换SDK版本 (convertSDKVersion(14) => Android 4.0.0-2) |
 
 
