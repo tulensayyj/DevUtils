@@ -1261,6 +1261,7 @@ DevUtils.openDebug();
 | removeActivity | 移除 Activity |
 | currentActivity | 获取最后一个(当前)Activity |
 | finishActivity | 结束最后一个(当前)Activity |
+| existActivitys | 检测是否包含指定的 Activity |
 | finishAllActivityToIgnore | 结束全部Activity 除忽略的页面外 |
 | finishAllActivity | 结束所有Activity |
 | appExit | 退出应用程序 |
