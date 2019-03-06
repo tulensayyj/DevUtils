@@ -493,6 +493,10 @@ DevUtils.openDebug();
 | createProgressDialog | 创建加载中 Dialog (原生样式) |
 | autoCloseDialog | 自动关闭dialog |
 | autoClosePopupWindow | 自动关闭 PopupWindow |
+| createSingleChoiceListDialog | 创建单选列表样式 Dialog |
+| createSingleChoiceDialog | 创建单选样式 Dialog |
+| createMultiChoiceDialog | 创建多选样式 Dialog |
+| createViewDialog | 创建自定义 View 样式 Dialog |
 
 
 * **EditText 工具类 ->** [EditTextUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/EditTextUtils.java)
