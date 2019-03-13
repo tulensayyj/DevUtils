@@ -319,7 +319,6 @@ DevUtils.openDebug();
 | getAppName | 获取 App 名 |
 | getAppVersionName | 获取 App 版本名 - 对外显示 |
 | getAppVersionCode | 获取 App 版本号 - 内部判断 |
-| setLanguage | 对内设置指定语言 (App 多语言,单独改变 App 语言) |
 | installApp | 安装 App(支持 8.0)的意图 |
 | installAppSilent | 静默安装 App |
 | uninstallApp | 卸载 App |
@@ -461,7 +460,6 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| getSysLanguage | 获取当前操作系统的语言 |
 | getDeviceInfo | 获取设备信息 |
 | handlerDeviceInfo | 处理设备信息 |
 | getSDKVersionName | 获取设备系统版本号 |
@@ -485,10 +483,11 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| closeDialog | 关闭Dialog |
-| closeDialogs | 关闭多个Dialog |
-| closePopupWindow | 关闭PopupWindow |
-| closePopupWindows | 关闭多个PopupWindow |
+| showDialog | 显示 Dialog |
+| closeDialog | 关闭 Dialog |
+| closeDialogs | 关闭多个 Dialog |
+| closePopupWindow | 关闭 PopupWindow |
+| closePopupWindows | 关闭多个 PopupWindow |
 | createAlertDialog | 创建提示 Dialog (原生样式) |
 | createProgressDialog | 创建加载中 Dialog (原生样式) |
 | autoCloseDialog | 自动关闭dialog |
@@ -652,6 +651,20 @@ DevUtils.openDebug();
 | newKeyguardLock | 生成一个新的 KeyguardLock, 并且设置 Tag |
 | getKeyguardLock | 获取 KeyguardManager.KeyguardLock |
 | setKeyguardLock | 设置 KeyguardManager.KeyguardLock |
+
+
+* **语言工具类 ->** [LanguageUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/LanguageUtils.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| getSystemLanguage | 获取系统语言 |
+| getSystemPreferredLanguage | 获取系统首选语言 |
+| applyLanguage | 修改系统语言 (App 多语言,单独改变 App 语言) |
+| getSupportLanguages | 获取支持的语言 |
+| putSupportLanguage | 添加支持的语言 |
+| removeSupportLanguage | 移除支持的语言 |
+| isSupportLanguage | 是否支持此语言 |
+| getSupportLanguage | 获取支持语言 |
 
 
 * **事件工具类 ->** [ListenerUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/ListenerUtils.java)
@@ -899,6 +912,7 @@ DevUtils.openDebug();
 | getString | 获取字符串 |
 | getColor | 获取 Color |
 | getDrawable | 获取 Drawable |
+| getDimension | 获取 Dimen 资源 |
 | getResourceId | 根据资源名获取资源id |
 | getDrawableId2 | 获取 drawable id |
 | getLayoutId | 获取 layout 布局文件 id |
@@ -1113,9 +1127,13 @@ DevUtils.openDebug();
 | getText | 获取文本 |
 | setBold | 设置是否加粗 |
 | setTextColor | 设置字体颜色 |
+| setTypeface | 设置字体 |
+| setUnderlineText | 设置下划线 |
+| setUnderlineTextToAntiAlias | 设置下划线并加清晰 |
+| setStrikeThruText | 设置中划线 |
+| setStrikeThruTextToAntiAlias | 设置中划线并加清晰 |
 | setText | 设置内容 |
 | setHtmlText | 设置 Html 内容 |
-| setTVUnderLine | 给TextView设置下划线 |
 | getTextHeight | 获取字体高度 |
 | getTextTopOffsetHeight | 获取字体顶部偏移高度 |
 | getTextWidth | 计算字体宽度 |
@@ -2023,6 +2041,7 @@ DevUtils.openDebug();
 | formatDate | 将Date类型转换日期字符串 |
 | parseDate | 将时间戳转换成Date类型 |
 | parseLong | 解析时间字符串转换为long毫秒 - 默认表示time 属于 yyyy-MM-dd HH:mm:ss 格式 |
+| parseToString | 转换时间为指定字符串 |
 | getTimeDiffMinute | 获取时间差 - 分钟 |
 | getTimeDiffHour | 获取时间差 - 小时 |
 | getTimeDiffDay | 获取时间差 - 天 |
