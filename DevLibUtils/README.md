@@ -1128,10 +1128,9 @@ DevUtils.openDebug();
 | setBold | 设置是否加粗 |
 | setTextColor | 设置字体颜色 |
 | setTypeface | 设置字体 |
+| clearFlags | 清空 flags |
 | setUnderlineText | 设置下划线 |
-| setUnderlineTextToAntiAlias | 设置下划线并加清晰 |
 | setStrikeThruText | 设置中划线 |
-| setStrikeThruTextToAntiAlias | 设置中划线并加清晰 |
 | setText | 设置内容 |
 | setHtmlText | 设置 Html 内容 |
 | getTextHeight | 获取字体高度 |
@@ -2059,6 +2058,13 @@ DevUtils.openDebug();
 | getMonthDayNumberAll | 根据年份、月份，获取对应的天数 (完整天数, 无判断是否属于未来日期) |
 | getYearMonthNumber | 根据年份，获取对应的月份 |
 | getMonthDayNumber | 根据年份、月份，获取对应的天数 |
+| getArrayToHH | 生成 HH 按时间排序数组 |
+| getListToHH | 生成 HH 按时间排序集合 |
+| getArrayToMM | 生成 MM 按时间排序数组 |
+| getListToMM | 生成 MM 按时间排序集合 |
+| getArrayToHHMM | 生成 HH:mm 按间隔时间排序数组 |
+| getListToHHMM | 生成 HH:mm 按间隔时间排序集合 |
+| getListToHHMMPosition | 获取 HH:mm 按间隔时间排序的集合中, 指定时间所在索引 |
 | secToTimeRetain | 传入时间，获取时间(00:00:00 格式) - 不处理大于一天 |
 | convertTimeArys | 传入时间,时间参数(小时、分钟、秒) |
 | millis2FitTimeSpan | 转换时间 |
