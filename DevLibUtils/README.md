@@ -619,6 +619,16 @@ DevUtils.openDebug();
 | openWirelessSettings | 打开网络设置界面 - 3.0以下打开设置界面 |
 
 
+* **Android 原生 JSONObject 工具类 ->** [JSONObjectUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/JSONObjectUtils.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| toJson | 转换为 JSON 格式字符串 |
+| fromJson | Object 转换 JSON 对象 |
+| wrap | 包装转换 Object - {@link JSONObject#wrap(Object)} |
+| stringJSONEscape | 字符串 JSON 转义处理 |
+
+
 * **软键盘相关辅助类 ->** [KeyBoardUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/KeyBoardUtils.java)
 
 | 方法 | 注释 |
