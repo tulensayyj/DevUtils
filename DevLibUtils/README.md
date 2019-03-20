@@ -1183,7 +1183,8 @@ DevUtils.openDebug();
 | getVisibilityIN | 获取显示的状态 (View.VISIBLE : View.INVISIBLE) |
 | setVisibility | 设置View显示状态 |
 | setVisibilitys | 设置View 显示的状态 |
-| toggleVisibilitys | 切换View 显示的状态 |
+| toggleVisibilitys | 切换 View 显示的状态 |
+| reverseVisibilitys | 反转 View 显示的状态 |
 | toogleView | 切换View状态 |
 | setViewImageRes | 设置View 图片资源 |
 | findViewById | 初始化View |
