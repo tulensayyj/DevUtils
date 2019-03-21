@@ -2779,6 +2779,7 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | isEmpty | 判断是否为null |
+| match | 通用匹配函数 |
 | isNumber | 检验数字 |
 | isLetter | 判断字符串是不是全是字母 |
 | isNumberLetter | 判断字符串是不是只含字母和数字 |
@@ -2795,17 +2796,6 @@ DevUtils.openDebug();
 | isChinese | 校验汉字(无符号,纯汉字) |
 | isChineseAll | 判断字符串是不是全是中文 |
 | isContainChinese | 判断字符串中包含中文、包括中文字符标点等 |
-
-
-* **检验身份证工具类 ->** [ValiToIDCardUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/validator/ValiToIDCardUtils.java)
-
-| 方法 | 注释 |
-| :- | :- |
-| isEmpty | 判断是否为null |
-| isIDCard | 校验身份证 |
-| isHKIDCard | 校验身份证 -> 香港 |
-| isAMIDCard | 校验身份证 -> 澳门 |
-| isTWIDCard | 校验身份证 -> 台湾 |
 
 
 * **检验联系(手机号,座机)工具类 ->** [ValiToPhoneUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/validator/ValiToPhoneUtils.java)
