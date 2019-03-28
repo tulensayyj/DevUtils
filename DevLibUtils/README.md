@@ -304,10 +304,11 @@ DevUtils.openDebug();
 | getView | 获取 View |
 | getResources | 获取 Resources |
 | getString | 获取 String |
+| getColor | 获取 Color |
+| getDrawable | 获取 Drawable |
+| getDimension | 获取 Dimen 资源 |
 | getTheme | 获取 Resources.Theme |
 | getAssets | 获取 AssetManager |
-| getDrawable | 获取 Drawable |
-| getColor | 获取 Color |
 | getColorStateList | 获取 ColorStateList |
 | getSystemService | 获取 SystemService |
 | getPackageManager | 获取 PackageManager |
@@ -336,7 +337,7 @@ DevUtils.openDebug();
 | getAppSignature | 获取 App 签名 |
 | getAppSignatureSHA1 | 获取 App sha1值 |
 | getAppSignatureSHA256 | 获取应用签名的的 SHA256 值 |
-| getAppSignatureMD5 | 获取应用签名的的 MD5 值 |
+| getAppSignatureMD5 | 获取应用签名 MD5 值 |
 | openPDFFile | 启动本地应用打开PDF |
 | openWordFile | 启动本地应用打开Word |
 | openOfficeByWPS | 调用WPS打开office文档 |
@@ -919,15 +920,19 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
+| getResources | 获取 Resources |
+| getTheme | 获取 Resources.Theme |
+| getAssets | 获取 AssetManager |
+| getColorStateList | 获取 ColorStateList |
 | getString | 获取字符串 |
 | getColor | 获取 Color |
 | getDrawable | 获取 Drawable |
 | getDimension | 获取 Dimen 资源 |
 | getResourceId | 根据资源名获取资源id |
-| getDrawableId2 | 获取 drawable id |
 | getLayoutId | 获取 layout 布局文件 id |
 | getStringId | 获取 string id |
 | getDrawableId | 获取 drawable id |
+| getDrawableId2 | 获取 drawable id |
 | getMipmapId | 获取 mipmap id |
 | getStyleId | 获取 style id |
 | getStyleableId | 获取 styleable id |
@@ -948,6 +953,7 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
+| getDisplayMetrics | 获取 DisplayMetrics |
 | getScreenWidth | 获取屏幕的宽度(单位：px) |
 | getScreenHeight | 获取屏幕的高度(单位：px) |
 | getScreenWidthHeightToPoint | 通过 Context 获取屏幕宽度高度 |
@@ -1280,7 +1286,7 @@ DevUtils.openDebug();
 ## <span id="devutilsappassistmanager">**`dev.utils.app.assist.manager`**</span>
 
 
-* **应用程序Activity管理类：用于Activity管理和应用程序 ->** [ActivityManager.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/assist/manager/ActivityManager.java)
+* **应用程序 Activity 管理类：用于 Activity 管理和应用程序 ->** [ActivityManager.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/assist/manager/ActivityManager.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -1889,6 +1895,7 @@ DevUtils.openDebug();
 | formatSSID | 判断是否存在\"ssid\"，存在则裁剪返回 |
 | getPassword | 获取密码(经过处理) |
 | isHexWepKey | 判断是否 wep 加密 |
+| isHex | 判断是否 十六进制 |
 | getWifiType | 获取加密类型(int常量) - 判断String |
 | getWifiTypeInt | 获取加密类型(int常量) - 判断int(String) |
 | getWifiTypeStr | 获取加密类型(String) |
@@ -1905,16 +1912,6 @@ DevUtils.openDebug();
 
 
 ## <span id="devutilscommon">**`dev.utils.common`**</span>
-
-
-* **快捷辅助工具类 ->** [AssistUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/AssistUtils.java)
-
-| 方法 | 注释 |
-| :- | :- |
-| randomUUID | 获取随机唯一数 |
-| randomUUIDToHashCode | 获取随机唯一数 HashCode |
-| getRandomUUID | 获取随机数 唯一id |
-| whileMD5 | 循环MD5 加密处理 |
 
 
 * **资金运算工具类 ->** [BigDecimalUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/BigDecimalUtils.java)
@@ -1937,13 +1934,13 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| byteJiaMi | (01)、位移加密、解密，调同一个方法 |
+| byteJiaMi | 位移 加/解密 （共用同一个方法） |
 | hexStrToByteArray | 字符串转数组 |
-| cutOut | (02)、从bytes上截取一段 |
-| byteToBit | 将字节转换为二进制字符串 |
-| bits2Bytes | 二进制字符串, 转换成byte数组 |
-| getHex | 字节数组转换成16进制字符串 |
-| subBytes | 从一个byte[]数组中截取一部分 |
+| cutOut | 从 byte[] 上截取一段 |
+| byteToBit | 将 字节转换 为 二进制字符串 |
+| bitToByte | 二进制字符串, 转换成 byte[] |
+| getHex | 字节数组转换成 16进制字符串 |
+| subBytes | 从一个 byte[] 中截取一部分 |
 | byteToObject | byte[] 转为 对象 |
 | objectToByte | 对象 转为 byte[] |
 
@@ -2099,6 +2096,8 @@ DevUtils.openDebug();
 | getFormatString2 | 获取格式化字符串 |
 | isHttpRes | 判断是否网络资源 |
 | isSpace | 判断字符串是否为 null 或全为空白字符 |
+| getSpace | 获取空格 |
+| getTab | 获取 Tab |
 | isEmpty | 判断是否为null |
 | isTrimEmpty | 判断字符串是否为 null 或全为空格 |
 | isEmptyObjs | 判读是否为null to 可变数组 |
@@ -2279,6 +2278,10 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
+| randomUUID | 获取随机唯一数 |
+| randomUUIDToHashCode | 获取随机唯一数 HashCode |
+| getRandomUUID | 获取随机数 唯一id |
+| whileMD5 | 循环 MD5 加密处理 |
 | converHideMobile | 转换手机号 |
 | timeRecord | 耗时时间记录 |
 | getFormatString | 获取格式化字符串(可变参数) |
@@ -2393,6 +2396,7 @@ DevUtils.openDebug();
 | :- | :- |
 | length | 获取长度，如果字符串为null,则返回0 |
 | isEmpty | 判断是否为null |
+| isSpace | 判断字符串是否为 null 或全为空白字符 |
 | toClearSpace | 清空全部空格,并返回处理后的字符串 |
 | toClearSpaceTrim | 清空前后空格,并返回处理后的字符串 |
 | toGBKEncode | 字符串进行 GBK 编码 |
@@ -2459,9 +2463,9 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| start | 一个计时开始 |
-| end | 一个计时结束 |
-| endAndRestart | 一个计时结束,并且启动下次计时。 |
+| start | 开始计时 |
+| end | 结束计时 |
+| endAndRestart | 结束计时, 并重新启动新的计时 |
 | average | 求全部计时均值 |
 | print | 打印全部时间值 |
 | clear | 清除数据 |
@@ -2477,7 +2481,7 @@ DevUtils.openDebug();
 | getStartTime | 获取开始时间 |
 
 
-* **时间堵塞保留 ->** [TimeKeeper.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/assist/TimeKeeper.java)
+* **堵塞时间记录 ->** [TimeKeeper.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/assist/TimeKeeper.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -2491,7 +2495,7 @@ DevUtils.openDebug();
 ## <span id="devutilscommonassistsearch">**`dev.utils.common.assist.search`**</span>
 
 
-* **文件广度优先搜索算法 (多线程 + 队列搜索) ->** [FileBreadthFirstSearchUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/assist/search/FileBreadthFirstSearchUtils.java)
+* **文件广度优先搜索算法 (多线程 + 队列，搜索某个目录下的全部文件) ->** [FileBreadthFirstSearchUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/assist/search/FileBreadthFirstSearchUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -2505,13 +2509,13 @@ DevUtils.openDebug();
 | getEndTime | 获取结束搜索时间 |
 | getDelayTime | 获取延迟校验时间 |
 | setDelayTime | 设置延迟校验时间 |
-| query | 查询 |
+| query | 搜索目录 |
 | isHandlerFile | 判断是否处理该文件 |
 | isAddToList | 是否添加到集合 |
 | OnEndListener | 搜索结束监听 |
 
 
-* **文件深度优先搜索算法 (搜索某个目录下的全部文件) ->** [FileDepthFirstSearchUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/assist/search/FileDepthFirstSearchUtils.java)
+* **文件深度优先搜索算法 (递归搜索某个目录下的全部文件) ->** [FileDepthFirstSearchUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/assist/search/FileDepthFirstSearchUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -2521,7 +2525,7 @@ DevUtils.openDebug();
 | isStop | 是否停止搜索 |
 | getStartTime | 获取开始搜索时间 |
 | getEndTime | 获取结束搜索时间 |
-| query | 查询 |
+| query | 搜索目录 |
 | isHandlerFile | 判断是否处理该文件 |
 | isAddToList | 是否添加到集合 |
 | OnEndListener | 搜索结束监听 |
@@ -2530,7 +2534,7 @@ DevUtils.openDebug();
 ## <span id="devutilscommoncipher">**`dev.utils.common.cipher`**</span>
 
 
-* **Baes64 编解码, 进行加密 ->** [Base64Cipher.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/cipher/Base64Cipher.java)
+* **Baes64 编/解码 并进行 加/解密 ->** [Base64Cipher.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/cipher/Base64Cipher.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -2542,28 +2546,28 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| encrypt | 加密工具类 |
+| encrypt | 加密方法 |
 | decrypt | 解密方法 |
 
 
-* **解密/解码接口 ->** [Decrypt.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/cipher/Decrypt.java)
+* **解密/解码 接口 ->** [Decrypt.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/cipher/Decrypt.java)
 
 | 方法 | 注释 |
 | :- | :- |
-| decrypt | 解密/解码方法 |
+| decrypt | 解密/解码 方法 |
 
 
-* **加密/编码接口 ->** [Encrypt.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/cipher/Encrypt.java)
+* **加密/编码 接口 ->** [Encrypt.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/cipher/Encrypt.java)
 
 | 方法 | 注释 |
 | :- | :- |
-| encrypt | 加密/编码方法 |
+| encrypt | 加密/编码 方法 |
 
 
 ## <span id="devutilscommonencrypt">**`dev.utils.common.encrypt`**</span>
 
 
-* **AES对称加密(Advanced Encryption Standard，高级数据加密标准，AES算法可以有效抵制针对DES的攻击算法，对称加密算法) ->** [AESUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/encrypt/AESUtils.java)
+* **AES 对称加密 ->** [AESUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/encrypt/AESUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -2576,21 +2580,21 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| getCRC32 | 获取 CRC32 值(返回Long,一定几率上唯一) |
-| getCRC32Str | 获取 CRC32 值(做了处理,返回String) |
-| getFileCrc32 | 获取文件CRC32 值 |
+| getCRC32 | 获取 CRC32 值 |
+| getCRC32Str | 获取 CRC32 值 |
+| getFileCrc32 | 获取文件 CRC32 值 |
 
 
-* **DES对称加密(Data Encryption Standard，数据加密标准，对称加密算法) ->** [DESUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/encrypt/DESUtils.java)
+* **DES 对称加密 ->** [DESUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/encrypt/DESUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
-| getDESKey | 返回可逆算法DES的密钥 |
+| getDESKey | 返回可逆算法 DES 的密钥 |
 | encrypt | DES 加密 |
 | decrypt | DES 解密 |
 
 
-* **加/解密工具类 ->** [EncryptUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/encrypt/EncryptUtils.java)
+* **加/解密 通用工具类 ->** [EncryptUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/encrypt/EncryptUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -2648,22 +2652,22 @@ DevUtils.openDebug();
 | decryptRSA | RSA 解密 |
 
 
-* **解码,编码 ->** [EscapeUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/encrypt/EscapeUtils.java)
+* **字符串 编/解码 工具类 ->** [EscapeUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/encrypt/EscapeUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
 | escape | 编码 |
-| unescape | 解码 说明：本方法保证 不论参数s是否经过escape()编码，均能获取正确的“解码”结果 |
+| unescape | 解码 - 本方法不论参数 str 是否经过 escape() 编码，均能获取正确的“解码”结果 |
 
 
 * **MD5加密 不可逆(Message Digest，消息摘要算法) ->** [MD5Utils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/encrypt/MD5Utils.java)
 
 | 方法 | 注释 |
 | :- | :- |
-| md5 | 加密内容 - 32位大小MD5 - 小写 |
-| md5Upper | 加密内容 - 32位大小MD5 - 大写 |
-| toHexString | 进行转换 |
-| getFileMD5 | 获取文件MD5值 - 小写 |
+| md5 | 加密内容 - 32 位 MD5 - 小写 |
+| md5Upper | 加密内容 - 32 位 MD5 - 大写 |
+| toHexString | 进行十六进制转换 |
+| getFileMD5 | 获取文件 MD5 值 - 小写 |
 
 
 * **SHA 加密工具类 ->** [SHAUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/encrypt/SHAUtils.java)
@@ -2675,11 +2679,13 @@ DevUtils.openDebug();
 | sha256 | 加密内容 SHA256 |
 | sha384 | 加密内容 SHA384 |
 | sha512 | 加密内容 SHA512 |
-| getFileSHA1 | 获取文件 Sha1 值 |
-| getFileSHA256 | 获取文件 Sha256 值 |
+| getFileSHA1 | 获取文件 sha1 值 |
+| getFileSHA256 | 获取文件 sha256 值 |
+| shaHex | 加密内容 SHA |
+| getFileSHA | 获取文件 SHA 值 |
 
 
-* **3DES对称加密(Triple DES、DESede，进行了三重DES加密的算法，对称加密算法) ->** [TripleDESUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/encrypt/TripleDESUtils.java)
+* **3DES 对称加密 ->** [TripleDESUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/encrypt/TripleDESUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -2688,13 +2694,13 @@ DevUtils.openDebug();
 | decrypt | 3DES 解密 |
 
 
-* **异或加密工具类 ->** [XorUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/encrypt/XorUtils.java)
+* **异或 加密工具类 ->** [XorUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/encrypt/XorUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
-| encryptAsFix | 固定 key 的方式加密 |
-| encrypt | 非固定 key 的方式加密 |
-| decrypt | 解密 |
+| encryptAsFix | 加密 (固定 key 方式) - 这种方式 加/解密 方法共用 |
+| encrypt | 加密 (非固定 key 方式) |
+| decrypt | 解密 (非固定 key 方式) |
 
 
 ## <span id="devutilscommonrandom">**`dev.utils.common.random`**</span>
@@ -2710,23 +2716,25 @@ DevUtils.openDebug();
 ## <span id="devutilscommonthread">**`dev.utils.common.thread`**</span>
 
 
-* **线程池管理 - 开发类 ->** [DevThreadManager.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/thread/DevThreadManager.java)
+* **线程池管理类 ->** [DevThreadManager.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/thread/DevThreadManager.java)
 
 | 方法 | 注释 |
 | :- | :- |
-| getInstance | 获取 DevThreadManager 实例 ,单例模式 |
+| getInstance | 获取 DevThreadManager 实例 |
 | initConfig | 初始化配置信息 |
 | putConfig | 添加配置信息 |
 | removeConfig | 移除配置信息 |
 
 
-* **线程池 - 开发类 ->** [DevThreadPool.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/thread/DevThreadPool.java)
+* **线程池 - 构建类 ->** [DevThreadPool.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/thread/DevThreadPool.java)
 
 | 方法 | 注释 |
 | :- | :- |
+| getThreads | 获取线程数 |
+| getCaclThreads | 获取线程数 |
 | execute | 加入到线程池任务队列 |
 | shutdown | shutdown 会等待所有提交的任务执行完成，不管是正在执行还是保存在任务队列中的已提交任务 |
-| shutdownNow | shutdownNow会尝试中断正在执行的任务(其主要是中断一些指定方法如sleep方法)，并且停止执行等待队列中提交的任务。 |
+| shutdownNow | shutdownNow 会尝试中断正在执行的任务(其主要是中断一些指定方法如sleep方法)，并且停止执行等待队列中提交的任务。 |
 | isShutdown | 判断线程池是否已关闭 = isShutDown当调用shutdown()方法后返回为true。 |
 | isTerminated | 若关闭后所有任务都已完成,则返回true. |
 | awaitTermination | 请求关闭、发生超时或者当前线程中断 |
@@ -2755,11 +2763,11 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | getPowerSum | 将身份证的每位和对应位的加权因子相乘之后，再获取和值 |
-| getCheckCode18 | 将power和值与1 1取模获取余数进行校验码判断 |
+| getCheckCode18 | 将 power 和值与 11 取模获取余数进行校验码判断 |
 | converCharToInt | 将字符数组转换成数字数组 |
 | validateIdCard18 | 身份证校验规则,验证18位身份编码是否合法 |
 | validateIdCard15 | 身份证校验规则,验证15位身份编码是否合法 |
-| convert15CardTo18 | 将15位身份证号码转换为18位 |
+| convert15CardTo18 | 将 15 位身份证号码转换为 18 位 |
 | validateTWCard | 验证台湾身份证号码 |
 | validateHKCard | 验证香港身份证号码(存在Bug，部份特殊身份证无法检查) |
 | validateIdCard10 | 判断 10 位数的身份证号, 是否合法 |
@@ -2772,6 +2780,7 @@ DevUtils.openDebug();
 | getDateByIdCard | 根据身份编号获取生日天 |
 | getGenderByIdCard | 根据身份编号获取性别 |
 | getProvinceByIdCard | 根据身份编号获取户籍省份 |
+| isEmpty | 判断是否为null |
 
 
 * **校验工具类 ->** [ValidatorUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/validator/ValidatorUtils.java)
@@ -2803,6 +2812,7 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | isEmpty | 判断是否为null |
+| match | 通用匹配函数 |
 | isPhoneCheck | 中国手机号格式验证,在输入可以调用该方法,点击发送验证码,使用 isPhone |
 | isPhone | 是否中国手机号 |
 | isPhoneToChinaTelecom | 是否中国电信手机号码 |
