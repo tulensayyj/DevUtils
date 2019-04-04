@@ -1954,16 +1954,20 @@ DevUtils.openDebug();
 | getDefaultPrimiticeValue | 判断 Class 是否为原始类型(boolean、char、byte、short、int、long、float、double) |
 | isCollection | 判断是否集合类型 |
 | isArray | 是否数组类型 |
+| getGenericSuperclass | 获取父类泛型类型 |
+| getGenericInterfaces | 获取接口泛型类型 |
 
 
-* **克隆相关工具类 ->** [CloneUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/CloneUtils.java)
+* **克隆工具类 ->** [CloneUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/CloneUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
 | deepClone | 进行克隆 |
+| serializableToBytes | 通过序列化实体类, 获取对应的byte数组数据 |
+| bytesToObject | 通过 byte数据, 生成Object对象 |
 
 
-* **关闭工具类 - (关闭IO流等) ->** [CloseUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/CloseUtils.java)
+* **关闭(IO流)工具类 ->** [CloseUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/CloseUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -1971,10 +1975,11 @@ DevUtils.openDebug();
 | closeIOQuietly | 安静关闭 IO |
 
 
-* **颜色工具类 包括常用的色值 ->** [ColorUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/ColorUtils.java)
+* **颜色工具类(包括常用的色值) ->** [ColorUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/ColorUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
+| toHexAlpha | 获取十六进制透明度字符串 |
 | percent | 计算百分比值 |
 | clamp | 返回的 value 介于 max、min之间，若 value 小于min，返回min，若大于max，返回max |
 | alpha | 返回一个颜色中的透明度值(返回10进制) |
@@ -1994,8 +1999,8 @@ DevUtils.openDebug();
 | setGreen | 改变颜色值中的绿色色值 |
 | setBlue | 改变颜色值中的蓝色色值 |
 | parseColor | 解析颜色字符串, 返回对应的颜色值 |
-| int2RgbString | 颜色值 转换 RGB颜色 字符串 |
-| int2ArgbString | 颜色值 转换 ARGB颜色 字符串 |
+| intToRgbString | 颜色值 转换 RGB颜色 字符串 |
+| intToArgbString | 颜色值 转换 ARGB颜色 字符串 |
 | getRandomColor | 获取随机颜色值 |
 | judgeColorString | 判断是否为ARGB格式的十六进制颜色，例如：FF990587 |
 | setDark | 颜色加深(单独修改 RGB值, 不变动透明度) |
@@ -2014,17 +2019,19 @@ DevUtils.openDebug();
 | toFloat | 字符串 转 float |
 | toDouble | 字符串 转 double |
 | toLong | 字符串 转 long |
-| toChar | 字符串 获取 char(默认第一位) |
+| toChar | 字符串 获取 char (默认第一位) |
 | toCharInt | char 转换 unicode 编码 |
 | toCharArys | 字符串 获取 char数组 |
 | toByteArys | 字符串 获取 byte数组 |
 | toHexString | 一个 int 参数的字符串表示形式在基数为16的无符号 int |
 | parseInt | 字符串转换对应的进制 |
-| hexString2Bytes | 十六进制字符串 转换byte数组 |
-| bytes2Bits | 把 bytes 数据, 转换成二进制数据 |
-| bits2Bytes | 二进制字符串, 转换成byte数组 |
-| bytes2Chars | byte 数组 转换 char 数组, 并且进行补码 |
-| chars2Bytes | char 数组 转换 byte 数组 |
+| hexStringToBytes | 十六进制字符串 转换byte数组 |
+| hexToInt | 十六进制 char 转换 int |
+| bytesToBits | 把 bytes 数据, 转换成二进制数据 |
+| bitsToBytes | 二进制字符串, 转换成byte数组 |
+| bytesToChars | byte 数组 转换 char 数组, 并且进行补码 |
+| charsToBytes | char 数组 转换 byte 数组 |
+| bytesToHexString | byte 数组转换16进制字符串 |
 
 
 * **坐标相关工具类 - GPS 纠偏 ->** [CoordinateUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/CoordinateUtils.java)
