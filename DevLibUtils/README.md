@@ -189,8 +189,8 @@ DevUtils.openDebug();
 | setSystemTime2 | 设置系统时间 |
 | shutdown | 关机 (需要 root 权限) |
 | reboot | 重启设备 (需要 root 权限) |
-| reboot2Recovery | 重启引导到 recovery (需要 root 权限) |
-| reboot2Bootloader | 重启引导到 bootloader (需要 root 权限) |
+| rebootToRecovery | 重启引导到 recovery (需要 root 权限) |
+| rebootToBootloader | 重启引导到 bootloader (需要 root 权限) |
 | sendEventSlide | 发送事件滑动 |
 | getSDKVersion | 获取 SDK 版本 |
 | getAndroidVersion | 获取 Android 系统版本 |
@@ -474,8 +474,8 @@ DevUtils.openDebug();
 | getModel | 获取设备型号 如 RedmiNote4X |
 | shutdown | 关机 (需要 root 权限) |
 | reboot | 重启设备 (需要 root 权限) |
-| reboot2Recovery | 重启引导到 recovery (需要 root 权限) |
-| reboot2Bootloader | 重启引导到 bootloader (需要 root 权限) |
+| rebootToRecovery | 重启引导到 recovery (需要 root 权限) |
+| rebootToBootloader | 重启引导到 bootloader (需要 root 权限) |
 | getBaseband_Ver | 获取 基带版本 BASEBAND-VER |
 | getLinuxCore_Ver | 获取 内核版本 CORE-VER |
 
@@ -533,7 +533,7 @@ DevUtils.openDebug();
 | urlEncode | url 编码 - UTF-8 |
 | urlDecode | url 解码 - UTF-8 |
 | base64Encode | base64 编码 => 去除\n 替换 + 和 - 号 |
-| base64Encode2String | base64 编码 |
+| base64EncodeToString | base64 编码 |
 | base64Decode | base64 解码 |
 | base64DecodeToString | base64 解码 |
 | htmlEncode | html 编码 |
@@ -1495,11 +1495,11 @@ DevUtils.openDebug();
 | drawableToByte | Drawable 转换成 byte数组 |
 | drawableToByte2 | Drawable 转换成 byte数组 |
 | byteToBitmap | byte 数组转换为Bitmap |
-| drawableToBitmap | Drawable 转换成 Bitmap |
-| bitmapToDrawable | Bitmap 转换成 Drawable |
 | byteToDrawable | byte数组转换成Drawable |
-| drawable2Bitmap | Drawable 转换 Bitmap |
-| drawable3Bitmap | Drawable 转换 Bitmap |
+| bitmapToDrawable | Bitmap 转换成 Drawable |
+| drawableToBitmap | Drawable 转换成 Bitmap |
+| drawableToBitmap2 | Drawable 转换 Bitmap |
+| drawableToBitmap3 | Drawable 转换 Bitmap |
 | saveBitmapToSDCardJPEG | 保存图片到SD卡 - JPEG |
 | saveBitmapToSDCardPNG | 保存图片到SD卡 - PNG |
 | saveBitmapToSDCard | 保存图片到SD卡 - PNG |
@@ -2164,11 +2164,11 @@ DevUtils.openDebug();
 | writeFileFromBytesByChannel | Write file from bytes by channel. |
 | writeFileFromBytesByMap | Write file from bytes by map. |
 | writeFileFromString | Write file from string. |
-| readFile2List | Return the lines in file. |
-| readFile2String | Return the string in file. |
-| readFile2BytesByStream | Return the bytes in file by stream. |
-| readFile2BytesByChannel | Return the bytes in file by channel. |
-| readFile2BytesByMap | Return the bytes in file by map. |
+| readFileToList | Return the lines in file. |
+| readFileToString | Return the string in file. |
+| readFileToBytesByStream | Return the bytes in file by stream. |
+| readFileToBytesByChannel | Return the bytes in file by channel. |
+| readFileToBytesByMap | Return the bytes in file by map. |
 
 
 * **文件操作工具类 ->** [FileUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/FileUtils.java)
@@ -2386,16 +2386,16 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| input2OutputStream | Input stream to output stream. |
-| output2InputStream | Output stream to input stream. |
-| inputStream2Bytes | Input stream to bytes. |
-| bytes2InputStream | Bytes to input stream. |
-| outputStream2Bytes | Output stream to bytes. |
-| bytes2OutputStream | Bytes to output stream. |
-| inputStream2String | Input stream to string. |
-| string2InputStream | String to input stream. |
-| outputStream2String | Output stream to string. |
-| string2OutputStream | String to output stream. |
+| inputToOutputStream | Input stream to output stream. |
+| outputToInputStream | Output stream to input stream. |
+| inputStreamToBytes | Input stream to bytes. |
+| bytesToInputStream | Bytes to input stream. |
+| outputStreamToBytes | Output stream to bytes. |
+| bytesToOutputStream | Bytes to output stream. |
+| inputStreamToString | Input stream to string. |
+| stringToInputStream | String to input stream. |
+| outputStreamToString | Output stream to string. |
+| stringToOutputStream | String to output stream. |
 
 
 * **字符串工具类 ->** [StringUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/StringUtils.java)
@@ -2430,8 +2430,8 @@ DevUtils.openDebug();
 | reverse | 反转字符串 |
 | concat | 字符串连接，将参数列表拼接为一个字符串 |
 | concatSpiltWith | 字符串连接，将参数列表拼接为一个字符串 |
-| underScoreCase2CamelCase | 下划线命名转为驼峰命名 |
-| camelCase2UnderScoreCase | 驼峰命名法转为下划线命名 |
+| underScoreCaseToCamelCase | 下划线命名转为驼峰命名 |
+| camelCaseToUnderScoreCase | 驼峰命名法转为下划线命名 |
 | sqliteEscape | 数据库字符转义 |
 
 
@@ -2802,6 +2802,7 @@ DevUtils.openDebug();
 | match | 通用匹配函数 |
 | isNumber | 检验数字 |
 | isLetter | 判断字符串是不是全是字母 |
+| isContainNumber | 判断字符串是不是包含数字 |
 | isNumberLetter | 判断字符串是不是只含字母和数字 |
 | isSpec | 检验特殊符号 |
 | isWx | 检验微信号 |
