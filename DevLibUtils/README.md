@@ -2082,8 +2082,8 @@ DevUtils.openDebug();
 | getListToHHMMPosition | 获取 HH:mm 按间隔时间排序的集合中, 指定时间所在索引 |
 | secToTimeRetain | 传入时间，获取时间(00:00:00 格式) - 不处理大于一天 |
 | convertTimeArys | 传入时间,时间参数(小时、分钟、秒) |
-| millis2FitTimeSpan | 转换时间 |
-| millis2TimeArys | 转换时间为数组 |
+| millisToFitTimeSpan | 转换时间 |
+| millisToTimeArys | 转换时间为数组 |
 | isInTimeHHmm | 判断时间是否在[startTime, endTime]区间，注意时间格式要一致 |
 | isInTimeHHmmss | 判断时间是否在[startTime, endTime]区间，注意时间格式要一致 |
 | isInTime | 判断时间是否在[startTime, endTime]区间，注意时间格式要一致 |
@@ -2092,7 +2092,7 @@ DevUtils.openDebug();
 | getEndTimeDiff | 获取指定时间距离该时间第二天的指定时段的时间差 (判断凌晨情况) |
 
 
-* **开发常用方法 - 工具类 ->** [DevCommonUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/DevCommonUtils.java)
+* **开发常用方法工具类 ->** [DevCommonUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/DevCommonUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -2103,8 +2103,9 @@ DevUtils.openDebug();
 | getFormatString2 | 获取格式化字符串 |
 | isHttpRes | 判断是否网络资源 |
 | isSpace | 判断字符串是否为 null 或全为空白字符 |
-| getSpace | 获取空格 |
-| getTab | 获取 Tab |
+| appendSpace | 追加空格 |
+| appendTab | 追加 Tab |
+| appendLine | 追加 换行 |
 | isEmpty | 判断是否为null |
 | isTrimEmpty | 判断字符串是否为 null 或全为空格 |
 | isEmptyObjs | 判读是否为null to 可变数组 |
@@ -2401,6 +2402,9 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
+| appendSpace | 追加空格 |
+| appendTab | 追加 Tab |
+| appendLine | 追加 换行 |
 | length | 获取长度，如果字符串为null,则返回0 |
 | isEmpty | 判断是否为null |
 | isSpace | 判断字符串是否为 null 或全为空白字符 |
