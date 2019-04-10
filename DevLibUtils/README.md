@@ -1924,32 +1924,16 @@ DevUtils.openDebug();
 | divide | 提供(相对)精确的除法运算,当发生除不尽的情况时, |
 | round | 提供精确的小数位四舍五入处理 |
 | remainder | 取余数 |
+| compare | 比较大小 |
 | formatMoney | 金额分割，四舍五入金额 |
-| formatMoney1 | 四舍五入金额 |
-| compareBigDecimal | 比较大小 |
 | adjustDouble | 获取自己想要的数据格式 |
-
-
-* **字节工具类，提供一些有关字节的便捷方法 ->** [ByteUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/ByteUtils.java)
-
-| 方法 | 注释 |
-| :- | :- |
-| byteJiaMi | 位移 加/解密 （共用同一个方法） |
-| hexStrToByteArray | 字符串转数组 |
-| cutOut | 从 byte[] 上截取一段 |
-| byteToBit | 将 字节转换 为 二进制字符串 |
-| bitToByte | 二进制字符串, 转换成 byte[] |
-| getHex | 字节数组转换成 16进制字符串 |
-| subBytes | 从一个 byte[] 中截取一部分 |
-| byteToObject | byte[] 转为 对象 |
-| objectToByte | 对象 转为 byte[] |
 
 
 * **类工具 ->** [ClassUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/ClassUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
-| isBaseDataType | 判断类是否是基础数据类型 |
+| isBaseDataType | 判断类是否是基础数据类型 - 目前支持11种 |
 | newInstance | 根据类获取对象：不再必须一个无参构造 |
 | getDefaultPrimiticeValue | 判断 Class 是否为原始类型(boolean、char、byte、short、int、long、float、double) |
 | isCollection | 判断是否集合类型 |
@@ -2009,11 +1993,11 @@ DevUtils.openDebug();
 | setAlphaLight | 设置透明度变浅 |
 
 
-* **转换工具类 ->** [ConverUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/ConverUtils.java)
+* **转换工具类(Byte、Hex等) ->** [ConvertUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/ConvertUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
-| toString | char 数组 转 String |
+| toString | char[] 转 String |
 | toInt | 字符串 转 int |
 | toBoolean | 字符串 转 boolean |
 | toFloat | 字符串 转 float |
@@ -2021,17 +2005,22 @@ DevUtils.openDebug();
 | toLong | 字符串 转 long |
 | toChar | 字符串 获取 char (默认第一位) |
 | toCharInt | char 转换 unicode 编码 |
-| toCharArys | 字符串 获取 char数组 |
-| toByteArys | 字符串 获取 byte数组 |
-| toHexString | 一个 int 参数的字符串表示形式在基数为16的无符号 int |
+| toChars | 字符串 获取 char[] |
+| toBytes | 字符串 获取 byte[] |
 | parseInt | 字符串转换对应的进制 |
-| hexStringToBytes | 十六进制字符串 转换byte数组 |
+| parseLong | 字符串转换对应的进制 |
+| bytesBitwiseAND | 按位求补 byte[] 位移编/解码 （共用同一个方法） |
+| subBytes | 从 byte[] 上截取一段 |
+| bytesToObject | byte[] 转为 Object |
+| objectToBytes | Object 转为 byte[] |
+| bytesToChars | byte[] 转换 char[], 并且进行补码 |
+| charsToBytes | char[] 转换 byte[] |
+| toBinaryString | 将 字节转换 为 二进制字符串 |
+| decodeBinary | 二进制字符串 转换 byte[] 解码 |
+| decodeHex | 将十六进制字节数组解码 |
 | hexToInt | 十六进制 char 转换 int |
-| bytesToBits | 把 bytes 数据, 转换成二进制数据 |
-| bitsToBytes | 二进制字符串, 转换成byte数组 |
-| bytesToChars | byte 数组 转换 char 数组, 并且进行补码 |
-| charsToBytes | char 数组 转换 byte 数组 |
-| bytesToHexString | byte 数组转换16进制字符串 |
+| toHexString | int 转换十六进制 |
+| toHexChars | 将 string 转换为 十六进制 char[] |
 
 
 * **坐标相关工具类 - GPS 纠偏 ->** [CoordinateUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/CoordinateUtils.java)
@@ -2044,16 +2033,17 @@ DevUtils.openDebug();
 | wgs84ToGcj02 | WGS84 坐标转 GCJ02 坐标 |
 | bd09ToWGS84 | BD09 坐标转 WGS84 坐标 |
 | wgs84ToBd09 | WGS84 坐标转 BD09 坐标 |
+| outOfChina | 判断是否中国境外 |
 
 
 * **日期工具类 ->** [DateUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/DateUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
-| getDateNow | 获取当前日期的字符串 - "yyyy-MM-dd HH:mm:ss" |
+| getDateNow | 获取当前日期的字符串 - yyyy-MM-dd HH:mm:ss |
 | formatTime | 将时间戳转换日期字符串 |
-| formatDate | 将Date类型转换日期字符串 |
-| parseDate | 将时间戳转换成Date类型 |
+| formatDate | 将 Date 转换日期字符串 |
+| parseDate | 将时间戳转换成 Date |
 | parseLong | 解析时间字符串转换为long毫秒 - 默认表示time 属于 yyyy-MM-dd HH:mm:ss 格式 |
 | parseToString | 转换时间为指定字符串 |
 | getTimeDiffMinute | 获取时间差 - 分钟 |
@@ -2085,9 +2075,9 @@ DevUtils.openDebug();
 | millisToFitTimeSpan | 转换时间 |
 | millisToTimeArys | 转换时间为数组 |
 | isInTimeHHmm | 判断时间是否在[startTime, endTime]区间，注意时间格式要一致 |
-| isInTimeHHmmss | 判断时间是否在[startTime, endTime]区间，注意时间格式要一致 |
-| isInTime | 判断时间是否在[startTime, endTime]区间，注意时间格式要一致 |
-| isInDate | 判断时间是否在[startTime, endTime]区间，注意时间格式要一致 |
+| isInTimeHHmmss | 判断时间是否在 [startTime, endTime] 区间，注意时间格式要一致 |
+| isInTime | 判断时间是否在 [startTime, endTime] 区间，注意时间格式要一致 |
+| isInDate | 判断时间是否在 [startTime, endTime] 区间，注意时间格式要一致 |
 | getEndTimeDiffHHmm | 获取指定时间距离该时间第二天的指定时段的时间 (判断凌晨情况) |
 | getEndTimeDiff | 获取指定时间距离该时间第二天的指定时段的时间差 (判断凌晨情况) |
 
@@ -2099,30 +2089,32 @@ DevUtils.openDebug();
 | percent | 计算百分比值 (最大 100%) |
 | percent2 | 计算百分比值 (可超出 100%) |
 | clamp | 返回的 value 介于 max、min之间，若 value 小于min，返回min，若大于max，返回max |
-| getFormatString | 获取格式化字符串 |
-| getFormatString2 | 获取格式化字符串 |
+| getFormatString | 获取格式化后的字符串 |
+| getFormatString2 | 获取格式化后的字符串 |
+| getAutoFormatString | 获取自动数量格式化后的字符串(可变参数) |
+| getAutoFormatString2 | 获取自动数量格式化后的字符串(可变参数) |
 | isHttpRes | 判断是否网络资源 |
 | isSpace | 判断字符串是否为 null 或全为空白字符 |
 | appendSpace | 追加空格 |
 | appendTab | 追加 Tab |
 | appendLine | 追加 换行 |
-| isEmpty | 判断是否为null |
-| isTrimEmpty | 判断字符串是否为 null 或全为空格 |
-| isEmptyObjs | 判读是否为null to 可变数组 |
-| length | 获取长度，如果字符串为null,则返回0 |
+| isEmpty | 判断是否为 null |
+| isTrimEmpty | 判断是否为 null 或者为空格 |
+| isEmptyObjs | 判读是否为 null to 可变数组 |
+| length | 获取长度，如果字符串为null, 则返回 0 |
 | lengthObjs | 获取可变数组长度 |
 | lengthObjsDf | 获取可变数组长度 |
-| isLength | 字符串长度匹配 |
+| isLength | 获取字符串长度 是否等于期望长度 |
 | equals | 判断两字符串是否相等 |
-| isEquals | 判断多个字符串是否相等, 只有全相等才返回true - 对比大小写 |
+| isEquals | 判断多个字符串是否相等, 只有全相等才返回 true - 对比大小写 |
 | isOrEquals | 判断多个字符串,只要有一个符合条件,则通过 |
 | isContains | 判断一堆值中，是否存在符合该条件的(包含) |
-| isStartsWith | 判断内容, 是否属于特定字符串数组开头 - 对比大小写 |
-| isEndsWith | 判断内容, 是否属于特定字符串数组结尾 - 对比大小写 |
+| isStartsWith | 判断内容, 是否属于特定字符串开头 - 对比大小写 |
+| isEndsWith | 判断内容, 是否属于特定字符串结尾 - 对比大小写 |
 | toClearSpace | 清空全部空格,并返回处理后的字符串 |
 | toClearSpaceTrim | 清空前后空格,并返回处理后的字符串 |
 | toCheckValue | 检查字符串,如果为null,返回 "" |
-| toCheckValues | 检查多个值,并返回第一个非null and "" 的字符串,如果都不符合条件，则返回默认值 |
+| toCheckValues | 检查多个值, 并返回第一个非null and "" 的字符串,如果都不符合条件，则返回默认值 |
 | toCheckValuesSpace | 检查多个值,并返回第一个非null and "" and 全部不是属于空格 的字符串,如果都不符合条件，则返回默认值 |
 | subEllipsize | 裁减超出的内容, 并且追加符号(如 ...) |
 | subSymbolHide | 裁剪符号处理 |
@@ -2146,9 +2138,12 @@ DevUtils.openDebug();
 | isSerializable | 判断是否序列化 |
 | set | 设置域的值 |
 | get | 获取域的值 |
-| isLong | 是否 long 类型 |
-| isInteger | 是否 Integer 类型 |
-| getGenericType | 获取域的泛型类型，如果不带泛型返回null |
+| isLong | 是否 long/Long 类型 |
+| isFloat | 是否 float/Float 类型 |
+| isDouble | 是否 double/Double 类型 |
+| isInteger | 是否 int/Integer 类型 |
+| isString | 是否 String 类型 |
+| getGenericType | 获取域的泛型类型，如果不带泛型返回 null |
 | getComponentType | 获取数组的类型 |
 | getAllDeclaredFields | 获取全部Field，包括父类 |
 | isInvalid | 是静态常量或者内部结构属性 |
@@ -2158,24 +2153,24 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| setBufferSize | Set the buffer's size. - Default size equals 8192 bytes. |
-| writeFileFromIS | Write file from input stream. |
-| writeFileFromBytesByStream | Write file from bytes by stream. |
-| writeFileFromBytesByChannel | Write file from bytes by channel. |
-| writeFileFromBytesByMap | Write file from bytes by map. |
-| writeFileFromString | Write file from string. |
-| readFileToList | Return the lines in file. |
-| readFileToString | Return the string in file. |
-| readFileToBytesByStream | Return the bytes in file by stream. |
-| readFileToBytesByChannel | Return the bytes in file by channel. |
-| readFileToBytesByMap | Return the bytes in file by map. |
+| setBufferSize | 设置缓冲区的大小, 默认大小等于 8192 字节 |
+| writeFileFromIS | 通过输入流写入文件 |
+| writeFileFromBytesByStream | 通过字节流写入文件 |
+| writeFileFromBytesByChannel | 通过 FileChannel 把字节流写入文件 |
+| writeFileFromBytesByMap | 通过 MappedByteBuffer 把字节流写入文件 |
+| writeFileFromString | 通过字符串写入文件 |
+| readFileToList | 读取文件内容, 返回换行 List |
+| readFileToString | 读取文件内容, 返回字符串 |
+| readFileToBytesByStream | 读取文件内容, 返回 byte[] |
+| readFileToBytesByChannel | 通过 FileChannel, 读取文件内容, 返回 byte[] |
+| readFileToBytesByMap | 通过 MappedByteBuffer, 读取文件内容, 返回 byte[] |
 
 
 * **文件操作工具类 ->** [FileUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/FileUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
-| getFile | 获取文件 - to getFileByPath |
+| getFile | 获取文件 |
 | getFileByPath | 获取文件 |
 | getFileCreateFolder | 获取路径, 并且进行创建目录 |
 | createFolder | 判断某个文件夹是否创建,未创建则创建(纯路径 - 无文件名) |
@@ -2194,8 +2189,8 @@ DevUtils.openDebug();
 | getFileExtension | 获取全路径中的文件拓展名 |
 | isFileExists | 检查是否存在某个文件 |
 | isFile | 判断是否文件 |
-| isDir | 判断是否文件夹 |
-| isHide | 判断是否隐藏文件 |
+| isDirectory | 判断是否文件夹 |
+| isHidden | 判断是否隐藏文件 |
 | getFileLastModified | 获取文件最后修改的毫秒时间戳 |
 | getFileCharsetSimple | 简单获取文件编码格式 |
 | getFileLines | 获取文件行数 |
@@ -2234,15 +2229,6 @@ DevUtils.openDebug();
 | onReplace | 是否覆盖/替换文件 |
 
 
-* **十六进制处理 ->** [HexUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/HexUtils.java)
-
-| 方法 | 注释 |
-| :- | :- |
-| encodeHex | 将字节数组转换为十六进制字符数组 |
-| encodeHexStr | 将字节数组转换为十六进制字符串 |
-| decodeHex | 将十六进制字符数组转换为字节数组 |
-
-
 * **Http 参数工具类 ->** [HttpParamsUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/HttpParamsUtils.java)
 
 | 方法 | 注释 |
@@ -2250,10 +2236,10 @@ DevUtils.openDebug();
 | splitParams | 拆分参数 |
 | joinReqParams | 拼接请求参数 - value => String |
 | joinReqParamsObj | 拼接请求参数 - value => Object |
-| toStringMap | toString 快捷方法, 拼接打印 String |
+| printMapParams | 拼接打印 Map 参数 |
 | toConvertObjToMS | 进行转换对象处理(请求发送对象) |
 | toConvertObjToMO | 进行转换对象处理(请求发送对象) |
-| urlEncode | url编码 - utf-8 |
+| urlEncode | url 编码 - utf-8 |
 
 
 * **HttpURLConnection 网络工具类 ->** [HttpURLConnectionUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/HttpURLConnectionUtils.java)
@@ -2292,8 +2278,6 @@ DevUtils.openDebug();
 | whileMD5 | 循环 MD5 加密处理 |
 | converHideMobile | 转换手机号 |
 | timeRecord | 耗时时间记录 |
-| getFormatString | 获取格式化字符串(可变参数) |
-| getFormatString2 | 获取格式化字符串(可变参数) |
 | getOperateTime | 获取操作时间 |
 | sleepOperate | 堵塞操作 |
 
@@ -2386,27 +2370,24 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| inputToOutputStream | Input stream to output stream. |
-| outputToInputStream | Output stream to input stream. |
-| inputStreamToBytes | Input stream to bytes. |
-| bytesToInputStream | Bytes to input stream. |
-| outputStreamToBytes | Output stream to bytes. |
-| bytesToOutputStream | Bytes to output stream. |
-| inputStreamToString | Input stream to string. |
-| stringToInputStream | String to input stream. |
-| outputStreamToString | Output stream to string. |
-| stringToOutputStream | String to output stream. |
+| inputToOutputStream | 输入流转输出流 |
+| outputToInputStream | 输出流转输入流 |
+| inputStreamToBytes | 输入流转 byte[] |
+| bytesToInputStream | byte[] 转输出流 |
+| outputStreamToBytes | 输出流转 byte[] |
+| bytesToOutputStream | byte[] 转 输出流 |
+| inputStreamToString | 输入流转 string |
+| stringToInputStream | String 转换输入流 |
+| outputStreamToString | 输出流转 string |
+| stringToOutputStream | string 转 输出流 |
 
 
 * **字符串工具类 ->** [StringUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/StringUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
-| appendSpace | 追加空格 |
-| appendTab | 追加 Tab |
-| appendLine | 追加 换行 |
-| length | 获取长度，如果字符串为null,则返回0 |
-| isEmpty | 判断是否为null |
+| length | 获取长度，如果字符串为null,则返回 0 |
+| isEmpty | 判断是否为 null |
 | isSpace | 判断字符串是否为 null 或全为空白字符 |
 | toClearSpace | 清空全部空格,并返回处理后的字符串 |
 | toClearSpaceTrim | 清空前后空格,并返回处理后的字符串 |
@@ -2415,15 +2396,12 @@ DevUtils.openDebug();
 | toUTF8Encode | 字符串进行 UTF-8 编码 |
 | toStrEncode | 进行字符串编码 |
 | toUrlEncode | 进行 URL 编码,默认UTF-8 |
-| toASCII | 将字符串转移为ASCII码 |
-| toUnicode | 将字符串转移为Unicode码 |
-| toUnicodeString | 将字符串转移为Unicode码 |
+| toASCII | 将字符串转移为 ASCII 码 |
+| toUnicode | 将字符串转移为 Unicode 码 |
+| toUnicodeString | 将字符串转移为 Unicode 码 |
 | toDBC | 转化为半角字符 |
 | toSBC | 转化为全角字符 如： a => ａ A => Ａ |
-| byteArrayToHexString | byte[]数组转换为16进制的字符串 |
-| toHexString | 进行转换 |
-| hexStringToByteArray | 16进制表示的字符串转换为字节数组 |
-| checkCheseToString | 检测String是否全是中文 |
+| checkChineseToString | 检测字符串是否全是中文 |
 | isChinese | 判定输入汉字 |
 | upperFirstLetter | 首字母大写 |
 | lowerFirstLetter | 首字母小写 |
@@ -2458,7 +2436,7 @@ DevUtils.openDebug();
 | clear | 清除全部 |
 | size | 返回参与均值计算的数字个数 |
 | getAverage | 获取平均数 |
-| print | 打印数字列 |
+| print | 打印数字集合 |
 
 
 * **Base64 工具类 ->** [Base64.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/assist/Base64.java)
@@ -2492,14 +2470,12 @@ DevUtils.openDebug();
 | getStartTime | 获取开始时间 |
 
 
-* **堵塞时间记录 ->** [TimeKeeper.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/assist/TimeKeeper.java)
+* **堵塞时间处理 ->** [TimeKeeper.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/assist/TimeKeeper.java)
 
 | 方法 | 注释 |
 | :- | :- |
-| getKeepTimeMillis | 获取预计堵塞时间 |
-| setKeepTimeMillis | 设置预计堵塞时间 |
-| startNow | 开始计时 |
-| waitForEnd | 设置等待一段时间后, 通知方法 |
+| waitForEndAsyn | 设置等待一段时间后, 通知方法 (异步) |
+| waitForEnd | 设置等待一段时间后, 通知方法 (同步) |
 | onEnd | 结束触发通知方法 |
 
 
@@ -2613,7 +2589,7 @@ DevUtils.openDebug();
 | encryptMD2 | MD2 加密 |
 | encryptMD5ToString | MD5 加密 |
 | encryptMD5 | MD5 加密 |
-| encryptMD5File2String | MD5 加密文件 |
+| encryptMD5FileToString | MD5 加密文件 |
 | encryptMD5File | MD5 加密文件 |
 | encryptSHA1ToString | SHA1 加密 |
 | encryptSHA1 | SHA1 加密 |
@@ -2637,26 +2613,26 @@ DevUtils.openDebug();
 | encryptHmacSHA384 | HmacSHA384 加密 |
 | encryptHmacSHA512ToString | HmacSHA512 加密 |
 | encryptHmacSHA512 | HmacSHA512 加密 |
-| encryptDES2Base64 | DES 加密 |
-| encryptDES2HexString | DES 加密 |
+| encryptDESToBase64 | DES 加密 |
+| encryptDESToHexString | DES 加密 |
 | encryptDES | DES 加密 |
 | decryptBase64DES | DES 解密 |
 | decryptHexStringDES | DES 解密 |
 | decryptDES | DES 解密 |
-| encrypt3DES2Base64 | 3DES 加密 |
-| encrypt3DES2HexString | 3DES 加密 |
+| encrypt3DESToBase64 | 3DES 加密 |
+| encrypt3DESToHexString | 3DES 加密 |
 | encrypt3DES | 3DES 加密 |
 | decryptBase64_3DES | 3DES 解密 |
 | decryptHexString3DES | 3DES 解密 |
 | decrypt3DES | 3DES 解密 |
-| encryptAES2Base64 | AES 加密 |
-| encryptAES2HexString | AES 加密 |
+| encryptAESToBase64 | AES 加密 |
+| encryptAESToHexString | AES 加密 |
 | encryptAES | AES 加密 |
 | decryptBase64AES | AES 解密 |
 | decryptHexStringAES | AES 解密 |
 | decryptAES | AES 解密 |
-| encryptRSA2Base64 | RSA 加密 |
-| encryptRSA2HexString | RSA 加密 |
+| encryptRSAToBase64 | RSA 加密 |
+| encryptRSAToHexString | RSA 加密 |
 | encryptRSA | RSA 加密 |
 | decryptBase64RSA | RSA 解密 |
 | decryptHexStringRSA | RSA 解密 |
@@ -2677,7 +2653,7 @@ DevUtils.openDebug();
 | :- | :- |
 | md5 | 加密内容 - 32 位 MD5 - 小写 |
 | md5Upper | 加密内容 - 32 位 MD5 - 大写 |
-| toHexString | 进行十六进制转换 |
+| toHexString | 将 byte[] 转换 十六进制字符串 |
 | getFileMD5 | 获取文件 MD5 值 - 小写 |
 
 
@@ -2742,7 +2718,7 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | getThreads | 获取线程数 |
-| getCaclThreads | 获取线程数 |
+| getCalcThreads | 获取线程数 |
 | execute | 加入到线程池任务队列 |
 | shutdown | shutdown 会等待所有提交的任务执行完成，不管是正在执行还是保存在任务队列中的已提交任务 |
 | shutdownNow | shutdownNow 会尝试中断正在执行的任务(其主要是中断一些指定方法如sleep方法)，并且停止执行等待队列中提交的任务。 |
@@ -2773,11 +2749,8 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| getPowerSum | 将身份证的每位和对应位的加权因子相乘之后，再获取和值 |
-| getCheckCode18 | 将 power 和值与 11 取模获取余数进行校验码判断 |
-| converCharToInt | 将字符数组转换成数字数组 |
-| validateIdCard18 | 身份证校验规则,验证18位身份编码是否合法 |
-| validateIdCard15 | 身份证校验规则,验证15位身份编码是否合法 |
+| validateIdCard15 | 身份证校验规则, 验证15位身份编码是否合法 |
+| validateIdCard18 | 身份证校验规则, 验证18位身份编码是否合法 |
 | convert15CardTo18 | 将 15 位身份证号码转换为 18 位 |
 | validateTWCard | 验证台湾身份证号码 |
 | validateHKCard | 验证香港身份证号码(存在Bug，部份特殊身份证无法检查) |
@@ -2786,11 +2759,12 @@ DevUtils.openDebug();
 | getAgeByIdCard | 根据身份编号获取年龄 |
 | getBirthByIdCard | 根据身份编号获取生日 |
 | getBirthdayByIdCard | 根据身份编号获取生日 |
-| getYearByIdCard | 根据身份编号获取生日年 |
-| getMonthByIdCard | 根据身份编号获取生日月 |
-| getDateByIdCard | 根据身份编号获取生日天 |
+| getYearByIdCard | 根据身份编号获取生日 - 年份 |
+| getMonthByIdCard | 根据身份编号获取生日 - 月份 |
+| getDateByIdCard | 根据身份编号获取生日 - 天数 |
 | getGenderByIdCard | 根据身份编号获取性别 |
 | getProvinceByIdCard | 根据身份编号获取户籍省份 |
+| getPowerSum | 将身份证的每位和对应位的加权因子相乘之后，再获取和值 |
 | isEmpty | 判断是否为null |
 
 
@@ -2813,7 +2787,6 @@ DevUtils.openDebug();
 | isEmail | 校验邮箱 |
 | isUrl | 校验URL |
 | isIPAddress | 校验IP地址 |
-| isIP | IP地址校验 |
 | isChinese | 校验汉字(无符号,纯汉字) |
 | isChineseAll | 判断字符串是不是全是中文 |
 | isContainChinese | 判断字符串中包含中文、包括中文字符标点等 |
@@ -2823,8 +2796,6 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| isEmpty | 判断是否为null |
-| match | 通用匹配函数 |
 | isPhoneCheck | 中国手机号格式验证,在输入可以调用该方法,点击发送验证码,使用 isPhone |
 | isPhone | 是否中国手机号 |
 | isPhoneToChinaTelecom | 是否中国电信手机号码 |
