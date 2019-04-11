@@ -2015,6 +2015,17 @@ DevUtils.openDebug();
 | objectToBytes | Object 转为 byte[] |
 | bytesToChars | byte[] 转换 char[], 并且进行补码 |
 | charsToBytes | char[] 转换 byte[] |
+| intsToDoubles | int[] 转换 double[] |
+| intsToLongs | int[] 转换 long[] |
+| intsToFloats | int[] 转换 float[] |
+| intsToStrings | int[] 转换 string[] |
+| stringsToInts | string[] 转换 int[] |
+| stringsToDoubles | string[] 转换 double[] |
+| stringsToLongs | string[] 转换 long[] |
+| stringsToFloats | string[] 转换 float[] |
+| doublesToInts | double[] 转换 int[] |
+| longsToInts | long[] 转换 int[] |
+| floatsToInts | float[] 转换 int[] |
 | toBinaryString | 将 字节转换 为 二进制字符串 |
 | decodeBinary | 二进制字符串 转换 byte[] 解码 |
 | decodeHex | 将十六进制字节数组解码 |
@@ -2439,15 +2450,6 @@ DevUtils.openDebug();
 | print | 打印数字集合 |
 
 
-* **Base64 工具类 ->** [Base64.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/assist/Base64.java)
-
-| 方法 | 注释 |
-| :- | :- |
-| decode | Decode the Base64-encoded data in input and return the data in |
-| encodeToString | Base64-encode the given data and return a newly allocated |
-| encode | Base64-encode the given data and return a newly allocated |
-
-
 * **时间均值计算器, 只能用于单线程计时。 ->** [TimeAverager.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/assist/TimeAverager.java)
 
 | 方法 | 注释 |
@@ -2519,6 +2521,15 @@ DevUtils.openDebug();
 
 
 ## <span id="devutilscommoncipher">**`dev.utils.common.cipher`**</span>
+
+
+* **Base64 工具类 ->** [Base64.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/cipher/Base64.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| decode | Decode the Base64-encoded data in input and return the data in |
+| encodeToString | Base64-encode the given data and return a newly allocated |
+| encode | Base64-encode the given data and return a newly allocated |
 
 
 * **Baes64 编/解码 并进行 加/解密 ->** [Base64Cipher.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/cipher/Base64Cipher.java)
