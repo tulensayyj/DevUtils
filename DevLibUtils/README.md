@@ -578,7 +578,6 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| init | 初始化操作 |
 | getMainHandler | 获取主线程 Handler |
 | postRunnable | 在主线程 Handler 中执行任务 |
 | removeRunnable | 在主线程 Handler 中清除任务 |
@@ -1228,7 +1227,7 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| invisibleViewByAlpha | 将给定视图渐渐隐去(view.setVisibility(View.INVISIBLE)) |
+| invisibleViewByAlpha | 将给定视图渐渐隐去 (view.setVisibility(View.INVISIBLE)) |
 | goneViewByAlpha | 将给定视图渐渐隐去最后从界面中移除(view.setVisibility(View.GONE)) |
 | visibleViewByAlpha | 将给定视图渐渐显示出来(view.setVisibility(View.VISIBLE)) |
 | translate | 视图移动 |
@@ -1935,7 +1934,7 @@ DevUtils.openDebug();
 | :- | :- |
 | isBaseDataType | 判断类是否是基础数据类型 - 目前支持11种 |
 | newInstance | 根据类获取对象：不再必须一个无参构造 |
-| getDefaultPrimiticeValue | 判断 Class 是否为原始类型(boolean、char、byte、short、int、long、float、double) |
+| getDefaultPrimiticeValue | 判断 Class 是否为原始类型 (boolean、char、byte、short、int、long、float、double) |
 | isCollection | 判断是否集合类型 |
 | isArray | 是否数组类型 |
 | getGenericSuperclass | 获取父类泛型类型 |
@@ -2011,6 +2010,7 @@ DevUtils.openDebug();
 | parseLong | 字符串转换对应的进制 |
 | bytesBitwiseAND | 按位求补 byte[] 位移编/解码 （共用同一个方法） |
 | subBytes | 从 byte[] 上截取一段 |
+| joinBytes | 拼接数据 |
 | bytesToObject | byte[] 转为 Object |
 | objectToBytes | Object 转为 byte[] |
 | bytesToChars | byte[] 转换 char[], 并且进行补码 |
@@ -2097,18 +2097,8 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| percent | 计算百分比值 (最大 100%) |
-| percent2 | 计算百分比值 (可超出 100%) |
-| clamp | 返回的 value 介于 max、min之间，若 value 小于min，返回min，若大于max，返回max |
-| getFormatString | 获取格式化后的字符串 |
-| getFormatString2 | 获取格式化后的字符串 |
-| getAutoFormatString | 获取自动数量格式化后的字符串(可变参数) |
-| getAutoFormatString2 | 获取自动数量格式化后的字符串(可变参数) |
 | isHttpRes | 判断是否网络资源 |
 | isSpace | 判断字符串是否为 null 或全为空白字符 |
-| appendSpace | 追加空格 |
-| appendTab | 追加 Tab |
-| appendLine | 追加 换行 |
 | isEmpty | 判断是否为 null |
 | isTrimEmpty | 判断是否为 null 或者为空格 |
 | isEmptyObjs | 判读是否为 null to 可变数组 |
@@ -2140,6 +2130,16 @@ DevUtils.openDebug();
 | replaceStrs | 替换字符串 |
 | replaceStr | 替换字符串 |
 | replaceStrToNull | 替换字符串 |
+| percent | 计算百分比值 (最大 100%) |
+| percent2 | 计算百分比值 (可超出 100%) |
+| clamp | 返回的 value 介于 max、min之间，若 value 小于min，返回min，若大于max，返回max |
+| getFormatString | 获取格式化后的字符串 |
+| getFormatString2 | 获取格式化后的字符串 |
+| getAutoFormatString | 获取自动数量格式化后的字符串(可变参数) |
+| getAutoFormatString2 | 获取自动数量格式化后的字符串(可变参数) |
+| appendSpace | 追加空格 |
+| appendTab | 追加 Tab |
+| appendLine | 追加 换行 |
 
 
 * **域工具 ->** [FieldUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/FieldUtils.java)
@@ -2156,7 +2156,7 @@ DevUtils.openDebug();
 | isString | 是否 String 类型 |
 | getGenericType | 获取域的泛型类型，如果不带泛型返回 null |
 | getComponentType | 获取数组的类型 |
-| getAllDeclaredFields | 获取全部Field，包括父类 |
+| getAllDeclaredFields | 获取全部 Field，包括父类 |
 | isInvalid | 是静态常量或者内部结构属性 |
 
 
@@ -2245,8 +2245,8 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | splitParams | 拆分参数 |
-| joinReqParams | 拼接请求参数 - value => String |
-| joinReqParamsObj | 拼接请求参数 - value => Object |
+| joinParams | 拼接请求参数 - value => String |
+| joinParamsObj | 拼接请求参数 - value => Object |
 | printMapParams | 拼接打印 Map 参数 |
 | toConvertObjToMS | 进行转换对象处理(请求发送对象) |
 | toConvertObjToMO | 进行转换对象处理(请求发送对象) |
@@ -2439,7 +2439,7 @@ DevUtils.openDebug();
 ## <span id="devutilscommonassist">**`dev.utils.common.assist`**</span>
 
 
-* **用以统计平均数 ->** [Averager.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/assist/Averager.java)
+* **均值计算器 - 用以统计平均数 ->** [Averager.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/assist/Averager.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -2596,58 +2596,58 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| encryptMD2ToString | MD2 加密 |
 | encryptMD2 | MD2 加密 |
-| encryptMD5ToString | MD5 加密 |
+| encryptMD2ToHexString | MD2 加密 |
 | encryptMD5 | MD5 加密 |
-| encryptMD5FileToString | MD5 加密文件 |
+| encryptMD5ToHexString | MD5 加密 |
 | encryptMD5File | MD5 加密文件 |
-| encryptSHA1ToString | SHA1 加密 |
+| encryptMD5FileToHexString | MD5 加密文件 |
 | encryptSHA1 | SHA1 加密 |
-| encryptSHA224ToString | SHA224 加密 |
+| encryptSHA1ToHexString | SHA1 加密 |
 | encryptSHA224 | SHA224 加密 |
-| encryptSHA256ToString | SHA256 加密 |
+| encryptSHA224ToHexString | SHA224 加密 |
 | encryptSHA256 | SHA256 加密 |
-| encryptSHA384ToString | SHA384 加密 |
+| encryptSHA256ToHexString | SHA256 加密 |
 | encryptSHA384 | SHA384 加密 |
-| encryptSHA512ToString | SHA512 加密 |
+| encryptSHA384ToHexString | SHA384 加密 |
 | encryptSHA512 | SHA512 加密 |
-| encryptHmacMD5ToString | HmacMD5 加密 |
+| encryptSHA512ToHexString | SHA512 加密 |
 | encryptHmacMD5 | HmacMD5 加密 |
-| encryptHmacSHA1ToString | HmacSHA1 加密 |
+| encryptHmacMD5ToHexString | HmacMD5 加密 |
 | encryptHmacSHA1 | HmacSHA1 加密 |
-| encryptHmacSHA224ToString | HmacSHA224 加密 |
+| encryptHmacSHA1ToHexString | HmacSHA1 加密 |
 | encryptHmacSHA224 | HmacSHA224 加密 |
-| encryptHmacSHA256ToString | HmacSHA256 加密 |
+| encryptHmacSHA224ToHexString | HmacSHA224 加密 |
 | encryptHmacSHA256 | HmacSHA256 加密 |
-| encryptHmacSHA384ToString | HmacSHA384 加密 |
+| encryptHmacSHA256ToHexString | HmacSHA256 加密 |
 | encryptHmacSHA384 | HmacSHA384 加密 |
-| encryptHmacSHA512ToString | HmacSHA512 加密 |
+| encryptHmacSHA384ToHexString | HmacSHA384 加密 |
 | encryptHmacSHA512 | HmacSHA512 加密 |
+| encryptHmacSHA512ToHexString | HmacSHA512 加密 |
+| encryptDES | DES 加密 |
 | encryptDESToBase64 | DES 加密 |
 | encryptDESToHexString | DES 加密 |
-| encryptDES | DES 加密 |
-| decryptBase64DES | DES 解密 |
-| decryptHexStringDES | DES 解密 |
 | decryptDES | DES 解密 |
+| decryptDESToBase64 | DES 解密 |
+| decryptDESToHexString | DES 解密 |
+| encrypt3DES | 3DES 加密 |
 | encrypt3DESToBase64 | 3DES 加密 |
 | encrypt3DESToHexString | 3DES 加密 |
-| encrypt3DES | 3DES 加密 |
-| decryptBase64_3DES | 3DES 解密 |
-| decryptHexString3DES | 3DES 解密 |
 | decrypt3DES | 3DES 解密 |
+| decrypt3DESToBase64 | 3DES 解密 |
+| decrypt3DESToHexString | 3DES 解密 |
+| encryptAES | AES 加密 |
 | encryptAESToBase64 | AES 加密 |
 | encryptAESToHexString | AES 加密 |
-| encryptAES | AES 加密 |
-| decryptBase64AES | AES 解密 |
-| decryptHexStringAES | AES 解密 |
 | decryptAES | AES 解密 |
+| decryptAESToBase64 | AES 解密 |
+| decryptAESToHexString | AES 解密 |
+| encryptRSA | RSA 加密 |
 | encryptRSAToBase64 | RSA 加密 |
 | encryptRSAToHexString | RSA 加密 |
-| encryptRSA | RSA 加密 |
-| decryptBase64RSA | RSA 解密 |
-| decryptHexStringRSA | RSA 解密 |
 | decryptRSA | RSA 解密 |
+| decryptRSAToBase64 | RSA 解密 |
+| decryptRSAToHexString | RSA 解密 |
 
 
 * **字符串 编/解码 工具类 ->** [EscapeUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/encrypt/EscapeUtils.java)
