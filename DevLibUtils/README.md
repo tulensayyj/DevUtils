@@ -122,15 +122,15 @@ DevUtils.openDebug();
 | :- | :- |
 | getActivityByView | 返回 View context 所属的 Activity |
 | isActivityExists | 判断是否存在指定的Activity |
-| startHomeActivity | 回到桌面 -> 同点击Home键效果 |
+| startHomeActivity | 回到桌面 (同点击Home键效果) |
 | getLauncherActivity | 获取 Launcher activity |
 | getActivityIcon | 返回 Activity 对应的图标 |
 | getActivityLogo | 返回 Activity 对应的Logo |
 | getActivityToLauncher | 获取对应包名应用启动 Activity |
 | getLauncherCategoryHomeToResolveInfo | 获取系统桌面信息 |
-| getLauncherCategoryHomeToPackageName | 获取系统桌面信息 -> packageName |
-| getLauncherCategoryHomeToActivityName | 获取系统桌面信息 -> activityName |
-| getLauncherCategoryHomeToPackageAndName | 获取系统桌面信息 -> package/activityName |
+| getLauncherCategoryHomeToPackageName | 获取系统桌面信息 - packageName |
+| getLauncherCategoryHomeToActivityName | 获取系统桌面信息 - activityName |
+| getLauncherCategoryHomeToPackageAndName | 获取系统桌面信息 - package/activityName |
 
 
 * **ADB shell 工具类 ->** [ADBUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/ADBUtils.java)
@@ -296,7 +296,7 @@ DevUtils.openDebug();
 | convertSDKVersion | 转换SDK版本 (convertSDKVersion(14) => Android 4.0.0-2) |
 
 
-* **App(Android 工具类) ->** [AppUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/AppUtils.java)
+* **App (Android) 工具类 ->** [AppUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/AppUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -338,9 +338,9 @@ DevUtils.openDebug();
 | getAppSignatureSHA1 | 获取 App sha1值 |
 | getAppSignatureSHA256 | 获取应用签名的的 SHA256 值 |
 | getAppSignatureMD5 | 获取应用签名 MD5 值 |
-| openPDFFile | 启动本地应用打开PDF |
-| openWordFile | 启动本地应用打开Word |
-| openOfficeByWPS | 调用WPS打开office文档 |
+| openPDFFile | 启动本地应用打开 PDF |
+| openWordFile | 启动本地应用打开 Word |
+| openOfficeByWPS | 调用 WPS 打开 office 文档 |
 
 
 * **状态栏相关工具类 ->** [BarUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/BarUtils.java)
@@ -406,7 +406,7 @@ DevUtils.openDebug();
 | putConfig | 添加配置信息 |
 | removeConfig | 移除配置信息 |
 | removeRecord | 移除点击记录 |
-| clearRecord | 清空点击记录 |
+| clearRecord | 清空点击记录(全部) |
 | addTouchArea | 增加控件的触摸范围，最大范围只能是父布局所包含的的区域 |
 
 
@@ -503,6 +503,7 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
+| setCursorVisible | 设置是否显示光标 |
 | setMaxLengthAnText | 设置长度限制，并且设置内容 |
 | setMaxLength | 设置长度限制 |
 | getSelectionStart | 获取光标位置 |
@@ -538,8 +539,6 @@ DevUtils.openDebug();
 | base64DecodeToString | base64 解码 |
 | htmlEncode | html 编码 |
 | htmlDecode | html 解码 |
-| binEncode | 返回二进制编码后的字符串 |
-| binDecode | 返回 UTF-8 字符串的二进制数据 |
 
 
 * **错误信息处理工具类 ->** [ErrorUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/ErrorUtils.java)
@@ -551,7 +550,7 @@ DevUtils.openDebug();
 | getThrowableNewLinesMsg | 获取错误信息(有换行) |
 
 
-* **App 文件记录工具类 ->** [FileRecordUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/FileRecordUtils.java)
+* **文件记录工具类 ->** [FileRecordUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/FileRecordUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -606,7 +605,7 @@ DevUtils.openDebug();
 | getUninstallAppIntent | 获取卸载 App 的意图 |
 | getLaunchAppIntent | 获取打开 App 的意图 |
 | getLaunchAppDetailsSettingsIntent | 获取 App 具体设置的意图 |
-| getlaunchAppDetailIntent | 获取 到应用商店app详情界面的意图 |
+| getLaunchAppDetailIntent | 获取 到应用商店app详情界面的意图 |
 | getShareTextIntent | 获取分享文本的意图 |
 | getShareImageIntent | 获取分享图片的意图 |
 | getComponentIntent | 获取其他应用组件的意图 |
@@ -726,9 +725,9 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| printMemInfo | 打印内存信息 |
+| printMemoryInfo | 返回内存信息 |
 | getMemoryInfo | 获取内存信息 |
-| printMemoryInfo | 打印内存信息 |
+| printMemoryInfo2 | 返回内存信息 |
 | getAvailMemory | 获取可用内存信息 |
 | getTotalMemory | 获取总内存大小 |
 | getMemoryAvailable | 获取可用内存大小 |
@@ -919,6 +918,7 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
+| getView | 获取 View |
 | getResources | 获取 Resources |
 | getTheme | 获取 Resources.Theme |
 | getAssets | 获取 AssetManager |
@@ -1199,7 +1199,7 @@ DevUtils.openDebug();
 | measureView | 测量 View |
 | getViewWidth | 获取view的宽度 |
 | getViewHeight | 获取view的高度 |
-| getActivity | 获取 View 的 Context |
+| getActivity | 获取 View 的 Context (Activity) |
 | calcListViewItemHeight | 计算ListView Item 高度 |
 | calcGridViewItemHeight | 计算GridView Item 高度 |
 | getItemHeighet | 获取单独一个Item 高度 |
@@ -1223,7 +1223,7 @@ DevUtils.openDebug();
 | shake | 视图摇晃 |
 
 
-* **视图动画工具箱(AnimationUtils 基础上封装)，提供简单的控制视图的动画的工具方法 ->** [ViewAnimationUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/anim/ViewAnimationUtils.java)
+* **视图动画工具箱 (AnimationUtils 基础上封装) ，提供简单的控制视图的动画的工具方法 ->** [ViewAnimationUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/anim/ViewAnimationUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -1290,16 +1290,16 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | getInstance | 获取 ActivityManager 实例 ,单例模式 |
-| getActivity | 通过 Context 获取Activity |
-| isFinishing | 判断页面是否关闭 |
-| isFinishingCtx | 判断页面是否关闭 |
+| getActivity | 通过 Context 获取 Activity |
+| isFinishing | 判断 Activity 是否关闭 |
+| isFinishingCtx | 判断 Activity 是否关闭 |
 | getActivityStacks | 获取 Activity 栈 |
 | addActivity | 保存 Activity |
 | removeActivity | 移除 Activity |
 | currentActivity | 获取最后一个(当前)Activity |
 | finishActivity | 结束最后一个(当前)Activity |
 | existActivitys | 检测是否包含指定的 Activity |
-| finishAllActivityToIgnore | 结束全部Activity 除忽略的页面外 |
+| finishAllActivityToIgnore | 结束全部Activity 除忽略的 Activity 外 |
 | finishAllActivity | 结束所有Activity |
 | appExit | 退出应用程序 |
 | restartApplication | 重启 App |
@@ -1313,6 +1313,7 @@ DevUtils.openDebug();
 | timerSize | 获取全部任务总数 |
 | getTimer | 获取属于对应字符串标记的定时器任务(优先获取符合的) |
 | closeAll | 关闭全部任务 |
+| closeNotRunTask | 关闭所有未运行的任务 |
 | closeInfiniteTask | 关闭所有无限循环的任务 |
 | closeMark | 关闭所有符合对应的字符串标记的定时器任务 |
 | createTimer | 创建定时器 => 立即执行,无限循环,通知默认what |
