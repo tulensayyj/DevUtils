@@ -745,11 +745,13 @@ DevUtils.openDebug();
 | isConnWifi | 判断是否连接Wifi(连接上、连接中) |
 | isConnMobileData | 判断是否连接移动网络(连接上、连接中) |
 | isAvailable | 判断网络是否可用 |
+| isAvailableByPing | 使用 ping ip 方式判断网络是否可用 |
 | is4G | 判断是否4G网络 |
 | getWifiEnabled | 判断wifi是否打开 |
 | isWifiAvailable | 判断wifi数据是否可用 |
 | getNetworkOperatorName | 获取网络运营商名称 - 中国移动、如中国联通、中国电信 |
 | getNetworkType | 获取当前网络类型 |
+| getNetworkClass | 获取移动网络连接类型 |
 | getBroadcastIpAddress | 获取广播 ip 地址 |
 | getDomainAddress | 获取域名ip地址 |
 | getIPAddress | 获取IP地址 |
@@ -1914,6 +1916,34 @@ DevUtils.openDebug();
 ## <span id="devutilscommon">**`dev.utils.common`**</span>
 
 
+* **Array 数组工具类 ->** [ArrayUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/ArrayUtils.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| isEmpty | 判断数组是否为 null |
+| isNotEmpty | 判断数组是否不为 null |
+| length | 获取数组长度 |
+| isLength | 判断数组长度是否等于期望长度 |
+| get | 获取数组对应索引数据 |
+| getFirst | 获取数组第一条数据 |
+| getLast | 获取数组最后一条数据 |
+| getPosition | 根据指定值获取 value 所在位置 + 偏移量的索引 |
+| getNotNull | 根据指定 value 获取 value 所在位置 + 偏移量的值, 不允许值为null |
+| getPositionNotNull | 根据指定 value 获取索引, 不允许值为null |
+| intsToIntegers | int 数组转换 Integer 数组 |
+| bytesToBytes | byte 数组转换 Byte 数组 |
+| charsToCharacters | char 数组转换 Character 数组 |
+| shortsToShorts | short 数组转换 Short 数组 |
+| longsToLongs | long 数组转换 Long 数组 |
+| floatsToFloats | float 数组转换 Float 数组 |
+| doublesToDoubles | double 数组转换 Double 数组 |
+| booleansToBooleans | boolean 数组转换 Boolean 数组 |
+| integersToInts | Integer 数组转换 int 数组 |
+| charactersToChars | Character 数组转换 char 数组 |
+| asList | 转换数组为集合 |
+| equals | 判断两个值是否一样 |
+
+
 * **资金运算工具类 ->** [BigDecimalUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/BigDecimalUtils.java)
 
 | 方法 | 注释 |
@@ -1957,6 +1987,49 @@ DevUtils.openDebug();
 | :- | :- |
 | closeIO | 关闭 IO |
 | closeIOQuietly | 安静关闭 IO |
+
+
+* **集合工具类 (Collection - List、Set、Queue) 等 ->** [CollectionUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/CollectionUtils.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| isEmpty | 判断 Collection 是否为 null |
+| isNotEmpty | 判断 Collection 是否不为 null |
+| length | 获取 Collection 长度 |
+| isLength | 获取长度 to Collection 是否等于期望长度 |
+| greaterThan | 判断 Collection 长度是否大于指定长度 |
+| greaterThanOrEqual | 判断 Collection 长度是否大于等于指定长度 |
+| lessThan | 判断 Collection 长度是否小于指定长度 |
+| lessThanOrEqual | 判断 Collection 长度是否小于等于指定长度 |
+| get | 获取数据 |
+| getFirst | 获取第一条数据 |
+| getLast | 获取最后一条数据 |
+| getPosition | 根据指定 value 获取 value 所在位置 + 偏移量的索引 |
+| getPositionNotNull | 根据指定 value 获取索引, 不允许值为null |
+| getNext | 根据指定 value 获取 value 所在位置的下一个值 |
+| getNextNotNull | 根据指定 value 获取 value 所在位置的下一个值, 不允许值为null |
+| getPrevious | 根据指定 value 获取 value 所在位置的上一个值 |
+| getPreviousNotNull | 根据指定 value 获取 value 所在位置的上一个值, 不允许值为null |
+| add | 添加一条数据 |
+| addNotNull | 添加一条数据 - value 不允许为null |
+| addAll | 添加集合数据 |
+| addAllNotNull | 添加集合数据 - values 内的值不允许为null |
+| remove | 移除一条数据 |
+| removeAll | 移除集合数据 |
+| clear | 清空集合中符合指定 value 的全部数据 |
+| clearNotBelong | 保留集合中符合指定 value 的全部数据 |
+| clearAll | 清空集合全部数据 |
+| isEqualCollection | 判断两个集合是否相同 |
+| isEqualCollections | 判断多个集合是否相同 |
+| union | 两个集合并集处理 |
+| unions | 多个集合并集处理 |
+| intersection | 两个集合交集处理 |
+| disjunction | 两个集合交集的补集处理 |
+| subtract | 两个集合差集（扣除）处理 |
+| equals | 判断两个值是否一样 |
+| toArray | 转换数组 to 集合数据类型数组 |
+| toArrayToObject | 转换数组 to Object |
+| reverse | 集合翻转处理 |
 
 
 * **颜色工具类(包括常用的色值) ->** [ColorUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/ColorUtils.java)
@@ -2003,7 +2076,9 @@ DevUtils.openDebug();
 | toFloat | 字符串 转 float |
 | toDouble | 字符串 转 double |
 | toLong | 字符串 转 long |
-| toChar | 字符串 获取 char (默认第一位) |
+| toShort | 基本类型对象 转 short |
+| toChar | 基本类型对象 转 char |
+| toByte | 基本类型对象 转 byte |
 | toCharInt | char 转换 unicode 编码 |
 | toChars | 字符串 获取 char[] |
 | toBytes | 字符串 获取 byte[] |
@@ -2107,7 +2182,7 @@ DevUtils.openDebug();
 | lengthObjs | 获取可变数组长度 |
 | lengthObjsDf | 获取可变数组长度 |
 | isLength | 获取字符串长度 是否等于期望长度 |
-| equals | 判断两字符串是否相等 |
+| equals | 判断两个值是否一样 |
 | isEquals | 判断多个字符串是否相等, 只有全相等才返回 true - 对比大小写 |
 | isOrEquals | 判断多个字符串,只要有一个符合条件,则通过 |
 | isContains | 判断一堆值中，是否存在符合该条件的(包含) |
@@ -2264,6 +2339,44 @@ DevUtils.openDebug();
 | getNetTime | 获取网络时间 - 默认使用百度链接 |
 | onResponse | 请求响应回调 |
 | onFail | 请求失败 |
+
+
+* **Map 工具类 ->** [MapUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/MapUtils.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| isEmpty | 判断 Map 是否为 null |
+| isNotEmpty | 判断 Map 是否不为 null |
+| length | 获取 Map 长度 |
+| isLength | 获取长度 to Map 是否等于期望长度 |
+| greaterThan | 判断 Map 长度是否大于指定长度 |
+| greaterThanOrEqual | 判断 Map 长度是否大于等于指定长度 |
+| lessThan | 判断 Map 长度是否小于指定长度 |
+| lessThanOrEqual | 判断 Map 长度是否小于等于指定长度 |
+| get | 获取 Value |
+| getKeyByValue | 通过 value 获取 Key |
+| getKeysByValue | 通过 value 获取 Key 集合 (返回等于 value 的 key 集合) |
+| getKeys | 通过 Map 获取 Key 集合 |
+| getKeysToArrays | 通过 Map 获取 Key 数组 |
+| getValues | 通过 Map 获取 Value 集合 |
+| getValuesToArrays | 通过 Map 获取 Value 数组 |
+| getFirst | 获取第一条数据 |
+| getLast | 获取最后一条数据 |
+| getNext | 根据指定 key 获取 key 所在位置的下一条数据 |
+| getPrevious | 根据指定 key 获取 key 所在位置的上一条数据 |
+| put | 添加一条数据 |
+| putNotNull | 添加一条数据, 不允许 key 为 null |
+| putAll | 添加多条数据 |
+| putAllNotNull | 添加多条数据, 不允许 key 为 null |
+| remove | 移除一条数据 |
+| removeToKeys | 移除多条数据 |
+| removeToValue | 移除等于 value 的所有数据 |
+| removeToValues | 移除等于 value 的所有数据 (Collection<Value>) |
+| equals | 判断两个值是否一样 |
+| toggle | 切换保存状态 |
+| isNullToValue | 判断指定 key 的 value 是否为 null |
+| containsKey | 判断 Map 是否存储了 key |
+| containsValue | 判断 Map 是否存储了 value |
 
 
 * **对象相关工具类 ->** [ObjectUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/ObjectUtils.java)
