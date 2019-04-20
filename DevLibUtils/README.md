@@ -772,7 +772,7 @@ DevUtils.openDebug();
 | createPendingIntent | 获取跳转id |
 | createNotification | 创建通知栏对象 |
 | obtain | 获取 Led 配置参数 |
-| isEmpty | 判断是否为null |
+| isEmpty | 判断是否为 null |
 
 
 * **工具类: OS 系统相关 ->** [OSUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/OSUtils.java)
@@ -2890,14 +2890,14 @@ DevUtils.openDebug();
 | getGenderByIdCard | 根据身份编号获取性别 |
 | getProvinceByIdCard | 根据身份编号获取户籍省份 |
 | getPowerSum | 将身份证的每位和对应位的加权因子相乘之后，再获取和值 |
-| isEmpty | 判断是否为null |
+| isEmpty | 判断是否为 null |
 
 
 * **校验工具类 ->** [ValidatorUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/validator/ValidatorUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
-| isEmpty | 判断是否为null |
+| isEmpty | 判断是否为 null |
 | match | 通用匹配函数 |
 | isNumber | 检验数字 |
 | isLetter | 判断字符串是不是全是字母 |
