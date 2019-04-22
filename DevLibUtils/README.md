@@ -955,8 +955,8 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | getDisplayMetrics | 获取 DisplayMetrics |
-| getScreenWidth | 获取屏幕的宽度(单位：px) |
-| getScreenHeight | 获取屏幕的高度(单位：px) |
+| getScreenWidth | 获取屏幕的宽度(单位 px) |
+| getScreenHeight | 获取屏幕的高度(单位 px) |
 | getScreenWidthHeightToPoint | 通过 Context 获取屏幕宽度高度 |
 | getScreenWidthHeight | 通过 Context 获取屏幕宽度高度 |
 | getScreenSize | 获取屏幕分辨率 |
@@ -1287,7 +1287,7 @@ DevUtils.openDebug();
 ## <span id="devutilsappassistmanager">**`dev.utils.app.assist.manager`**</span>
 
 
-* **应用程序 Activity 管理类：用于 Activity 管理和应用程序 ->** [ActivityManager.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/assist/manager/ActivityManager.java)
+* **应用程序 Activity 管理类; 用于 Activity 管理和应用程序 ->** [ActivityManager.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/assist/manager/ActivityManager.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -1456,7 +1456,7 @@ DevUtils.openDebug();
 | createThumbnailBitmap | 创建图片缩略图 |
 | createWatermarkBitmap | 生成水印图片 水印在右下角 |
 | codec | 重新编码Bitmap |
-| compress | 图片压缩方法：(使用compress的方法) |
+| compress | 图片压缩方法(使用compress的方法) |
 | scale | 图片的缩放方法 |
 | rotate | 旋转图片 |
 | reverseByHorizontal | 水平翻转处理 |
@@ -1474,7 +1474,7 @@ DevUtils.openDebug();
 | film | 底片效果处理 |
 | sharpen | 锐化效果处理 |
 | emboss | 浮雕效果处理 |
-| yuvLandscapeToPortrait | 将YUV格式的图片的源数据从横屏模式转为竖屏模式，注意：将源图片的宽高互换一下就是新图片的宽高 |
+| yuvLandscapeToPortrait | 将YUV格式的图片的源数据从横屏模式转为竖屏模式，注: 将源图片的宽高互换一下就是新图片的宽高 |
 | safeDecodeStream | 比较安全的 解码(decodeStream) 方法 |
 
 
@@ -1964,7 +1964,7 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | isBaseDataType | 判断类是否是基础数据类型 - 目前支持11种 |
-| newInstance | 根据类获取对象：不再必须一个无参构造 |
+| newInstance | 根据类获取对象: 不再必须一个无参构造 |
 | getDefaultPrimiticeValue | 判断 Class 是否为原始类型 (boolean、char、byte、short、int、long、float、double) |
 | isCollection | 判断是否集合类型 |
 | isArray | 是否数组类型 |
@@ -2059,7 +2059,7 @@ DevUtils.openDebug();
 | intToRgbString | 颜色值 转换 RGB颜色 字符串 |
 | intToArgbString | 颜色值 转换 ARGB颜色 字符串 |
 | getRandomColor | 获取随机颜色值 |
-| judgeColorString | 判断是否为ARGB格式的十六进制颜色，例如：FF990587 |
+| judgeColorString | 判断是否为ARGB格式的十六进制颜色，例如: FF990587 |
 | setDark | 颜色加深(单独修改 RGB值, 不变动透明度) |
 | setLight | 颜色变浅, 变亮(单独修改 RGB值, 不变动透明度) |
 | setAlphaDark | 设置透明度加深 |
@@ -2298,7 +2298,7 @@ DevUtils.openDebug();
 | deleteFiles | 删除多个文件 |
 | deleteFolder | 删除文件夹 |
 | saveFile | 保存文件 |
-| appendFile | 追加文件：使用FileWriter |
+| appendFile | 追加文件: 使用FileWriter |
 | readFileBytes | 读取文件 |
 | readFile | 读取文件 |
 | copyFile | 复制单个文件 |
@@ -2525,7 +2525,7 @@ DevUtils.openDebug();
 | toUnicode | 将字符串转移为 Unicode 码 |
 | toUnicodeString | 将字符串转移为 Unicode 码 |
 | toDBC | 转化为半角字符 |
-| toSBC | 转化为全角字符 如： a => ａ A => Ａ |
+| toSBC | 转化为全角字符 如: a => ａ A => Ａ |
 | checkChineseToString | 检测字符串是否全是中文 |
 | isChinese | 判定输入汉字 |
 | upperFirstLetter | 首字母大写 |
@@ -2608,9 +2608,9 @@ DevUtils.openDebug();
 | isRunning | 是否搜索中 |
 | stop | 停止搜索 |
 | isStop | 是否停止搜索 |
-| getStartTime | 获取开始搜索时间 |
-| getEndTime | 获取结束搜索时间 |
-| getDelayTime | 获取延迟校验时间 |
+| getStartTime | 获取开始搜索时间(毫秒) |
+| getEndTime | 获取结束搜索时间(毫秒) |
+| getDelayTime | 获取延迟校验时间(毫秒) |
 | setDelayTime | 设置延迟校验时间 |
 | query | 搜索目录 |
 | isHandlerFile | 判断是否处理该文件 |
@@ -2626,8 +2626,8 @@ DevUtils.openDebug();
 | isRunning | 是否搜索中 |
 | stop | 停止搜索 |
 | isStop | 是否停止搜索 |
-| getStartTime | 获取开始搜索时间 |
-| getEndTime | 获取结束搜索时间 |
+| getStartTime | 获取开始搜索时间(毫秒) |
+| getEndTime | 获取结束搜索时间(毫秒) |
 | query | 搜索目录 |
 | isHandlerFile | 判断是否处理该文件 |
 | isAddToList | 是否添加到集合 |
