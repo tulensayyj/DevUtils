@@ -2193,7 +2193,7 @@ DevUtils.openDebug();
 | toCheckValue | 检查字符串,如果为null,返回 "" |
 | toCheckValues | 检查多个值, 并返回第一个非null and "" 的字符串,如果都不符合条件，则返回默认值 |
 | toCheckValuesSpace | 检查多个值,并返回第一个非null and "" and 全部不是属于空格 的字符串,如果都不符合条件，则返回默认值 |
-| subEllipsize | 裁减超出的内容, 并且追加符号(如 ...) |
+| subEllipsize | 裁剪超出的内容, 并且追加符号(如 ...) |
 | subSymbolHide | 裁剪符号处理 |
 | converSymbolHide | 转换符号处理 |
 | toReplaceSEWith | 替换(删除 - 替换成"") 字符串中符合 特定标记字符的 startsWith - endsWith |
