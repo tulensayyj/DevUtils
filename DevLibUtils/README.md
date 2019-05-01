@@ -1149,7 +1149,9 @@ DevUtils.openDebug();
 | setUnderlineText | 设置下划线 |
 | setStrikeThruText | 设置中划线 |
 | setText | 设置内容 |
+| setTexts | 设置多个 TextView 内容 |
 | setHtmlText | 设置 Html 内容 |
+| setHtmlTexts | 设置 多个 TextView Html 内容 |
 | getTextHeight | 获取字体高度 |
 | getTextTopOffsetHeight | 获取字体顶部偏移高度 |
 | getTextWidth | 计算字体宽度 |
@@ -1978,7 +1980,7 @@ DevUtils.openDebug();
 | :- | :- |
 | deepClone | 进行克隆 |
 | serializableToBytes | 通过序列化实体类, 获取对应的byte数组数据 |
-| bytesToObject | 通过 byte数据, 生成Object对象 |
+| bytesToObject | 通过 byte 数据, 生成 Object 对象 |
 
 
 * **关闭(IO流)工具类 ->** [CloseUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/CloseUtils.java)
@@ -2037,8 +2039,6 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | toHexAlpha | 获取十六进制透明度字符串 |
-| percent | 计算百分比值 |
-| clamp | 返回的 value 介于 max、min之间，若 value 小于min，返回min，若大于max，返回max |
 | alpha | 返回一个颜色中的透明度值(返回10进制) |
 | alphaPercent | 返回一个颜色中的透明度百分比值 |
 | red | 返回一个颜色中红色的色值(返回10进制) |
@@ -2086,7 +2086,7 @@ DevUtils.openDebug();
 | parseLong | 字符串转换对应的进制 |
 | bytesBitwiseAND | 按位求补 byte[] 位移编/解码 （共用同一个方法） |
 | subBytes | 从 byte[] 上截取一段 |
-| joinBytes | 拼接数据 |
+| joinBytes | 拼接 byte[] 数据 |
 | bytesToObject | byte[] 转为 Object |
 | objectToBytes | Object 转为 byte[] |
 | bytesToChars | byte[] 转换 char[], 并且进行补码 |
@@ -2173,49 +2173,52 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
+| timeRecord | 耗时时间记录 |
+| getOperateTime | 获取操作时间 |
+| sleepOperate | 堵塞操作 |
 | isHttpRes | 判断是否网络资源 |
-| isSpace | 判断字符串是否为 null 或全为空白字符 |
-| isEmpty | 判断是否为 null |
-| isTrimEmpty | 判断是否为 null 或者为空格 |
-| isEmptyObjs | 判读是否为 null to 可变数组 |
-| length | 获取长度，如果字符串为null, 则返回 0 |
-| lengthObjs | 获取可变数组长度 |
-| lengthObjsDf | 获取可变数组长度 |
-| isLength | 获取字符串长度 是否等于期望长度 |
+| whileMD5 | 循环 MD5 加密处理 |
+| randomUUID | 获取随机唯一数 |
+| randomUUIDToHashCode | 获取随机唯一数 HashCode |
+| getRandomUUID | 获取随机规则生成 UUID |
+| getRandomUUIDToString | 获取随机规则生成 UUID 字符串 |
+| converHideMobile | 转换手机号 |
+| converSymbolHide | 转换符号处理 |
+| subEllipsize | 裁剪超出的内容, 并且追加符号(如 ...) |
+| subSymbolHide | 裁剪符号处理 |
+| substring | 裁剪字符串 |
+| toReplaceSEWith | 替换(删除 - 替换成"") 字符串中符合 特定标记字符的 startsWith - endsWith |
+| toReplaceStartsWith | 替换开头字符串 |
+| toReplaceEndsWith | 替换结尾字符串 |
+| toClearSEWiths | (这个方法功能主要把字符符合标记的 头部和尾部都替换成 "") |
+| toClearStartsWith | 清空属于特定字符串开头的字段 |
+| toClearEndsWith | 清空属于特定字符串结尾的字段 |
+| replaceStr | 替换字符串 |
+| replaceStrToNull | 替换字符串 |
+| replaceStrs | 替换字符串 |
+| isEmpty | 判断数组是否为 null |
+| isNotEmpty | 判断数组是否不为 null |
+| length | 获取数组长度 |
+| isLength | 判断数组长度是否等于期望长度 |
 | equals | 判断两个值是否一样 |
 | isEquals | 判断多个字符串是否相等, 只有全相等才返回 true - 对比大小写 |
 | isOrEquals | 判断多个字符串,只要有一个符合条件,则通过 |
 | isContains | 判断一堆值中，是否存在符合该条件的(包含) |
 | isStartsWith | 判断内容, 是否属于特定字符串开头 - 对比大小写 |
 | isEndsWith | 判断内容, 是否属于特定字符串结尾 - 对比大小写 |
-| toClearSpace | 清空全部空格,并返回处理后的字符串 |
-| toClearSpaceTrim | 清空前后空格,并返回处理后的字符串 |
-| toCheckValue | 检查字符串,如果为null,返回 "" |
-| toCheckValues | 检查多个值, 并返回第一个非null and "" 的字符串,如果都不符合条件，则返回默认值 |
-| toCheckValuesSpace | 检查多个值,并返回第一个非null and "" and 全部不是属于空格 的字符串,如果都不符合条件，则返回默认值 |
-| subEllipsize | 裁剪超出的内容, 并且追加符号(如 ...) |
-| subSymbolHide | 裁剪符号处理 |
-| converSymbolHide | 转换符号处理 |
-| toReplaceSEWith | 替换(删除 - 替换成"") 字符串中符合 特定标记字符的 startsWith - endsWith |
-| toClearSEWiths | (这个方法功能主要把字符符合标记的 头部和尾部都替换成 "") |
-| substring | 裁剪字符串 |
-| toReplaceStartsWith | 替换开头字符串 |
-| toClearStartsWith | 清空属于特定字符串开头的字段 |
-| toReplaceEndsWith | 替换结尾字符串 |
-| toClearEndsWith | 清空属于特定字符串结尾的字段 |
-| replaceStrs | 替换字符串 |
-| replaceStr | 替换字符串 |
-| replaceStrToNull | 替换字符串 |
-| percent | 计算百分比值 (最大 100%) |
-| percent2 | 计算百分比值 (可超出 100%) |
-| clamp | 返回的 value 介于 max、min之间，若 value 小于min，返回min，若大于max，返回max |
+| isSpace | 判断字符串是否为 null 或全为空白字符 |
+| toClearSpace | 清空字符串全部空格 |
+| toClearSpaceTrim | 清空字符串前后所有空格 |
+| appendSpace | 追加空格 |
+| appendTab | 追加 Tab |
+| appendLine | 追加 换行 |
+| toCheckValue | 检查字符串 |
+| toCheckValues | 检查字符串 - 多个值 |
+| toCheckValuesSpace | 检查字符串 - 多个值(删除前后空格对比判断) |
 | getFormatString | 获取格式化后的字符串 |
 | getFormatString2 | 获取格式化后的字符串 |
 | getAutoFormatString | 获取自动数量格式化后的字符串(可变参数) |
 | getAutoFormatString2 | 获取自动数量格式化后的字符串(可变参数) |
-| appendSpace | 追加空格 |
-| appendTab | 追加 Tab |
-| appendLine | 追加 换行 |
 
 
 * **域工具 ->** [FieldUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/FieldUtils.java)
@@ -2272,22 +2275,22 @@ DevUtils.openDebug();
 | getFileSuffix | 获取文件后缀名(无.,单独后缀) |
 | getFileNotSuffix | 获取文件名(无后缀) |
 | getFileNotSuffixToPath | 获取文件名(无后缀) |
-| getFileNameNoExtension | 获取全路径中的不带拓展名的文件名 |
-| getFileExtension | 获取全路径中的文件拓展名 |
+| getFileNameNoExtension | 获取路径中的不带拓展名的文件名 |
+| getFileExtension | 获取路径中的文件拓展名 |
 | isFileExists | 检查是否存在某个文件 |
 | isFile | 判断是否文件 |
 | isDirectory | 判断是否文件夹 |
 | isHidden | 判断是否隐藏文件 |
 | getFileLastModified | 获取文件最后修改的毫秒时间戳 |
-| getFileCharsetSimple | 简单获取文件编码格式 |
+| getFileCharsetSimple | 获取文件编码格式 |
 | getFileLines | 获取文件行数 |
 | getFileSize | 获取文件大小 |
 | getDirSize | 获取目录大小 |
 | getFileLength | 获取文件大小 |
-| getDirLength | 获取目录长度 |
-| getFileLengthNetwork | 获取文件长度 - 网络资源 |
-| getFileName | 获取全路径中的文件名 |
-| getDirName | 获取全路径中的最长目录 |
+| getDirLength | 获取目录全部文件大小 |
+| getFileLengthNetwork | 获取文件大小 - 网络资源 |
+| getFileName | 获取路径中的文件名 |
+| getDirName | 获取路径中的最长目录地址 |
 | rename | 重命名文件 - 同个目录下, 修改文件名 |
 | formatFileSize | 传入文件路径, 返回对应的文件大小 |
 | formatByteMemorySize | 字节数转合适内存大小 保留 3 位小数 (%.位数f) |
@@ -2326,7 +2329,7 @@ DevUtils.openDebug();
 | printMapParams | 拼接打印 Map 参数 |
 | toConvertObjToMS | 进行转换对象处理(请求发送对象) |
 | toConvertObjToMO | 进行转换对象处理(请求发送对象) |
-| urlEncode | url 编码 - utf-8 |
+| toUrlEncode | 进行 URL 编码,默认UTF-8 |
 
 
 * **HttpURLConnection 网络工具类 ->** [HttpURLConnectionUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/HttpURLConnectionUtils.java)
@@ -2379,32 +2382,29 @@ DevUtils.openDebug();
 | containsValue | 判断 Map 是否存储了 value |
 
 
+* **数字(计算)工具类 ->** [NumberUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/NumberUtils.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| percent | 计算百分比值 (最大 100%) |
+| percent2 | 计算百分比值 (可超出 100%) |
+| clamp | 返回的 value 介于 max、min之间，若 value 小于min，返回min，若大于max，返回max |
+| isNumber | 检验数字 |
+| isNumberDecimal | 检验数字或包含小数点 |
+
+
 * **对象相关工具类 ->** [ObjectUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/ObjectUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
 | isEmpty | 判断对象是否为空 |
 | isNotEmpty | 判断对象是否非空 |
-| equals | 判断对象是否相等 |
-| requireNonNull | 检查对象非空 |
+| equals | 判断两个值是否一样 |
+| requireNonNull | 检查对象是否为 null, 为 null 则抛出异常, 不为 null 则返回该对象 |
 | getOrDefault | 获取非空或默认对象 |
 | hashCode | 获取对象哈希值 |
 | getObjectTag | 获取一个对象的独一无二的标记 |
 | converObj | 获取转换对象 |
-
-
-* **快捷通用 ->** [QuickCommonUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/QuickCommonUtils.java)
-
-| 方法 | 注释 |
-| :- | :- |
-| randomUUID | 获取随机唯一数 |
-| randomUUIDToHashCode | 获取随机唯一数 HashCode |
-| getRandomUUID | 获取随机数 唯一id |
-| whileMD5 | 循环 MD5 加密处理 |
-| converHideMobile | 转换手机号 |
-| timeRecord | 耗时时间记录 |
-| getOperateTime | 获取操作时间 |
-| sleepOperate | 堵塞操作 |
 
 
 * **随机生成工具类 ->** [RandomUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/RandomUtils.java)
@@ -2459,7 +2459,7 @@ DevUtils.openDebug();
 | reflect | 设置要反射的类 |
 | newInstance | 实例化反射对象 |
 | field | 设置反射的字段 |
-| getObject | 获取Object 对象 |
+| getObject | 获取 Object 对象 |
 | setEnumVal | 设置枚举值 |
 | getDeclaredField | 通过反射获取全部字段 |
 | getDeclaredFieldBase | 循环向上转型, 获取对象的 DeclaredField |
@@ -2469,7 +2469,7 @@ DevUtils.openDebug();
 | get | 获取反射想要获取的 |
 | hashCode | 获取 HashCode |
 | equals | 判断反射的两个对象是否一样 |
-| toString | 获取反射获取的对象 toString |
+| toString | 获取反射获取的对象 |
 
 
 * **计算比例方法 ->** [ScaleUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/ScaleUtils.java)
@@ -2511,11 +2511,29 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| length | 获取长度，如果字符串为null,则返回 0 |
-| isEmpty | 判断是否为 null |
+| isEmpty | 判断字符串是否为 null |
+| isNotEmpty | 判断字符串是否不为 null |
+| length | 获取字符串长度 |
+| isLength | 获取字符串长度 是否等于期望长度 |
+| equals | 判断两个值是否一样 |
+| isEquals | 判断多个字符串是否相等, 只有全相等才返回 true - 对比大小写 |
+| isOrEquals | 判断多个字符串,只要有一个符合条件,则通过 |
+| isContains | 判断一堆值中，是否存在符合该条件的(包含) |
+| isStartsWith | 判断内容, 是否属于特定字符串开头 - 对比大小写 |
+| isEndsWith | 判断内容, 是否属于特定字符串结尾 - 对比大小写 |
 | isSpace | 判断字符串是否为 null 或全为空白字符 |
-| toClearSpace | 清空全部空格,并返回处理后的字符串 |
-| toClearSpaceTrim | 清空前后空格,并返回处理后的字符串 |
+| toClearSpace | 清空字符串全部空格 |
+| toClearSpaceTrim | 清空字符串前后所有空格 |
+| appendSpace | 追加空格 |
+| appendTab | 追加 Tab |
+| appendLine | 追加 换行 |
+| toCheckValue | 检查字符串 |
+| toCheckValues | 检查字符串 - 多个值 |
+| toCheckValuesSpace | 检查字符串 - 多个值(删除前后空格对比判断) |
+| getFormatString | 获取格式化后的字符串 |
+| getFormatString2 | 获取格式化后的字符串 |
+| getAutoFormatString | 获取自动数量格式化后的字符串(可变参数) |
+| getAutoFormatString2 | 获取自动数量格式化后的字符串(可变参数) |
 | toGBKEncode | 字符串进行 GBK 编码 |
 | toGBK2312Encode | 字符串进行 GBK2312 编码 |
 | toUTF8Encode | 字符串进行 UTF-8 编码 |
@@ -2523,7 +2541,7 @@ DevUtils.openDebug();
 | toUrlEncode | 进行 URL 编码,默认UTF-8 |
 | toASCII | 将字符串转移为 ASCII 码 |
 | toUnicode | 将字符串转移为 Unicode 码 |
-| toUnicodeString | 将字符串转移为 Unicode 码 |
+| toUnicodeString | 将字符数组转移为 Unicode 码 |
 | toDBC | 转化为半角字符 |
 | toSBC | 转化为全角字符 如: a => ａ A => Ａ |
 | checkChineseToString | 检测字符串是否全是中文 |
@@ -2535,7 +2553,7 @@ DevUtils.openDebug();
 | concatSpiltWith | 字符串连接，将参数列表拼接为一个字符串 |
 | underScoreCaseToCamelCase | 下划线命名转为驼峰命名 |
 | camelCaseToUnderScoreCase | 驼峰命名法转为下划线命名 |
-| sqliteEscape | 数据库字符转义 |
+| sqliteEscape | 字符串数据库字符转义 |
 
 
 * **压缩相关工具类 ->** [ZipUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/ZipUtils.java)
@@ -2559,31 +2577,31 @@ DevUtils.openDebug();
 | :- | :- |
 | add | 添加一个数字 |
 | clear | 清除全部 |
-| size | 返回参与均值计算的数字个数 |
+| size | 获取参与均值计算的数字个数 |
 | getAverage | 获取平均数 |
-| print | 打印数字集合 |
+| print | 输出参与均值计算的数字 |
 
 
 * **时间均值计算器, 只能用于单线程计时。 ->** [TimeAverager.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/assist/TimeAverager.java)
 
 | 方法 | 注释 |
 | :- | :- |
-| start | 开始计时 |
-| end | 结束计时 |
+| start | 开始计时(毫秒) |
+| end | 结束计时(毫秒) |
 | endAndRestart | 结束计时, 并重新启动新的计时 |
 | average | 求全部计时均值 |
-| print | 打印全部时间值 |
-| clear | 清除数据 |
+| print | 输出全部时间值 |
+| clear | 清除计时数据 |
 
 
 * **时间计时器 ->** [TimeCounter.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/assist/TimeCounter.java)
 
 | 方法 | 注释 |
 | :- | :- |
-| start | 开始计时 |
-| durationRestart | 获取持续的时间并重新启动。 |
-| duration | 获取持续的时间 |
-| getStartTime | 获取开始时间 |
+| start | 开始计时(毫秒) |
+| durationRestart | 获取持续的时间并重新启动(毫秒) |
+| duration | 获取持续的时间(毫秒) |
+| getStartTime | 获取开始时间(毫秒) |
 
 
 * **堵塞时间处理 ->** [TimeKeeper.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/assist/TimeKeeper.java)
@@ -2611,7 +2629,7 @@ DevUtils.openDebug();
 | getStartTime | 获取开始搜索时间(毫秒) |
 | getEndTime | 获取结束搜索时间(毫秒) |
 | getDelayTime | 获取延迟校验时间(毫秒) |
-| setDelayTime | 设置延迟校验时间 |
+| setDelayTime | 设置延迟校验时间(毫秒) |
 | query | 搜索目录 |
 | isHandlerFile | 判断是否处理该文件 |
 | isAddToList | 是否添加到集合 |
@@ -2693,15 +2711,15 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | getCRC32 | 获取 CRC32 值 |
-| getCRC32Str | 获取 CRC32 值 |
-| getFileCrc32 | 获取文件 CRC32 值 |
+| getCRC32ToHexString | 获取 CRC32 值 |
+| getFileCRC32 | 获取文件 CRC32 值 |
 
 
 * **DES 对称加密 ->** [DESUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/encrypt/DESUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
-| getDESKey | 返回可逆算法 DES 的密钥 |
+| getDESKey | 获取可逆算法 DES 的密钥 |
 | encrypt | DES 加密 |
 | decrypt | DES 解密 |
 
@@ -2791,9 +2809,9 @@ DevUtils.openDebug();
 | sha256 | 加密内容 SHA256 |
 | sha384 | 加密内容 SHA384 |
 | sha512 | 加密内容 SHA512 |
-| getFileSHA1 | 获取文件 sha1 值 |
-| getFileSHA256 | 获取文件 sha256 值 |
-| shaHex | 加密内容 SHA |
+| getFileSHA1 | 获取文件 SHA1 值 |
+| getFileSHA256 | 获取文件 SHA256 值 |
+| shaHex | 加密内容 SHA 模板 |
 | getFileSHA | 获取文件 SHA 值 |
 
 
@@ -2847,8 +2865,8 @@ DevUtils.openDebug();
 | execute | 加入到线程池任务队列 |
 | shutdown | shutdown 会等待所有提交的任务执行完成，不管是正在执行还是保存在任务队列中的已提交任务 |
 | shutdownNow | shutdownNow 会尝试中断正在执行的任务(其主要是中断一些指定方法如sleep方法)，并且停止执行等待队列中提交的任务。 |
-| isShutdown | 判断线程池是否已关闭 = isShutDown当调用shutdown()方法后返回为true。 |
-| isTerminated | 若关闭后所有任务都已完成,则返回true. |
+| isShutdown | 判断线程池是否已关闭 - isShutDown 当调用 shutdown() 方法后返回为 true |
+| isTerminated | 若关闭后所有任务都已完成,则返回true |
 | awaitTermination | 请求关闭、发生超时或者当前线程中断 |
 | submit | 提交一个Callable任务用于执行 |
 | invokeAll | 执行给定的任务 |
@@ -2878,7 +2896,7 @@ DevUtils.openDebug();
 | validateIdCard18 | 身份证校验规则, 验证18位身份编码是否合法 |
 | convert15CardTo18 | 将 15 位身份证号码转换为 18 位 |
 | validateTWCard | 验证台湾身份证号码 |
-| validateHKCard | 验证香港身份证号码(存在Bug，部份特殊身份证无法检查) |
+| validateHKCard | 验证香港身份证号码 |
 | validateIdCard10 | 判断 10 位数的身份证号, 是否合法 |
 | validateCard | 验证身份证是否合法 |
 | getAgeByIdCard | 根据身份编号获取年龄 |
@@ -2900,6 +2918,7 @@ DevUtils.openDebug();
 | isEmpty | 判断是否为 null |
 | match | 通用匹配函数 |
 | isNumber | 检验数字 |
+| isNumberDecimal | 检验数字或包含小数点 |
 | isLetter | 判断字符串是不是全是字母 |
 | isContainNumber | 判断字符串是不是包含数字 |
 | isNumberLetter | 判断字符串是不是只含字母和数字 |
