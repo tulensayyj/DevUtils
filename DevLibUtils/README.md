@@ -57,6 +57,8 @@ DevUtils.openDebug();
 
 - 部分api更新不及时或有遗漏等，`具体以对应的工具类为准`
 
+- [JavaDoc - API](https://javadoc.jitpack.io/com/github/afkT/DevUtils/1.6.2/javadoc/)
+
 ## API
 
 
