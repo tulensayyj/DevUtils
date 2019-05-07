@@ -1218,24 +1218,27 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
+| setAnimRepeat | 设置动画重复处理 |
 | getRotateAnimation | 获取一个旋转动画 |
 | getRotateAnimationByCenter | 获取一个根据视图自身中心点旋转的动画 |
 | getAlphaAnimation | 获取一个透明度渐变动画 |
 | getHiddenAlphaAnimation | 获取一个由完全显示变为不可见的透明度渐变动画 |
 | getShowAlphaAnimation | 获取一个由不可见变为完全显示的透明度渐变动画 |
+| getScaleAnimation | 获取一个缩放动画 |
+| getScaleAnimationCenter | 获取一个中心点缩放动画 |
 | getLessenScaleAnimation | 获取一个缩小动画 |
 | getAmplificationAnimation | 获取一个放大动画 |
-| translate | 视图移动 |
-| shake | 视图摇晃 |
+| getTranslateAnimation | 获取一个视图移动动画 |
+| getShakeAnimation | 获取一个视图摇晃动画 |
 
 
 * **视图动画工具箱 (AnimationUtils 基础上封装) ，提供简单的控制视图的动画的工具方法 ->** [ViewAnimationUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/anim/ViewAnimationUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
-| invisibleViewByAlpha | 将给定视图渐渐隐去 (view.setVisibility(View.INVISIBLE)) |
-| goneViewByAlpha | 将给定视图渐渐隐去最后从界面中移除(view.setVisibility(View.GONE)) |
-| visibleViewByAlpha | 将给定视图渐渐显示出来(view.setVisibility(View.VISIBLE)) |
+| invisibleViewByAlpha | 将给定视图渐渐隐去 - view.setVisibility(View.INVISIBLE) |
+| goneViewByAlpha | 将给定视图渐渐隐去最后从界面中移除 - view.setVisibility(View.GONE) |
+| visibleViewByAlpha | 将给定视图渐渐显示出来 - view.setVisibility(View.VISIBLE) |
 | translate | 视图移动 |
 | shake | 视图摇晃 |
 
@@ -1260,7 +1263,7 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | isPlayBeep | 判断是否允许播放声音 |
-| isVibrate | 获取是否允许震动 |
+| isVibrate | 判断是否允许震动 |
 | setVibrate | 设置是否允许震动 |
 | setMediaPlayer | 设置播放资源对象 |
 | playBeepSoundAndVibrate | 进行播放声音, 并且震动 |
@@ -1272,10 +1275,9 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| start | 开始计时任务 |
 | onPause | 暂停检测 |
-| onResume | 回到 Activity/xx 处理 |
-| onDestroy | 页面销毁处理 |
+| onResume | 回到 Activity 处理 |
+| onDestroy | Activity 销毁处理 |
 
 
 * **屏幕传感器(监听是否横竖屏) ->** [ScreenSensorAssist.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/assist/ScreenSensorAssist.java)
@@ -1291,21 +1293,20 @@ DevUtils.openDebug();
 ## <span id="devutilsappassistmanager">**`dev.utils.app.assist.manager`**</span>
 
 
-* **应用程序 Activity 管理类; 用于 Activity 管理和应用程序 ->** [ActivityManager.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/assist/manager/ActivityManager.java)
+* **Activity 管理类; 用于管理应用程序 Activity ->** [ActivityManager.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/assist/manager/ActivityManager.java)
 
 | 方法 | 注释 |
 | :- | :- |
 | getInstance | 获取 ActivityManager 实例 ,单例模式 |
 | getActivity | 通过 Context 获取 Activity |
 | isFinishing | 判断 Activity 是否关闭 |
-| isFinishingCtx | 判断 Activity 是否关闭 |
 | getActivityStacks | 获取 Activity 栈 |
-| addActivity | 保存 Activity |
+| addActivity | 添加 Activity |
 | removeActivity | 移除 Activity |
-| currentActivity | 获取最后一个(当前)Activity |
-| finishActivity | 结束最后一个(当前)Activity |
+| currentActivity | 获取最后一个(当前) Activity |
+| finishActivity | 关闭最后一个(当前) Activity |
 | existActivitys | 检测是否包含指定的 Activity |
-| finishAllActivityToIgnore | 结束全部Activity 除忽略的 Activity 外 |
+| finishAllActivityToIgnore | 结束全部 Activity 除忽略的 Activity 外 |
 | finishAllActivity | 结束所有Activity |
 | appExit | 退出应用程序 |
 | restartApplication | 重启 App |
@@ -1318,6 +1319,7 @@ DevUtils.openDebug();
 | gc | 回收资源 |
 | timerSize | 获取全部任务总数 |
 | getTimer | 获取属于对应字符串标记的定时器任务(优先获取符合的) |
+| getTimers | 获取属于对应字符串标记的定时器任务集合 |
 | closeAll | 关闭全部任务 |
 | closeNotRunTask | 关闭所有未运行的任务 |
 | closeInfiniteTask | 关闭所有无限循环的任务 |
@@ -1334,9 +1336,9 @@ DevUtils.openDebug();
 | getTriggerLimit | 获取允许触发的上限次数 |
 | isTriggerEnd | 是否触发结束(到达最大次数) |
 | isInfinite | 是否无限循环 |
-| setHandler | 设置通知的Handler |
-| setNotifyWhat | 设置通知的What |
-| setNotifyObject | 设置通知的Obj |
+| setHandler | 设置通知的 Handler |
+| setNotifyWhat | 设置通知的 What |
+| setNotifyObject | 设置通知的 Object |
 | setTime | 设置时间 |
 | setTriggerLimit | 设置触发次数上限 |
 
