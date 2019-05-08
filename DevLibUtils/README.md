@@ -57,7 +57,7 @@ DevUtils.openDebug();
 
 - 部分api更新不及时或有遗漏等，`具体以对应的工具类为准`
 
-- [JavaDoc - API](https://javadoc.jitpack.io/com/github/afkT/DevUtils/1.6.2/javadoc/)
+- [JavaDoc - API](https://javadoc.jitpack.io/com/github/afkT/DevUtils/1.6.3/javadoc/)
 
 ## API
 
@@ -403,13 +403,18 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| isFastDoubleClick | 判断两次点击的间隔 小于默认间隔时间(1秒), 则认为是多次无效点击 |
+| addTouchArea | 增加控件的触摸范围，最大范围只能是父布局所包含的的区域 |
+| get | 获取对应功能模块点击辅助类 |
+| remove | 移除对应功能模块点击辅助类 |
+| isFastDoubleClick | 判断是否双击(无效点击 - 短时间内多次点击) |
 | initConfig | 初始化配置信息 |
 | putConfig | 添加配置信息 |
 | removeConfig | 移除配置信息 |
+| getConfigTime | 获取配置时间 |
 | removeRecord | 移除点击记录 |
-| clearRecord | 清空点击记录(全部) |
-| addTouchArea | 增加控件的触摸范围，最大范围只能是父布局所包含的的区域 |
+| clearRecord | 清空全部点击记录 |
+| setIntervalTime | 设置默认点击时间间隔 |
+| reset | 重置处理 |
 
 
 * **剪贴板相关工具类 ->** [ClipboardUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/ClipboardUtils.java)
