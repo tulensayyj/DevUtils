@@ -1329,7 +1329,7 @@ DevUtils.openDebug();
 | closeNotRunTask | 关闭所有未运行的任务 |
 | closeInfiniteTask | 关闭所有无限循环的任务 |
 | closeMark | 关闭所有符合对应的字符串标记的定时器任务 |
-| createTimer | 创建定时器 => 立即执行,无限循环,通知默认what |
+| createTimer | 创建定时器 => 立即执行,无限循环,通知默认 what |
 | getMarkId | 获取标记id |
 | getMarkStr | 获取标记字符串 |
 | setMarkId | 设置标记id |
@@ -1342,7 +1342,7 @@ DevUtils.openDebug();
 | isTriggerEnd | 是否触发结束(到达最大次数) |
 | isInfinite | 是否无限循环 |
 | setHandler | 设置通知的 Handler |
-| setNotifyWhat | 设置通知的 What |
+| setNotifyWhat | 设置通知的 what |
 | setNotifyObject | 设置通知的 Object |
 | setTime | 设置时间 |
 | setTriggerLimit | 设置触发次数上限 |
@@ -1363,7 +1363,7 @@ DevUtils.openDebug();
 | getAsJSONArray | 读取 JSONArray 数据 |
 | getAsBinary | 获取 byte[] 数据 |
 | getAsObject | 读取 Serializable 数据 |
-| getAsBitmap | 读取 bitmap 数据 |
+| getAsBitmap | 读取 Bitmap 数据 |
 | getAsDrawable | 读取 Drawable 数据 |
 | file | 获取缓存文件 |
 | remove | 移除某个key |
