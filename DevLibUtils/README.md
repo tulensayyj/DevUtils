@@ -57,7 +57,7 @@ DevUtils.openDebug();
 
 - 部分api更新不及时或有遗漏等，`具体以对应的工具类为准`
 
-- [JavaDoc - API](https://javadoc.jitpack.io/com/github/afkT/DevUtils/1.6.4/javadoc/)
+- [JavaDoc - API](https://javadoc.jitpack.io/com/github/afkT/DevUtils/1.6.2/javadoc/)
 
 ## API
 
@@ -392,7 +392,7 @@ DevUtils.openDebug();
 | cleanInternalDbByName | 根据名称清除数据库 - path /data/data/package/databases/dbName |
 | cleanInternalSp | 清除内部 SP - path /data/data/package/shared_prefs |
 | cleanExternalCache | 清除外部缓存 - path /storage/emulated/0/android/data/package/cache |
-| cleanCustomDir | 清除自定义路径下的文件，使用需小心，请不要误删。而且只支持目录下的文件删除 |
+| cleanCustomDir | 清除自定义路径下的文件，使用需小心请不要误删, 而且只支持目录下的文件删除 |
 | cleanApplicationData | 清除本应用所有的数据 |
 | getFolderSize | 获取文件夹大小 |
 | getCacheSize | 获取缓存文件大小 |
@@ -662,7 +662,7 @@ DevUtils.openDebug();
 | getKeyguardManager | 获取 KeyguardManager |
 | setKeyguardManager | 设置 KeyguardManager |
 | disableKeyguard | 屏蔽系统的屏保 |
-| reenableKeyguard | 使能显示锁屏界面，如果你之前调用了disableKeyguard()方法取消锁屏界面，那么会马上显示锁屏界面。 |
+| reenableKeyguard | 使能显示锁屏界面，如果你之前调用了disableKeyguard()方法取消锁屏界面，那么会马上显示锁屏界面 |
 | release | 释放资源 |
 | newKeyguardLock | 生成一个新的 KeyguardLock, 并且设置 Tag |
 | getKeyguardLock | 获取 KeyguardManager.KeyguardLock |
@@ -949,10 +949,10 @@ DevUtils.openDebug();
 | getColorId | 获取 color id |
 | readBytesFromAssets | 获取 Assets 资源文件数据 |
 | readStringFromAssets | 读取字符串 来自 Assets文件 |
-| readBytesFromRaw | 从res/raw 中获取内容。 |
+| readBytesFromRaw | 从res/raw 中获取内容 |
 | readStringFromRaw | 读取字符串 来自Raw 文件 |
 | geFileToListFromAssets | 获取 Assets 资源文件数据(返回List<String> 一行的全部内容属于一个索引) |
-| geFileToListFromRaw | 从res/raw 中获取内容。(返回List<String>一行的全部内容属于一个索引) |
+| geFileToListFromRaw | 从res/raw 中获取内容(返回List<String>一行的全部内容属于一个索引) |
 | saveAssetsFormFile | 从Assets 资源中获取内容并保存到本地 |
 | saveRawFormFile | 从res/raw 中获取内容并保存到本地 |
 
@@ -1790,7 +1790,7 @@ DevUtils.openDebug();
 | setIsHandler | 设置是否使用 Handler 显示 Toast |
 | setNullText | 设置 Text 为 null 的文本 |
 | setUseConfig | 判断是否使用配置 |
-| setGravity | 设置 Toast 显示在屏幕上的位置。 |
+| setGravity | 设置 Toast 显示在屏幕上的位置 |
 | setMargin | 设置边距 |
 | getDefaultStyle | 获取默认样式 |
 | getNormalStyle | 获取 Normal 样式 |
@@ -1824,7 +1824,7 @@ DevUtils.openDebug();
 | setIsHandler | 设置是否使用 Handler 显示 Toast |
 | setNullText | 设置 Text 为 null 的文本 |
 | setUseConfig | 判断是否使用配置 |
-| setGravity | 设置 Toast 显示在屏幕上的位置。 |
+| setGravity | 设置 Toast 显示在屏幕上的位置 |
 | setMargin | 设置边距 |
 | showShort | 显示 LENGTH_SHORT Toast |
 | showLong | 显示 LENGTH_LONG Toast |
@@ -2365,13 +2365,13 @@ DevUtils.openDebug();
 | greaterThanOrEqual | 判断 Map 长度是否大于等于指定长度 |
 | lessThan | 判断 Map 长度是否小于指定长度 |
 | lessThanOrEqual | 判断 Map 长度是否小于等于指定长度 |
-| get | 获取 Value |
-| getKeyByValue | 通过 Value 获取 Key |
-| getKeysByValue | 通过 Value 获取 Key 集合 (返回等于 value 的 key 集合) |
-| getKeys | 通过 Map 获取 Key 集合 |
-| getKeysToArrays | 通过 Map 获取 Key 数组 |
-| getValues | 通过 Map 获取 Value 集合 |
-| getValuesToArrays | 通过 Map 获取 Value 数组 |
+| get | 获取 value |
+| getKeyByValue | 通过 value 获取 key |
+| getKeysByValue | 通过 value 获取 key 集合 (返回等于 value 的 key 集合) |
+| getKeys | 通过 Map 获取 key 集合 |
+| getKeysToArrays | 通过 Map 获取 key 数组 |
+| getValues | 通过 Map 获取 value 集合 |
+| getValuesToArrays | 通过 Map 获取 value 数组 |
 | getFirst | 获取第一条数据 |
 | getLast | 获取最后一条数据 |
 | getNext | 根据指定 key 获取 key 所在位置的下一条数据 |
@@ -2673,7 +2673,7 @@ DevUtils.openDebug();
 | encode | Base64-encode the given data and return a newly allocated |
 
 
-* **Baes64 编解码(并进行)加解密 ->** [Base64Cipher.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/cipher/Base64Cipher.java)
+* **Base64 编解码(并进行)加解密 ->** [Base64Cipher.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/cipher/Base64Cipher.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -2837,7 +2837,7 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| encryptAsFix | 加密 (固定 Key 方式) - 这种方式 加解密 方法共用 |
+| encryptAsFix | 加解密 (固定 Key 方式) - 这种方式 加解密 方法共用 |
 | encrypt | 加密 (非固定 Key 方式) |
 | decrypt | 解密 (非固定 Key 方式) |
 
@@ -2905,7 +2905,7 @@ DevUtils.openDebug();
 | validateIdCard18 | 身份证校验规则, 验证 18 位身份编码是否合法 |
 | convert15CardTo18 | 将 15 位身份证号码转换为 18 位 |
 | validateTWCard | 验证台湾身份证号码 |
-| validateHKCard | 验证香港身份证号码 |
+| validateHKCard | 验证香港身份证号码(部份特殊身份证无法检查) |
 | validateIdCard10 | 判断 10 位数的身份证号, 是否合法 |
 | validateCard | 验证身份证是否合法 |
 | getAgeByIdCard | 根据身份编号获取年龄 |
