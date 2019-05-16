@@ -7,21 +7,21 @@
 
 ```
 - dev.utils         | 根目录
-   - app            | app相关工具类
+   - app            | App 相关工具类
       - anim        | 动画工具类
       - assist      | 辅助类
          - manager  | 管理器 如: ActivityManager
       - cache       | 缓存工具类
       - camera1     | 摄像头相关 android.hardware.Camera
       - image       | 图片相关处理
-      - info        | App信息, PackageInfo 等
+      - info        | App 信息, PackageInfo 等
       - logger      | 日志库 DevLogger
       - player      | 多媒体(视频、音频)播放封装
       - share       | SharedPreferences 封装
       - toast       | Toast
          - toaster  | Toaster 处理无通知权限
-      - wifi        | wifi、热点工具类
-   - common         | java工具类, 不依赖android api
+      - wifi        | Wifi、热点工具类
+   - common         | Java 工具类, 不依赖 android api
       - assist      | 各种快捷辅助类
          - search   | 搜索相关(文件搜索等)
       - cipher      | 编/解码工具类
@@ -34,7 +34,7 @@
 
 ## 事项
 
-- 内部存在两个日志工具类(工具类内部调用)， 对外使用 [DevLogger](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/utils_readme/logger/DevLogger.md)
+- 内部存在两个日志工具类(工具类内部调用), 对外使用 [DevLogger](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/utils_readme/logger/DevLogger.md)
 
 ```java
 // 整个工具类内部日志信息, 都通过以下两个工具类输出打印, 并且通过 DevUtils.openLog() 控制开关
@@ -55,7 +55,7 @@ DevUtils.openDebug();
 
 - 工具类部分模块配置与使用 - [Use and Config](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/utils_readme/USE_CONFIG.md)
 
-- 部分api更新不及时或有遗漏等，`具体以对应的工具类为准`
+- 部分api更新不及时或有遗漏等, `具体以对应的工具类为准`
 
 - [JavaDoc - API](https://javadoc.jitpack.io/com/github/afkT/DevUtils/1.6.2/javadoc/)
 
@@ -63,21 +63,21 @@ DevUtils.openDebug();
 
 
 - dev.utils                                        | 根目录
-   - [app](#devutilsapp)                           | app相关工具类
+   - [app](#devutilsapp)                           | App 相关工具类
       - [anim](#devutilsappanim)                   | 动画工具类
       - [assist](#devutilsappassist)               | 辅助类
          - [manager](#devutilsappassistmanager)    | 管理器 如: ActivityManager
       - [cache](#devutilsappcache)                 | 缓存工具类
       - [camera1](#devutilsappcamera1)             | 摄像头相关 android.hardware.Camera
       - [image](#devutilsappimage)                 | 图片相关处理
-      - [info](#devutilsappinfo)                   | App信息, PackageInfo 等
+      - [info](#devutilsappinfo)                   | App 信息, PackageInfo 等
       - [logger](#devutilsapplogger)               | 日志库 DevLogger
       - [player](#devutilsappplayer)               | 多媒体(视频、音频)播放封装
       - [share](#devutilsappshare)                 | SharedPreferences 封装
       - [toast](#devutilsapptoast)                 | Toast
          - [toaster](#devutilsapptoasttoaster)     | Toaster 处理无通知权限
-      - [wifi](#devutilsappwifi)                   | wifi、热点工具类
-   - [common](#devutilscommon)                     | java工具类, 不依赖android api
+      - [wifi](#devutilsappwifi)                   | Wifi、热点工具类
+   - [common](#devutilscommon)                     | Java 工具类, 不依赖 android api
       - [assist](#devutilscommonassist)            | 各种快捷辅助类
          - [search](#devutilscommonassistsearch)   | 搜索相关(文件搜索等)
       - [cipher](#devutilscommoncipher)            | 编/解码工具类
@@ -392,7 +392,7 @@ DevUtils.openDebug();
 | cleanInternalDbByName | 根据名称清除数据库 - path /data/data/package/databases/dbName |
 | cleanInternalSp | 清除内部 SP - path /data/data/package/shared_prefs |
 | cleanExternalCache | 清除外部缓存 - path /storage/emulated/0/android/data/package/cache |
-| cleanCustomDir | 清除自定义路径下的文件，使用需小心请不要误删, 而且只支持目录下的文件删除 |
+| cleanCustomDir | 清除自定义路径下的文件, 使用需小心请不要误删, 而且只支持目录下的文件删除 |
 | cleanApplicationData | 清除本应用所有的数据 |
 | getFolderSize | 获取文件夹大小 |
 | getCacheSize | 获取缓存文件大小 |
@@ -403,7 +403,7 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| addTouchArea | 增加控件的触摸范围，最大范围只能是父布局所包含的的区域 |
+| addTouchArea | 增加控件的触摸范围, 最大范围只能是父布局所包含的的区域 |
 | get | 获取对应功能模块点击辅助类 |
 | remove | 移除对应功能模块点击辅助类 |
 | isFastDoubleClick | 判断是否双击(无效点击 - 短时间内多次点击) |
@@ -511,7 +511,7 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | setCursorVisible | 设置是否显示光标 |
-| setMaxLengthAnText | 设置长度限制，并且设置内容 |
+| setMaxLengthAnText | 设置长度限制, 并且设置内容 |
 | setMaxLength | 设置长度限制 |
 | getSelectionStart | 获取光标位置 |
 | getText | 获取输入的内容 |
@@ -522,8 +522,8 @@ DevUtils.openDebug();
 | setSelectBottom | 设置光标在最后一位 |
 | setSelect | 设置光标位置 |
 | setKeyListener | 设置输入限制 |
-| getNumberAndEnglishKeyListener | 限制只能输入字母和数字，默认弹出英文输入法 |
-| getNumberKeyListener | 限制只能输入数字，默认弹出数字列表 |
+| getNumberAndEnglishKeyListener | 限制只能输入字母和数字, 默认弹出英文输入法 |
+| getNumberKeyListener | 限制只能输入数字, 默认弹出数字列表 |
 | getMarkId | 获取标记id |
 | isOperate | 判断是否操作中 |
 | setOperate | 设置是否操作中 |
@@ -580,7 +580,7 @@ DevUtils.openDebug();
 | isFlashlightEnable | 是否支持手机闪光灯 |
 
 
-* **Handler 工具类, 默认开启一个 Handler，方便在各个地方随时执行主线程任务 ->** [HandlerUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/HandlerUtils.java)
+* **Handler 工具类, 默认开启一个 Handler, 方便在各个地方随时执行主线程任务 ->** [HandlerUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/HandlerUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -643,7 +643,7 @@ DevUtils.openDebug();
 | openKeyboard | 打开软键盘 |
 | closeKeyboard | 关闭软键盘 |
 | closeKeyBoardSpecial | 关闭软键盘 - 特殊处理 |
-| toggleKeyboard | 自动切换键盘状态，如果键盘显示了则隐藏，隐藏着显示 |
+| toggleKeyboard | 自动切换键盘状态, 如果键盘显示了则隐藏, 隐藏着显示 |
 | judgeView | 某个View里面的子View的View判断 |
 | isSoftInputVisible | 判断软键盘是否可见 |
 | registerSoftInputChangedListener | 注册软键盘改变监听器 |
@@ -651,7 +651,7 @@ DevUtils.openDebug();
 | fixSoftInputLeaks | 修复软键盘内存泄漏 在 Activity.onDestroy() 中使用 |
 
 
-* **锁屏工具类 - 锁屏管理，锁屏、禁用锁屏，判断是否锁屏 ->** [KeyguardUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/KeyguardUtils.java)
+* **锁屏工具类 - 锁屏管理, 锁屏、禁用锁屏, 判断是否锁屏 ->** [KeyguardUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/KeyguardUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -662,7 +662,7 @@ DevUtils.openDebug();
 | getKeyguardManager | 获取 KeyguardManager |
 | setKeyguardManager | 设置 KeyguardManager |
 | disableKeyguard | 屏蔽系统的屏保 |
-| reenableKeyguard | 使能显示锁屏界面，如果你之前调用了disableKeyguard()方法取消锁屏界面，那么会马上显示锁屏界面 |
+| reenableKeyguard | 使能显示锁屏界面, 如果你之前调用了disableKeyguard()方法取消锁屏界面, 那么会马上显示锁屏界面 |
 | release | 释放资源 |
 | newKeyguardLock | 生成一个新的 KeyguardLock, 并且设置 Tag |
 | getKeyguardLock | 获取 KeyguardManager.KeyguardLock |
@@ -710,7 +710,7 @@ DevUtils.openDebug();
 | isBetterLocation | 是否更好的位置 |
 | isSameProvider | 是否相同的提供者 |
 | getLastKnownLocation | 获取最后一次保留的坐标 |
-| onLocationChanged | 当坐标改变时触发此函数，如果Provider传进相同的坐标，它就不会被触发 |
+| onLocationChanged | 当坐标改变时触发此函数, 如果Provider传进相同的坐标, 它就不会被触发 |
 | onStatusChanged | provider的在可用、暂时不可用和无服务三个状态直接切换时触发此函数 |
 
 
@@ -800,36 +800,36 @@ DevUtils.openDebug();
 | getDownloadCachePath | 获取下载缓存目录 - path data/cache |
 | getInternalAppDataPath | 获取内存应用数据路径 - path /data/data/package |
 | getInternalAppCodeCacheDir | 获取内存应用代码缓存路径 - path /data/data/package/code_cache |
-| getInternalAppDbsPath | 获取内存应用数据库路径 - path /data/data/package/databases. |
-| getInternalAppDbPath | 获取内存应用数据库路径 - path /data/data/package/databases/name. |
-| getInternalAppFilesPath | 获取内存应用文件路径 - path/data/data/package/files. |
-| getInternalAppSpPath | 获取内存应用 SP 路径 - path/data/data/package/shared_prefs. |
-| getInternalAppNoBackupFilesPath | 获取内存应用未备份文件路径 - path/data/data/package/no_backup. |
-| getExternalStoragePath | 获取外存路径 - path/storage/emulated/0. |
-| getExternalMusicPath | 获取外存音乐路径 - path/storage/emulated/0/Music. |
-| getExternalPodcastsPath | 获取外存播客路径 - path/storage/emulated/0/Podcasts. |
-| getExternalRingtonesPath | 获取外存铃声路径 - path/storage/emulated/0/Ringtones. |
-| getExternalAlarmsPath | 获取外存闹铃路径 - path/storage/emulated/0/Alarms. |
-| getExternalNotificationsPath | 获取外存通知路径 - path/storage/emulated/0/Notifications. |
-| getExternalPicturesPath | 获取外存图片路径 - path/storage/emulated/0/Pictures. |
-| getExternalMoviesPath | 获取外存影片路径 - path/storage/emulated/0/Movies. |
-| getExternalDownloadsPath | 获取外存下载路径 - path/storage/emulated/0/Download. |
-| getExternalDcimPath | 获取外存数码相机图片路径 - path/storage/emulated/0/DCIM. |
-| getExternalDocumentsPath | 获取外存文档路径 - path/storage/emulated/0/Documents. |
-| getExternalAppDataPath | 获取外存应用数据路径 - path/storage/emulated/0/Android/data/package. |
-| getExternalAppCachePath | 获取外存应用缓存路径 - path/storage/emulated/0/Android/data/package/cache. |
-| getExternalAppFilesPath | 获取外存应用文件路径 - path/storage/emulated/0/Android/data/package/files. |
-| getExternalAppMusicPath | 获取外存应用音乐路径 - path/storage/emulated/0/Android/data/package/files/Music. |
-| getExternalAppPodcastsPath | 获取外存应用播客路径 - path/storage/emulated/0/Android/data/package/files/Podcasts. |
-| getExternalAppRingtonesPath | 获取外存应用铃声路径 - path/storage/emulated/0/Android/data/package/files/Ringtones. |
-| getExternalAppAlarmsPath | 获取外存应用闹铃路径 - path/storage/emulated/0/Android/data/package/files/Alarms. |
-| getExternalAppNotificationsPath | 获取外存应用通知路径 - path/storage/emulated/0/Android/data/package/files/Notifications. |
-| getExternalAppPicturesPath | 获取外存应用图片路径 - path/storage/emulated/0/Android/data/package/files/Pictures. |
-| getExternalAppMoviesPath | 获取外存应用影片路径 - path/storage/emulated/0/Android/data/package/files/Movies. |
-| getExternalAppDownloadPath | 获取外存应用下载路径 - path/storage/emulated/0/Android/data/package/files/Download. |
-| getExternalAppDcimPath | 获取外存应用数码相机图片路径 - path/storage/emulated/0/Android/data/package/files/DCIM. |
-| getExternalAppDocumentsPath | 获取外存应用文档路径 - path/storage/emulated/0/Android/data/package/files/Documents. |
-| getExternalAppObbPath | 获取外存应用 OBB 路径 - path/storage/emulated/0/Android/obb/package. |
+| getInternalAppDbsPath | 获取内存应用数据库路径 - path /data/data/package/databases |
+| getInternalAppDbPath | 获取内存应用数据库路径 - path /data/data/package/databases/name |
+| getInternalAppFilesPath | 获取内存应用文件路径 - path/data/data/package/files |
+| getInternalAppSpPath | 获取内存应用 SP 路径 - path/data/data/package/shared_prefs |
+| getInternalAppNoBackupFilesPath | 获取内存应用未备份文件路径 - path/data/data/package/no_backup |
+| getExternalStoragePath | 获取外存路径 - path/storage/emulated/0 |
+| getExternalMusicPath | 获取外存音乐路径 - path/storage/emulated/0/Music |
+| getExternalPodcastsPath | 获取外存播客路径 - path/storage/emulated/0/Podcasts |
+| getExternalRingtonesPath | 获取外存铃声路径 - path/storage/emulated/0/Ringtones |
+| getExternalAlarmsPath | 获取外存闹铃路径 - path/storage/emulated/0/Alarms |
+| getExternalNotificationsPath | 获取外存通知路径 - path/storage/emulated/0/Notifications |
+| getExternalPicturesPath | 获取外存图片路径 - path/storage/emulated/0/Pictures |
+| getExternalMoviesPath | 获取外存影片路径 - path/storage/emulated/0/Movies |
+| getExternalDownloadsPath | 获取外存下载路径 - path/storage/emulated/0/Download |
+| getExternalDcimPath | 获取外存数码相机图片路径 - path/storage/emulated/0/DCIM |
+| getExternalDocumentsPath | 获取外存文档路径 - path/storage/emulated/0/Documents |
+| getExternalAppDataPath | 获取外存应用数据路径 - path/storage/emulated/0/Android/data/package |
+| getExternalAppCachePath | 获取外存应用缓存路径 - path/storage/emulated/0/Android/data/package/cache |
+| getExternalAppFilesPath | 获取外存应用文件路径 - path/storage/emulated/0/Android/data/package/files |
+| getExternalAppMusicPath | 获取外存应用音乐路径 - path/storage/emulated/0/Android/data/package/files/Music |
+| getExternalAppPodcastsPath | 获取外存应用播客路径 - path/storage/emulated/0/Android/data/package/files/Podcasts |
+| getExternalAppRingtonesPath | 获取外存应用铃声路径 - path/storage/emulated/0/Android/data/package/files/Ringtones |
+| getExternalAppAlarmsPath | 获取外存应用闹铃路径 - path/storage/emulated/0/Android/data/package/files/Alarms |
+| getExternalAppNotificationsPath | 获取外存应用通知路径 - path/storage/emulated/0/Android/data/package/files/Notifications |
+| getExternalAppPicturesPath | 获取外存应用图片路径 - path/storage/emulated/0/Android/data/package/files/Pictures |
+| getExternalAppMoviesPath | 获取外存应用影片路径 - path/storage/emulated/0/Android/data/package/files/Movies |
+| getExternalAppDownloadPath | 获取外存应用下载路径 - path/storage/emulated/0/Android/data/package/files/Download |
+| getExternalAppDcimPath | 获取外存应用数码相机图片路径 - path/storage/emulated/0/Android/data/package/files/DCIM |
+| getExternalAppDocumentsPath | 获取外存应用文档路径 - path/storage/emulated/0/Android/data/package/files/Documents |
+| getExternalAppObbPath | 获取外存应用 OBB 路径 - path/storage/emulated/0/Android/obb/package |
 
 
 * **权限请求工具类 ->** [PermissionUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/PermissionUtils.java)
@@ -851,8 +851,8 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | isSimReady | 判断是否装载sim卡 |
-| getUserCountry | 获取Sim卡所属地区，非国内地区暂不支持播放 |
-| judgeArea | 判断地区，是否属于国内 |
+| getUserCountry | 获取Sim卡所属地区, 非国内地区暂不支持播放 |
+| judgeArea | 判断地区, 是否属于国内 |
 | isPhone | 判断设备是否是手机 |
 | getMEID | 获取 MEID 移动设备识别码 |
 | getIMEI | 获取 IMEI 码 |
@@ -985,11 +985,11 @@ DevUtils.openDebug();
 | isScreenLock | 判断是否锁屏 |
 | isTablet | 判断是否是平板 |
 | getStatusHeight | 获取状态栏的高度(无关 android:theme 获取状态栏高度) |
-| getStatusBarHeight | 获取应用区域 TitleBar 高度 (顶部灰色TitleBar高度，没有设置 android:theme 的 NoTitleBar 时会显示) |
+| getStatusBarHeight | 获取应用区域 TitleBar 高度 (顶部灰色TitleBar高度, 没有设置 android:theme 的 NoTitleBar 时会显示) |
 | setSleepDuration | 设置进入休眠时长 |
 | getSleepDuration | 获取进入休眠时长 |
-| snapShotWithStatusBar | 获取当前屏幕截图，包含状态栏 (顶部灰色TitleBar高度，没有设置 android:theme 的 NoTitleBar 时会显示) |
-| snapShotWithoutStatusBar | 获取当前屏幕截图，不包含状态栏 (如果 android:theme 全屏了，则截图无状态栏) |
+| snapShotWithStatusBar | 获取当前屏幕截图, 包含状态栏 (顶部灰色TitleBar高度, 没有设置 android:theme 的 NoTitleBar 时会显示) |
+| snapShotWithoutStatusBar | 获取当前屏幕截图, 不包含状态栏 (如果 android:theme 全屏了, 则截图无状态栏) |
 | getNavigationBarHeight | 获取底部导航栏高度 |
 | checkDeviceHasNavigationBar | 检测是否具有底部导航栏 |
 
@@ -1008,7 +1008,7 @@ DevUtils.openDebug();
 | getAlreadyBlock | 返回对应路径,已使用的空间大小 |
 | getBlockSizeInfos | 返回对应路径的空间大小信息 |
 | getSDTotalSize | 获取 SD 卡总大小 |
-| getSDAvailableSize | 获取 SD 卡剩余容量，即可用大小 |
+| getSDAvailableSize | 获取 SD 卡剩余容量, 即可用大小 |
 | getRomTotalSize | 获取机身内存总大小 |
 | getRomAvailableSize | 获取机身可用内存 |
 | getDiskCacheDir | 获取缓存地址 |
@@ -1083,7 +1083,7 @@ DevUtils.openDebug();
 | getCertificateFromApk | 从 Apk 中读取签名 |
 
 
-* **dp，px，sp转换、View获取宽高等 ->** [SizeUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/SizeUtils.java)
+* **dp, px, sp转换、View获取宽高等 ->** [SizeUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/SizeUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -1100,7 +1100,7 @@ DevUtils.openDebug();
 | spConvertPx2 | 根据手机的分辨率从 sp 的单位 转成为 px 第二种 |
 | spConvertPx2f | 根据手机的分辨率从 sp 的单位 转成为 px 第二种 - float |
 | applyDimension | 各种单位转换 - 该方法存在于 TypedValue |
-| forceGetViewSize | 在 onCreate 中获取视图的尺寸 - 需回调 onGetSizeListener 接口，在 onGetSize 中获取 view 宽高 |
+| forceGetViewSize | 在 onCreate 中获取视图的尺寸 - 需回调 onGetSizeListener 接口, 在 onGetSize 中获取 view 宽高 |
 | measureView | 测量视图尺寸 |
 | getMeasuredWidth | 获取测量视图宽度 |
 | getMeasuredHeight | 获取测量视图高度 |
@@ -1172,7 +1172,7 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | getUriForFileToName | 返回处理后的Uri, 单独传递名字, 自动添加包名 ${applicationId} |
-| getUriForFile | Return a content URI for a given file. |
+| getUriForFile | Return a content URI for a given file |
 | getFilePathByUri | 通过 Uri 获取 文件路径 |
 
 
@@ -1237,7 +1237,7 @@ DevUtils.openDebug();
 | getShakeAnimation | 获取一个视图摇晃动画 |
 
 
-* **视图动画工具箱 (AnimationUtils 基础上封装) ，提供简单的控制视图的动画的工具方法 ->** [ViewAnimationUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/anim/ViewAnimationUtils.java)
+* **视图动画工具箱 (AnimationUtils 基础上封装) , 提供简单的控制视图的动画的工具方法 ->** [ViewAnimationUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/anim/ViewAnimationUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -1416,7 +1416,7 @@ DevUtils.openDebug();
 | :- | :- |
 | getCamera | 获取摄像头 |
 | setPreviewSize | 设置预览大小 |
-| getPreviewSize | 根据手机支持的预览分辨率计算，设置预览尺寸 |
+| getPreviewSize | 根据手机支持的预览分辨率计算, 设置预览尺寸 |
 | setPictureSize | 设置拍照图片大小 |
 | getPictureSize | 根据手机支持的拍照分辨率计算 |
 | getVideoSize | 根据手机支持的视频录制分辨率计算 |
@@ -1472,7 +1472,7 @@ DevUtils.openDebug();
 | rotate | 旋转图片 |
 | reverseByHorizontal | 水平翻转处理 |
 | reverseByVertical | 垂直翻转处理 |
-| adjustTone | 更改图片色系，变亮或变暗 |
+| adjustTone | 更改图片色系, 变亮或变暗 |
 | convertToBlackWhite | 将彩色图转换为黑白图 |
 | getImageDegree | 读取图片属性 图片被旋转的角度 |
 | saturation | 饱和度处理 |
@@ -1485,7 +1485,7 @@ DevUtils.openDebug();
 | film | 底片效果处理 |
 | sharpen | 锐化效果处理 |
 | emboss | 浮雕效果处理 |
-| yuvLandscapeToPortrait | 将YUV格式的图片的源数据从横屏模式转为竖屏模式，注: 将源图片的宽高互换一下就是新图片的宽高 |
+| yuvLandscapeToPortrait | 将YUV格式的图片的源数据从横屏模式转为竖屏模式, 注: 将源图片的宽高互换一下就是新图片的宽高 |
 | safeDecodeStream | 比较安全的 解码(decodeStream) 方法 |
 
 
@@ -1520,7 +1520,7 @@ DevUtils.openDebug();
 | bitmapToViewBackGround | 通过View, 获取背景转换Bitmap |
 | getBitmapFromView | 通过View, 获取Bitmap -> 绘制整个View |
 | getBitmapFromView2 | 把一个View的对象转换成bitmap |
-| reckonVideoWidthHeight | 计算视频宽高大小，视频比例xxx*xxx按屏幕比例放大或者缩小 |
+| reckonVideoWidthHeight | 计算视频宽高大小, 视频比例xxx*xxx按屏幕比例放大或者缩小 |
 | caculateInSampleSize | 根据需求的宽和高以及图片实际的宽和高计算SampleSize |
 | getImageViewSize | 根据ImageView获适当的压缩的宽和高 |
 | getImageWidthHeight | 获取图片宽度高度(不加载解析图片) |
@@ -1585,7 +1585,7 @@ DevUtils.openDebug();
 | addImageWatermark | 添加图片水印 |
 | toAlpha | 转为 alpha 位图 |
 | toGray | 转为灰度图片 |
-| fastBlur | 快速模糊 - 先缩小原图，对小图进行模糊，再放大回原先尺寸 |
+| fastBlur | 快速模糊 - 先缩小原图, 对小图进行模糊, 再放大回原先尺寸 |
 | renderScriptBlur | renderScript 模糊图片 - API 大于 17 |
 | stackBlur | stack 模糊图片 |
 | save | 保存图片 |
@@ -1622,7 +1622,7 @@ DevUtils.openDebug();
 | getSourceDir | 获取 Apk 地址 |
 | getApkSize | 获取 Apk 大小 |
 | isSystemApp | 是否系统程序 |
-| isSystemUpdateApp | 是否系统程序被手动更新后，也成为第三方应用程序 |
+| isSystemUpdateApp | 是否系统程序被手动更新后, 也成为第三方应用程序 |
 
 
 * **App 信息获取工具类 ->** [AppInfoUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/info/AppInfoUtils.java)
@@ -1866,7 +1866,7 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| createWifiConfigToAp | 创建Wifi配置信息(无其他操作，单独返回WifiConfig) => Wifi热点 (就支持 无密码/WPA2 PSK) |
+| createWifiConfigToAp | 创建Wifi配置信息(无其他操作, 单独返回WifiConfig) => Wifi热点 (就支持 无密码/WPA2 PSK) |
 | stratWifiAp | 开启Wifi热点 |
 | closeWifiAp | 关闭Wifi热点 |
 | getWifiApState | 获取Wifi热点状态 |
@@ -1905,7 +1905,7 @@ DevUtils.openDebug();
 | getIPAddress | 获取IP地址 |
 | getNetworkId | 获取连接的ID |
 | getSSID | 获取SSID |
-| formatSSID | 判断是否存在\"ssid\"，存在则裁剪返回 |
+| formatSSID | 判断是否存在\"ssid\", 存在则裁剪返回 |
 | getPassword | 获取密码(经过处理) |
 | isHexWepKey | 判断是否 wep 加密 |
 | isHex | 判断是否 十六进制 |
@@ -1915,11 +1915,11 @@ DevUtils.openDebug();
 | isConnNull | 判断是否连接为 null - unknown ssid |
 | isConnectAphot | 判断是否连接上Wifi(非连接中) |
 | getSecurity | 获取Wifi配置,加密类型 |
-| isExsitsPwd | 获知Wifi配置，是否属于密码加密类型 |
+| isExsitsPwd | 获知Wifi配置, 是否属于密码加密类型 |
 | isExsits | 查看以前是否也配置过这个网络 |
 | delWifiConfig | 删除指定的 Wifi(SSID) 配置信息 |
 | quickConnWifi | 快速连接Wifi(不使用静态ip方式) |
-| createWifiConfig | 创建Wifi配置信息(无其他操作，单独返回WifiConfig) |
+| createWifiConfig | 创建Wifi配置信息(无其他操作, 单独返回WifiConfig) |
 | removeWifiConfig | 移除某个Wifi配置信息 |
 | disconnectWifi | 断开指定ID的网络 |
 
