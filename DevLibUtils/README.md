@@ -108,7 +108,7 @@ DevUtils.openDebug();
 | preformActionBack | 触发返回键 |
 | preformActionHome | 触发Home键 |
 | preformActionPowerDialog | 启动长按电源按钮 Dialog |
-| preformActionLockScreen | 锁定屏幕 -> 非锁屏 |
+| preformActionLockScreen | 锁定屏幕(非锁屏) |
 | preformActionTakeScreenshot | 截图 |
 | preformActionNotifications | 打开通知栏 |
 | preformActionRecents | 最近打开应用列表 |
@@ -439,12 +439,12 @@ DevUtils.openDebug();
 | insertIntoMediaStore | 保存到系统相册 |
 
 
-* **获取CPU信息工具类 ->** [CPUUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/CPUUtils.java)
+* **获取 CPU 信息工具类 ->** [CPUUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/CPUUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
-| getProcessorsCount | 获取处理器的Java虚拟机的数量 |
-| getSysCPUSerialNum | 获取手机CPU序列号 |
+| getProcessorsCount | 获取处理器的 Java 虚拟机的数量 |
+| getSysCPUSerialNum | 获取手机 CPU 序列号 |
 | getCpuInfo | 获取CPU 信息 |
 | getCpuModel | 获取CPU 型号 |
 | getMaxCpuFreq | 获取 CPU 最大频率(单位KHZ) |
@@ -1000,7 +1000,7 @@ DevUtils.openDebug();
 | :- | :- |
 | isSDCardEnable | 判断SDCard是否正常挂载 |
 | getSDCardFile | 获取SD卡路径(File对象) |
-| getSDCardPath | 获取SD卡路径(无添加  -> / -> File.separator) |
+| getSDCardPath | 获取SD卡路径(无添加 File.separator) |
 | isSDCardEnablePath | 判断 SD 卡是否可用 |
 | getSDCardPaths | 获取 SD 卡路径 |
 | getAllBlockSize | 返回对应路径的空间总大小 |
@@ -1518,7 +1518,7 @@ DevUtils.openDebug();
 | saveBitmapToSDCard | 保存图片到SD卡 - PNG |
 | getBitmapFromDrawable | 将Drawable转化为Bitmap |
 | bitmapToViewBackGround | 通过View, 获取背景转换Bitmap |
-| getBitmapFromView | 通过View, 获取Bitmap -> 绘制整个View |
+| getBitmapFromView | 通过 View 获取 Bitmap, 绘制整个View |
 | getBitmapFromView2 | 把一个View的对象转换成bitmap |
 | reckonVideoWidthHeight | 计算视频宽高大小, 视频比例xxx*xxx按屏幕比例放大或者缩小 |
 | caculateInSampleSize | 根据需求的宽和高以及图片实际的宽和高计算SampleSize |
@@ -1848,7 +1848,7 @@ DevUtils.openDebug();
 | setIsHandler | 设置是否使用 Handler 显示 Toast |
 | setNullText | 设置 Text 为 null 的文本 |
 | setTextLength | 设置 Toast 文案长度转换 显示时间 |
-| init | Application 初始化调用 (必须调用 -> 内部已经调用) |
+| init | Application 初始化调用 (内部已调用) |
 | style | 使用单次 Toast 样式配置 |
 | defaultStyle | 使用默认 Toast 样式 |
 | getToastStyle | 获取 Toast 样式配置 |
@@ -2487,9 +2487,9 @@ DevUtils.openDebug();
 | :- | :- |
 | calcScaleToWidth | 计算缩放比例 - 根据宽度比例转换高度 |
 | calcScaleToHeight | 计算缩放比例 - 根据高度比例转换宽度 |
-| calcWidthHeightToScale | 通过宽度、高度根据对应的比例 -> 转换成对应的比例宽度高度 - 智能转换 |
-| calcWidthToScale | 以宽度为基准 -> 转换对应比例的高度 |
-| calcHeightToScale | 以高度为基准 -> 转换对应比例的宽度 |
+| calcWidthHeightToScale | 通过宽度、高度根据对应的比例, 转换成对应的比例宽度高度 - 智能转换 |
+| calcWidthToScale | 以宽度为基准, 转换对应比例的高度 |
+| calcHeightToScale | 以高度为基准, 转换对应比例的宽度 |
 
 
 * **单例工具类 ->** [SingletonUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/SingletonUtils.java)
