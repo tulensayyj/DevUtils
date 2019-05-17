@@ -34,7 +34,7 @@
 
 ## 事项
 
-- 内部存在两个日志工具类(工具类内部调用), 对外使用 [DevLogger](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/utils_readme/logger/DevLogger.md)
+- 内部存在两个日志工具类(工具类内部调用)，对外使用 [DevLogger](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/utils_readme/logger/DevLogger.md)
 
 ```java
 // 整个工具类内部日志信息, 都通过以下两个工具类输出打印, 并且通过 DevUtils.openLog() 控制开关
@@ -45,9 +45,9 @@ LogPrintUtils
 JCLogUtils
 ```
 
-- 需要开启日志, 单独调用
+- 需要开启日志，单独调用
 ```java
-// 打开 lib 内部日志 - 线上环境, 不调用方法就行
+// 打开 lib 内部日志 - 线上(release)环境, 不调用方法就行
 DevUtils.openLog();
 // 标示 debug 模式
 DevUtils.openDebug();
@@ -55,7 +55,7 @@ DevUtils.openDebug();
 
 - 工具类部分模块配置与使用 - [Use and Config](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/utils_readme/USE_CONFIG.md)
 
-- 部分api更新不及时或有遗漏等, `具体以对应的工具类为准`
+- 部分 api 更新不及时或有遗漏等，`具体以对应的工具类为准`
 
 - [JavaDoc - API](https://javadoc.jitpack.io/com/github/afkT/DevUtils/1.6.4/javadoc/)
 
