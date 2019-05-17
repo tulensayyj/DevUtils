@@ -1866,7 +1866,7 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| createWifiConfigToAp | 创建Wifi配置信息(无其他操作, 单独返回WifiConfig) => Wifi热点 (就支持 无密码/WPA2 PSK) |
+| createWifiConfigToAp | 创建Wifi配置信息(无其他操作, 单独返回WifiConfig) => Wifi热点 (支持 无密码/WPA2 PSK) |
 | stratWifiAp | 开启Wifi热点 |
 | closeWifiAp | 关闭Wifi热点 |
 | getWifiApState | 获取Wifi热点状态 |
@@ -2333,8 +2333,8 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | splitParams | 拆分参数 |
-| joinParams | 拼接请求参数 - value => String |
-| joinParamsObj | 拼接请求参数 - value => Object |
+| joinParams | 拼接请求参数 - value(String) |
+| joinParamsObj | 拼接请求参数 - value(Object) |
 | printMapParams | 拼接打印 Map 参数 |
 | toConvertObjToMS | 进行转换对象处理(请求发送对象) |
 | toConvertObjToMO | 进行转换对象处理(请求发送对象) |
