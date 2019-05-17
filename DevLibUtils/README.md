@@ -1056,7 +1056,7 @@ DevUtils.openDebug();
 | isSuccess | 判断是否执行成功 |
 | isSuccess2 | 判断是否执行成功(判断 errorMsg) |
 | isSuccess3 | 判断是否执行成功(判断 successMsg) |
-| isSuccess4 | 判断是否执行成功(判断 successMsg) , 并且 successMsg 是否包含某个字符串 |
+| isSuccess4 | 判断是否执行成功(判断 successMsg), 并且 successMsg 是否包含某个字符串 |
 
 
 * **创建删除快捷图标工具类 ->** [ShortCutUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/ShortCutUtils.java)
@@ -1237,7 +1237,7 @@ DevUtils.openDebug();
 | getShakeAnimation | 获取一个视图摇晃动画 |
 
 
-* **视图动画工具箱 (AnimationUtils 基础上封装) , 提供简单的控制视图的动画的工具方法 ->** [ViewAnimationUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/anim/ViewAnimationUtils.java)
+* **视图动画工具箱 (AnimationUtils 基础上封装), 提供简单的控制视图的动画的工具方法 ->** [ViewAnimationUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/anim/ViewAnimationUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -1329,7 +1329,7 @@ DevUtils.openDebug();
 | closeNotRunTask | 关闭所有未运行的任务 |
 | closeInfiniteTask | 关闭所有无限循环的任务 |
 | closeMark | 关闭所有符合对应的字符串标记的定时器任务 |
-| createTimer | 创建定时器 => 立即执行,无限循环,通知默认 what |
+| createTimer | 创建定时器 => 立即执行、无限循环、通知默认 what |
 | getMarkId | 获取标记id |
 | getMarkStr | 获取标记字符串 |
 | setMarkId | 设置标记id |
