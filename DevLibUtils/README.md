@@ -1258,7 +1258,7 @@ DevUtils.openDebug();
 | shutdownNow | 立即关闭线程池任务 |
 | execute | 将任务投入线程池执行 |
 | doInBackground | 后台运行 |
-| onPostExecute | 将子线程结果传递到UI线程 |
+| onPostExecute | 将子线程结果传递到 UI 线程 |
 | onCanceled | 取消任务 |
 | abort | 中止任务 |
 
