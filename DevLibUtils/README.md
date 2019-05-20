@@ -664,7 +664,7 @@ DevUtils.openDebug();
 | disableKeyguard | 屏蔽系统的屏保 |
 | reenableKeyguard | 使能显示锁屏界面, 如果你之前调用了disableKeyguard()方法取消锁屏界面, 那么会马上显示锁屏界面 |
 | release | 释放资源 |
-| newKeyguardLock | 生成一个新的 KeyguardLock, 并且设置 Tag |
+| newKeyguardLock | 生成一个新的 KeyguardLock, 并且设置 TAG |
 | getKeyguardLock | 获取 KeyguardManager.KeyguardLock |
 | setKeyguardLock | 设置 KeyguardManager.KeyguardLock |
 
@@ -1659,16 +1659,16 @@ DevUtils.openDebug();
 | i | 打印 Log.INFO |
 | v | 打印 Log.VERBOSE |
 | wtf | 打印 Log.ASSERT |
-| json | 格式化Json格式数据,并打印 |
-| xml | 格式化XML格式数据,并打印 |
+| json | 格式化 JSON 格式数据, 并打印 |
+| xml | 格式化 XML 格式数据, 并打印 |
 | dTag | 打印 Log.DEBUG |
 | eTag | 打印 Log.ERROR |
 | wTag | 打印 Log.WARN |
 | iTag | 打印 Log.INFO |
 | vTag | 打印 Log.VERBOSE |
 | wtfTag | 打印 Log.ASSERT |
-| jsonTag | 格式化Json格式数据,并打印 |
-| xmlTag | 格式化XML格式数据,并打印 |
+| jsonTag | 格式化 JSON 格式数据, 并打印 |
+| xmlTag | 格式化 XML 格式数据, 并打印 |
 
 
 * **日志操作工具类 ->** [DevLoggerUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/logger/DevLoggerUtils.java)
@@ -1676,9 +1676,9 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | init | 初始化调用方法(获取版本号) |
-| getReleaseLogConfig | 获取发布 Log 配置(打印线程信息,显示方法总数 3,从 0 开始,不进行排序, 默认属于ERROR级别日志) |
-| getDebugLogConfig | 获取调试 Log 配置(打印线程信息,显示方法总数 3,从 0 开始,不进行排序, 默认属于ERROR级别日志) |
-| getSortLogConfig | 获取 Log 配置(打印线程信息,显示方法总数 3,从 0 开始,并且美化日志信息, 默认属于DEBUG级别日志) |
+| getReleaseLogConfig | 获取 Release Log 配置(打印线程信息, 显示方法总数 3, 从 0 开始, 不进行排序, 默认只打印 ERROR 级别日志) |
+| getDebugLogConfig | 获取 Debug Log 配置(打印线程信息, 显示方法总数 3, 从 0 开始, 不进行排序, 默认只打印 ERROR 级别日志) |
+| getSortLogConfig | 获取 Log 配置(打印线程信息, 显示方法总数 3, 从 0 开始, 并且美化日志信息, 默认打印 DEBUG 级别及以上日志) |
 | getLogConfig | 获取 Log 配置 |
 | saveErrorLog | 保存 App 错误日志 |
 | saveLog | 保存 App 日志 |
