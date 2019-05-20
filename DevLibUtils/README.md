@@ -319,7 +319,7 @@ DevUtils.openDebug();
 | getContentResolver | 获取 ContentResolver |
 | getAppIcon | 获取 App 的图标 |
 | getAppPackageName | 获取 App 包名 |
-| getAppName | 获取 App 名 |
+| getAppName | 获取 App 应用名 |
 | getAppVersionName | 获取 App 版本名 - 对外显示 |
 | getAppVersionCode | 获取 App 版本号 - 内部判断 |
 | installApp | 安装 App(支持 8.0)的意图 |
@@ -1005,7 +1005,7 @@ DevUtils.openDebug();
 | getSDCardPaths | 获取 SD 卡路径 |
 | getAllBlockSize | 返回对应路径的空间总大小 |
 | getAvailableBlocks | 返回对应路径的空闲空间(byte 字节大小) |
-| getAlreadyBlock | 返回对应路径,已使用的空间大小 |
+| getAlreadyBlock | 返回对应路径, 已使用的空间大小 |
 | getBlockSizeInfos | 返回对应路径的空间大小信息 |
 | getSDTotalSize | 获取 SD 卡总大小 |
 | getSDAvailableSize | 获取 SD 卡剩余容量, 即可用大小 |
@@ -1079,8 +1079,8 @@ DevUtils.openDebug();
 | isDebuggable | 判断签名是debug签名还是release签名 |
 | getX509Certificate | 获取 App 证书对象 |
 | printSignatureName | 打印签名信息 |
-| getSignaturesFromApk | 从 Apk 中读取签名 |
-| getCertificateFromApk | 从 Apk 中读取签名 |
+| getSignaturesFromApk | 从 APK 中读取签名 |
+| getCertificateFromApk | 从 APK 中读取签名 |
 
 
 * **dp, px, sp转换、View获取宽高等 ->** [SizeUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/SizeUtils.java)
@@ -1298,11 +1298,11 @@ DevUtils.openDebug();
 ## <span id="devutilsappassistmanager">**`dev.utils.app.assist.manager`**</span>
 
 
-* **Activity 管理类; 用于管理应用程序 Activity ->** [ActivityManager.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/assist/manager/ActivityManager.java)
+* **Activity 管理类, 用于管理应用程序 Activity ->** [ActivityManager.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/assist/manager/ActivityManager.java)
 
 | 方法 | 注释 |
 | :- | :- |
-| getInstance | 获取 ActivityManager 实例 ,单例模式 |
+| getInstance | 获取 ActivityManager 实例 |
 | getActivity | 通过 Context 获取 Activity |
 | isFinishing | 判断 Activity 是否关闭 |
 | getActivityStacks | 获取 Activity 栈 |
@@ -1312,7 +1312,7 @@ DevUtils.openDebug();
 | finishActivity | 关闭最后一个(当前) Activity |
 | existActivitys | 检测是否包含指定的 Activity |
 | finishAllActivityToIgnore | 结束全部 Activity 除忽略的 Activity 外 |
-| finishAllActivity | 结束所有Activity |
+| finishAllActivity | 结束所有 Activity |
 | appExit | 退出应用程序 |
 | restartApplication | 重启 App |
 
@@ -1322,7 +1322,7 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | gc | 回收定时器资源 |
-| timerSize | 获取全部任务总数 |
+| getTimerSize | 获取全部任务总数 |
 | getTimer | 获取属于对应字符串标记的定时器任务(优先获取符合的) |
 | getTimers | 获取属于对应字符串标记的定时器任务集合 |
 | closeAll | 关闭全部任务 |
@@ -1330,9 +1330,9 @@ DevUtils.openDebug();
 | closeInfiniteTask | 关闭所有无限循环的任务 |
 | closeMark | 关闭所有符合对应的字符串标记的定时器任务 |
 | createTimer | 创建定时器 => 立即执行、无限循环、通知默认 what |
-| getMarkId | 获取标记id |
+| getMarkId | 获取标记 id |
 | getMarkStr | 获取标记字符串 |
-| setMarkId | 设置标记id |
+| setMarkId | 设置标记 id |
 | setMarkStr | 设置标记字符串 |
 | startTimer | 运行定时器 |
 | closeTimer | 关闭定时器 |
@@ -1366,7 +1366,7 @@ DevUtils.openDebug();
 | getAsBitmap | 读取 Bitmap 数据 |
 | getAsDrawable | 读取 Drawable 数据 |
 | file | 获取缓存文件 |
-| remove | 移除某个key |
+| remove | 移除某个 key 的数据 |
 | clear | 清除所有数据 |
 
 
@@ -1410,7 +1410,7 @@ DevUtils.openDebug();
 | startPreviewNotify | 开始预览通知 |
 
 
-* **摄像头 预览、输出大小 辅助类 ->** [CameraSizeAssist.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/camera1/CameraSizeAssist.java)
+* **摄像头 (预览、输出大小) 辅助类 ->** [CameraSizeAssist.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/camera1/CameraSizeAssist.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -1513,6 +1513,7 @@ DevUtils.openDebug();
 | drawableToBitmap | Drawable 转换成 Bitmap |
 | drawableToBitmap2 | Drawable 转换 Bitmap |
 | drawableToBitmap3 | Drawable 转换 Bitmap |
+| drawableToBitmap4 | Drawable 转 Bitmap |
 | saveBitmapToSDCardJPEG | 保存图片到SD卡 - JPEG |
 | saveBitmapToSDCardPNG | 保存图片到SD卡 - PNG |
 | saveBitmapToSDCard | 保存图片到SD卡 - PNG |
@@ -1612,15 +1613,15 @@ DevUtils.openDebug();
 | :- | :- |
 | obtain | 获取 AppInfoBean |
 | getAppPackName | 获取 App 包名 |
-| getAppName | 获取 App 名 |
+| getAppName | 获取 App 应用名 |
 | getAppIcon | 获取 App 图标 |
 | getAppType | 获取 App 类型 |
 | getVersionCode | 获取 versionCode |
 | getVersionName | 获取 versionName |
 | getFirstInstallTime | 获取 App 首次安装时间 |
 | getLastUpdateTime | 获取 App 最后更新时间 |
-| getSourceDir | 获取 Apk 地址 |
-| getApkSize | 获取 Apk 大小 |
+| getSourceDir | 获取 APK 地址 |
+| getApkSize | 获取 APK 大小 |
 | isSystemApp | 是否系统程序 |
 | isSystemUpdateApp | 是否系统程序被手动更新后, 也成为第三方应用程序 |
 
@@ -1629,17 +1630,17 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| getPackageInfoToFile | 通过 Apk 路径 初始化 PackageInfo |
-| getPackageInfoToPath | 通过 Apk 路径 初始化 PackageInfo |
+| getPackageInfoToFile | 通过 APK 路径 初始化 PackageInfo |
+| getPackageInfoToPath | 通过 APK 路径 初始化 PackageInfo |
 | getPackageInfo | 获取当前应用 PackageInfo |
-| getAppInfoBeanToFile | 通过 Apk 路径 获取 AppInfoBean |
-| getAppInfoBeanToPath | 通过 Apk 路径 获取 AppInfoBean |
+| getAppInfoBeanToFile | 通过 APK 路径 获取 AppInfoBean |
+| getAppInfoBeanToPath | 通过 APK 路径 获取 AppInfoBean |
 | getAppInfoBean | 获取当前应用 AppInfoBean |
-| getApkInfoItem | 获取 Apk 详细信息 |
+| getApkInfoItem | 获取 APK 详细信息 |
 | getAppInfoItem | 获取 App 详细信息 |
 | getAppLists | 获取全部 App 列表 |
-| getApkPermission | 获取 Apk 注册的权限 |
-| printApkPermission | 打印 Apk 注册的权限 |
+| getApkPermission | 获取 APK 注册的权限 |
+| printApkPermission | 打印 APK 注册的权限 |
 
 
 ## <span id="devutilsapplogger">**`dev.utils.app.logger`**</span>
