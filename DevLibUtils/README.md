@@ -571,7 +571,7 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| getInstance | 获取 FlashlightUtils 实例 ,单例模式 |
+| getInstance | 获取 FlashlightUtils 实例 |
 | register | 注册摄像头 |
 | unregister | 注销摄像头 |
 | setFlashlightOn | 打开闪光灯 |
@@ -596,7 +596,7 @@ DevUtils.openDebug();
 | setHtmlText | 设置内容, 最终做处理 |
 | addHtmlColor | 为给定的字符串添加HTML颜色标记 |
 | addHtmlBold | 为给定的字符串添加HTML加粗标记 |
-| addHtmlColorAndBlod | 为给定的字符串添加HTML颜色标记,以及加粗 |
+| addHtmlColorAndBlod | 为给定的字符串添加HTML颜色标记, 以及加粗 |
 | addHtmlUnderline | 为给定的字符串添加HTML下划线 |
 | addHtmlIncline | 为给定的字符串添加HTML 字体倾斜 |
 | keywordMadeRed | 将给定的字符串中所有给定的关键字标色 |
@@ -655,7 +655,7 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| getInstance | 获取 KeyguardUtils 实例 ,单例模式 |
+| getInstance | 获取 KeyguardUtils 实例 |
 | isKeyguardLocked | 是否锁屏 - android 4.1以上支持 |
 | isKeyguardSecure | 是否有锁屏密码 - android 4.1以上支持 |
 | inKeyguardRestrictedInputMode | 是否锁屏 - android 4.1 之前 |
@@ -675,7 +675,7 @@ DevUtils.openDebug();
 | :- | :- |
 | getSystemLanguage | 获取系统语言 |
 | getSystemPreferredLanguage | 获取系统首选语言 |
-| applyLanguage | 修改系统语言 (App 多语言,单独改变 App 语言) |
+| applyLanguage | 修改系统语言 (App 多语言, 单独改变 App 语言) |
 | getSupportLanguages | 获取支持的语言 |
 | putSupportLanguage | 添加支持的语言 |
 | removeSupportLanguage | 移除支持的语言 |
@@ -895,7 +895,7 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| getInstance | 获取 PowerManagerUtils 实例 ,单例模式 |
+| getInstance | 获取 PowerManagerUtils 实例 |
 | isScreenOn | 屏幕是否打开(亮屏) |
 | turnScreenOn | 唤醒屏幕/点亮亮屏 |
 | turnScreenOff | 释放屏幕锁, 允许休眠时间自动黑屏 |
@@ -1118,7 +1118,7 @@ DevUtils.openDebug();
 | getSnackbarView | 获取 Snackbar View |
 | getTextView | 获取 Snackbar TextView(snackbar_text) |
 | getActionButton | 获取 Snackbar Action Button(snackbar_action) |
-| addView | 向 Snackbar 布局中添加View (Google不建议,复杂的布局应该使用DialogFragment进行展示) |
+| addView | 向 Snackbar 布局中添加View (Google 不建议, 复杂的布局应该使用 DialogFragment 进行展示) |
 | setCallback | 设置 Snackbar 展示完成 及 隐藏完成 的监听 |
 | setAction | 设置 Action 按钮文字内容 及 点击监听 |
 | dismiss | 关闭 Snackbar |
@@ -1764,7 +1764,7 @@ DevUtils.openDebug();
 | :- | :- |
 | init | 初始化操作 |
 | put | 保存数据 |
-| putAll | 保存 Map 集合(只能是 Integer, Long, Boolean, Float, String, Set) |
+| putAll | 保存 Map 集合(只能是 Integer、Long、Boolean、Float、String、Set) |
 | get | 根据 key 获取数据 |
 | getAll | 获取全部数据 |
 | remove | 移除数据 |
@@ -1853,7 +1853,7 @@ DevUtils.openDebug();
 | style | 使用单次 Toast 样式配置 |
 | defaultStyle | 使用默认 Toast 样式 |
 | getToastStyle | 获取 Toast 样式配置 |
-| initStyle | 初始化 Toast 样式配置(非单次,一直持续) |
+| initStyle | 初始化 Toast 样式配置(非单次, 一直持续) |
 | initToastFilter | 初始化 Toast 过滤器 |
 | setView | 设置 Toast 显示的View |
 | show | 显示 Toast |
@@ -1867,22 +1867,22 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| createWifiConfigToAp | 创建Wifi配置信息(无其他操作, 单独返回WifiConfig) => Wifi热点 (支持 无密码/WPA2 PSK) |
-| stratWifiAp | 开启Wifi热点 |
-| closeWifiAp | 关闭Wifi热点 |
-| getWifiApState | 获取Wifi热点状态 |
-| getWifiApConfiguration | 获取Wifi热点配置信息 |
-| setWifiApConfiguration | 设置Wifi热点配置信息 |
-| isOpenWifiAp | 判断是否打开Wifi热点 |
-| closeWifiApCheck | 关闭Wifi热点(判断当前状态) |
+| createWifiConfigToAp | 创建 wifi 配置信息(无其他操作, 单独返回 WifiConfig) => Wifi热点 (支持 无密码/WPA2 PSK) |
+| stratWifiAp | 开启 wifi 热点 |
+| closeWifiAp | 关闭 wifi 热点 |
+| getWifiApState | 获取 wifi 热点状态 |
+| getWifiApConfiguration | 获取 wifi 热点配置信息 |
+| setWifiApConfiguration | 设置 wifi 热点配置信息 |
+| isOpenWifiAp | 判断是否打开 wifi 热点 |
+| closeWifiApCheck | 关闭 wifi 热点(判断当前状态) |
 | isConnectHot | 是否有连接热点 |
 | getHotspotServiceIp | 获取热点主机ip地址 |
 | getHotspotAllotIp | 获取连接上的子网关热点IP(一个) |
 | getHotspotSplitIpMask | 获取热点拼接后的ip网关掩码 |
 | getApWifiSSID | 获取Wifi 热点名 |
-| getApWifiPwd | 获取Wifi 热点密码 |
+| getApWifiPwd | 获取 wifi 热点密码 |
 | setOnWifiAPListener | 设置 Wifi 热点监听 |
-| onStarted | 开启热点触发 |
+| onStarted | 开启热点回调 |
 | onStopped | 关闭热点回调 |
 | onFailed | 失败回调 |
 
@@ -1915,7 +1915,7 @@ DevUtils.openDebug();
 | getWifiTypeStr | 获取加密类型(String) |
 | isConnNull | 判断是否连接为 null - unknown ssid |
 | isConnectAphot | 判断是否连接上Wifi(非连接中) |
-| getSecurity | 获取Wifi配置,加密类型 |
+| getSecurity | 获取Wifi配置, 加密类型 |
 | isExsitsPwd | 获知Wifi配置, 是否属于密码加密类型 |
 | isExsits | 查看以前是否也配置过这个网络 |
 | delWifiConfig | 删除指定的 Wifi(SSID) 配置信息 |
