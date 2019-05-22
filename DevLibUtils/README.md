@@ -760,8 +760,8 @@ DevUtils.openDebug();
 | getNetworkType | 获取当前网络类型 |
 | getNetworkClass | 获取移动网络连接类型 |
 | getBroadcastIpAddress | 获取广播 ip 地址 |
-| getDomainAddress | 获取域名ip地址 |
-| getIPAddress | 获取IP地址 |
+| getDomainAddress | 获取域名 IP 地址 |
+| getIPAddress | 获取 IP 地址 |
 | getIpAddressByWifi | 根据 WiFi 获取网络 IP 地址 |
 | getGatewayByWifi | 根据 WiFi 获取网关 IP 地址 |
 | getNetMaskByWifi | 根据 WiFi 获取子网掩码 IP 地址 |
@@ -1867,7 +1867,7 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| createWifiConfigToAp | 创建 wifi 配置信息(无其他操作, 单独返回 WifiConfig) => Wifi热点 (支持 无密码/WPA2 PSK) |
+| createWifiConfigToAp | 创建 wifi 热点配置(支持 无密码/WPA2 PSK) |
 | stratWifiAp | 开启 wifi 热点 |
 | closeWifiAp | 关闭 wifi 热点 |
 | getWifiApState | 获取 wifi 热点状态 |
@@ -1875,54 +1875,55 @@ DevUtils.openDebug();
 | setWifiApConfiguration | 设置 wifi 热点配置信息 |
 | isOpenWifiAp | 判断是否打开 wifi 热点 |
 | closeWifiApCheck | 关闭 wifi 热点(判断当前状态) |
-| isConnectHot | 是否有连接热点 |
-| getHotspotServiceIp | 获取热点主机ip地址 |
-| getHotspotAllotIp | 获取连接上的子网关热点IP(一个) |
-| getHotspotSplitIpMask | 获取热点拼接后的ip网关掩码 |
-| getApWifiSSID | 获取Wifi 热点名 |
+| isConnectHot | 是否有设备连接热点 |
+| getHotspotServiceIp | 获取热点主机 IP 地址 |
+| getHotspotAllotIp | 获取连接上的子网关热点 IP(一个) |
+| getConnectHotspotMsg | 获取连接的热点信息 |
+| getHotspotSplitIpMask | 获取热点拼接后的 IP 网关掩码 |
+| getApWifiSSID | 获取 wifi 热点名 |
 | getApWifiPwd | 获取 wifi 热点密码 |
-| setOnWifiAPListener | 设置 Wifi 热点监听 |
+| setOnWifiAPListener | 设置 wifi 热点监听事件 |
 | onStarted | 开启热点回调 |
 | onStopped | 关闭热点回调 |
 | onFailed | 失败回调 |
 
 
-* **wifi工具类 ->** [WifiUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/wifi/WifiUtils.java)
+* **Wifi 工具类 ->** [WifiUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/wifi/WifiUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
-| getWifiManager | 获取wifi管理对象 |
-| isOpenWifi | 判断是否打开wifi |
-| openWifi | 打开WIFI |
-| closeWifi | 关闭WIFI |
-| toggleWifiEnabled | 自动切换wifi开关状态 |
-| getWifiState | 获取当前WIFI连接状态 |
-| startScan | 开始扫描wifi |
-| getConfiguration | 获取已配置的网络 |
-| getWifiList | 获取网络列表 |
-| getWifiInfo | 获取WifiInfo对象 |
-| getMacAddress | 获取MAC地址 |
-| getBSSID | 获取接入点的BSSID |
-| getIPAddress | 获取IP地址 |
-| getNetworkId | 获取连接的ID |
-| getSSID | 获取SSID |
-| formatSSID | 判断是否存在\"ssid\", 存在则裁剪返回 |
-| getPassword | 获取密码(经过处理) |
+| getWifiManager | 获取 WifiManager |
+| isOpenWifi | 判断是否打开 wifi |
+| openWifi | 打开 wifi |
+| closeWifi | 关闭 wifi |
+| toggleWifiEnabled | 自动切换 wifi 开关状态 |
+| getWifiState | 获取当前 wifi 连接状态 |
+| startScan | 开始扫描 wifi |
+| getConfiguration | 获取已配置(连接过) 的 wifi 配置 |
+| getWifiList | 获取附近的 wifi 列表 |
+| getWifiInfo | 获取连接的 WifiInfo |
+| getMacAddress | 获取 MAC 地址 |
+| getBSSID | 获取连接的 BSSID |
+| getIPAddress | 获取 IP 地址 |
+| getNetworkId | 获取连接的 Network Id |
+| getSSID | 获取 wifi SSID |
+| formatSSID | 判断是否存在 \"ssid\", 存在则裁剪返回 |
+| getPassword | 获取处理后的密码 |
 | isHexWepKey | 判断是否 wep 加密 |
-| isHex | 判断是否 十六进制 |
-| getWifiType | 获取加密类型(int常量) - 判断String |
-| getWifiTypeInt | 获取加密类型(int常量) - 判断int(String) |
-| getWifiTypeStr | 获取加密类型(String) |
+| isHex | 判断是否十六进制数据 |
+| getWifiType | 获取加密类型 |
+| getWifiTypeInt | 获取加密类型 |
+| getWifiTypeStr | 获取加密类型 |
 | isConnNull | 判断是否连接为 null - unknown ssid |
-| isConnectAphot | 判断是否连接上Wifi(非连接中) |
-| getSecurity | 获取Wifi配置, 加密类型 |
-| isExsitsPwd | 获知Wifi配置, 是否属于密码加密类型 |
-| isExsits | 查看以前是否也配置过这个网络 |
-| delWifiConfig | 删除指定的 Wifi(SSID) 配置信息 |
-| quickConnWifi | 快速连接Wifi(不使用静态ip方式) |
-| createWifiConfig | 创建Wifi配置信息(无其他操作, 单独返回WifiConfig) |
-| removeWifiConfig | 移除某个Wifi配置信息 |
-| disconnectWifi | 断开指定ID的网络 |
+| isConnectAphot | 获取连接的 wifi 热点 SSID |
+| getSecurity | 获取 wifi 加密类型 |
+| isExsitsPwd | 判断 wifi 加密类型, 是否为加密类型 |
+| isExsits | 获取指定的 ssid 网络配置 (需连接保存过, 才存在) |
+| delWifiConfig | 删除指定的 wifi(SSID) 配置信息 |
+| quickConnWifi | 快速连接 wifi (不使用静态 IP 方式) |
+| createWifiConfig | 创建 wifi 配置信息 |
+| removeWifiConfig | 移除 wifi 配置信息 |
+| disconnectWifi | 断开指定 networkId 的网络 |
 
 
 ## <span id="devutilscommon">**`dev.utils.common`**</span>
@@ -2114,6 +2115,7 @@ DevUtils.openDebug();
 | floatsToInts | float[] 转换 int[] |
 | toBinaryString | 将 字节转换 为 二进制字符串 |
 | decodeBinary | 二进制字符串 转换 byte[] 解码 |
+| isHex | 判断是否十六进制数据 |
 | decodeHex | 将十六进制字节数组解码 |
 | hexToInt | 十六进制 char 转换 int |
 | toHexString | int 转换十六进制 |
