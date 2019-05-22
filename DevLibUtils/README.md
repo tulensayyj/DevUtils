@@ -1782,7 +1782,7 @@ DevUtils.openDebug();
 ## <span id="devutilsapptoast">**`dev.utils.app.toast`**</span>
 
 
-* **自定义View着色美化 Toast 工具类 ->** [ToastTintUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/toast/ToastTintUtils.java)
+* **自定义 View 着色美化 Toast 工具类 ->** [ToastTintUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/toast/ToastTintUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -1790,7 +1790,7 @@ DevUtils.openDebug();
 | setToastFilter | 设置 Toast 过滤器 |
 | setIsHandler | 设置是否使用 Handler 显示 Toast |
 | setNullText | 设置 Text 为 null 的文本 |
-| setUseConfig | 判断是否使用配置 |
+| setUseConfig | 设置是否使用配置 |
 | setGravity | 设置 Toast 显示在屏幕上的位置 |
 | setMargin | 设置边距 |
 | getDefaultStyle | 获取默认样式 |
@@ -1824,7 +1824,7 @@ DevUtils.openDebug();
 | setToastFilter | 设置 Toast 过滤器 |
 | setIsHandler | 设置是否使用 Handler 显示 Toast |
 | setNullText | 设置 Text 为 null 的文本 |
-| setUseConfig | 判断是否使用配置 |
+| setUseConfig | 设置是否使用配置 |
 | setGravity | 设置 Toast 显示在屏幕上的位置 |
 | setMargin | 设置边距 |
 | showShort | 显示 LENGTH_SHORT Toast |
@@ -1853,9 +1853,9 @@ DevUtils.openDebug();
 | style | 使用单次 Toast 样式配置 |
 | defaultStyle | 使用默认 Toast 样式 |
 | getToastStyle | 获取 Toast 样式配置 |
-| initStyle | 初始化 Toast 样式配置(非单次, 一直持续) |
+| initStyle | 初始化 Toast 样式配置 |
 | initToastFilter | 初始化 Toast 过滤器 |
-| setView | 设置 Toast 显示的View |
+| setView | 设置 Toast 显示的 View |
 | show | 显示 Toast |
 | cancel | 取消当前显示的 Toast |
 
