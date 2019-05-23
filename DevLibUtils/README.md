@@ -1211,7 +1211,10 @@ DevUtils.openDebug();
 | measureView | 测量 View |
 | getViewWidth | 获取 View 的宽度 |
 | getViewHeight | 获取 View 的高度 |
+| getMargin | 获取 View Margin |
 | setMargin | 设置 Margin 边距 |
+| getPadding | 获取 View Padding |
+| setPadding | 设置 Padding 边距 |
 | calcListViewItemHeight | 计算 ListView Item 高度 |
 | calcGridViewItemHeight | 计算 GridView Item 高度 |
 | getItemHeighet | 获取单独一个 Item 高度 |
