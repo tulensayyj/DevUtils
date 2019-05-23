@@ -1147,7 +1147,7 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| getTextView | 获取TextView |
+| getTextView | 获取 TextView |
 | getText | 获取文本 |
 | setBold | 设置是否加粗 |
 | setTextColor | 设置字体颜色 |
@@ -1155,10 +1155,10 @@ DevUtils.openDebug();
 | clearFlags | 清空 flags |
 | setUnderlineText | 设置下划线 |
 | setStrikeThruText | 设置中划线 |
-| setText | 设置内容 |
-| setTexts | 设置多个 TextView 内容 |
+| setText | 设置文本 |
+| setTexts | 设置多个 TextView 文本 |
 | setHtmlText | 设置 Html 内容 |
-| setHtmlTexts | 设置 多个 TextView Html 内容 |
+| setHtmlTexts | 设置多个 TextView Html 内容 |
 | getTextHeight | 获取字体高度 |
 | getTextTopOffsetHeight | 获取字体顶部偏移高度 |
 | getTextWidth | 计算字体宽度 |
