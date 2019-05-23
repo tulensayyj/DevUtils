@@ -57,7 +57,7 @@ DevUtils.openDebug();
 
 - 部分 api 更新不及时或有遗漏等，`具体以对应的工具类为准`
 
-- [JavaDoc - API](https://javadoc.jitpack.io/com/github/afkT/DevUtils/1.6.4/javadoc/)
+- [JavaDoc - API](https://javadoc.jitpack.io/com/github/afkT/DevUtils/1.6.5/javadoc/)
 
 ## API
 
@@ -593,7 +593,7 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| setHtmlText | 设置内容, 最终做处理 |
+| setHtmlText | 设置 Html 内容 |
 | addHtmlColor | 为给定的字符串添加HTML颜色标记 |
 | addHtmlBold | 为给定的字符串添加HTML加粗标记 |
 | addHtmlColorAndBlod | 为给定的字符串添加HTML颜色标记, 以及加粗 |
@@ -1152,9 +1152,20 @@ DevUtils.openDebug();
 | setBold | 设置是否加粗 |
 | setTextColor | 设置字体颜色 |
 | setTypeface | 设置字体 |
+| setTextSizeByPx | 设置字体大小 - px 像素 |
+| setTextSizeBySp | 设置字体大小 - sp 缩放像素 |
+| setTextSizeByDp | 设置字体大小 - dp 与设备无关的像素 |
+| setTextSizeByIn | 设置字体大小 - inches 英寸 |
+| setTextSize | 设置字体大小 |
+| setTextSizes | 设置多个 TextView 字体大小 |
 | clearFlags | 清空 flags |
 | setUnderlineText | 设置下划线 |
 | setStrikeThruText | 设置中划线 |
+| setLetterSpacing | 设置文字水平间距 |
+| setLineSpacing | 设置文字行间距(行高) |
+| setLineSpacingAndMultiplier | 设置文字行间距(行高)、行间距倍数 |
+| setTextScaleX | 设置字体水平方向的缩放 |
+| setIncludeFontPadding | 设置是否保留字体留白间隙区域 |
 | setText | 设置文本 |
 | setTexts | 设置多个 TextView 文本 |
 | setHtmlText | 设置 Html 内容 |
