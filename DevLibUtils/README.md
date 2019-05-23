@@ -1189,6 +1189,7 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | getContext | 获取 Context |
+| getActivity | 获取 View 的 Context (Activity) |
 | getView | 获取 View |
 | isEmpty | 判断 View 是否为 null |
 | isVisibility | 判断 View 是否显示 |
@@ -1197,23 +1198,23 @@ DevUtils.openDebug();
 | isVisibilityGone | 判断 View 是否隐藏 |
 | getVisibility | 获取显示的状态 (View.VISIBLE : View.GONE) |
 | getVisibilityIN | 获取显示的状态 (View.VISIBLE : View.INVISIBLE) |
-| setVisibility | 设置View显示状态 |
-| setVisibilitys | 设置View 显示的状态 |
+| setVisibility | 设置 View 显示的状态 |
+| setVisibilitys | 设置 View 显示的状态 |
 | toggleVisibilitys | 切换 View 显示的状态 |
 | reverseVisibilitys | 反转 View 显示的状态 |
-| toogleView | 切换View状态 |
-| setViewImageRes | 设置View 图片资源 |
-| findViewById | 初始化View |
-| removeSelfFromParent | 把自身从父View中移除 |
-| isTouchInView | 判断触点是否落在该View上 |
+| toogleView | 切换 View 状态 |
+| setViewImageRes | 设置 View 图片资源 |
+| findViewById | 初始化 View |
+| removeSelfFromParent | 把自身从父 View 中移除 |
+| isTouchInView | 判断触点是否落在该 View 上 |
 | requestLayoutParent | View 改变请求 |
 | measureView | 测量 View |
-| getViewWidth | 获取view的宽度 |
-| getViewHeight | 获取view的高度 |
-| getActivity | 获取 View 的 Context (Activity) |
-| calcListViewItemHeight | 计算ListView Item 高度 |
-| calcGridViewItemHeight | 计算GridView Item 高度 |
-| getItemHeighet | 获取单独一个Item 高度 |
+| getViewWidth | 获取 View 的宽度 |
+| getViewHeight | 获取 View 的高度 |
+| setMargin | 设置 Margin 边距 |
+| calcListViewItemHeight | 计算 ListView Item 高度 |
+| calcGridViewItemHeight | 计算 GridView Item 高度 |
+| getItemHeighet | 获取单独一个 Item 高度 |
 
 
 ## <span id="devutilsappanim">**`dev.utils.app.anim`**</span>
