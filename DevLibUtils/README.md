@@ -904,7 +904,7 @@ DevUtils.openDebug();
 | getPowerManager | 获取 PowerManager |
 | setPowerManager | 设置 PowerManager |
 | setBright | 设置屏幕常亮 |
-| setWakeLockToBright | 设置WakeLock 常亮 |
+| setWakeLockToBright | 设置 WakeLock 常亮 |
 
 
 * **进程相关工具类 ->** [ProcessUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/ProcessUtils.java)
@@ -936,17 +936,22 @@ DevUtils.openDebug();
 | getColor | 获取 Color |
 | getDrawable | 获取 Drawable |
 | getDimension | 获取 Dimen 资源 |
-| getResourceId | 根据资源名获取资源id |
-| getLayoutId | 获取 layout 布局文件 id |
-| getStringId | 获取 string id |
+| getLayoutId | 获取 layout id |
 | getDrawableId | 获取 drawable id |
-| getDrawableId2 | 获取 drawable id |
 | getMipmapId | 获取 mipmap id |
+| getMenuId | 获取 menu id |
+| getRawId | 获取 raw id |
+| getAnimId | 获取 anim id |
+| getColorId | 获取 color id |
+| getDimenId | 获取 dimen id |
+| getAttrId | 获取 attr id |
 | getStyleId | 获取 style id |
 | getStyleableId | 获取 styleable id |
-| getAnimId | 获取 anim id |
 | getId | 获取 id |
-| getColorId | 获取 color id |
+| getStringId | 获取 string id |
+| getBoolId | 获取 bool id |
+| getIntegerId | 获取 integer id |
+| getIdentifier | 获取资源 id |
 | readBytesFromAssets | 获取 Assets 资源文件数据 |
 | readStringFromAssets | 读取字符串 来自 Assets文件 |
 | readBytesFromRaw | 从res/raw 中获取内容 |
@@ -2407,6 +2412,10 @@ DevUtils.openDebug();
 | isNullToValue | 判断指定 key 的 value 是否为 null |
 | containsKey | 判断 Map 是否存储了 key |
 | containsValue | 判断 Map 是否存储了 value |
+| putToList | 添加一条数据 - (Value) List<T> |
+| removeToList | 移除一条数据 - (Value) List<T> |
+| removeToLists | 移除多条数据 - (Value) List<T> |
+| removeToMap | 移除多条数据 - 通过 Map 进行移除 |
 
 
 * **数字(计算)工具类 ->** [NumberUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/NumberUtils.java)
@@ -2545,6 +2554,8 @@ DevUtils.openDebug();
 | equals | 判断两个值是否一样 |
 | isEquals | 判断多个字符串是否相等, 只有全相等才返回 true - 对比大小写 |
 | isOrEquals | 判断多个字符串, 只要有一个符合条件则通过 |
+| countMatches | 统计字符串匹配个数 |
+| countMatches2 | 统计字符串匹配个数 |
 | isContains | 判断一堆值中, 是否存在符合该条件的(包含) |
 | isStartsWith | 判断内容, 是否属于特定字符串开头 - 对比大小写 |
 | isEndsWith | 判断内容, 是否属于特定字符串结尾 - 对比大小写 |
