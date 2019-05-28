@@ -1976,6 +1976,7 @@ DevUtils.openDebug();
 | asList | 转换数组为集合 |
 | equals | 判断两个值是否一样 |
 | arraycopy | 拼接数组 |
+| subarray | 从数组上截取一段 |
 
 
 * **资金运算工具类 ->** [BigDecimalUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/BigDecimalUtils.java)
@@ -2001,7 +2002,7 @@ DevUtils.openDebug();
 | newInstance | 根据类获取对象, 不再必须一个无参构造 |
 | getDefaultPrimiticeValue | 判断 Class 是否为原始类型 (boolean、char、byte、short、int、long、float、double) |
 | isCollection | 判断是否集合类型 |
-| isArray | 是否数组类型 |
+| isArray | 判断是否数组类型 |
 | getGenericSuperclass | 获取父类泛型类型 |
 | getGenericInterfaces | 获取接口泛型类型 |
 
@@ -2015,7 +2016,7 @@ DevUtils.openDebug();
 | bytesToObject | 通过 byte[] 生成 Object 对象 |
 
 
-* **关闭 (IO 流) 工具类 ->** [CloseUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/CloseUtils.java)
+* **关闭(IO流)工具类 ->** [CloseUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/CloseUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -2061,7 +2062,7 @@ DevUtils.openDebug();
 | disjunction | 两个集合交集的补集处理 |
 | subtract | 两个集合差集(扣除)处理 |
 | equals | 判断两个值是否一样 |
-| toArrayToObject | 转换数组 to Object |
+| toArray | 转换数组 to Object |
 | reverse | 集合翻转处理 |
 
 
@@ -2079,7 +2080,7 @@ DevUtils.openDebug();
 | blue | 返回一个颜色中蓝色的色值(返回十进制) |
 | bluePercent | 返回一个颜色中蓝色的百分比值 |
 | rgb | 根据对应的 red、green、blue 生成一个颜色值 |
-| argb | 根据对应的 alpha, red、green、blue 生成一个颜色值 (含透明度) |
+| argb | 根据对应的 alpha、red、green、blue 生成一个颜色值 (含透明度) |
 | isRGB | 判断颜色 RGB 是否有效 |
 | isARGB | 判断颜色 ARGB 是否有效 |
 | setAlpha | 设置透明度 |
@@ -2097,7 +2098,7 @@ DevUtils.openDebug();
 | setAlphaLight | 设置透明度变浅 |
 
 
-* **转换工具类(Byte、Hex等) ->** [ConvertUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/ConvertUtils.java)
+* **转换工具类(Byte、Hex 等) ->** [ConvertUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/ConvertUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -2116,8 +2117,6 @@ DevUtils.openDebug();
 | parseInt | 字符串转换对应的进制 |
 | parseLong | 字符串转换对应的进制 |
 | bytesBitwiseAND | 按位求补 byte[] 位移编解码(共用同一个方法) |
-| subBytes | 从 byte[] 上截取一段 |
-| joinBytes | 拼接 byte[] 数据 |
 | bytesToObject | byte[] 转为 Object |
 | objectToBytes | Object 转为 byte[] |
 | bytesToChars | byte[] 转换 char[], 并且进行补码 |
@@ -2253,25 +2252,25 @@ DevUtils.openDebug();
 | getAutoFormatString2 | 获取自动数量格式化后的字符串(可变参数) |
 
 
-* **域工具 ->** [FieldUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/FieldUtils.java)
+* **变量字段工具类 ->** [FieldUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/FieldUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
 | isSerializable | 判断是否序列化 |
-| set | 设置域的值 |
-| get | 获取域的值 |
+| set | 设置字段的值 |
+| get | 获取字段的值 |
 | isLong | 是否 long/Long 类型 |
 | isFloat | 是否 float/Float 类型 |
 | isDouble | 是否 double/Double 类型 |
 | isInteger | 是否 int/Integer 类型 |
 | isString | 是否 String 类型 |
-| getGenericType | 获取域的泛型类型, 如果不带泛型返回 null |
+| getGenericType | 获取字段的泛型类型, 如果不带泛型返回 null |
 | getComponentType | 获取数组的类型 |
 | getAllDeclaredFields | 获取全部 Field, 包括父类 |
 | isInvalid | 是静态常量或者内部结构属性 |
 
 
-* **文件IO流工具类 ->** [FileIOUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/FileIOUtils.java)
+* **文件(IO流)工具类 ->** [FileIOUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/FileIOUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -2618,7 +2617,7 @@ DevUtils.openDebug();
 | print | 输出参与均值计算的数字 |
 
 
-* **时间均值计算器(只能用于单线程计时) ->** [TimeAverager.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/assist/TimeAverager.java)
+* **时间均值计算器 ->** [TimeAverager.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/assist/TimeAverager.java)
 
 | 方法 | 注释 |
 | :- | :- |
