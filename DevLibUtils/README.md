@@ -700,7 +700,7 @@ DevUtils.openDebug();
 | getLocation | 获取位置, 需要先判断是否开启了定位 |
 | isGpsEnabled | 判断Gps是否可用 |
 | isLocationEnabled | 判断定位是否可用 |
-| openGpsSettings | 打开Gps设置界面 |
+| openGpsSettings | 打开 GPS 设置界面 |
 | register | 注册 - 使用完记得调用{@link #unregister()} |
 | unregister | 注销监听 |
 | getAddress | 根据经纬度获取地理位置 |
@@ -1975,6 +1975,7 @@ DevUtils.openDebug();
 | charactersToChars | Character[] 转换 char[] |
 | asList | 转换数组为集合 |
 | equals | 判断两个值是否一样 |
+| arraycopy | 拼接数组 |
 
 
 * **资金运算工具类 ->** [BigDecimalUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/BigDecimalUtils.java)
@@ -2060,7 +2061,6 @@ DevUtils.openDebug();
 | disjunction | 两个集合交集的补集处理 |
 | subtract | 两个集合差集(扣除)处理 |
 | equals | 判断两个值是否一样 |
-| toArray | 转换数组 to 集合数据类型数组 |
 | toArrayToObject | 转换数组 to Object |
 | reverse | 集合翻转处理 |
 
@@ -2486,6 +2486,7 @@ DevUtils.openDebug();
 | getDeclaredFieldParent | 循环向上转型, 获取对象的 DeclaredField |
 | setFieldMethod | 设置反射的方法 |
 | setFieldValue | 设置反射的字段 |
+| getObject | 获取 Object 对象 |
 
 
 * **反射相关工具类 ->** [ReflectUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/ReflectUtils.java)
@@ -2495,10 +2496,7 @@ DevUtils.openDebug();
 | reflect | 设置要反射的类 |
 | newInstance | 实例化反射对象 |
 | field | 设置反射的字段 |
-| getObject | 获取 Object 对象 |
 | setEnumVal | 设置枚举值 |
-| getDeclaredField | 通过反射获取全部字段 |
-| getDeclaredFieldBase | 循环向上转型, 获取对象的 DeclaredField |
 | method | 设置反射的方法 |
 | proxy | 根据类, 代理创建并返回对象 |
 | type | 获取类型 |
