@@ -232,7 +232,7 @@ DevUtils.openDebug();
 | closeAccessibility | 关闭无障碍辅助功能 |
 
 
-* **AlarmManager (全局定时器/闹钟)指定时长或以周期形式执行某项操作 ->** [AlarmUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/AlarmUtils.java)
+* **AlarmManager(全局定时器/闹钟)指定时长或以周期形式执行某项操作 ->** [AlarmUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/AlarmUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -270,7 +270,7 @@ DevUtils.openDebug();
 | getIntervalTimeFolder | 获取时间间隔 - 文件夹 |
 
 
-* **App通用工具类 ->** [AppCommonUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/AppCommonUtils.java)
+* **App 通用工具类 ->** [AppCommonUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/AppCommonUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -455,7 +455,7 @@ DevUtils.openDebug();
 | getCMDOutputString | 获取 CMD 指令回调数据 |
 
 
-* **数据库工具类 (导入导出等) ->** [DBUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/DBUtils.java)
+* **数据库工具类(导入导出等) ->** [DBUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/DBUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -580,7 +580,7 @@ DevUtils.openDebug();
 | isFlashlightEnable | 是否支持手机闪光灯 |
 
 
-* **Handler 工具类, 默认开启一个 Handler, 方便在各个地方随时执行主线程任务 ->** [HandlerUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/HandlerUtils.java)
+* **Handler 工具类(默认开启一个 Handler, 方便在各个地方随时执行主线程任务) ->** [HandlerUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/HandlerUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -603,7 +603,7 @@ DevUtils.openDebug();
 | keywordReplaceAll | 将给定的字符串中所有给定的关键字进行替换内容 |
 
 
-* **Intent(意图) 相关工具类 ->** [IntentUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/IntentUtils.java)
+* **Intent(意图)相关工具类 ->** [IntentUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/IntentUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -651,7 +651,7 @@ DevUtils.openDebug();
 | fixSoftInputLeaks | 修复软键盘内存泄漏 在 Activity.onDestroy() 中使用 |
 
 
-* **锁屏工具类 - 锁屏管理, 锁屏、禁用锁屏, 判断是否锁屏 ->** [KeyguardUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/KeyguardUtils.java)
+* **锁屏管理工具类(锁屏、禁用锁屏, 判断是否锁屏) ->** [KeyguardUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/KeyguardUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -714,7 +714,7 @@ DevUtils.openDebug();
 | onStatusChanged | provider的在可用、暂时不可用和无服务三个状态直接切换时触发此函数 |
 
 
-* **Android Manifest工具类 ->** [ManifestUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/ManifestUtils.java)
+* **Android Manifest 工具类 ->** [ManifestUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/ManifestUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -728,7 +728,7 @@ DevUtils.openDebug();
 | getAppVersionName | 获取 App 版本信息 |
 
 
-* **获取内存信息 ->** [MemoryUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/MemoryUtils.java)
+* **内存信息工具类 ->** [MemoryUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/MemoryUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -782,7 +782,7 @@ DevUtils.openDebug();
 | isEmpty | 判断是否为 null |
 
 
-* **工具类: OS 系统相关 ->** [OSUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/OSUtils.java)
+* **OS 系统相关 ->** [OSUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/OSUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -999,7 +999,7 @@ DevUtils.openDebug();
 | checkDeviceHasNavigationBar | 检测是否具有底部导航栏 |
 
 
-* **SD卡相关辅助类 ->** [SDCardUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/SDCardUtils.java)
+* **SDCard 相关辅助类 ->** [SDCardUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/SDCardUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -1088,7 +1088,7 @@ DevUtils.openDebug();
 | getCertificateFromApk | 从 APK 中读取签名 |
 
 
-* **dp, px, sp转换、View获取宽高等 ->** [SizeUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/SizeUtils.java)
+* **大小工具类(dp, px, sp 转换、View 获取宽高等) ->** [SizeUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/SizeUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -1139,7 +1139,7 @@ DevUtils.openDebug();
 | bellow | 设置 Snackbar 显示在指定 View 的下方 |
 
 
-* **颜色状态列表 工具类 ->** [StateListUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/StateListUtils.java)
+* **颜色状态列表工具类 ->** [StateListUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/StateListUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -1257,7 +1257,7 @@ DevUtils.openDebug();
 | getShakeAnimation | 获取一个视图摇晃动画 |
 
 
-* **视图动画工具箱 (AnimationUtils 基础上封装), 提供简单的控制视图的动画的工具方法 ->** [ViewAnimationUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/anim/ViewAnimationUtils.java)
+* **视图动画工具箱(AnimationUtils 基础上封装), 提供简单的控制视图的动画的工具方法 ->** [ViewAnimationUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/anim/ViewAnimationUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -1271,7 +1271,7 @@ DevUtils.openDebug();
 ## <span id="devutilsappassist">**`dev.utils.app.assist`**</span>
 
 
-* **异步执行 ->** [AsyncExecutor.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/assist/AsyncExecutor.java)
+* **异步执行辅助类 ->** [AsyncExecutor.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/assist/AsyncExecutor.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -1283,7 +1283,7 @@ DevUtils.openDebug();
 | abort | 中止任务 |
 
 
-* **播放“bee”的声音, 并且震动 辅助类 ->** [BeepVibrateAssist.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/assist/BeepVibrateAssist.java)
+* **播放“bee”的声音, 并且震动辅助类 ->** [BeepVibrateAssist.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/assist/BeepVibrateAssist.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -1318,7 +1318,7 @@ DevUtils.openDebug();
 ## <span id="devutilsappassistmanager">**`dev.utils.app.assist.manager`**</span>
 
 
-* **Activity 管理类, 用于管理应用程序 Activity ->** [ActivityManager.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/assist/manager/ActivityManager.java)
+* **Activity 管理工具类(用于管理应用程序 Activity) ->** [ActivityManager.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/assist/manager/ActivityManager.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -1393,7 +1393,7 @@ DevUtils.openDebug();
 ## <span id="devutilsappcamera1">**`dev.utils.app.camera1`**</span>
 
 
-* **自动获取焦点 辅助类 ->** [AutoFocusAssist.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/camera1/AutoFocusAssist.java)
+* **摄像头自动获取焦点辅助类 ->** [AutoFocusAssist.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/camera1/AutoFocusAssist.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -1430,7 +1430,7 @@ DevUtils.openDebug();
 | startPreviewNotify | 开始预览通知 |
 
 
-* **摄像头 (预览、输出大小) 辅助类 ->** [CameraSizeAssist.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/camera1/CameraSizeAssist.java)
+* **摄像头(预览、输出大小)辅助类 ->** [CameraSizeAssist.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/camera1/CameraSizeAssist.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -1466,7 +1466,7 @@ DevUtils.openDebug();
 | cropBitmap | 裁剪图片(默认比例16:9) |
 
 
-* **Bitmap工具类主要包括获取Bitmap和对Bitmap的操作 ->** [BitmapExtendUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/image/BitmapExtendUtils.java)
+* **Bitmap 工具类, 主要包括获取 Bitmap 和对 Bitmap 的操作 ->** [BitmapExtendUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/image/BitmapExtendUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -1509,7 +1509,7 @@ DevUtils.openDebug();
 | safeDecodeStream | 比较安全的 解码(decodeStream) 方法 |
 
 
-* **Bitmap工具类 ->** [BitmapUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/image/BitmapUtils.java)
+* **Bitmap 工具类 ->** [BitmapUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/image/BitmapUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -1554,7 +1554,7 @@ DevUtils.openDebug();
 | blur | 对图片进行毛玻璃化 |
 
 
-* **图片Buf转换 - 转换BMP图片 ->** [ImageBmpUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/image/ImageBmpUtils.java)
+* **图片 Buf 转换 BMP 图片 ->** [ImageBmpUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/image/ImageBmpUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -1778,7 +1778,7 @@ DevUtils.openDebug();
 ## <span id="devutilsappshare">**`dev.utils.app.share`**</span>
 
 
-* **SPUtils 工具类 - 直接单独使用 ->** [SharedUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/share/SharedUtils.java)
+* **SPUtils 工具类(单独使用) ->** [SharedUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/share/SharedUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -1861,7 +1861,7 @@ DevUtils.openDebug();
 ## <span id="devutilsapptoasttoaster">**`dev.utils.app.toast.toaster`**</span>
 
 
-* **Toast 工具类 (支持子线程弹出 Toast, 处理无通知权限) ->** [DevToast.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/toast/toaster/DevToast.java)
+* **Toast 工具类(支持子线程弹出 Toast, 处理无通知权限) ->** [DevToast.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/toast/toaster/DevToast.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -1994,7 +1994,7 @@ DevUtils.openDebug();
 | adjustDouble | 获取自己想要的数据格式 |
 
 
-* **类 (Class) 工具 ->** [ClassUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/ClassUtils.java)
+* **类(Class)工具类 ->** [ClassUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/ClassUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -2141,7 +2141,7 @@ DevUtils.openDebug();
 | toHexChars | 将 string 转换为 十六进制 char[] |
 
 
-* **坐标相关工具类 - GPS 纠偏 ->** [CoordinateUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/CoordinateUtils.java)
+* **坐标(GPS 纠偏)相关工具类 ->** [CoordinateUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/CoordinateUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -2715,14 +2715,14 @@ DevUtils.openDebug();
 | decrypt | 解密方法 |
 
 
-* **解密(解码) 接口 ->** [Decrypt.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/cipher/Decrypt.java)
+* **解密(解码)接口 ->** [Decrypt.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/cipher/Decrypt.java)
 
 | 方法 | 注释 |
 | :- | :- |
 | decrypt | 解密(解码) 方法 |
 
 
-* **加密(编码) 接口 ->** [Encrypt.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/cipher/Encrypt.java)
+* **加密(编码)接口 ->** [Encrypt.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/cipher/Encrypt.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -2817,7 +2817,7 @@ DevUtils.openDebug();
 | decryptRSAToHexString | RSA 解密 |
 
 
-* **字符串(编解码) 工具类 ->** [EscapeUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/encrypt/EscapeUtils.java)
+* **字符串(编解码)工具类 ->** [EscapeUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/encrypt/EscapeUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -2825,7 +2825,7 @@ DevUtils.openDebug();
 | unescape | 解码 - 本方法不论参数 data 是否经过 escape() 编码, 均能获取正确的(解码)结果 |
 
 
-* **MD5 加密 (Message Digest 消息摘要算法) ->** [MD5Utils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/encrypt/MD5Utils.java)
+* **MD5 加密工具类 ->** [MD5Utils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/encrypt/MD5Utils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -2850,7 +2850,7 @@ DevUtils.openDebug();
 | getFileSHA | 获取文件 SHA 值 |
 
 
-* **3DES 对称加密 ->** [TripleDESUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/encrypt/TripleDESUtils.java)
+* **3DES 对称加密工具类 ->** [TripleDESUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/encrypt/TripleDESUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -2891,7 +2891,7 @@ DevUtils.openDebug();
 | removeConfig | 移除配置信息 |
 
 
-* **线程池 - 构建类 ->** [DevThreadPool.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/thread/DevThreadPool.java)
+* **线程池(构建类) ->** [DevThreadPool.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/thread/DevThreadPool.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -2914,7 +2914,7 @@ DevUtils.openDebug();
 ## <span id="devutilscommonvalidator">**`dev.utils.common.validator`**</span>
 
 
-* **银行卡管理 ->** [BankCheckUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/validator/BankCheckUtils.java)
+* **银行卡管理工具类 ->** [BankCheckUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/validator/BankCheckUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
