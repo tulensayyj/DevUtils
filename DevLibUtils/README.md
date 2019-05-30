@@ -57,7 +57,7 @@ DevUtils.openDebug();
 
 - 部分 api 更新不及时或有遗漏等，`具体以对应的工具类为准`
 
-- [JavaDoc - API](https://javadoc.jitpack.io/com/github/afkT/DevUtils/1.6.7/javadoc/)
+- [JavaDoc - API](https://javadoc.jitpack.io/com/github/afkT/DevUtils/1.6.8/javadoc/)
 
 ## API
 
@@ -612,7 +612,7 @@ DevUtils.openDebug();
 | getUninstallAppIntent | 获取卸载 App 的意图 |
 | getLaunchAppIntent | 获取打开 App 的意图 |
 | getLaunchAppDetailsSettingsIntent | 获取 App 具体设置的意图 |
-| getLaunchAppDetailIntent | 获取 到应用商店app详情界面的意图 |
+| getLaunchAppDetailIntent | 获取到应用商店 APP 详情界面的意图 |
 | getShareTextIntent | 获取分享文本的意图 |
 | getShareImageIntent | 获取分享图片的意图 |
 | getComponentIntent | 获取其他应用组件的意图 |
@@ -732,7 +732,7 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| printMemoryInfo | 返回内存信息 |
+| printMemoryInfo | 获取内存信息 |
 | getMemoryInfo | 获取内存信息 |
 | printMemoryInfo2 | 返回内存信息 |
 | getAvailMemory | 获取可用内存信息 |
@@ -1081,7 +1081,7 @@ DevUtils.openDebug();
 | signatureMD5 | 返回 MD5 |
 | signatureSHA1 | 返回 SHA1 加密字符串 |
 | signatureSHA256 | 返回 SHA256 加密字符串 |
-| isDebuggable | 判断签名是debug签名还是release签名 |
+| isDebuggable | 判断签名是 debug 签名还是 release 签名 |
 | getX509Certificate | 获取 App 证书对象 |
 | printSignatureName | 打印签名信息 |
 | getSignaturesFromApk | 从 APK 中读取签名 |
@@ -1722,7 +1722,7 @@ DevUtils.openDebug();
 | stop | 停止操作 - 销毁 MediaPlayer |
 | isIgnoreWhat | 是否忽略错误类型 |
 | onError | 播放出错回调 |
-| onVideoSizeChanged | 视频大小改变回调 |
+| onVideoSizeChanged | 视频大小改变通知 |
 | onPrepared | 使用 mMediaPlayer.prepareAsync() 异步播放准备成功回调 |
 | onCompletion | 视频播放结束回调 |
 | onBufferingUpdate | MediaPlayer 缓冲更新回调 |
@@ -1757,7 +1757,7 @@ DevUtils.openDebug();
 | onCompletion | 播放完成/结束 |
 | onBufferingUpdate | 缓存进度 |
 | onSeekComplete | 滑动进度加载成功 |
-| onError | 异常回调 |
+| onError | 播放出错回调 |
 | onVideoSizeChanged | 视频大小改变通知 |
 | setMediaListener | 设置播放监听事件 |
 | pausePlayer | 暂停播放 |
