@@ -232,7 +232,7 @@ DevUtils.openDebug();
 | closeAccessibility | 关闭无障碍辅助功能 |
 
 
-* **AlarmManager(全局定时器/闹钟)指定时长或以周期形式执行某项操作 ->** [AlarmUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/AlarmUtils.java)
+* **AlarmManager(全局定时器/闹钟)工具类, 指定时长或以周期形式执行某项操作 ->** [AlarmUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/AlarmUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -382,7 +382,7 @@ DevUtils.openDebug();
 | getWindowBrightness | 获取窗口亮度 |
 
 
-* **本应用数据清除管理器 ->** [CleanUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/CleanUtils.java)
+* **本应用数据清除管理工具类 ->** [CleanUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/CleanUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -399,7 +399,7 @@ DevUtils.openDebug();
 | getFormatSize | 格式化单位 |
 
 
-* **点击工具类 ->** [ClickUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/ClickUtils.java)
+* **点击(双击)工具类 ->** [ClickUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/ClickUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -768,7 +768,7 @@ DevUtils.openDebug();
 | getServerAddressByWifi | 根据 WiFi 获取服务端 IP 地址 |
 
 
-* **通知栏管理类 ->** [NotificationUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/NotificationUtils.java)
+* **通知栏管理工具类 ->** [NotificationUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/NotificationUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -782,7 +782,7 @@ DevUtils.openDebug();
 | isEmpty | 判断是否为 null |
 
 
-* **OS 系统相关 ->** [OSUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/OSUtils.java)
+* **OS 系统相关工具类 ->** [OSUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/OSUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -999,7 +999,7 @@ DevUtils.openDebug();
 | checkDeviceHasNavigationBar | 检测是否具有底部导航栏 |
 
 
-* **SDCard 相关辅助类 ->** [SDCardUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/SDCardUtils.java)
+* **SDCard 工具类 ->** [SDCardUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/SDCardUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -1257,7 +1257,7 @@ DevUtils.openDebug();
 | getShakeAnimation | 获取一个视图摇晃动画 |
 
 
-* **视图动画工具箱(AnimationUtils 基础上封装), 提供简单的控制视图的动画的工具方法 ->** [ViewAnimationUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/anim/ViewAnimationUtils.java)
+* **视图动画工具类(AnimationUtils 基础上封装), 提供简单的控制视图的动画的工具方法 ->** [ViewAnimationUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/anim/ViewAnimationUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -1305,7 +1305,7 @@ DevUtils.openDebug();
 | onDestroy | Activity 销毁处理 |
 
 
-* **屏幕传感器(监听是否横竖屏) ->** [ScreenSensorAssist.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/assist/ScreenSensorAssist.java)
+* **屏幕传感器辅助类(监听是否横竖屏) ->** [ScreenSensorAssist.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/assist/ScreenSensorAssist.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -1547,21 +1547,21 @@ DevUtils.openDebug();
 | getImageWidthHeight | 获取图片宽度高度(不加载解析图片) |
 
 
-* **毛玻璃效果 ->** [FastBlurUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/image/FastBlurUtils.java)
+* **毛玻璃效果工具类 ->** [FastBlurUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/image/FastBlurUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
 | blur | 对图片进行毛玻璃化 |
 
 
-* **图片 Buf 转换 BMP 图片 ->** [ImageBmpUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/image/ImageBmpUtils.java)
+* **转换 BMP 图片工具类 ->** [ImageBmpUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/image/ImageBmpUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
 | saveBmpImg | 保存Bmp图片 |
 
 
-* **图片处理器 ->** [ImageProcessor.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/image/ImageProcessor.java)
+* **图片处理工具类 ->** [ImageProcessor.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/image/ImageProcessor.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -1617,7 +1617,7 @@ DevUtils.openDebug();
 | compressBySampleSize | 按采样大小压缩 |
 
 
-* **Android 自己的 RenderScript 实现图片模糊 ->** [RSBlurUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/image/RSBlurUtils.java)
+* **Android RenderScript 实现图片模糊工具类 ->** [RSBlurUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/image/RSBlurUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -2442,7 +2442,7 @@ DevUtils.openDebug();
 | converObj | 获取转换对象 |
 
 
-* **随机生成工具类 ->** [RandomUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/RandomUtils.java)
+* **随机工具类 ->** [RandomUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/RandomUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -2505,7 +2505,7 @@ DevUtils.openDebug();
 | toString | 获取反射获取的对象 |
 
 
-* **计算比例方法 ->** [ScaleUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/ScaleUtils.java)
+* **计算比例工具类 ->** [ScaleUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/ScaleUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -2606,7 +2606,7 @@ DevUtils.openDebug();
 ## <span id="devutilscommonassist">**`dev.utils.common.assist`**</span>
 
 
-* **均值计算器(用以统计平均数) ->** [Averager.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/assist/Averager.java)
+* **均值计算(用以统计平均数)辅助类 ->** [Averager.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/assist/Averager.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -2617,7 +2617,7 @@ DevUtils.openDebug();
 | print | 输出参与均值计算的数字 |
 
 
-* **时间均值计算器 ->** [TimeAverager.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/assist/TimeAverager.java)
+* **时间均值计算辅助类 ->** [TimeAverager.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/assist/TimeAverager.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -2629,7 +2629,7 @@ DevUtils.openDebug();
 | clear | 清除计时数据 |
 
 
-* **时间计时器 ->** [TimeCounter.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/assist/TimeCounter.java)
+* **时间计时辅助类 ->** [TimeCounter.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/assist/TimeCounter.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -2639,7 +2639,7 @@ DevUtils.openDebug();
 | getStartTime | 获取开始时间(毫秒) |
 
 
-* **堵塞时间处理 ->** [TimeKeeper.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/assist/TimeKeeper.java)
+* **堵塞时间辅助类 ->** [TimeKeeper.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/assist/TimeKeeper.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -2732,7 +2732,7 @@ DevUtils.openDebug();
 ## <span id="devutilscommonencrypt">**`dev.utils.common.encrypt`**</span>
 
 
-* **AES 对称加密 ->** [AESUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/encrypt/AESUtils.java)
+* **AES 对称加密工具类 ->** [AESUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/encrypt/AESUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -2750,7 +2750,7 @@ DevUtils.openDebug();
 | getFileCRC32 | 获取文件 CRC32 值 |
 
 
-* **DES 对称加密 ->** [DESUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/encrypt/DESUtils.java)
+* **DES 对称加密工具类 ->** [DESUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/encrypt/DESUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -2759,7 +2759,7 @@ DevUtils.openDebug();
 | decrypt | DES 解密 |
 
 
-* **加解密 通用工具类 ->** [EncryptUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/encrypt/EncryptUtils.java)
+* **加解密通用工具类 ->** [EncryptUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/encrypt/EncryptUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -2881,7 +2881,7 @@ DevUtils.openDebug();
 ## <span id="devutilscommonthread">**`dev.utils.common.thread`**</span>
 
 
-* **线程池管理类 ->** [DevThreadManager.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/thread/DevThreadManager.java)
+* **线程池管理工具类 ->** [DevThreadManager.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/thread/DevThreadManager.java)
 
 | 方法 | 注释 |
 | :- | :- |
