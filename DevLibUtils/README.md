@@ -1919,7 +1919,7 @@ DevUtils.openDebug();
 | toggleWifiEnabled | 自动切换 wifi 开关状态 |
 | getWifiState | 获取当前 wifi 连接状态 |
 | startScan | 开始扫描 wifi |
-| getConfiguration | 获取已配置(连接过) 的 wifi 配置 |
+| getConfiguration | 获取已配置(连接过)的 wifi 配置 |
 | getWifiList | 获取附近的 wifi 列表 |
 | getWifiInfo | 获取连接的 WifiInfo |
 | getMacAddress | 获取 MAC 地址 |
