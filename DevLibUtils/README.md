@@ -156,9 +156,9 @@ DevUtils.openDebug();
 | getVersionCode | 获取 App versionCode |
 | getVersionName | 获取 App versionName |
 | installApp | 安装应用 |
-| installAppSilent | 静默安装 App |
-| uninstallApp | 卸载 App |
-| uninstallAppSilent | 静默卸载 App |
+| installAppSilent | 静默安装应用 |
+| uninstallApp | 卸载应用 |
+| uninstallAppSilent | 静默卸载应用 |
 | getActivityToLauncher | 获取对应包名应用启动 Activity |
 | getWindowCurrent | 获取当前显示的 Window |
 | getWindowCurrent2 | 获取当前显示的 Window |
@@ -184,13 +184,13 @@ DevUtils.openDebug();
 | text | 输入文本 - 不支持中文 |
 | keyevent | 触发某些按键 |
 | screencap | 屏幕截图 |
-| screenrecord | 录制屏幕 (以 mp4 格式保存到 /sdcard) |
-| wifiConf | 查看连接过的 WiFi 密码 |
-| wifiSwitch | 开启/关闭 WiFi |
+| screenrecord | 录制屏幕(以 mp4 格式保存到 /sdcard) |
+| wifiConf | 查看连接过的 Wifi 密码 |
+| wifiSwitch | 开启/关闭 Wifi |
 | setSystemTime | 设置系统时间 |
 | setSystemTime2 | 设置系统时间 |
-| shutdown | 关机 (需要 root 权限) |
-| reboot | 重启设备 (需要 root 权限) |
+| shutdown | 关机(需要 root 权限) |
+| reboot | 重启设备(需要 root 权限) |
 | rebootToRecovery | 重启引导到 recovery (需要 root 权限) |
 | rebootToBootloader | 重启引导到 bootloader (需要 root 权限) |
 | sendEventSlide | 发送事件滑动 |
@@ -217,12 +217,12 @@ DevUtils.openDebug();
 | resetDensity | 恢复原屏幕密度 |
 | setOverscan | 显示区域 (设置留白边距) |
 | resetOverscan | 恢复原显示区域 |
-| getScreenBrightnessMode | 获取亮度是否为自动获取(自动调节亮度) |
-| setScreenBrightnessMode | 设置亮度是否为自动获取(自动调节亮度) |
+| getScreenBrightnessMode | 获取亮度是否为自动获取 (自动调节亮度) |
+| setScreenBrightnessMode | 设置亮度是否为自动获取 (自动调节亮度) |
 | getScreenBrightness | 获取当前亮度值 |
 | setScreenBrightness | 更改亮度值(亮度值在0—255之间) |
-| getScreenOffTimeout | 获取自动锁屏休眠时间 (单位毫秒) |
-| setScreenOffTimeout | 设置自动锁屏休眠时间 (单位毫秒) |
+| getScreenOffTimeout | 获取自动锁屏休眠时间  (单位毫秒) |
+| setScreenOffTimeout | 设置自动锁屏休眠时间  (单位毫秒) |
 | getGlobalAutoTime | 获取日期时间选项中通过网络获取时间的状态 |
 | setGlobalAutoTime | 修改日期时间选项中通过网络获取时间的状态, 设置是否开启 |
 | disableADB | 关闭 USB 调试模式 |
@@ -323,9 +323,9 @@ DevUtils.openDebug();
 | getAppVersionName | 获取 App 版本名 - 对外显示 |
 | getAppVersionCode | 获取 App 版本号 - 内部判断 |
 | installApp | 安装 App(支持 8.0)的意图 |
-| installAppSilent | 静默安装 App |
-| uninstallApp | 卸载 App |
-| uninstallAppSilent | 静默卸载 App |
+| installAppSilent | 静默安装应用 |
+| uninstallApp | 卸载应用 |
+| uninstallAppSilent | 静默卸载应用 |
 | isAppInstalled | 判断是否安装了应用 |
 | isInstalledApp | 判断是否安装指定包名的 App |
 | isAppRoot | 判断是否存在 root 权限 |
@@ -479,8 +479,8 @@ DevUtils.openDebug();
 | getMacAddress | 获取设备 MAC 地址 |
 | getManufacturer | 获取设备厂商 如 Xiaomi |
 | getModel | 获取设备型号 如 RedmiNote4X |
-| shutdown | 关机 (需要 root 权限) |
-| reboot | 重启设备 (需要 root 权限) |
+| shutdown | 关机(需要 root 权限) |
+| reboot | 重启设备(需要 root 权限) |
 | rebootToRecovery | 重启引导到 recovery (需要 root 权限) |
 | rebootToBootloader | 重启引导到 bootloader (需要 root 权限) |
 | getBaseband_Ver | 获取 基带版本 BASEBAND-VER |
@@ -762,10 +762,10 @@ DevUtils.openDebug();
 | getBroadcastIpAddress | 获取广播 ip 地址 |
 | getDomainAddress | 获取域名 IP 地址 |
 | getIPAddress | 获取 IP 地址 |
-| getIpAddressByWifi | 根据 WiFi 获取网络 IP 地址 |
-| getGatewayByWifi | 根据 WiFi 获取网关 IP 地址 |
-| getNetMaskByWifi | 根据 WiFi 获取子网掩码 IP 地址 |
-| getServerAddressByWifi | 根据 WiFi 获取服务端 IP 地址 |
+| getIpAddressByWifi | 根据 Wifi 获取网络 IP 地址 |
+| getGatewayByWifi | 根据 Wifi 获取网关 IP 地址 |
+| getNetMaskByWifi | 根据 Wifi 获取子网掩码 IP 地址 |
+| getServerAddressByWifi | 根据 Wifi 获取服务端 IP 地址 |
 
 
 * **通知栏管理工具类 ->** [NotificationUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/NotificationUtils.java)
