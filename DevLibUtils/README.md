@@ -274,28 +274,28 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| getUUID | 获取设备唯一id |
+| getUUID | 获取设备唯一 UUID |
 | getRandomUUID | 获取随机数 唯一id |
 | getFormatRes | 获取 R.string 资源的格式化字符串 |
-| isFroyo | 是否在2.2版本及以上 |
-| isGingerbread | 是否在2.3版本及以上 |
-| isGingerbreadMR1 | 是否在2.3.3版本及以上 |
-| isHoneycomb | 是否在3.0版本及以上 |
-| isHoneycombMR1 | 是否在3.1版本及以上 |
-| isIceCreamSandwich | 是否在4.0版本及以上 |
-| isIceCreamSandwichMR1 | 是否在4.0.3版本及以上 |
-| isJellyBean | 是否在4.1版本及以上 |
-| isJellyBeanMR1 | 是否在4.2版本及以上 |
-| isJellyBeanMR2 | 是否在4.3版本及以上 |
-| isKitkat | 是否在4.4.2版本及以上 |
-| isLollipop | 是否在5.0.1版本及以上 |
-| isM | 是否在6.0版本及以上 |
-| isN | 是否在7.0版本及以上 |
-| isN_MR1 | 是否在7.1.1版本及以上 |
-| isO | 是否在8.0版本及以上 |
-| isO_MR1 | 是否在8.1版本及以上 |
-| isP | 是否在9.0版本及以上 |
-| convertSDKVersion | 转换SDK版本 (convertSDKVersion(14) => Android 4.0.0-2) |
+| isFroyo | 是否在 2.2 版本及以上 |
+| isGingerbread | 是否在 2.3 版本及以上 |
+| isGingerbreadMR1 | 是否在 2.3.3 版本及以上 |
+| isHoneycomb | 是否在 3.0 版本及以上 |
+| isHoneycombMR1 | 是否在 3.1 版本及以上 |
+| isIceCreamSandwich | 是否在 4.0 版本及以上 |
+| isIceCreamSandwichMR1 | 是否在 4.0.3 版本及以上 |
+| isJellyBean | 是否在 4.1 版本及以上 |
+| isJellyBeanMR1 | 是否在 4.2 版本及以上 |
+| isJellyBeanMR2 | 是否在 4.3 版本及以上 |
+| isKitkat | 是否在 4.4.2 版本及以上 |
+| isLollipop | 是否在 5.0.1 版本及以上 |
+| isM | 是否在 6.0 版本及以上 |
+| isN | 是否在 7.0 版本及以上 |
+| isN_MR1 | 是否在 7.1.1 版本及以上 |
+| isO | 是否在 8.0 版本及以上 |
+| isO_MR1 | 是否在 8.1 版本及以上 |
+| isP | 是否在 9.0 版本及以上 |
+| convertSDKVersion | 转换 SDK 版本 convertSDKVersion(14) => Android 4.0.0-2 |
 
 
 * **App (Android) 工具类 ->** [AppUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/AppUtils.java)
@@ -865,7 +865,7 @@ DevUtils.openDebug();
 | getDeviceId | 获取设备id |
 | getSerialNumber | 返回设备序列化 |
 | getAndroidId | 获取Android id |
-| getUUID | 获取设备唯一id |
+| getUUID | 获取设备唯一 UUID |
 | getPhoneStatus | 获取手机状态信息 |
 | dial | 跳至拨号界面 |
 | call | 拨打电话 |
