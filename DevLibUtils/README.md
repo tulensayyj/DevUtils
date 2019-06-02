@@ -10,7 +10,7 @@
    - app            | App 相关工具类
       - anim        | 动画工具类
       - assist      | 辅助类
-         - manager  | 管理器 如: ActivityManager
+         - manager  | 管理器 如: TimerManager
       - cache       | 缓存工具类
       - camera1     | 摄像头相关 android.hardware.Camera
       - image       | 图片相关处理
@@ -57,7 +57,7 @@ DevUtils.openDebug();
 
 - 部分 api 更新不及时或有遗漏等，`具体以对应的工具类为准`
 
-- [JavaDoc - API](https://javadoc.jitpack.io/com/github/afkT/DevUtils/1.6.8/javadoc/)
+- [JavaDoc - API](https://javadoc.jitpack.io/com/github/afkT/DevUtils/1.6.9/javadoc/)
 
 ## API
 
@@ -66,7 +66,7 @@ DevUtils.openDebug();
    - [app](#devutilsapp)                           | App 相关工具类
       - [anim](#devutilsappanim)                   | 动画工具类
       - [assist](#devutilsappassist)               | 辅助类
-         - [manager](#devutilsappassistmanager)    | 管理器 如: ActivityManager
+         - [manager](#devutilsappassistmanager)    | 管理器 如: TimerManager
       - [cache](#devutilsappcache)                 | 缓存工具类
       - [camera1](#devutilsappcamera1)             | 摄像头相关 android.hardware.Camera
       - [image](#devutilsappimage)                 | 图片相关处理
@@ -101,15 +101,16 @@ DevUtils.openDebug();
 | checkAccessibility | 检查是否开启无障碍功能 |
 | isAccessibilitySettingsOn | 判断是否开启无障碍功能 |
 | printAccessibilityEvent | 打印 AccessibilityEvent 信息日志 |
+| findFocus | 查找符合条件的节点 |
 | findAccessibilityNodeInfosByText | 查找符合条件的节点 |
 | findAccessibilityNodeInfosByViewId | 查找符合条件的节点 |
 | performClick | 点击指定的节点 |
 | performLongClick | 长按指定的节点 |
 | preformActionBack | 触发返回键 |
-| preformActionHome | 触发Home键 |
+| preformActionHome | 触发 Home 键 |
 | preformActionPowerDialog | 启动长按电源按钮 Dialog |
 | preformActionLockScreen | 锁定屏幕(非锁屏) |
-| preformActionTakeScreenshot | 截图 |
+| preformActionTakeScreenshot | 截屏 |
 | preformActionNotifications | 打开通知栏 |
 | preformActionRecents | 最近打开应用列表 |
 | preformActionQuickSettings | 打开设置 |
@@ -118,21 +119,34 @@ DevUtils.openDebug();
 | performGlobalAction | 模拟全局对应 Action 操作 |
 
 
-* **Acitivty 工具类 ->** [ActivityUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/ActivityUtils.java)
+* **Activity 工具类(包含 Activity 控制管理) ->** [ActivityUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/ActivityUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
-| getActivityByView | 返回 View context 所属的 Activity |
-| isActivityExists | 判断是否存在指定的Activity |
-| startHomeActivity | 回到桌面 (同点击Home键效果) |
+| getActivity | 通过 Context 获取 Activity |
+| getActivityByView | 获取 View context 所属的 Activity |
+| isFinishing | 判断 Activity 是否关闭 |
+| isActivityExists | 判断是否存在指定的 Activity |
+| startHomeActivity | 回到桌面 (同点击 Home 键效果) |
 | getLauncherActivity | 获取 Launcher activity |
-| getActivityIcon | 返回 Activity 对应的图标 |
-| getActivityLogo | 返回 Activity 对应的Logo |
-| getActivityToLauncher | 获取对应包名应用启动 Activity |
+| getActivityIcon | 获取 Activity 对应的 icon |
+| getActivityLogo | 获取 Activity 对应的 logo |
+| getActivityToLauncher | 获取对应包名应用启动的 Activity |
 | getLauncherCategoryHomeToResolveInfo | 获取系统桌面信息 |
 | getLauncherCategoryHomeToPackageName | 获取系统桌面信息 - packageName |
 | getLauncherCategoryHomeToActivityName | 获取系统桌面信息 - activityName |
 | getLauncherCategoryHomeToPackageAndName | 获取系统桌面信息 - package/activityName |
+| getManager | 获取 ActivityUtils 管理实例 |
+| getActivityStacks | 获取 Activity 栈 |
+| addActivity | 添加 Activity |
+| removeActivity | 移除 Activity |
+| currentActivity | 获取最后一个(当前) Activity |
+| finishActivity | 关闭最后一个(当前) Activity |
+| existActivitys | 检测是否包含指定的 Activity |
+| finishAllActivityToIgnore | 结束全部 Activity 除忽略的 Activity 外 |
+| finishAllActivity | 结束所有 Activity |
+| appExit | 退出应用程序 |
+| restartApplication | 重启 App |
 
 
 * **ADB shell 工具类 ->** [ADBUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/ADBUtils.java)
@@ -159,16 +173,16 @@ DevUtils.openDebug();
 | installAppSilent | 静默安装应用 |
 | uninstallApp | 卸载应用 |
 | uninstallAppSilent | 静默卸载应用 |
-| getActivityToLauncher | 获取对应包名应用启动 Activity |
+| getActivityToLauncher | 获取对应包名应用启动的 Activity |
 | getWindowCurrent | 获取当前显示的 Window |
 | getWindowCurrent2 | 获取当前显示的 Window |
-| getWindowCurrentToPackage | 获取对应包名 显示的 Window |
+| getWindowCurrentToPackage | 获取对应包名显示的 Window |
 | getActivityCurrent | 获取当前显示的 Activity |
-| getActivitys | 获取 activity 栈 |
+| getActivitys | 获取 Activity 栈 |
 | getActivitysToPackage | 获取对应包名的 Activity 栈 |
-| getActivitysToPackageLists | 获取对应包名的 Activity 栈 (处理成 List), 最新的 Activity 越靠后 |
-| isActivityTopRepeat | 判断 Activity 栈顶 是否重复 |
-| getActivityTopRepeatCount | 获取 Activity 栈顶 重复总数 |
+| getActivitysToPackageLists | 获取对应包名的 Activity 栈(处理成 List) - 最新的 Activity 越靠后 |
+| isActivityTopRepeat | 判断 Activity 栈顶是否重复 |
+| getActivityTopRepeatCount | 获取 Activity 栈顶重复总数 |
 | getServices | 查看正在运行的 Services |
 | startSelfApp | 启动自身应用 |
 | startActivity | 跳转页面 Activity |
@@ -196,18 +210,18 @@ DevUtils.openDebug();
 | sendEventSlide | 发送事件滑动 |
 | getSDKVersion | 获取 SDK 版本 |
 | getAndroidVersion | 获取 Android 系统版本 |
-| getModel | 获取设备型号 如 RedmiNote4X |
-| getBrand | 获取品牌 |
+| getModel | 获取设备型号 - 如 RedmiNote4X |
+| getBrand | 获取设备品牌 |
 | getDeviceName | 获取设备名 |
 | getCpuAbiList | 获取 CPU 支持的 abi 列表 |
-| getAppHeapsize | 每个应用程序的内存上限 |
+| getAppHeapsize | 获取每个应用程序的内存上限 |
 | getBattery | 获取电池状况 |
 | getDensity | 获取屏幕密度 |
 | getScreenSize | 获取屏幕分辨率 |
 | getDisplays | 获取显示屏参数 |
 | getAndroidId | 获取 Android id |
 | getIMEI | 获取 IMEI 码 |
-| getIPAddress | 获取 ip 地址 |
+| getIPAddress | 获取 IP 地址 |
 | getMac | 获取 Mac 地址 |
 | getCPU | 获取 CPU 信息 |
 | getMeminfo | 获取内存信息 |
@@ -219,10 +233,10 @@ DevUtils.openDebug();
 | resetOverscan | 恢复原显示区域 |
 | getScreenBrightnessMode | 获取亮度是否为自动获取 (自动调节亮度) |
 | setScreenBrightnessMode | 设置亮度是否为自动获取 (自动调节亮度) |
-| getScreenBrightness | 获取当前亮度值 |
-| setScreenBrightness | 更改亮度值(亮度值在0—255之间) |
-| getScreenOffTimeout | 获取自动锁屏休眠时间  (单位毫秒) |
-| setScreenOffTimeout | 设置自动锁屏休眠时间  (单位毫秒) |
+| getScreenBrightness | 获取屏幕亮度值 |
+| setScreenBrightness | 更改屏幕亮度值 (亮度值在 0-255 之间) |
+| getScreenOffTimeout | 获取自动锁屏休眠时间 (单位毫秒) |
+| setScreenOffTimeout | 设置自动锁屏休眠时间 (单位毫秒) |
 | getGlobalAutoTime | 获取日期时间选项中通过网络获取时间的状态 |
 | setGlobalAutoTime | 修改日期时间选项中通过网络获取时间的状态, 设置是否开启 |
 | disableADB | 关闭 USB 调试模式 |
@@ -232,7 +246,7 @@ DevUtils.openDebug();
 | closeAccessibility | 关闭无障碍辅助功能 |
 
 
-* **AlarmManager(全局定时器/闹钟)工具类, 指定时长或以周期形式执行某项操作 ->** [AlarmUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/AlarmUtils.java)
+* **AlarmManager(全局定时器/闹钟)工具类 ->** [AlarmUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/AlarmUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -246,28 +260,28 @@ DevUtils.openDebug();
 | stopAlarmActivity | 停止轮询 Activity |
 
 
-* **分析记录工具类 ->** [AnalysisRecordUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/AnalysisRecordUtils.java)
+* **日志记录分析工具类 ->** [AnalysisRecordUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/AnalysisRecordUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
 | init | 初始化操作 |
 | record | 日志记录 |
-| isHandler | 是否处理日志记录 |
+| isHandler | 判断是否处理日志记录 |
 | setHandler | 设置是否处理日志记录 |
-| isAppendSpace | 是否追加空格 |
+| isAppendSpace | 判断是否追加空格 |
 | setAppendSpace | 设置是否追加空格 |
-| getLogFolderName | 获取文件日志名 |
+| getLogFolderName | 获取日志文件名 |
 | setLogFolderName | 设置日志文件夹名 |
 | getLogStoragePath | 获取日志存储路径 |
 | setLogStoragePath | 设置日志存储路径 |
 | getStoragePath | 获取存储路径 |
 | getFileName | 获取日志文件名 |
-| getFileFunction | 获取日志文件记录的功能 |
+| getFileFunction | 获取日志文件记录功能 |
 | getFileIntervalTime | 获取日志文件记录间隔时间 |
 | getFolderName | 获取日志文件夹名 |
-| obtain | 获取记录分析文件信息 |
-| getLogPath | 获取日志地址 |
-| getIntervalTimeFolder | 获取时间间隔 - 文件夹 |
+| obtain | 获取日志记录分析文件对象 |
+| getLogPath | 获取日志文件地址 |
+| getIntervalTimeFolder | 获取时间间隔所属的文件夹 |
 
 
 * **App 通用工具类 ->** [AppCommonUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/AppCommonUtils.java)
@@ -275,7 +289,7 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | getUUID | 获取设备唯一 UUID |
-| getRandomUUID | 获取随机数 唯一id |
+| getRandomUUID | 获取随机唯一数 |
 | getFormatRes | 获取 R.string 资源的格式化字符串 |
 | isFroyo | 是否在 2.2 版本及以上 |
 | isGingerbread | 是否在 2.3 版本及以上 |
@@ -360,7 +374,7 @@ DevUtils.openDebug();
 | setStatusBarCustom | 设置自定义状态栏 |
 | setStatusBarColor4Drawer | 设置状态栏的颜色 |
 | setStatusBarAlpha4Drawer | 设置状态栏透明度 |
-| getActionBarHeight | 返回 ActionBase 高度 |
+| getActionBarHeight | 获取 ActionBase 高度 |
 | setNotificationBarVisibility | 设置通知栏是否显示 |
 | getNavBarHeight | 获取 NavigationView 高度 |
 | setNavBarVisibility | 设置导航栏是否可见(图标显示) |
@@ -759,7 +773,7 @@ DevUtils.openDebug();
 | getNetworkOperatorName | 获取网络运营商名称 - 中国移动、如中国联通、中国电信 |
 | getNetworkType | 获取当前网络类型 |
 | getNetworkClass | 获取移动网络连接类型 |
-| getBroadcastIpAddress | 获取广播 ip 地址 |
+| getBroadcastIpAddress | 获取广播 IP 地址 |
 | getDomainAddress | 获取域名 IP 地址 |
 | getIPAddress | 获取 IP 地址 |
 | getIpAddressByWifi | 根据 Wifi 获取网络 IP 地址 |
@@ -1078,9 +1092,9 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | toHexString | 进行转换 |
-| signatureMD5 | 返回 MD5 |
-| signatureSHA1 | 返回 SHA1 加密字符串 |
-| signatureSHA256 | 返回 SHA256 加密字符串 |
+| signatureMD5 | 获取 MD5 |
+| signatureSHA1 | 获取 SHA1 加密字符串 |
+| signatureSHA256 | 获取 SHA256 加密字符串 |
 | isDebuggable | 判断签名是 debug 签名还是 release 签名 |
 | getX509Certificate | 获取 App 证书对象 |
 | printSignatureName | 打印签名信息 |
@@ -1318,7 +1332,7 @@ DevUtils.openDebug();
 ## <span id="devutilsappassistmanager">**`dev.utils.app.assist.manager`**</span>
 
 
-* **Activity 管理工具类(用于管理应用程序 Activity) ->** [ActivityManager.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/assist/manager/ActivityManager.java)
+* **Activity 管理工具类(用于管理应用程序 Activity) - 已抛弃, 同步移动至 ActivityUtils ->** [ActivityManager.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/assist/manager/ActivityManager.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -1897,7 +1911,7 @@ DevUtils.openDebug();
 | closeWifiApCheck | 关闭 wifi 热点(判断当前状态) |
 | isConnectHot | 是否有设备连接热点 |
 | getHotspotServiceIp | 获取热点主机 IP 地址 |
-| getHotspotAllotIp | 获取连接上的子网关热点 IP(一个) |
+| getHotspotAllotIp | 获取连接上的子网关热点 IP (一个) |
 | getConnectHotspotMsg | 获取连接的热点信息 |
 | getHotspotSplitIpMask | 获取热点拼接后的 IP 网关掩码 |
 | getApWifiSSID | 获取 wifi 热点名 |
