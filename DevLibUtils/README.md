@@ -57,7 +57,7 @@ DevUtils.openDebug();
 
 - 部分 api 更新不及时或有遗漏等，`具体以对应的工具类为准`
 
-- [JavaDoc - API](https://javadoc.jitpack.io/com/github/afkT/DevUtils/1.6.9/javadoc/)
+- [JavaDoc - API](https://javadoc.jitpack.io/com/github/afkT/DevUtils/1.7.0/javadoc/)
 
 ## API
 
@@ -560,15 +560,6 @@ DevUtils.openDebug();
 | base64DecodeToString | base64 解码 |
 | htmlEncode | html 编码 |
 | htmlDecode | html 解码 |
-
-
-* **错误信息处理工具类 ->** [ErrorUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/ErrorUtils.java)
-
-| 方法 | 注释 |
-| :- | :- |
-| getErrorMsg | 获取错误信息 |
-| getThrowableMsg | 将异常栈信息转为字符串 |
-| getThrowableNewLinesMsg | 获取错误信息(有换行) |
 
 
 * **文件记录工具类 ->** [FileRecordUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/FileRecordUtils.java)
@@ -2027,7 +2018,6 @@ DevUtils.openDebug();
 | :- | :- |
 | deepClone | 进行克隆 |
 | serializableToBytes | 通过序列化实体类, 获取对应的 byte[] 数据 |
-| bytesToObject | 通过 byte[] 生成 Object 对象 |
 
 
 * **关闭(IO流)工具类 ->** [CloseUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/CloseUtils.java)
@@ -2068,6 +2058,7 @@ DevUtils.openDebug();
 | clear | 清空集合中符合指定 value 的全部数据 |
 | clearNotBelong | 保留集合中符合指定 value 的全部数据 |
 | clearAll | 清空集合全部数据 |
+| clearNull | 清空集合中为 null 的值 |
 | isEqualCollection | 判断两个集合是否相同 |
 | isEqualCollections | 判断多个集合是否相同 |
 | union | 两个集合并集处理 |
@@ -2130,15 +2121,17 @@ DevUtils.openDebug();
 | toBytes | 字符串 获取 byte[] |
 | parseInt | 字符串转换对应的进制 |
 | parseLong | 字符串转换对应的进制 |
-| bytesBitwiseAND | 按位求补 byte[] 位移编解码(共用同一个方法) |
 | bytesToObject | byte[] 转为 Object |
 | objectToBytes | Object 转为 byte[] |
 | bytesToChars | byte[] 转换 char[], 并且进行补码 |
 | charsToBytes | char[] 转换 byte[] |
+| intsToStrings | int[] 转换 string[] |
+| doublesToStrings | double[] 转换 string[] |
+| longsToStrings | long[] 转换 string[] |
+| floatsToStrings | float[] 转换 string[] |
 | intsToDoubles | int[] 转换 double[] |
 | intsToLongs | int[] 转换 long[] |
 | intsToFloats | int[] 转换 float[] |
-| intsToStrings | int[] 转换 string[] |
 | stringsToInts | string[] 转换 int[] |
 | stringsToDoubles | string[] 转换 double[] |
 | stringsToLongs | string[] 转换 long[] |
@@ -2153,6 +2146,7 @@ DevUtils.openDebug();
 | hexToInt | 十六进制 char 转换 int |
 | toHexString | int 转换十六进制 |
 | toHexChars | 将 string 转换为 十六进制 char[] |
+| bytesBitwiseAND | 按位求补 byte[] 位移编解码(共用同一个方法) |
 
 
 * **坐标(GPS 纠偏)相关工具类 ->** [CoordinateUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/CoordinateUtils.java)
@@ -2339,9 +2333,6 @@ DevUtils.openDebug();
 | rename | 重命名文件 - 同个目录下, 修改文件名 |
 | formatFileSize | 传入文件路径, 返回对应的文件大小 |
 | formatByteMemorySize | 字节数转合适内存大小 保留 3 位小数 (%.位数f) |
-| getFileMD5ToString | 获取文件的 MD5 校验码 |
-| getFileMD5 | 获取文件的 MD5 校验码 |
-| getFileMD5ToString2 | 获取文件 MD5 值 - 小写 |
 | deleteFile | 删除文件 |
 | deleteFiles | 删除多个文件 |
 | deleteFolder | 删除文件夹 |
@@ -2361,6 +2352,8 @@ DevUtils.openDebug();
 | deleteFilesInDirWithFilter | 删除目录下所有过滤的文件 |
 | listFilesInDir | 获取目录下所有文件 - 不递归进子目录 |
 | listFilesInDirWithFilter | 获取目录下所有过滤的文件 - 不递归进子目录 |
+| getFileMD5 | 获取文件 MD5 值 |
+| getFileMD5ToHexString | 获取文件 MD5 值 - 小写 |
 | onReplace | 是否覆盖/替换文件 |
 
 
@@ -2435,8 +2428,14 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| percent | 计算百分比值 (最大 100%) |
-| percent2 | 计算百分比值 (可超出 100%) |
+| percentI | 计算百分比值 (最大 100%) |
+| percentD | 计算百分比值 (最大 100%) |
+| percentL | 计算百分比值 (最大 100%) |
+| percentF | 计算百分比值 (最大 100%) |
+| percentI2 | 计算百分比值 (可超出 100%) |
+| percentD2 | 计算百分比值 (可超出 100%) |
+| percentL2 | 计算百分比值 (可超出 100%) |
+| percentF2 | 计算百分比值 (可超出 100%) |
 | clamp | 返回的 value 介于 max、min 之间, 若 value 小于 min, 返回 min, 若大于 max, 返回 max |
 | isNumber | 检验数字 |
 | isNumberDecimal | 检验数字或包含小数点 |
@@ -2603,6 +2602,14 @@ DevUtils.openDebug();
 | underScoreCaseToCamelCase | 下划线命名转为驼峰命名 |
 | camelCaseToUnderScoreCase | 驼峰命名法转为下划线命名 |
 | sqliteEscape | 字符串数据库字符转义 |
+
+
+* **异常处理工具类 ->** [ThrowableUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/ThrowableUtils.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| getThrowable | 获取异常信息 |
+| getThrowableStackTrace | 获取异常栈信息 |
 
 
 * **压缩相关工具类 ->** [ZipUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/ZipUtils.java)
@@ -2781,8 +2788,8 @@ DevUtils.openDebug();
 | encryptMD2ToHexString | MD2 加密 |
 | encryptMD5 | MD5 加密 |
 | encryptMD5ToHexString | MD5 加密 |
-| encryptMD5File | MD5 加密文件 |
-| encryptMD5FileToHexString | MD5 加密文件 |
+| encryptMD5File | 获取文件 MD5 值 |
+| encryptMD5FileToHexString | 获取文件 MD5 值 |
 | encryptSHA1 | SHA1 加密 |
 | encryptSHA1ToHexString | SHA1 加密 |
 | encryptSHA224 | SHA224 加密 |
@@ -2845,8 +2852,8 @@ DevUtils.openDebug();
 | :- | :- |
 | md5 | 加密内容 - 32 位 MD5 - 小写 |
 | md5Upper | 加密内容 - 32 位 MD5 - 大写 |
-| toHexString | 将 byte[] 转换 十六进制字符串 |
-| getFileMD5 | 获取文件 MD5 值 - 小写 |
+| getFileMD5 | 获取文件 MD5 值 |
+| getFileMD5ToHexString | 获取文件 MD5 值 - 小写 |
 
 
 * **SHA 加密工具类 ->** [SHAUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/encrypt/SHAUtils.java)
@@ -2957,14 +2964,13 @@ DevUtils.openDebug();
 | getGenderByIdCard | 根据身份编号获取性别 |
 | getProvinceByIdCard | 根据身份编号获取户籍省份 |
 | getPowerSum | 将身份证的每位和对应位的加权因子相乘之后, 再获取和值 |
-| isEmpty | 判断是否为 null |
+| getCheckCode18 | 将 POWER 和值与 11 取模获取余数进行校验码判断 |
 
 
 * **校验工具类 ->** [ValidatorUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/validator/ValidatorUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
-| isEmpty | 判断是否为 null |
 | match | 通用匹配函数 |
 | isNumber | 检验数字 |
 | isNumberDecimal | 检验数字或包含小数点 |
