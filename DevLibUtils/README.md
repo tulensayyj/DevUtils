@@ -856,7 +856,7 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | isSimReady | 判断是否装载sim卡 |
-| getUserCountry | 获取Sim卡所属地区, 非国内地区暂不支持播放 |
+| getUserCountry | 获取 SIM 卡所属地区, 非国内地区暂不支持播放 |
 | judgeArea | 判断地区, 是否属于国内 |
 | isPhone | 判断设备是否是手机 |
 | getMEID | 获取 MEID 移动设备识别码 |
@@ -1787,7 +1787,7 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| init | 初始化操作 |
+| init | 初始化操作 (内部已调用) |
 | put | 保存数据 |
 | putAll | 保存 Map 集合(只能是 Integer、Long、Boolean、Float、String、Set) |
 | get | 根据 key 获取数据 |
@@ -1935,15 +1935,14 @@ DevUtils.openDebug();
 | formatSSID | 判断是否存在 \"ssid\", 存在则裁剪返回 |
 | getPassword | 获取处理后的密码 |
 | isHexWepKey | 判断是否 wep 加密 |
-| isHex | 判断是否十六进制数据 |
 | getWifiType | 获取加密类型 |
 | getWifiTypeInt | 获取加密类型 |
 | getWifiTypeStr | 获取加密类型 |
 | isConnNull | 判断是否连接为 null - unknown ssid |
 | isConnectAphot | 获取连接的 wifi 热点 SSID |
 | getSecurity | 获取 wifi 加密类型 |
-| isExsitsPwd | 判断 wifi 加密类型, 是否为加密类型 |
-| isExsits | 获取指定的 ssid 网络配置 (需连接保存过, 才存在) |
+| isExistsPwd | 判断 wifi 加密类型, 是否为加密类型 |
+| isExists | 获取指定的 ssid 网络配置 (需连接保存过, 才存在) |
 | delWifiConfig | 删除指定的 wifi(SSID) 配置信息 |
 | quickConnWifi | 快速连接 wifi (不使用静态 IP 方式) |
 | createWifiConfig | 创建 wifi 配置信息 |
