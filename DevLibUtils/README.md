@@ -124,7 +124,6 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | getActivity | 通过 Context 获取 Activity |
-| getActivityByView | 获取 View context 所属的 Activity |
 | isFinishing | 判断 Activity 是否关闭 |
 | isActivityExists | 判断是否存在指定的 Activity |
 | startHomeActivity | 回到桌面 (同点击 Home 键效果) |
@@ -136,6 +135,7 @@ DevUtils.openDebug();
 | getLauncherCategoryHomeToPackageName | 获取系统桌面信息 - packageName |
 | getLauncherCategoryHomeToActivityName | 获取系统桌面信息 - activityName |
 | getLauncherCategoryHomeToPackageAndName | 获取系统桌面信息 - package/activityName |
+| getOptionsBundle | 设置跳转动画 |
 | getManager | 获取 ActivityUtils 管理实例 |
 | getActivityStacks | 获取 Activity 栈 |
 | addActivity | 添加 Activity |
