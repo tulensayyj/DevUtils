@@ -57,7 +57,7 @@ DevUtils.openDebug();
 
 - 部分 api 更新不及时或有遗漏等，`具体以对应的工具类为准`
 
-- [JavaDoc - API](https://javadoc.jitpack.io/com/github/afkT/DevUtils/1.7.0/javadoc/)
+- [JavaDoc - API](https://javadoc.jitpack.io/com/github/afkT/DevUtils/1.7.1/javadoc/)
 
 ## API
 
@@ -246,25 +246,27 @@ DevUtils.openDebug();
 | closeAccessibility | 关闭无障碍辅助功能 |
 
 
-* **AlarmManager(全局定时器/闹钟)工具类 ->** [AlarmUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/AlarmUtils.java)
+* **AlarmManager(全局定时器、闹钟)工具类 ->** [AlarmUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/AlarmUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
-| startAlarmIntent | 开启定时器 |
-| stopAlarmIntent | 关闭定时器 |
-| startAlarmService | 开启轮询服务 |
-| stopAlarmService | 停止轮询服务 |
-| startAlarmBroadcast | 开启轮询广播 |
-| stopAlarmBroadcast | 停止轮询广播 |
-| startAlarmActivity | 开启轮询 Activity |
-| stopAlarmActivity | 停止轮询 Activity |
+| startAlarmIntent | 开启一次性闹钟 |
+| stopAlarmIntent | 关闭闹钟 |
+| startAlarmService | 开启 Service 闹钟 |
+| stopAlarmService | 关闭 Service 闹钟 |
+| startAlarmForegroundService | 开启 ForegroundService 闹钟 |
+| stopAlarmForegroundService | 关闭 ForegroundService 闹钟 |
+| startAlarmBroadcast | 开启 Receiver 闹钟 |
+| stopAlarmBroadcast | 关闭 Receiver 闹钟 |
+| startAlarmActivity | 开启 Activity 闹钟 |
+| stopAlarmActivity | 关闭 Activity 闹钟 |
 
 
 * **日志记录分析工具类 ->** [AnalysisRecordUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/AnalysisRecordUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
-| init | 初始化操作 |
+| init | 初始化操作 (内部已调用) |
 | record | 日志记录 |
 | isHandler | 判断是否处理日志记录 |
 | setHandler | 设置是否处理日志记录 |
@@ -289,7 +291,6 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | getUUID | 获取设备唯一 UUID |
-| getRandomUUID | 获取随机唯一数 |
 | getFormatRes | 获取 R.string 资源的格式化字符串 |
 | isFroyo | 是否在 2.2 版本及以上 |
 | isGingerbread | 是否在 2.3 版本及以上 |
@@ -566,7 +567,7 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| init | 初始化调用方法 |
+| init | 初始化调用方法 (内部已调用) |
 | saveErrorLog | 保存 App 错误日志 |
 | saveLog | 保存 App 日志 |
 | handlerVariable | 处理可变参数 |
@@ -884,16 +885,6 @@ DevUtils.openDebug();
 | getMtkTeleInfo2 | 获取 MTK 神机的双卡 IMSI、IMSI 信息 |
 | getQualcommTeleInfo | 获取 高通 神机的双卡 IMSI、IMSI 信息 |
 | getSpreadtrumTeleInfo | 获取 展讯 神机的双卡 IMSI、IMSI 信息 |
-
-
-* **轮询工具类 ->** [PollingUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/PollingUtils.java)
-
-| 方法 | 注释 |
-| :- | :- |
-| startPolling | 开启轮询 |
-| stopPolling | 停止轮询 |
-| startPollingService | 开启轮询服务 |
-| stopPollingService | 停止轮询服务 |
 
 
 * **电源管理工具类 ->** [PowerManagerUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/PowerManagerUtils.java)
@@ -1700,7 +1691,7 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| init | 初始化调用方法(获取版本号) |
+| init | 初始化调用方法 (内部已调用) |
 | getReleaseLogConfig | 获取 Release Log 配置(打印线程信息、显示方法总数 3、从 0 开始、不进行排序、默认只打印 ERROR 级别日志) |
 | getDebugLogConfig | 获取 Debug Log 配置(打印线程信息、显示方法总数 3、从 0 开始、不进行排序、默认只打印 ERROR 级别日志) |
 | getSortLogConfig | 获取 Log 配置(打印线程信息、显示方法总数 3、从 0 开始、并且美化日志信息、默认打印 DEBUG 级别及以上日志) |
