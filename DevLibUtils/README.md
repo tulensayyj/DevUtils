@@ -57,7 +57,7 @@ DevUtils.openDebug();
 
 - 部分 api 更新不及时或有遗漏等，`具体以对应的工具类为准`
 
-- [JavaDoc - API](https://javadoc.jitpack.io/com/github/afkT/DevUtils/1.7.1/javadoc/)
+- [JavaDoc - API](https://javadoc.jitpack.io/com/github/afkT/DevUtils/1.7.2/javadoc/)
 
 ## API
 
@@ -292,6 +292,7 @@ DevUtils.openDebug();
 | :- | :- |
 | getUUID | 获取设备唯一 UUID |
 | getFormatRes | 获取 R.string 资源的格式化字符串 |
+| getSDKVersion | 获取 SDK 版本 |
 | isFroyo | 是否在 2.2 版本及以上 |
 | isGingerbread | 是否在 2.3 版本及以上 |
 | isGingerbreadMR1 | 是否在 2.3.3 版本及以上 |
@@ -368,8 +369,8 @@ DevUtils.openDebug();
 | setStatusBarVisibility | 设置状态栏是否显示 |
 | isStatusBarVisible | 判断状态栏是否显示 |
 | setStatusBarLightMode | 设置状态是否高亮模式 |
-| addMarginTopEqualStatusBarHeight | 添加状态栏同等高度到View的顶部 |
-| subtractMarginTopEqualStatusBarHeight | 添加状态栏同等高度到View的顶部 |
+| addMarginTopEqualStatusBarHeight | 添加状态栏同等高度到 View 的顶部 |
+| subtractMarginTopEqualStatusBarHeight | 添加状态栏同等高度到 View 的顶部 |
 | setStatusBarColor | 设置状态栏颜色 |
 | setStatusBarAlpha | 设置状态栏透明度 |
 | setStatusBarCustom | 设置自定义状态栏 |
@@ -536,14 +537,18 @@ DevUtils.openDebug();
 | setSelectTop | 设置光标在第一位 |
 | setSelectBottom | 设置光标在最后一位 |
 | setSelect | 设置光标位置 |
-| setKeyListener | 设置输入限制 |
-| getNumberAndEnglishKeyListener | 限制只能输入字母和数字, 默认弹出英文输入法 |
-| getNumberKeyListener | 限制只能输入数字, 默认弹出数字列表 |
-| getMarkId | 获取标记id |
+| setKeyListener | 设置 KeyListener |
+| getLettersKeyListener | 获取 DigitsKeyListener (限制只能输入字母, 默认弹出英文输入法) |
+| getNumberAndLettersKeyListener | 获取 DigitsKeyListener (限制只能输入字母和数字, 默认弹出英文输入法) |
+| getNumberKeyListener | 获取 DigitsKeyListener (限制只能输入数字, 默认弹出数字列表) |
+| createDigitsKeyListener | 创建 DigitsKeyListener |
+| getMarkId | 获取标记 id |
 | isOperate | 判断是否操作中 |
 | setOperate | 设置是否操作中 |
 | getOperateState | 获取操作状态 |
 | setOperateState | 设置操作状态 |
+| getType | 获取类型 |
+| setType | 设置类型 |
 | beforeTextChanged | 在文本变化前调用 |
 | onTextChanged | 在文本变化后调用 |
 | afterTextChanged | 在文本变化后调用 |
@@ -650,7 +655,7 @@ DevUtils.openDebug();
 | closeKeyboard | 关闭软键盘 |
 | closeKeyBoardSpecial | 关闭软键盘 - 特殊处理 |
 | toggleKeyboard | 自动切换键盘状态, 如果键盘显示了则隐藏, 隐藏着显示 |
-| judgeView | 某个View里面的子View的View判断 |
+| judgeView | 某个 View 里面的子 View 的 View 判断 |
 | isSoftInputVisible | 判断软键盘是否可见 |
 | registerSoftInputChangedListener | 注册软键盘改变监听器 |
 | registerSoftInputChangedListener2 | 注册软键盘改变监听器 |
@@ -856,7 +861,7 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| isSimReady | 判断是否装载sim卡 |
+| isSimReady | 判断是否装载 SIM 卡 |
 | getUserCountry | 获取 SIM 卡所属地区, 非国内地区暂不支持播放 |
 | judgeArea | 判断地区, 是否属于国内 |
 | isPhone | 判断设备是否是手机 |
@@ -999,22 +1004,22 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| isSDCardEnable | 判断SDCard是否正常挂载 |
-| getSDCardFile | 获取SD卡路径(File对象) |
-| getSDCardPath | 获取SD卡路径(无添加 File.separator) |
-| isSDCardEnablePath | 判断 SD 卡是否可用 |
-| getSDCardPaths | 获取 SD 卡路径 |
-| getAllBlockSize | 返回对应路径的空间总大小 |
-| getAvailableBlocks | 返回对应路径的空闲空间(byte 字节大小) |
-| getAlreadyBlock | 返回对应路径, 已使用的空间大小 |
-| getBlockSizeInfos | 返回对应路径的空间大小信息 |
-| getSDTotalSize | 获取 SD 卡总大小 |
-| getSDAvailableSize | 获取 SD 卡剩余容量, 即可用大小 |
-| getRomTotalSize | 获取机身内存总大小 |
-| getRomAvailableSize | 获取机身可用内存 |
-| getDiskCacheDir | 获取缓存地址 |
-| getCacheFile | 获取缓存资源地址 |
-| getCachePath | 获取缓存资源地址 |
+| isSDCardEnable | 判断内置 SDCard 是否正常挂载 |
+| getSDCardFile | 获取内置 SDCard File |
+| getSDCardPath | 获取内置 SDCard 绝对路径 |
+| getSDCardPathSeparator | 获取内置 SDCard 绝对路径 |
+| isSDCardEnablePath | 判断 SDCard 是否可用 |
+| getSDCardPaths | 获取 SDCard 路径 |
+| getAllBlockSizeFormat | 获取内置 SDCard 空间总大小 |
+| getAvailableBlocksFormat | 获取内置 SDCard 空闲空间大小 |
+| getUsedBlocksFormat | 获取内置 SDCard 已使用空间大小 |
+| getAllBlockSize | 获取内置 SDCard 空间总大小 |
+| getAvailableBlocks | 获取内置 SDCard 空闲空间大小 |
+| getUsedBlocks | 获取内置 SDCard 已使用空间大小 |
+| getBlockSizeInfos | 返回内置 SDCard 空间大小信息 |
+| getDiskCacheDir | 获取 App Cache 文件夹地址 |
+| getCacheFile | 获取 App Cache 路径 File |
+| getCachePath | 获取 App Cache 路径 |
 
 
 * **服务相关工具类 ->** [ServiceUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/ServiceUtils.java)
@@ -1039,47 +1044,49 @@ DevUtils.openDebug();
 | newBuilderToLeft | 创建新的 Shape Builder 对象 |
 | newBuilderToRight | 创建新的 Shape Builder 对象 |
 | newBuilderToGradient | 创建渐变的 Shape Builder 对象 |
-| build | 获取 Shape 工具类 |
+| build | build ShapeUtils 对象 |
 | setRadius | 设置圆角 |
 | setRadiusLeft | 设置圆角 |
 | setRadiusRight | 设置圆角 |
-| setCornerRadii | 内部处理方法 |
+| setCornerRadii | 设置圆角(统一处理方法) |
 | setColor | 设置背景色(填充铺满) |
 | setStroke | 设置边框颜色 |
 | setSize | 设置大小 |
+| setPadding | 设置边距 |
+| getOrientation | 获取渐变角度 |
 
 
-* **Shell 相关工具类 ->** [ShellUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/ShellUtils.java)
+* **Shell 命令工具类 ->** [ShellUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/ShellUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
-| execCmd | 是否是在 root 下执行命令 |
+| execCmd | 执行 shell 命令 |
 | isSuccess | 判断是否执行成功 |
 | isSuccess2 | 判断是否执行成功(判断 errorMsg) |
 | isSuccess3 | 判断是否执行成功(判断 successMsg) |
 | isSuccess4 | 判断是否执行成功(判断 successMsg), 并且 successMsg 是否包含某个字符串 |
 
 
-* **创建删除快捷图标工具类 ->** [ShortCutUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/ShortCutUtils.java)
+* **快捷方式工具类 ->** [ShortCutUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/ShortCutUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
 | hasShortcut | 检测是否存在桌面快捷方式 |
-| addShortcut | 为程序创建桌面快捷方式 |
-| delShortcut | 删除程序的快捷方式 |
+| getShortCutIntent | 获取桌面快捷方式点击 Intent |
+| addShortcut | 创建桌面快捷方式 |
+| deleteShortcut | 删除桌面快捷方式 |
 
 
 * **签名工具类(获取 App 签名信息) ->** [SignaturesUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/SignaturesUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
-| toHexString | 进行转换 |
-| signatureMD5 | 获取 MD5 |
-| signatureSHA1 | 获取 SHA1 加密字符串 |
-| signatureSHA256 | 获取 SHA256 加密字符串 |
-| isDebuggable | 判断签名是 debug 签名还是 release 签名 |
-| getX509Certificate | 获取 App 证书对象 |
-| printSignatureName | 打印签名信息 |
+| signatureMD5 | 获取 MD5 签名 |
+| signatureSHA1 | 获取签名 SHA1 加密字符串 |
+| signatureSHA256 | 获取签名 SHA256 加密字符串 |
+| isDebuggable | 判断 debug 签名还是 release 签名 |
+| getX509Certificate | 获取证书对象 |
+| printSignatureInfo | 打印签名信息 |
 | getSignaturesFromApk | 从 APK 中读取签名 |
 | getCertificateFromApk | 从 APK 中读取签名 |
 
@@ -1088,24 +1095,20 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| dipConvertPx | 根据手机的分辨率从 dp 的单位 转成为 px(像素) |
-| dipConvertPxf | 根据手机的分辨率从 dp 的单位 转成为 px(像素) - float |
-| pxConvertDip | 根据手机的分辨率从 px(像素) 的单位 转成为 dp |
-| pxConvertDipf | 根据手机的分辨率从 px(像素) 的单位 转成为 dp - float |
-| pxConvertSp | 根据手机的分辨率从 px(像素) 的单位 转成为 sp |
-| pxConvertSpf | 根据手机的分辨率从 px(像素) 的单位 转成为 sp - float |
-| spConvertPx | 根据手机的分辨率从 sp 的单位 转成为 px |
-| spConvertPxf | 根据手机的分辨率从 sp 的单位 转成为 px - float |
-| dipConvertPx2 | 根据手机的分辨率从 dp 的单位 转成为 px(像素) 第二种 |
-| dipConvertPx2f | 根据手机的分辨率从 dp 的单位 转成为 px(像素) 第二种 - float |
-| spConvertPx2 | 根据手机的分辨率从 sp 的单位 转成为 px 第二种 |
-| spConvertPx2f | 根据手机的分辨率从 sp 的单位 转成为 px 第二种 - float |
-| applyDimension | 各种单位转换 - 该方法存在于 TypedValue |
-| forceGetViewSize | 在 onCreate 中获取视图的尺寸 - 需回调 onGetSizeListener 接口, 在 onGetSize 中获取 view 宽高 |
-| measureView | 测量视图尺寸 |
-| getMeasuredWidth | 获取测量视图宽度 |
-| getMeasuredHeight | 获取测量视图高度 |
-| onGetSize | 获取到 View 尺寸 通知 |
+| dipConvertPx | dp 转 px |
+| dipConvertPxf | dp 转 px (float) |
+| pxConvertDip | px 转 dp |
+| pxConvertDipf | px 转 dp (float) |
+| spConvertPx | sp 转 px |
+| spConvertPxf | sp 转 px (float) |
+| pxConvertSp | px 转 sp |
+| pxConvertSpf | px 转 sp (float) |
+| applyDimension | 各种单位转换 - 该方法存在于 TypedValue.applyDimension |
+| forceGetViewSize | 在 onCreate 中获取视图的尺寸 - 需回调 onGetSizeListener 接口, 在 onGetSize 中获取 View 宽高 |
+| measureView | 测量 View |
+| getMeasuredWidth | 获取 View 的宽度 |
+| getMeasuredHeight | 获取 View 的高度 |
+| onGetSize | 获取到 View 宽高监听通知 |
 
 
 * **Snackbar 工具类 ->** [SnackbarUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/SnackbarUtils.java)
@@ -1120,7 +1123,7 @@ DevUtils.openDebug();
 | getTextView | 获取 Snackbar TextView(snackbar_text) |
 | getActionButton | 获取 Snackbar Action Button(snackbar_action) |
 | addView | 向 Snackbar 布局中添加 View (Google 不建议, 复杂的布局应该使用 DialogFragment 进行展示) |
-| setCallback | 设置 Snackbar 展示完成 及 隐藏完成 的监听 |
+| setCallback | 设置 Snackbar 展示完成、隐藏完成 的监听 |
 | setAction | 设置 Action 按钮文字内容及点击监听 |
 | dismiss | 关闭 Snackbar |
 | showShort | 显示 Short Snackbar |
@@ -1139,9 +1142,9 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| getColorStateList | 通过 Context 获取 ColorStateList |
-| createColorStateList | 创建 颜色状态列表 => createColorStateList("#ffffffff", "#ff44e6ff") |
-| newSelector | 创建 Drawable选择切换 list => view.setBackground(Drawable) |
+| getColorStateList | 获取 ColorStateList |
+| createColorStateList | 创建 ColorStateList => createColorStateList("#ffffffff", "#ff44e6ff") |
+| newSelector | 创建 StateListDrawable => view.setBackground(Drawable) |
 
 
 * **TextView 工具类 ->** [TextViewUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/TextViewUtils.java)
@@ -1150,8 +1153,13 @@ DevUtils.openDebug();
 | :- | :- |
 | getTextView | 获取 TextView |
 | getText | 获取文本 |
-| setBold | 设置是否加粗 |
+| getTexts | 获取多个 TextView 文本 |
+| setText | 设置文本 |
+| setTexts | 设置多个 TextView 文本 |
+| setHtmlText | 设置 Html 内容 |
+| setHtmlTexts | 设置多个 TextView Html 内容 |
 | setTextColor | 设置字体颜色 |
+| setTextColors | 设置多个 TextView 字体颜色 |
 | setTypeface | 设置字体 |
 | setTextSizeByPx | 设置字体大小 - px 像素 |
 | setTextSizeBySp | 设置字体大小 - sp 缩放像素 |
@@ -1159,7 +1167,9 @@ DevUtils.openDebug();
 | setTextSizeByIn | 设置字体大小 - inches 英寸 |
 | setTextSize | 设置字体大小 |
 | setTextSizes | 设置多个 TextView 字体大小 |
+| getTextSize | 获取 TextView 字体大小 - px |
 | clearFlags | 清空 flags |
+| setBold | 设置 TextView 是否加粗 |
 | setUnderlineText | 设置下划线 |
 | setStrikeThruText | 设置中划线 |
 | setLetterSpacing | 设置文字水平间距 |
@@ -1167,10 +1177,6 @@ DevUtils.openDebug();
 | setLineSpacingAndMultiplier | 设置文字行间距(行高)、行间距倍数 |
 | setTextScaleX | 设置字体水平方向的缩放 |
 | setIncludeFontPadding | 设置是否保留字体留白间隙区域 |
-| setText | 设置文本 |
-| setTexts | 设置多个 TextView 文本 |
-| setHtmlText | 设置 Html 内容 |
-| setHtmlTexts | 设置多个 TextView Html 内容 |
 | getTextHeight | 获取字体高度 |
 | getTextTopOffsetHeight | 获取字体顶部偏移高度 |
 | getTextWidth | 计算字体宽度 |
@@ -1183,9 +1189,9 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| getUriForFileToName | 返回处理后的Uri, 单独传递名字, 自动添加包名 ${applicationId} |
-| getUriForFile | Return a content URI for a given file |
-| getFilePathByUri | 通过 Uri 获取 文件路径 |
+| getUriForFileToName | 获取文件 Uri (自动添加包名 ${applicationId}) |
+| getUriForFile | 获取文件 Uri |
+| getFilePathByUri | 通过 Uri 获取文件路径 |
 
 
 * **震动相关工具类 ->** [VibrationUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/VibrationUtils.java)
@@ -1201,13 +1207,18 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | getContext | 获取 Context |
-| getActivity | 获取 View 的 Context (Activity) |
-| getView | 获取 View |
+| getActivity | 获取 View context 所属的 Activity |
+| inflate | 获取 View |
+| findViewById | 初始化 View |
+| convertView | 转换 View |
 | isEmpty | 判断 View 是否为 null |
+| isNotEmpty | 判断 View 是否不为 null |
 | isVisibility | 判断 View 是否显示 |
-| isVisibilitys | 判断 View 是否都显示显示 |
+| isVisibilitys | 判断 View 是否都显示 |
 | isVisibilityIN | 判断 View 是否隐藏占位 |
+| isVisibilityINs | 判断 View 是否都隐藏占位 |
 | isVisibilityGone | 判断 View 是否隐藏 |
+| isVisibilityGones | 判断 View 是否都隐藏 |
 | getVisibility | 获取显示的状态 (View.VISIBLE : View.GONE) |
 | getVisibilityIN | 获取显示的状态 (View.VISIBLE : View.INVISIBLE) |
 | setVisibility | 设置 View 显示的状态 |
@@ -1215,14 +1226,13 @@ DevUtils.openDebug();
 | toggleVisibilitys | 切换 View 显示的状态 |
 | reverseVisibilitys | 反转 View 显示的状态 |
 | toogleView | 切换 View 状态 |
-| setViewImageRes | 设置 View 图片资源 |
-| findViewById | 初始化 View |
+| toogleViews | 切换 View 状态 |
 | removeSelfFromParent | 把自身从父 View 中移除 |
 | isTouchInView | 判断触点是否落在该 View 上 |
-| requestLayoutParent | View 改变请求 |
+| requestLayoutParent | View 请求更新 |
 | measureView | 测量 View |
-| getViewWidth | 获取 View 的宽度 |
-| getViewHeight | 获取 View 的高度 |
+| getMeasuredWidth | 获取 View 的宽度 |
+| getMeasuredHeight | 获取 View 的高度 |
 | getMargin | 获取 View Margin |
 | setMargin | 设置 Margin 边距 |
 | getPadding | 获取 View Padding |
@@ -1534,9 +1544,9 @@ DevUtils.openDebug();
 | saveBitmapToSDCardPNG | 保存图片到SD卡 - PNG |
 | saveBitmapToSDCard | 保存图片到SD卡 - PNG |
 | getBitmapFromDrawable | 将Drawable转化为Bitmap |
-| bitmapToViewBackGround | 通过View, 获取背景转换Bitmap |
-| getBitmapFromView | 通过 View 获取 Bitmap, 绘制整个View |
-| getBitmapFromView2 | 把一个View的对象转换成bitmap |
+| bitmapToViewBackGround | 通过 View, 获取背景转换 Bitmap |
+| getBitmapFromView | 通过 View 获取 Bitmap, 绘制整个 View |
+| getBitmapFromView2 | 把一个 View 的对象转换成 bitmap |
 | reckonVideoWidthHeight | 计算视频宽高大小, 视频比例xxx*xxx按屏幕比例放大或者缩小 |
 | caculateInSampleSize | 根据需求的宽和高以及图片实际的宽和高计算SampleSize |
 | getImageViewSize | 根据ImageView获适当的压缩的宽和高 |
@@ -1611,6 +1621,7 @@ DevUtils.openDebug();
 | compressByScale | 按缩放压缩 |
 | compressByQuality | 按质量压缩 |
 | compressBySampleSize | 按采样大小压缩 |
+| setViewImageRes | 设置 View 图片资源 |
 
 
 * **Android RenderScript 实现图片模糊工具类 ->** [RSBlurUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/image/RSBlurUtils.java)
@@ -2245,9 +2256,9 @@ DevUtils.openDebug();
 | toCheckValues | 检查字符串 - 多个值 |
 | toCheckValuesSpace | 检查字符串 - 多个值(删除前后空格对比判断) |
 | getFormatString | 获取格式化后的字符串 |
-| getFormatString2 | 获取格式化后的字符串 |
 | getAutoFormatString | 获取自动数量格式化后的字符串(可变参数) |
 | getAutoFormatString2 | 获取自动数量格式化后的字符串(可变参数) |
+| appends | StringBuilder 拼接处理 |
 
 
 * **变量字段工具类 ->** [FieldUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/FieldUtils.java)
@@ -2427,6 +2438,7 @@ DevUtils.openDebug();
 | percentL2 | 计算百分比值 (可超出 100%) |
 | percentF2 | 计算百分比值 (可超出 100%) |
 | clamp | 返回的 value 介于 max、min 之间, 若 value 小于 min, 返回 min, 若大于 max, 返回 max |
+| numberToCHN | 数字转中文数值 |
 | isNumber | 检验数字 |
 | isNumberDecimal | 检验数字或包含小数点 |
 
@@ -2569,9 +2581,9 @@ DevUtils.openDebug();
 | toCheckValues | 检查字符串 - 多个值 |
 | toCheckValuesSpace | 检查字符串 - 多个值(删除前后空格对比判断) |
 | getFormatString | 获取格式化后的字符串 |
-| getFormatString2 | 获取格式化后的字符串 |
 | getAutoFormatString | 获取自动数量格式化后的字符串(可变参数) |
 | getAutoFormatString2 | 获取自动数量格式化后的字符串(可变参数) |
+| appends | StringBuilder 拼接处理 |
 | toGBKEncode | 字符串进行 GBK 编码 |
 | toGBK2312Encode | 字符串进行 GBK2312 编码 |
 | toUTF8Encode | 字符串进行 UTF-8 编码 |
