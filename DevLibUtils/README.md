@@ -970,17 +970,17 @@ DevUtils.openDebug();
 | getDisplayMetrics | 获取 DisplayMetrics |
 | getScreenWidth | 获取屏幕的宽度(单位 px) |
 | getScreenHeight | 获取屏幕的高度(单位 px) |
-| getScreenWidthHeightToPoint | 通过 Context 获取屏幕宽度高度 |
-| getScreenWidthHeight | 通过 Context 获取屏幕宽度高度 |
+| getScreenWidthHeightToPoint | 获取屏幕宽高 |
+| getScreenWidthHeight | 获取屏幕宽高 |
 | getScreenSize | 获取屏幕分辨率 |
 | getScreenSizeOfDevice | 获取屏幕英寸 例5.5英寸 |
-| getDensity | 通过 Context 获取屏幕密度 |
-| getDensityDpi | 通过 Context 获取屏幕密度Dpi |
-| getScaledDensity | 通过 Context 获取屏幕缩放密度 |
-| getXDpi | 获取 X轴 dpi |
-| getYDpi | 获取 Y轴 dpi |
-| getWidthDpi | 获取 宽度比例 dpi 基准 |
-| getHeightDpi | 获取 高度比例 dpi 基准 |
+| getDensity | 获取屏幕密度 |
+| getDensityDpi | 获取屏幕密度 dpi |
+| getScaledDensity | 获取屏幕缩放密度 |
+| getXDpi | 获取 X 轴 dpi |
+| getYDpi | 获取 Y 轴 dpi |
+| getWidthDpi | 获取宽度比例 dpi 基准 |
+| getHeightDpi | 获取高度比例 dpi 基准 |
 | getScreenInfo | 获取屏幕信息 |
 | setFullScreen | 设置屏幕为全屏 |
 | setLandscape | 设置屏幕为横屏 |
@@ -1540,9 +1540,9 @@ DevUtils.openDebug();
 | drawableToBitmap2 | Drawable 转换 Bitmap |
 | drawableToBitmap3 | Drawable 转换 Bitmap |
 | drawableToBitmap4 | Drawable 转 Bitmap |
-| saveBitmapToSDCardJPEG | 保存图片到SD卡 - JPEG |
-| saveBitmapToSDCardPNG | 保存图片到SD卡 - PNG |
-| saveBitmapToSDCard | 保存图片到SD卡 - PNG |
+| saveBitmapToSDCardJPEG | 保存图片到 SDCard - JPEG |
+| saveBitmapToSDCardPNG | 保存图片到 SDCard - PNG |
+| saveBitmapToSDCard | 保存图片到 SDCard - PNG |
 | getBitmapFromDrawable | 将Drawable转化为Bitmap |
 | bitmapToViewBackGround | 通过 View, 获取背景转换 Bitmap |
 | getBitmapFromView | 通过 View 获取 Bitmap, 绘制整个 View |
