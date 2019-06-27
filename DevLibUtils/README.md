@@ -1289,7 +1289,7 @@ DevUtils.openDebug();
 | abort | 中止任务 |
 
 
-* **播放“bee”的声音, 并且震动辅助类 ->** [BeepVibrateAssist.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/assist/BeepVibrateAssist.java)
+* **播放「bee」的声音, 并且震动辅助类 ->** [BeepVibrateAssist.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/assist/BeepVibrateAssist.java)
 
 | 方法 | 注释 |
 | :- | :- |
