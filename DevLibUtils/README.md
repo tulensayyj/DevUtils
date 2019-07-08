@@ -561,9 +561,8 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | init | 初始化调用方法 (内部已调用) |
-| saveErrorLog | 保存 App 错误日志 |
-| saveLog | 保存 App 日志 |
-| handlerVariable | 处理可变参数 |
+| saveErrorLog | 保存异常日志 |
+| saveLog | 保存日志 |
 
 
 * **手电筒工具类 ->** [FlashlightUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/FlashlightUtils.java)
@@ -1692,9 +1691,9 @@ DevUtils.openDebug();
 | getDebugLogConfig | 获取 Debug Log 配置 ( 打印线程信息、显示方法总数 3、从 0 开始、不进行排序、默认只打印 ERROR 级别日志 ) |
 | getSortLogConfig | 获取 Log 配置 ( 打印线程信息、显示方法总数 3、从 0 开始、并且美化日志信息、默认打印 DEBUG 级别及以上日志 ) |
 | getLogConfig | 获取 Log 配置 |
-| saveErrorLog | 保存 App 错误日志 |
-| saveLog | 保存 App 日志 |
-| saveLogHeadBottom | 保存 App 日志 - 包含头部、底部信息 |
+| saveErrorLog | 保存异常日志 |
+| saveLog | 保存日志 |
+| saveLogHeadBottom | 保存日志 - 包含头部、底部信息 |
 
 
 ## <span id="devutilsappplayer">**`dev.utils.app.player`**</span>
