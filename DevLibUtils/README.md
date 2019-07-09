@@ -1693,7 +1693,6 @@ DevUtils.openDebug();
 | getLogConfig | 获取 Log 配置 |
 | saveErrorLog | 保存异常日志 |
 | saveLog | 保存日志 |
-| saveLogHeadBottom | 保存日志 - 包含头部、底部信息 |
 
 
 ## <span id="devutilsappplayer">**`dev.utils.app.player`**</span>
