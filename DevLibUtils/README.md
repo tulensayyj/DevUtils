@@ -14,18 +14,18 @@
       - cache        | 缓存工具类
       - camera1      | 摄像头相关 android.hardware.Camera
       - image        | 图片相关处理
-      - info         | APP 信息, PackageInfo 等
+      - info         | APP 信息、PackageInfo 等
       - logger       | 日志库 DevLogger
       - permission   | 权限工具类
-      - player       | 多媒体(视频、音频)播放封装
+      - player       | 多媒体 ( 视频、音频 ) 播放封装
       - share        | SharedPreferences 封装
       - toast        | Toast
          - toaster   | Toaster 处理无通知权限
       - wifi         | Wifi、热点工具类
    - common          | Java 工具类, 不依赖 android api
       - assist       | 各种快捷辅助类
-         - search    | 搜索相关(文件搜索等)
-      - cipher       | 编/解码工具类
+         - search    | 搜索相关 ( 文件搜索等 )
+      - cipher       | 编 / 解码工具类
       - encrypt      | 加密工具类
       - random       | 随机概率算法工具类
       - thread       | 线程相关
@@ -71,18 +71,18 @@ DevUtils.openDebug();
       - [cache](#devutilsappcache)                    | 缓存工具类
       - [camera1](#devutilsappcamera1)                | 摄像头相关 android.hardware.Camera
       - [image](#devutilsappimage)                    | 图片相关处理
-      - [info](#devutilsappinfo)                      | APP 信息, PackageInfo 等
+      - [info](#devutilsappinfo)                      | APP 信息、PackageInfo 等
       - [logger](#devutilsapplogger)                  | 日志库 DevLogger
       - [permission](#devutilsapppermission)          | 权限工具类
-      - [player](#devutilsappplayer)                  | 多媒体(视频、音频)播放封装
+      - [player](#devutilsappplayer)                  | 多媒体 ( 视频、音频 ) 播放封装
       - [share](#devutilsappshare)                    | SharedPreferences 封装
       - [toast](#devutilsapptoast)                    | Toast
          - [toaster](#devutilsapptoasttoaster)        | Toaster 处理无通知权限
       - [wifi](#devutilsappwifi)                      | Wifi、热点工具类
    - [common](#devutilscommon)                        | Java 工具类, 不依赖 android api
       - [assist](#devutilscommonassist)               | 各种快捷辅助类
-         - [search](#devutilscommonassistsearch)      | 搜索相关(文件搜索等)
-      - [cipher](#devutilscommoncipher)               | 编/解码工具类
+         - [search](#devutilscommonassistsearch)      | 搜索相关 ( 文件搜索等 )
+      - [cipher](#devutilscommoncipher)               | 编 / 解码工具类
       - [encrypt](#devutilscommonencrypt)             | 加密工具类
       - [random](#devutilscommonrandom)               | 随机概率算法工具类
       - [thread](#devutilscommonthread)               | 线程相关
