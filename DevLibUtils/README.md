@@ -6,29 +6,30 @@
 ## 目录结构
 
 ```
-- dev.utils         | 根目录
-   - app            | App 相关工具类
-      - anim        | 动画工具类
-      - assist      | 辅助类
-         - manager  | 管理器 如: TimerManager
-      - cache       | 缓存工具类
-      - camera1     | 摄像头相关 android.hardware.Camera
-      - image       | 图片相关处理
-      - info        | App 信息, PackageInfo 等
-      - logger      | 日志库 DevLogger
-      - player      | 多媒体(视频、音频)播放封装
-      - share       | SharedPreferences 封装
-      - toast       | Toast
-         - toaster  | Toaster 处理无通知权限
-      - wifi        | Wifi、热点工具类
-   - common         | Java 工具类, 不依赖 android api
-      - assist      | 各种快捷辅助类
-         - search   | 搜索相关(文件搜索等)
-      - cipher      | 编/解码工具类
-      - encrypt     | 加密工具类
-      - random      | 随机概率算法工具类
-      - thread      | 线程相关
-      - validator   | 数据校验工具类
+- dev.utils          | 根目录
+   - app             | APP 相关工具类
+      - anim         | 动画工具类
+      - assist       | 辅助类
+         - manager   | 管理器 如: TimerManager
+      - cache        | 缓存工具类
+      - camera1      | 摄像头相关 android.hardware.Camera
+      - image        | 图片相关处理
+      - info         | APP 信息, PackageInfo 等
+      - logger       | 日志库 DevLogger
+      - permission   | 权限工具类
+      - player       | 多媒体(视频、音频)播放封装
+      - share        | SharedPreferences 封装
+      - toast        | Toast
+         - toaster   | Toaster 处理无通知权限
+      - wifi         | Wifi、热点工具类
+   - common          | Java 工具类, 不依赖 android api
+      - assist       | 各种快捷辅助类
+         - search    | 搜索相关(文件搜索等)
+      - cipher       | 编/解码工具类
+      - encrypt      | 加密工具类
+      - random       | 随机概率算法工具类
+      - thread       | 线程相关
+      - validator    | 数据校验工具类
 ```
 
 
@@ -39,7 +40,7 @@
 ```java
 // 整个工具类内部日志信息, 都通过以下两个工具类输出打印, 并且通过 DevUtils.openLog() 控制开关
 
-// dev.utils.app - App 打印日志工具类
+// dev.utils.app - APP 打印日志工具类
 LogPrintUtils
 // dev.utils.common - Java Common 日志打印工具类
 JCLogUtils
@@ -57,34 +58,35 @@ DevUtils.openDebug();
 
 - 部分 api 更新不及时或有遗漏等，`具体以对应的工具类为准`
 
-- [JavaDoc - API](https://javadoc.jitpack.io/com/github/afkT/DevUtils/1.7.3/javadoc/)
+- [JavaDoc - API](https://javadoc.jitpack.io/com/github/afkT/DevUtils/1.7.4/javadoc/)
 
 ## API
 
 
-- dev.utils                                        | 根目录
-   - [app](#devutilsapp)                           | App 相关工具类
-      - [anim](#devutilsappanim)                   | 动画工具类
-      - [assist](#devutilsappassist)               | 辅助类
-         - [manager](#devutilsappassistmanager)    | 管理器 如: TimerManager
-      - [cache](#devutilsappcache)                 | 缓存工具类
-      - [camera1](#devutilsappcamera1)             | 摄像头相关 android.hardware.Camera
-      - [image](#devutilsappimage)                 | 图片相关处理
-      - [info](#devutilsappinfo)                   | App 信息, PackageInfo 等
-      - [logger](#devutilsapplogger)               | 日志库 DevLogger
-      - [player](#devutilsappplayer)               | 多媒体(视频、音频)播放封装
-      - [share](#devutilsappshare)                 | SharedPreferences 封装
-      - [toast](#devutilsapptoast)                 | Toast
-         - [toaster](#devutilsapptoasttoaster)     | Toaster 处理无通知权限
-      - [wifi](#devutilsappwifi)                   | Wifi、热点工具类
-   - [common](#devutilscommon)                     | Java 工具类, 不依赖 android api
-      - [assist](#devutilscommonassist)            | 各种快捷辅助类
-         - [search](#devutilscommonassistsearch)   | 搜索相关(文件搜索等)
-      - [cipher](#devutilscommoncipher)            | 编/解码工具类
-      - [encrypt](#devutilscommonencrypt)          | 加密工具类
-      - [random](#devutilscommonrandom)            | 随机概率算法工具类
-      - [thread](#devutilscommonthread)            | 线程相关
-      - [validator](#devutilscommonvalidator)      | 数据校验工具类
+- dev.utils                                           | 根目录
+   - [app](#devutilsapp)                              | APP 相关工具类
+      - [anim](#devutilsappanim)                      | 动画工具类
+      - [assist](#devutilsappassist)                  | 辅助类
+         - [manager](#devutilsappassistmanager)       | 管理器 如: TimerManager
+      - [cache](#devutilsappcache)                    | 缓存工具类
+      - [camera1](#devutilsappcamera1)                | 摄像头相关 android.hardware.Camera
+      - [image](#devutilsappimage)                    | 图片相关处理
+      - [info](#devutilsappinfo)                      | APP 信息, PackageInfo 等
+      - [logger](#devutilsapplogger)                  | 日志库 DevLogger
+      - [permission](#devutilsapppermission)          | 权限工具类
+      - [player](#devutilsappplayer)                  | 多媒体(视频、音频)播放封装
+      - [share](#devutilsappshare)                    | SharedPreferences 封装
+      - [toast](#devutilsapptoast)                    | Toast
+         - [toaster](#devutilsapptoasttoaster)        | Toaster 处理无通知权限
+      - [wifi](#devutilsappwifi)                      | Wifi、热点工具类
+   - [common](#devutilscommon)                        | Java 工具类, 不依赖 android api
+      - [assist](#devutilscommonassist)               | 各种快捷辅助类
+         - [search](#devutilscommonassistsearch)      | 搜索相关(文件搜索等)
+      - [cipher](#devutilscommoncipher)               | 编/解码工具类
+      - [encrypt](#devutilscommonencrypt)             | 加密工具类
+      - [random](#devutilscommonrandom)               | 随机概率算法工具类
+      - [thread](#devutilscommonthread)               | 线程相关
+      - [validator](#devutilscommonvalidator)         | 数据校验工具类
 
 
 
@@ -146,7 +148,7 @@ DevUtils.openDebug();
 | finishAllActivityToIgnore | 结束全部 Activity 除忽略的 Activity 外 |
 | finishAllActivity | 结束所有 Activity |
 | appExit | 退出应用程序 |
-| restartApplication | 重启 App |
+| restartApplication | 重启 APP |
 
 
 * **ADB shell 工具类 ->** [ADBUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/ADBUtils.java)
@@ -155,9 +157,9 @@ DevUtils.openDebug();
 | :- | :- |
 | isDeviceRooted | 判断设备是否 root |
 | requestRoot | 请求 Root 权限 |
-| isGrantedRoot | 判断 App 是否授权 Root 权限 |
-| getAppList | 获取 App 列表 ( 包名 ) |
-| getInstallAppList | 获取 App 安装列表 ( 包名 ) |
+| isGrantedRoot | 判断 APP 是否授权 Root 权限 |
+| getAppList | 获取 APP 列表 ( 包名 ) |
+| getInstallAppList | 获取 APP 安装列表 ( 包名 ) |
 | getUserAppList | 获取用户安装的应用列表 ( 包名 ) |
 | getSystemAppList | 获取系统应用列表 ( 包名 ) |
 | getEnableAppList | 获取启用的应用列表 ( 包名 ) |
@@ -167,8 +169,8 @@ DevUtils.openDebug();
 | getAppInstallPath | 查看应用安装路径 |
 | clearAppDataCache | 清除应用数据与缓存 - 相当于在设置里的应用信息界面点击了「清除缓存」和「清除数据」 |
 | getAppMessage | 查看应用详细信息 |
-| getVersionCode | 获取 App versionCode |
-| getVersionName | 获取 App versionName |
+| getVersionCode | 获取 APP versionCode |
+| getVersionName | 获取 APP versionName |
 | installApp | 安装应用 |
 | installAppSilent | 静默安装应用 |
 | uninstallApp | 卸载应用 |
@@ -276,17 +278,17 @@ DevUtils.openDebug();
 | setLogFolderName | 设置日志文件夹名 |
 | getLogStoragePath | 获取日志存储路径 |
 | setLogStoragePath | 设置日志存储路径 |
+| obtain | 获取日志记录分析文件对象 |
 | getStoragePath | 获取存储路径 |
 | getFileName | 获取日志文件名 |
 | getFileFunction | 获取日志文件记录功能 |
 | getFileIntervalTime | 获取日志文件记录间隔时间 |
 | getFolderName | 获取日志文件夹名 |
-| obtain | 获取日志记录分析文件对象 |
 | getLogPath | 获取日志文件地址 |
 | getIntervalTimeFolder | 获取时间间隔所属的文件夹 |
 
 
-* **App 通用工具类 ->** [AppCommonUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/AppCommonUtils.java)
+* **APP 通用工具类 ->** [AppCommonUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/AppCommonUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -314,39 +316,44 @@ DevUtils.openDebug();
 | convertSDKVersion | 转换 SDK 版本 convertSDKVersion(14) => Android 4.0.0-2 |
 
 
-* **App (Android) 工具类 ->** [AppUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/AppUtils.java)
+* **APP (Android) 工具类 ->** [AppUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/AppUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
 | getWindowManager | 获取 WindowManager |
 | getSystemService | 获取 SystemService |
 | getPackageManager | 获取 PackageManager |
-| getAppIcon | 获取 App 的图标 |
-| getAppPackageName | 获取 App 包名 |
-| getAppName | 获取 App 应用名 |
-| getAppVersionName | 获取 App 版本名 - 对外显示 |
-| getAppVersionCode | 获取 App 版本号 - 内部判断 |
-| installApp | 安装 App(支持 8.0)的意图 |
+| getAppPackageName | 获取 APP 包名 |
+| getAppIcon | 获取 APP 图标 |
+| getAppName | 获取 APP 应用名 |
+| getAppVersionName | 获取 APP versionName |
+| getAppVersionCode | 获取 APP versionCode |
+| getAppPath | 获取 APP 安装包路径 /data/data/packageName/.apk |
+| getAppSignature | 获取 APP Signature |
+| getAppSignatureMD5 | 获取 APP 签名 MD5 值 |
+| getAppSignatureSHA1 | 获取 APP 签名 SHA1 值 |
+| getAppSignatureSHA256 | 获取 APP 签名 SHA256 值 |
+| isAppDebug | 判断 APP 是否 debug 模式 |
+| isAppRelease | 判断 APP 是否 release 模式 |
+| isAppSystem | 判断 APP 是否系统 app |
+| isAppForeground | 判断 APP 是否在前台 |
+| isInstalledApp | 判断是否安装了 APP |
+| isInstalledApp2 | 判断是否安装了 APP |
+| installApp | 安装 APP( 支持 8.0) 的意图 |
 | installAppSilent | 静默安装应用 |
 | uninstallApp | 卸载应用 |
 | uninstallAppSilent | 静默卸载应用 |
-| isAppInstalled | 判断是否安装了应用 |
-| isInstalledApp | 判断是否安装指定包名的 App |
-| isAppRoot | 判断是否存在 root 权限 |
-| isAppDebug | 判断是否 App 是否debug模式 |
-| isAppSystem | 判断 App 是否系统app |
-| isAppForeground | 判断 App 是否在前台 |
-| launchApp | 打开 App |
-| launchAppDetailsSettings | 跳转到 专门的 App 设置详情页面 |
-| launchAppDetails | 跳转到 专门的 App 应用商城详情页面 |
-| getAppPath | 获取 App 路径 /data/data/包名/.apk |
-| getAppSignature | 获取 App 签名 |
-| getAppSignatureSHA1 | 获取 App sha1值 |
-| getAppSignatureSHA256 | 获取应用签名的的 SHA256 值 |
-| getAppSignatureMD5 | 获取应用签名 MD5 值 |
-| openPDFFile | 启动本地应用打开 PDF |
-| openWordFile | 启动本地应用打开 Word |
+| launchApp | 打开 APP |
+| launchAppDetailsSettings | 跳转到 APP 设置详情页面 |
+| launchAppDetails | 跳转到 APP 应用商城详情页面 |
+| openFile | 打开文件 |
+| openFileByApp | 打开文件 - 指定应用 |
+| openPDFFile | 打开 PDF 文件 |
+| openWordFile | 打开 Word 文件 |
 | openOfficeByWPS | 调用 WPS 打开 office 文档 |
+| startSysSetting | 跳转到系统设置页面 |
+| openWirelessSettings | 打开网络设置界面 |
+| openGpsSettings | 打开 GPS 设置界面 |
 
 
 * **状态栏相关工具类 ->** [BarUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/BarUtils.java)
@@ -367,7 +374,7 @@ DevUtils.openDebug();
 | getActionBarHeight | 获取 ActionBase 高度 |
 | setNotificationBarVisibility | 设置通知栏是否显示 |
 | getNavBarHeight | 获取 NavigationView 高度 |
-| setNavBarVisibility | 设置导航栏是否可见(图标显示) |
+| setNavBarVisibility | 设置导航栏是否可见 ( 图标显示 ) |
 | isNavBarVisible | 判断导航栏是否可见 |
 | setNavBarColor | 设置导航栏颜色 |
 | getNavBarColor | 设置导航栏颜色 |
@@ -380,7 +387,7 @@ DevUtils.openDebug();
 | :- | :- |
 | isAutoBrightnessEnabled | 判断是否开启自动调节亮度 |
 | setAutoBrightnessEnabled | 设置是否开启自动调节亮度 |
-| getBrightness | 获取屏幕亮度 |
+| getBrightness | 获取屏幕亮度 0-255 |
 | setBrightness | 设置屏幕亮度 |
 | setWindowBrightness | 设置窗口亮度 |
 | getWindowBrightness | 获取窗口亮度 |
@@ -398,19 +405,16 @@ DevUtils.openDebug();
 | cleanExternalCache | 清除外部缓存 - path /storage/emulated/0/android/data/package/cache |
 | cleanCustomDir | 清除自定义路径下的文件, 使用需小心请不要误删, 而且只支持目录下的文件删除 |
 | cleanApplicationData | 清除本应用所有的数据 |
-| getFolderSize | 获取文件夹大小 |
-| getCacheSize | 获取缓存文件大小 |
-| getFormatSize | 格式化单位 |
 
 
-* **点击(双击)工具类 ->** [ClickUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/ClickUtils.java)
+* **点击 ( 双击 ) 工具类 ->** [ClickUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/ClickUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
 | addTouchArea | 增加控件的触摸范围, 最大范围只能是父布局所包含的的区域 |
 | get | 获取对应功能模块点击辅助类 |
 | remove | 移除对应功能模块点击辅助类 |
-| isFastDoubleClick | 判断是否双击(无效点击 - 短时间内多次点击) |
+| isFastDoubleClick | 判断是否双击 ( 无效点击 - 短时间内多次点击 ) |
 | initConfig | 初始化配置信息 |
 | putConfig | 添加配置信息 |
 | removeConfig | 移除配置信息 |
@@ -426,11 +430,11 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | copyText | 复制文本到剪贴板 |
-| getText | 获取剪贴板的文本 |
-| copyUri | 复制uri到剪贴板 |
-| getUri | 获取剪贴板的uri |
+| getText | 获取剪贴板文本 |
+| copyUri | 复制 URI 到剪贴板 |
+| getUri | 获取剪贴板 URI |
 | copyIntent | 复制意图到剪贴板 |
-| getIntent | 获取剪贴板的意图 |
+| getIntent | 获取剪贴板意图 |
 
 
 * **ContentResolver 工具类 ->** [ContentResolverUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/ContentResolverUtils.java)
@@ -438,7 +442,7 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | notifyMediaStore | 通知刷新本地资源 |
-| insertImageIntoMediaStore | 添加图片到系统相册(包含原图、相册图, 会存在两张) - 想要一张, 直接调用 notifyMediaStore() |
+| insertImageIntoMediaStore | 添加图片到系统相册 ( 包含原图、相册图, 会存在两张 ) - 想要一张, 直接调用 notifyMediaStore() |
 | insertVideoIntoMediaStore | 添加视频到系统相册 |
 | insertIntoMediaStore | 保存到系统相册 |
 
@@ -449,17 +453,17 @@ DevUtils.openDebug();
 | :- | :- |
 | getProcessorsCount | 获取处理器的 Java 虚拟机的数量 |
 | getSysCPUSerialNum | 获取手机 CPU 序列号 |
-| getCpuInfo | 获取CPU 信息 |
-| getCpuModel | 获取CPU 型号 |
-| getMaxCpuFreq | 获取 CPU 最大频率(单位KHZ) |
-| getMinCpuFreq | 获取 CPU 最小频率(单位KHZ) |
-| getCurCpuFreq | 实时获取 CPU 当前频率(单位KHZ) |
-| getCoresNumbers | 获取 CPU 几核 |
-| getCpuName | 获取CPU名字 |
+| getCpuInfo | 获取 CPU 信息 |
+| getCpuModel | 获取 CPU 型号 |
+| getMaxCpuFreq | 获取 CPU 最大频率 ( 单位 KHZ) |
+| getMinCpuFreq | 获取 CPU 最小频率 ( 单位 KHZ) |
+| getCurCpuFreq | 获取 CPU 当前频率 ( 单位 KHZ) |
+| getCoresNumbers | 获取 CPU 核心数 |
+| getCpuName | 获取 CPU 名字 |
 | getCMDOutputString | 获取 CMD 指令回调数据 |
 
 
-* **数据库工具类(导入导出等) ->** [DBUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/DBUtils.java)
+* **数据库工具类 ( 导入导出等 ) ->** [DBUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/DBUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -474,35 +478,70 @@ DevUtils.openDebug();
 | :- | :- |
 | getDeviceInfo | 获取设备信息 |
 | handlerDeviceInfo | 处理设备信息 |
-| getSDKVersionName | 获取设备系统版本号 |
-| getSDKVersion | 获取当前SDK 版本号 |
-| getAndroidId | 获取Android id |
-| isDeviceRooted | 判断设备是否 root |
-| isAdbEnabled | 返回是否启用了 ADB |
+| getBoard | 获取设备基板名称 |
+| getBootloader | 获取设备引导程序版本号 |
+| getBrand | 获取设备品牌 |
+| getCPU_ABI | 获取支持的第一个指令集 |
+| getCPU_ABI2 | 获取支持的第二个指令集 |
 | getABIs | 获取支持的指令集 如: [arm64-v8a, armeabi-v7a, armeabi] |
-| getMacAddress | 获取设备 MAC 地址 |
-| getManufacturer | 获取设备厂商 如 Xiaomi |
+| getSUPPORTED_32_BIT_ABIS | 获取支持的 32 位指令集 |
+| getSUPPORTED_64_BIT_ABIS | 获取支持的 64 位指令集 |
+| getDevice | 获取设备驱动名称 |
+| getDisplay | 获取设备显示的版本包 ( 在系统设置中显示为版本号 ) 和 ID 一样 |
+| getFingerprint | 获取设备的唯一标识, 由设备的多个信息拼接合成 |
+| getHardware | 获取设备硬件名称, 一般和基板名称一样 (BOARD) |
+| getHost | 获取设备主机地址 |
+| getID | 获取设备版本号 |
 | getModel | 获取设备型号 如 RedmiNote4X |
-| shutdown | 关机(需要 root 权限) |
-| reboot | 重启设备(需要 root 权限) |
-| rebootToRecovery | 重启引导到 recovery (需要 root 权限) |
-| rebootToBootloader | 重启引导到 bootloader (需要 root 权限) |
-| getBaseband_Ver | 获取 基带版本 BASEBAND-VER |
-| getLinuxCore_Ver | 获取 内核版本 CORE-VER |
+| getManufacturer | 获取设备厂商 如 Xiaomi |
+| getProduct | 获取整个产品的名称 |
+| getRadio | 获取无线电固件版本号, 通常是不可用的 显示 unknown |
+| getTags | 获取设备标签, 如 release-keys 或测试的 test-keys |
+| getTime | 获取设备时间 |
+| getType | 获取设备版本类型 主要为 "user" 或 "eng". |
+| getUser | 获取设备用户名 基本上都为 android-build |
+| getSDKVersion | 获取 SDK 版本号 |
+| getRelease | 获取系统版本号, 如 4.1.2 或 2.2 或 2.3 等 |
+| getCodename | 获取设备当前的系统开发代号, 一般使用 REL 代替 |
+| getIncremental | 获取系统源代码控制值, 一个数字或者 git hash 值 |
+| getAndroidId | 获取 Android id |
+| getBaseband_Ver | 获取基带版本 BASEBAND-VER |
+| getLinuxCore_Ver | 获取内核版本 CORE-VER |
+| isDeviceRooted | 判断设备是否 root |
+| isAdbEnabled | 获取是否启用 ADB |
+| getMacAddress | 获取设备 MAC 地址 |
+| shutdown | 关机 ( 需要 root 权限 ) |
+| reboot | 重启设备 ( 需要 root 权限 ) |
+| rebootToRecovery | 重启引导到 recovery ( 需要 root 权限 ) |
+| rebootToBootloader | 重启引导到 bootloader ( 需要 root 权限 ) |
 
 
 * **Dialog 操作相关工具类 ->** [DialogUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/DialogUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
+| getWindow | 获取 Dialog Window |
+| getAttributes | 获取 Dialog Window LayoutParams |
+| setAttributes | 设置 Dialog Window LayoutParams |
+| setWidth | 设置 Dialog 宽度 |
+| setHeight | 设置 Dialog 高度 |
+| setWidthHeight | 设置 Dialog 宽度、高度 |
+| setX | 设置 Dialog X 轴坐标 |
+| setY | 设置 Dialog Y 轴坐标 |
+| setXY | 设置 Dialog X、Y 轴坐标 |
+| setGravity | 设置 Dialog Gravity |
+| setDimAmount | 设置 Dialog 透明度 |
+| setCancelable | 设置是否允许返回键关闭 |
+| setCanceledOnTouchOutside | 设置是否允许点击其他地方自动关闭 |
+| setCancelableAndTouchOutside | 设置是否允许 返回键关闭、点击其他地方自动关闭 |
 | showDialog | 显示 Dialog |
 | closeDialog | 关闭 Dialog |
 | closeDialogs | 关闭多个 Dialog |
 | closePopupWindow | 关闭 PopupWindow |
 | closePopupWindows | 关闭多个 PopupWindow |
-| createAlertDialog | 创建提示 Dialog (原生样式) |
-| createProgressDialog | 创建加载中 Dialog (原生样式) |
-| autoCloseDialog | 自动关闭dialog |
+| createAlertDialog | 创建提示 Dialog ( 原生样式 ) |
+| createProgressDialog | 创建加载中 Dialog ( 原生样式 ) |
+| autoCloseDialog | 自动关闭 dialog |
 | autoClosePopupWindow | 自动关闭 PopupWindow |
 | createSingleChoiceListDialog | 创建单选列表样式 Dialog |
 | createSingleChoiceDialog | 创建单选样式 Dialog |
@@ -514,21 +553,21 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| setCursorVisible | 设置是否显示光标 |
-| setMaxLengthAnText | 设置长度限制, 并且设置内容 |
-| setMaxLength | 设置长度限制 |
-| getSelectionStart | 获取光标位置 |
 | getText | 获取输入的内容 |
 | getTextLength | 获取输入的内容长度 |
 | setText | 设置内容 |
-| insert | 追加内容 - 当前光标位置追加 |
-| setSelectTop | 设置光标在第一位 |
-| setSelectBottom | 设置光标在最后一位 |
-| setSelect | 设置光标位置 |
+| insert | 追加内容 ( 当前光标位置追加 ) |
+| setMaxLength | 设置长度限制 |
+| setMaxLengthAndText | 设置长度限制, 并且设置内容 |
+| setCursorVisible | 设置是否显示光标 |
+| getSelectionStart | 获取光标位置 |
+| setSelectionToTop | 设置光标在第一位 |
+| setSelectionToBottom | 设置光标在最后一位 |
+| setSelection | 设置光标位置 |
 | setKeyListener | 设置 KeyListener |
-| getLettersKeyListener | 获取 DigitsKeyListener (限制只能输入字母, 默认弹出英文输入法) |
-| getNumberAndLettersKeyListener | 获取 DigitsKeyListener (限制只能输入字母和数字, 默认弹出英文输入法) |
-| getNumberKeyListener | 获取 DigitsKeyListener (限制只能输入数字, 默认弹出数字列表) |
+| getLettersKeyListener | 获取 DigitsKeyListener ( 限制只能输入字母, 默认弹出英文输入法 ) |
+| getNumberAndLettersKeyListener | 获取 DigitsKeyListener ( 限制只能输入字母和数字, 默认弹出英文输入法 ) |
+| getNumberKeyListener | 获取 DigitsKeyListener ( 限制只能输入数字, 默认弹出数字列表 ) |
 | createDigitsKeyListener | 创建 DigitsKeyListener |
 | getMarkId | 获取标记 id |
 | isOperate | 判断是否操作中 |
@@ -542,25 +581,11 @@ DevUtils.openDebug();
 | afterTextChanged | 在文本变化后调用 |
 
 
-* **编码工具类 ->** [EncodeUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/EncodeUtils.java)
-
-| 方法 | 注释 |
-| :- | :- |
-| urlEncode | url 编码 - UTF-8 |
-| urlDecode | url 解码 - UTF-8 |
-| base64Encode | base64 编码 => 去除\n 替换 + 和 - 号 |
-| base64EncodeToString | base64 编码 |
-| base64Decode | base64 解码 |
-| base64DecodeToString | base64 解码 |
-| htmlEncode | html 编码 |
-| htmlDecode | html 解码 |
-
-
 * **文件记录工具类 ->** [FileRecordUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/FileRecordUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
-| init | 初始化调用方法 (内部已调用) |
+| init | 初始化调用方法 ( 内部已调用 ) |
 | saveErrorLog | 保存异常日志 |
 | saveLog | 保存日志 |
 
@@ -578,13 +603,14 @@ DevUtils.openDebug();
 | isFlashlightEnable | 是否支持手机闪光灯 |
 
 
-* **Handler 工具类(默认开启一个 Handler, 方便在各个地方随时执行主线程任务) ->** [HandlerUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/HandlerUtils.java)
+* **Handler 工具类 ( 默认开启一个 Handler, 方便在各个地方随时执行主线程任务 ) ->** [HandlerUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/HandlerUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
 | getMainHandler | 获取主线程 Handler |
 | postRunnable | 在主线程 Handler 中执行任务 |
 | removeRunnable | 在主线程 Handler 中清除任务 |
+| onEnd | 结束通知 |
 
 
 * **Html 工具类 ->** [HtmlUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/HtmlUtils.java)
@@ -592,24 +618,25 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | setHtmlText | 设置 Html 内容 |
-| addHtmlColor | 为给定的字符串添加HTML颜色标记 |
-| addHtmlBold | 为给定的字符串添加HTML加粗标记 |
-| addHtmlColorAndBlod | 为给定的字符串添加HTML颜色标记, 以及加粗 |
-| addHtmlUnderline | 为给定的字符串添加HTML下划线 |
-| addHtmlIncline | 为给定的字符串添加HTML 字体倾斜 |
-| keywordMadeRed | 将给定的字符串中所有给定的关键字标色 |
-| keywordReplaceAll | 将给定的字符串中所有给定的关键字进行替换内容 |
+| addHtmlColor | 为给定的字符串添加 HTML 颜色标记 |
+| addHtmlBold | 为给定的字符串添加 HTML 加粗标记 |
+| addHtmlColorAndBlod | 为给定的字符串添加 HTML 颜色标记并加粗 |
+| addHtmlUnderline | 为给定的字符串添加 HTML 下划线 |
+| addHtmlIncline | 为给定的字符串添加 HTML 字体倾斜 |
+| keywordReplaceHtmlColor | 将给定的字符串中所有给定的关键字标色 |
 
 
-* **Intent(意图)相关工具类 ->** [IntentUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/IntentUtils.java)
+* **Intent ( 意图 ) 相关工具类 ->** [IntentUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/IntentUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
+| getIntent | 获取 Intent |
 | isIntentAvailable | 判断 Intent 是否可用 |
-| getInstallAppIntent | 获取安装 App(支持 8.0)的意图 |
-| getUninstallAppIntent | 获取卸载 App 的意图 |
-| getLaunchAppIntent | 获取打开 App 的意图 |
-| getLaunchAppDetailsSettingsIntent | 获取 App 具体设置的意图 |
+| getInstallAppIntent | 获取安装 APP( 支持 8.0) 的意图 |
+| getUninstallAppIntent | 获取卸载 APP 的意图 |
+| getLaunchAppIntent | 获取打开 APP 的意图 |
+| getSystemSettingIntent | 获取跳转到系统设置的意图 |
+| getLaunchAppDetailsSettingsIntent | 获取 APP 具体设置的意图 |
 | getLaunchAppDetailIntent | 获取到应用商店 APP 详情界面的意图 |
 | getShareTextIntent | 获取分享文本的意图 |
 | getShareImageIntent | 获取分享图片的意图 |
@@ -619,8 +646,6 @@ DevUtils.openDebug();
 | getCallIntent | 获取拨打电话意图 |
 | getSendSmsIntent | 获取发送短信界面的意图 |
 | getCaptureIntent | 获取拍照的意图 |
-| startSysSetting | 跳转到系统设置页面 |
-| openWirelessSettings | 打开网络设置界面 - 3.0以下打开设置界面 |
 
 
 * **Android 原生 JSONObject 工具类 ->** [JSONObjectUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/JSONObjectUtils.java)
@@ -642,27 +667,26 @@ DevUtils.openDebug();
 | closeKeyboard | 关闭软键盘 |
 | closeKeyBoardSpecial | 关闭软键盘 - 特殊处理 |
 | toggleKeyboard | 自动切换键盘状态, 如果键盘显示了则隐藏, 隐藏着显示 |
-| judgeView | 某个 View 里面的子 View 的 View 判断 |
+| judgeView | 设置某个 View 内所有非 EditText 的子 View OnTouchListener 事件 |
 | isSoftInputVisible | 判断软键盘是否可见 |
-| registerSoftInputChangedListener | 注册软键盘改变监听器 |
-| registerSoftInputChangedListener2 | 注册软键盘改变监听器 |
+| registerSoftInputChangedListener | 注册软键盘改变监听 |
+| registerSoftInputChangedListener2 | 注册软键盘改变监听 |
 | fixSoftInputLeaks | 修复软键盘内存泄漏 在 Activity.onDestroy() 中使用 |
 
 
-* **锁屏管理工具类(锁屏、禁用锁屏, 判断是否锁屏) ->** [KeyguardUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/KeyguardUtils.java)
+* **锁屏管理工具类 ( 锁屏、禁用锁屏, 判断是否锁屏 ) ->** [KeyguardUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/KeyguardUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
 | getInstance | 获取 KeyguardUtils 实例 |
-| isKeyguardLocked | 是否锁屏 - android 4.1以上支持 |
-| isKeyguardSecure | 是否有锁屏密码 - android 4.1以上支持 |
-| inKeyguardRestrictedInputMode | 是否锁屏 - android 4.1 之前 |
+| isKeyguardLocked | 是否锁屏 - android 4.1 以上支持 |
+| isKeyguardSecure | 是否有锁屏密码 - android 4.1 以上支持 |
+| inKeyguardRestrictedInputMode | 是否锁屏 |
 | getKeyguardManager | 获取 KeyguardManager |
 | setKeyguardManager | 设置 KeyguardManager |
 | disableKeyguard | 屏蔽系统的屏保 |
-| reenableKeyguard | 使能显示锁屏界面, 如果你之前调用了disableKeyguard()方法取消锁屏界面, 那么会马上显示锁屏界面 |
+| reenableKeyguard | 使能显示锁屏界面, 如果你之前调用了 disableKeyguard() 方法取消锁屏界面, 那么会马上显示锁屏界面 |
 | release | 释放资源 |
-| newKeyguardLock | 生成一个新的 KeyguardLock, 并且设置 TAG |
 | getKeyguardLock | 获取 KeyguardManager.KeyguardLock |
 | setKeyguardLock | 设置 KeyguardManager.KeyguardLock |
 
@@ -673,7 +697,7 @@ DevUtils.openDebug();
 | :- | :- |
 | getSystemLanguage | 获取系统语言 |
 | getSystemPreferredLanguage | 获取系统首选语言 |
-| applyLanguage | 修改系统语言 (App 多语言, 单独改变 App 语言) |
+| applyLanguage | 修改系统语言 (APP 多语言, 单独改变 APP 语言 ) |
 | getSupportLanguages | 获取支持的语言 |
 | putSupportLanguage | 添加支持的语言 |
 | removeSupportLanguage | 移除支持的语言 |
@@ -685,8 +709,8 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| getTouchListener | 获取 View 设置的 OnTouchListener |
-| getListenerInfo | 获取 View ListenerInfo 对象(内部类) |
+| getTouchListener | 获取 View 设置的 OnTouchListener 事件对象 |
+| getListenerInfo | 获取 View ListenerInfo 对象 ( 内部类 ) |
 | getListenerInfoListener | 获取 View ListenerInfo 对象内部事件对象 |
 | setOnClicks | 设置点击事件 |
 
@@ -696,34 +720,34 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | getLocation | 获取位置, 需要先判断是否开启了定位 |
-| isGpsEnabled | 判断Gps是否可用 |
+| isGpsEnabled | 判断 GPS 是否可用 |
 | isLocationEnabled | 判断定位是否可用 |
 | openGpsSettings | 打开 GPS 设置界面 |
-| register | 注册 - 使用完记得调用{@link #unregister()} |
+| register | 注册 - 使用完记得调用 {@link #unregister()} |
 | unregister | 注销监听 |
 | getAddress | 根据经纬度获取地理位置 |
 | getCountryName | 根据经纬度获取所在国家 |
 | getLocality | 根据经纬度获取所在地 |
 | getStreet | 根据经纬度获取所在街道 |
-| isBetterLocation | 是否更好的位置 |
+| isBetterLocation | 判断是否更好的位置 |
 | isSameProvider | 是否相同的提供者 |
 | getLastKnownLocation | 获取最后一次保留的坐标 |
-| onLocationChanged | 当坐标改变时触发此函数, 如果Provider传进相同的坐标, 它就不会被触发 |
-| onStatusChanged | provider的在可用、暂时不可用和无服务三个状态直接切换时触发此函数 |
+| onLocationChanged | 当坐标改变时触发此函数, 如果 Provider 传进相同的坐标, 它就不会被触发 |
+| onStatusChanged | provider 的在可用、暂时不可用和无服务三个状态直接切换时触发此函数 |
 
 
 * **Android Manifest 工具类 ->** [ManifestUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/ManifestUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
-| getMetaData | 获取 Application Meta Data |
-| getMetaDataInActivity | 获取 Activity Meta Data |
-| getMetaDataInService | 获取 Service Meta Data |
-| getMetaDataInReceiver | 获取 Receiver Meta Data |
-| getMetaDataInProvider | 获取 ContentProvider Meta Data |
-| getAppVersion | 获取 App 版本信息 |
-| getAppVersionCode | 获取 App 版本号 |
-| getAppVersionName | 获取 App 版本信息 |
+| getMetaData | 获取 Application meta Data |
+| getMetaDataInActivity | 获取 Activity meta Data |
+| getMetaDataInService | 获取 Service meta Data |
+| getMetaDataInReceiver | 获取 Receiver meta Data |
+| getMetaDataInProvider | 获取 ContentProvider meta Data |
+| getAppVersion | 获取 APP 版本信息 |
+| getAppVersionCode | 获取 APP versionCode |
+| getAppVersionName | 获取 APP versionName |
 
 
 * **内存信息工具类 ->** [MemoryUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/MemoryUtils.java)
@@ -731,11 +755,14 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | printMemoryInfo | 获取内存信息 |
+| printMemoryInfo2 | 获取内存信息 |
 | getMemoryInfo | 获取内存信息 |
-| printMemoryInfo2 | 返回内存信息 |
 | getAvailMemory | 获取可用内存信息 |
+| getAvailMemoryFormat | 获取可用内存信息 ( 格式化 ) |
 | getTotalMemory | 获取总内存大小 |
+| getTotalMemoryFormat | 获取总内存大小 ( 格式化 ) |
 | getMemoryAvailable | 获取可用内存大小 |
+| getMemoryAvailableFormat | 获取可用内存大小 ( 格式化 ) |
 | getMemInfoIype | 通过不同 type 获取对应的内存信息 |
 
 
@@ -743,17 +770,19 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| getMobileDataEnabled | 获取移动网络打开状态(默认属于未打开) |
-| setMobileDataEnabled | 设置移动网络开关(无判断是否已开启移动网络) - 实际无效果, 非系统应用无权限 |
+| getMobileDataEnabled | 获取移动网络打开状态 ( 默认属于未打开 ) |
+| setMobileDataEnabled | 设置移动网络开关 ( 无判断是否已开启移动网络 ) - 实际无效果, 非系统应用无权限 |
 | isConnect | 判断是否连接了网络 |
 | getConnectType | 获取连接的网络类型 |
-| isConnWifi | 判断是否连接Wifi(连接上、连接中) |
-| isConnMobileData | 判断是否连接移动网络(连接上、连接中) |
+| isConnWifi | 判断是否连接 Wifi( 连接上、连接中 ) |
+| isConnMobileData | 判断是否连接移动网络 ( 连接上、连接中 ) |
 | isAvailable | 判断网络是否可用 |
 | isAvailableByPing | 使用 ping ip 方式判断网络是否可用 |
-| is4G | 判断是否4G网络 |
-| getWifiEnabled | 判断wifi是否打开 |
-| isWifiAvailable | 判断wifi数据是否可用 |
+| getActiveNetworkInfo | 获取活动网络信息 |
+| getActiveNetwork | 获取活动网络信息 |
+| is4G | 判断是否 4G 网络 |
+| getWifiEnabled | 判断 wifi 是否打开 |
+| isWifiAvailable | 判断 wifi 数据是否可用 |
 | getNetworkOperatorName | 获取网络运营商名称 - 中国移动、如中国联通、中国电信 |
 | getNetworkType | 获取当前网络类型 |
 | getNetworkClass | 获取移动网络连接类型 |
@@ -770,11 +799,11 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| getNotificationManager | 获取通知栏管理类 |
-| cancelAll | 移除通知 - 移除所有通知(只是针对当前Context下的Notification) |
-| cancel | 移除通知 - 移除标记为id的通知 (只是针对当前Context下的所有Notification) |
+| getNotificationManager | 获取通知栏管理对象 |
+| cancelAll | 移除通知 - 移除所有通知 ( 只是针对当前 Context 下的 Notification) |
+| cancel | 移除通知 - 移除标记为 id 的通知 ( 只是针对当前 Context 下的所有 Notification) |
 | notify | 进行通知 |
-| createPendingIntent | 获取跳转id |
+| createPendingIntent | 获取 PendingIntent |
 | createNotification | 创建通知栏对象 |
 | obtain | 获取 Led 配置参数 |
 | isEmpty | 判断是否为 null |
@@ -785,8 +814,8 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | getRomType | 获取 ROM 类型 |
-| getBaseVersion | 获取 Rom 版本, 如 MIUI 9 获取的是 9 |
-| getVersion | 获取 Rom 具体版本号, 如 MIUI 9 8.4.26 获取的是 8.4.26 |
+| getVersion | 获取 ROM 具体版本号, 如 MIUI 9 8.4.26 获取的是 8.4.26 |
+| getBaseVersion | 获取 ROM 版本, 如 MIUI 9 获取的是 9 |
 
 
 * **路径相关工具类 ->** [PathUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/PathUtils.java)
@@ -828,20 +857,6 @@ DevUtils.openDebug();
 | getExternalAppDcimPath | 获取外存应用数码相机图片路径 - path/storage/emulated/0/Android/data/package/files/DCIM |
 | getExternalAppDocumentsPath | 获取外存应用文档路径 - path/storage/emulated/0/Android/data/package/files/Documents |
 | getExternalAppObbPath | 获取外存应用 OBB 路径 - path/storage/emulated/0/Android/obb/package |
-
-
-* **权限请求工具类 ->** [PermissionUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/PermissionUtils.java)
-
-| 方法 | 注释 |
-| :- | :- |
-| isGranted | 判断是否授予了权限 |
-| shouldShowRequestPermissionRationale | 是否拒绝了权限 - 拒绝过一次, 再次申请时, 弹出选择不再提醒并拒绝才会触发 true |
-| permission | 申请权限初始化 |
-| callBack | 设置回调方法 |
-| request | 请求权限 |
-| onRequestPermissionsResult | 请求权限回调 - 需要在 onRequestPermissionsResult 回调里面调用 |
-| onGranted | 授权通过权限 |
-| onDenied | 授权未通过权限 |
 
 
 * **手机相关工具类 ->** [PhoneUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/PhoneUtils.java)
@@ -1013,9 +1028,9 @@ DevUtils.openDebug();
 | getAvailableBlocks | 获取内置 SDCard 空闲空间大小 |
 | getUsedBlocks | 获取内置 SDCard 已使用空间大小 |
 | getBlockSizeInfos | 返回内置 SDCard 空间大小信息 |
-| getDiskCacheDir | 获取 App Cache 文件夹地址 |
-| getCacheFile | 获取 App Cache 路径 File |
-| getCachePath | 获取 App Cache 路径 |
+| getDiskCacheDir | 获取 APP Cache 文件夹地址 |
+| getCacheFile | 获取 APP Cache 路径 File |
+| getCachePath | 获取 APP Cache 路径 |
 
 
 * **服务相关工具类 ->** [ServiceUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/ServiceUtils.java)
@@ -1073,7 +1088,7 @@ DevUtils.openDebug();
 | deleteShortcut | 删除桌面快捷方式 |
 
 
-* **签名工具类 ( 获取 App 签名信息 ) ->** [SignaturesUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/SignaturesUtils.java)
+* **签名工具类 ( 获取 APP 签名信息 ) ->** [SignaturesUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/SignaturesUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -1618,26 +1633,26 @@ DevUtils.openDebug();
 ## <span id="devutilsappinfo">**`dev.utils.app.info`**</span>
 
 
-* **App 信息实体类 ->** [AppInfoBean.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/info/AppInfoBean.java)
+* **APP 信息实体类 ->** [AppInfoBean.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/info/AppInfoBean.java)
 
 | 方法 | 注释 |
 | :- | :- |
 | obtain | 获取 AppInfoBean |
-| getAppPackName | 获取 App 包名 |
-| getAppName | 获取 App 应用名 |
-| getAppIcon | 获取 App 图标 |
-| getAppType | 获取 App 类型 |
+| getAppPackName | 获取 APP 包名 |
+| getAppName | 获取 APP 应用名 |
+| getAppIcon | 获取 APP 图标 |
+| getAppType | 获取 APP 类型 |
 | getVersionCode | 获取 versionCode |
 | getVersionName | 获取 versionName |
-| getFirstInstallTime | 获取 App 首次安装时间 |
-| getLastUpdateTime | 获取 App 最后更新时间 |
+| getFirstInstallTime | 获取 APP 首次安装时间 |
+| getLastUpdateTime | 获取 APP 最后更新时间 |
 | getSourceDir | 获取 APK 地址 |
 | getApkSize | 获取 APK 大小 |
 | isSystemApp | 是否系统程序 |
 | isSystemUpdateApp | 是否系统程序被手动更新后, 也成为第三方应用程序 |
 
 
-* **App 信息获取工具类 ->** [AppInfoUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/info/AppInfoUtils.java)
+* **APP 信息获取工具类 ->** [AppInfoUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/info/AppInfoUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -1648,10 +1663,12 @@ DevUtils.openDebug();
 | getAppInfoBeanToPath | 通过 APK 路径 获取 AppInfoBean |
 | getAppInfoBean | 获取当前应用 AppInfoBean |
 | getApkInfoItem | 获取 APK 详细信息 |
-| getAppInfoItem | 获取 App 详细信息 |
-| getAppLists | 获取全部 App 列表 |
-| getApkPermission | 获取 APK 注册的权限 |
-| printApkPermission | 打印 APK 注册的权限 |
+| getAppInfoItem | 获取 APP 详细信息 |
+| getAppLists | 获取全部 APP 列表 |
+| getAppPermissionToList | 获取 APP 注册的权限 |
+| getAppPermissionToSet | 获取 APP 注册的权限 |
+| getAppPermission | 获取 APP 注册的权限 |
+| printAppPermission | 打印 APP 注册的权限 |
 
 
 ## <span id="devutilsapplogger">**`dev.utils.app.logger`**</span>
@@ -1693,6 +1710,37 @@ DevUtils.openDebug();
 | getLogConfig | 获取 Log 配置 |
 | saveErrorLog | 保存异常日志 |
 | saveLog | 保存日志 |
+
+
+## <span id="devutilsapppermission">**`dev.utils.app.permission`**</span>
+
+
+* **权限常量 ->** [PermissionConstants.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/permission/PermissionConstants.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| getPermissions | 获取权限组 |
+
+
+* **权限请求工具类 ->** [PermissionUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/permission/PermissionUtils.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| permission | 申请权限初始化 |
+| callBack | 设置回调方法 |
+| setRequestPermissionsResult | 设置是否需要在 Activity 的 onRequestPermissionsResult 回调中, 调用 PermissionUtils.onRequestPermissionsResult(this); |
+| request | 请求权限 |
+| onRequestPermissionsResult | 请求权限回调 - 需要在 Activity 的 onRequestPermissionsResult 回调中, 调用 PermissionUtils.onRequestPermissionsResult(this); |
+| notifyPermissionsChange | 刷新权限改变处理 ( 清空已拒绝的权限记录 ) |
+| isGranted | 判断是否授予了权限 |
+| shouldShowRequestPermissionRationale | 是否拒绝了权限 - 拒绝过一次, 再次申请时, 弹出选择不再提醒并拒绝才会触发 true |
+| getAllPermissionToSet | 获取全部权限 |
+| getAllPermissionToList | 获取全部权限 |
+| getAppPermissionToList | 获取 APP 注册的权限 |
+| getAppPermissionToSet | 获取 APP 注册的权限 |
+| getAppPermission | 获取 APP 注册的权限 |
+| onGranted | 授权通过权限回调 |
+| onDenied | 授权未通过权限回调 |
 
 
 ## <span id="devutilsappplayer">**`dev.utils.app.player`**</span>
@@ -1965,7 +2013,9 @@ DevUtils.openDebug();
 | asList | 转换数组为集合 |
 | equals | 判断两个值是否一样 |
 | arraycopy | 拼接数组 |
+| newarray | 创建指定长度数组 |
 | subarray | 从数组上截取一段 |
+| appendToString | 追加数组内容字符串 |
 
 
 * **资金运算工具类 ->** [BigDecimalUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/BigDecimalUtils.java)
@@ -2244,6 +2294,17 @@ DevUtils.openDebug();
 | appends | StringBuilder 拼接处理 |
 
 
+* **编码工具类 ->** [EncodeUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/EncodeUtils.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| base64Encode | Base64 编码 |
+| base64EncodeToString | Base64 编码 |
+| base64Decode | Base64 解码 |
+| base64DecodeToString | Base64 解码 |
+| htmlEncode | Html 字符串编码 |
+
+
 * **变量字段工具类 ->** [FieldUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/FieldUtils.java)
 
 | 方法 | 注释 |
@@ -2286,6 +2347,7 @@ DevUtils.openDebug();
 | getFile | 获取文件 |
 | getFileByPath | 获取文件 |
 | getFileCreateFolder | 获取路径, 并且进行创建目录 |
+| getFilePathCreateFolder | 获取路径, 并且进行创建目录 |
 | createFolder | 判断某个文件夹是否创建, 未创建则创建 ( 纯路径 - 无文件名 ) |
 | createFolderByPath | 创建文件夹目录 - 可以传入文件名 |
 | createFolderByPaths | 创建多个文件夹, 如果不存在则创建 |
@@ -2511,14 +2573,6 @@ DevUtils.openDebug();
 | calcHeightToScale | 以高度为基准, 转换对应比例的宽度 |
 
 
-* **单例工具类 ->** [SingletonUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/SingletonUtils.java)
-
-| 方法 | 注释 |
-| :- | :- |
-| newInstance | 实现实例抽象方法 |
-| getInstance | 获取实例方法 |
-
-
 * **流操作工具类 ->** [StreamUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/StreamUtils.java)
 
 | 方法 | 注释 |
@@ -2557,6 +2611,7 @@ DevUtils.openDebug();
 | appendSpace | 追加空格 |
 | appendTab | 追加 Tab |
 | appendLine | 追加换行 |
+| colonSplit | 冒号分割处理 |
 | toCheckValue | 检查字符串 |
 | toCheckValues | 检查字符串 - 多个值 |
 | toCheckValuesSpace | 检查字符串 - 多个值 ( 删除前后空格对比判断 ) |
@@ -2569,6 +2624,7 @@ DevUtils.openDebug();
 | toUTF8Encode | 字符串进行 UTF-8 编码 |
 | toStrEncode | 进行字符串编码 |
 | toUrlEncode | 进行 URL 编码, 默认 UTF-8 |
+| toUrlDecode | 进行 URL 解码, 默认 UTF-8 |
 | toASCII | 将字符串转移为 ASCII 码 |
 | toUnicode | 将字符串转移为 Unicode 码 |
 | toUnicodeString | 将字符数组转移为 Unicode 码 |
