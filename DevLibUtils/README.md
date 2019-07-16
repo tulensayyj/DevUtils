@@ -569,16 +569,6 @@ DevUtils.openDebug();
 | getNumberAndLettersKeyListener | 获取 DigitsKeyListener ( 限制只能输入字母和数字, 默认弹出英文输入法 ) |
 | getNumberKeyListener | 获取 DigitsKeyListener ( 限制只能输入数字, 默认弹出数字列表 ) |
 | createDigitsKeyListener | 创建 DigitsKeyListener |
-| getMarkId | 获取标记 id |
-| isOperate | 判断是否操作中 |
-| setOperate | 设置是否操作中 |
-| getOperateState | 获取操作状态 |
-| setOperateState | 设置操作状态 |
-| getType | 获取类型 |
-| setType | 设置类型 |
-| beforeTextChanged | 在文本变化前调用 |
-| onTextChanged | 在文本变化后调用 |
-| afterTextChanged | 在文本变化后调用 |
 
 
 * **文件记录工具类 ->** [FileRecordUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/FileRecordUtils.java)
@@ -610,7 +600,6 @@ DevUtils.openDebug();
 | getMainHandler | 获取主线程 Handler |
 | postRunnable | 在主线程 Handler 中执行任务 |
 | removeRunnable | 在主线程 Handler 中清除任务 |
-| onEnd | 结束通知 |
 
 
 * **Html 工具类 ->** [HtmlUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/HtmlUtils.java)
@@ -1119,7 +1108,6 @@ DevUtils.openDebug();
 | measureView | 测量 View |
 | getMeasuredWidth | 获取 View 的宽度 |
 | getMeasuredHeight | 获取 View 的高度 |
-| onGetSize | 获取到 View 宽高监听通知 |
 
 
 * **Snackbar 工具类 ->** [SnackbarUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/SnackbarUtils.java)
@@ -1301,10 +1289,6 @@ DevUtils.openDebug();
 | :- | :- |
 | shutdownNow | 立即关闭线程池任务 |
 | execute | 将任务投入线程池执行 |
-| doInBackground | 后台运行 |
-| onPostExecute | 将子线程结果传递到 UI 线程 |
-| onCanceled | 取消任务 |
-| abort | 中止任务 |
 
 
 * **播放「bee」的声音, 并且震动辅助类 ->** [BeepVibrateAssist.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/assist/BeepVibrateAssist.java)
@@ -1405,7 +1389,6 @@ DevUtils.openDebug();
 | setFocusModes | 设置对焦模式 |
 | isAutoFocus | 是否允许自动对焦 |
 | setAutoFocus | 设置是否开启自动对焦 |
-| onAutoFocus | 对焦回调 {@link Camera.AutoFocusCallback} 重写方法 |
 | start | 开始对焦 |
 | stop | 停止对焦 |
 
@@ -1431,8 +1414,6 @@ DevUtils.openDebug();
 | setFlashlightOff | 关闭闪光灯 |
 | isFlashlightOn | 是否打开闪光灯 |
 | isFlashlightEnable | 是否支持手机闪光灯 |
-| stopPreviewNotify | 停止预览通知 |
-| startPreviewNotify | 开始预览通知 |
 
 
 * **摄像头 ( 预览、输出大小 ) 辅助类 ->** [CameraSizeAssist.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/camera1/CameraSizeAssist.java)
@@ -1633,6 +1614,31 @@ DevUtils.openDebug();
 ## <span id="devutilsappinfo">**`dev.utils.app.info`**</span>
 
 
+* **APK 信息 Item ->** [ApkInfoItem.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/info/ApkInfoItem.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| obtain | 获取 ApkInfoItem |
+| getAppInfoBean | 获取 AppInfoBean |
+| getListKeyValues | 获取 List 信息键对值集合 |
+| getAppMD5 | 获取 APP MD5 签名 |
+| getAppSHA1 | 获取 APP SHA1 签名 |
+| getAppSHA256 | 获取 APP SHA256 签名 |
+| getMinSdkVersion | 获取 APP 最低支持 Android SDK 版本 |
+| getTargetSdkVersion | 获取 APP 兼容 SDK 版本 |
+| getApkLength | 获取 APP 安装包大小 |
+| getX509Certificate | 获取证书对象 |
+| getNotBefore | 获取证书生成日期 |
+| getNotAfter | 获取证书有效期 |
+| isEffective | 获取证书是否过期 |
+| getCertPrincipal | 获取证书发布方 |
+| getCertVersion | 获取证书版本号 |
+| getCertSigalgname | 获取证书算法名称 |
+| getCertSigalgoid | 获取证书算法 OID |
+| getCertSerialnumber | 获取证书机器码 |
+| getCertDercode | 获取证书 DER 编码 |
+
+
 * **APP 信息实体类 ->** [AppInfoBean.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/info/AppInfoBean.java)
 
 | 方法 | 注释 |
@@ -1652,6 +1658,31 @@ DevUtils.openDebug();
 | isSystemUpdateApp | 是否系统程序被手动更新后, 也成为第三方应用程序 |
 
 
+* **APP 信息 Item ->** [AppInfoItem.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/info/AppInfoItem.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| obtain | 获取 AppInfoItem |
+| getAppInfoBean | 获取 AppInfoBean |
+| getListKeyValues | 获取 List 信息键对值集合 |
+| getAppMD5 | 获取 APP MD5 签名 |
+| getAppSHA1 | 获取 APP SHA1 签名 |
+| getAppSHA256 | 获取 APP SHA256 签名 |
+| getMinSdkVersion | 获取 APP 最低支持 Android SDK 版本 |
+| getTargetSdkVersion | 获取 APP 兼容 SDK 版本 |
+| getApkLength | 获取 APP 安装包大小 |
+| getX509Certificate | 获取证书对象 |
+| getNotBefore | 获取证书生成日期 |
+| getNotAfter | 获取证书有效期 |
+| isEffective | 获取证书是否过期 |
+| getCertPrincipal | 获取证书发布方 |
+| getCertVersion | 获取证书版本号 |
+| getCertSigalgname | 获取证书算法名称 |
+| getCertSigalgoid | 获取证书算法 OID |
+| getCertSerialnumber | 获取证书机器码 |
+| getCertDercode | 获取证书 DER 编码 |
+
+
 * **APP 信息获取工具类 ->** [AppInfoUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/info/AppInfoUtils.java)
 
 | 方法 | 注释 |
@@ -1669,6 +1700,16 @@ DevUtils.openDebug();
 | getAppPermissionToSet | 获取 APP 注册的权限 |
 | getAppPermission | 获取 APP 注册的权限 |
 | printAppPermission | 打印 APP 注册的权限 |
+
+
+* **键对值实体类 ->** [KeyValueBean.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/info/KeyValueBean.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| getKey | 获取 key |
+| getValue | 获取 value |
+| toString | toString |
+| get | 通过 resId 设置 key, 并且初始化 KeyValueBean |
 
 
 ## <span id="devutilsapplogger">**`dev.utils.app.logger`**</span>
@@ -1739,8 +1780,6 @@ DevUtils.openDebug();
 | getAppPermissionToList | 获取 APP 注册的权限 |
 | getAppPermissionToSet | 获取 APP 注册的权限 |
 | getAppPermission | 获取 APP 注册的权限 |
-| onGranted | 授权通过权限回调 |
-| onDenied | 授权未通过权限回调 |
 
 
 ## <span id="devutilsappplayer">**`dev.utils.app.player`**</span>
@@ -1759,12 +1798,6 @@ DevUtils.openDebug();
 | pause | 暂停操作 |
 | stop | 停止操作 - 销毁 MediaPlayer |
 | isIgnoreWhat | 是否忽略错误类型 |
-| onError | 播放出错回调 |
-| onVideoSizeChanged | 视频大小改变通知 |
-| onPrepared | 使用 mMediaPlayer.prepareAsync() 异步播放准备成功回调 |
-| onCompletion | 视频播放结束回调 |
-| onBufferingUpdate | MediaPlayer 缓冲更新回调 |
-| onSeekComplete | 滑动加载完成回调 |
 | setMeidaListener | 设置 MediaPlayer 回调事件 |
 | isNullMediaPlayer | 判断 MediaPlayer 是否为 null |
 | isNotNullMediaPlayer | 判断 MediaPlayer 是否不为 null |
@@ -1780,23 +1813,12 @@ DevUtils.openDebug();
 | getCurrentPosition | 获取播放时间 |
 | getDuration | 获取资源总时间 |
 | getPlayPercent | 获取播放进度百分比 |
-| isLooping | 是否循环播放 - 默认不循环 |
-| setMediaConfig | 设置播放配置 |
 
 
 * **视频播放控制器 ->** [DevVideoPlayerControl.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/player/DevVideoPlayerControl.java)
 
 | 方法 | 注释 |
 | :- | :- |
-| surfaceChanged | Surface 改变通知 |
-| surfaceCreated | Surface 创建 |
-| surfaceDestroyed | Surface 销毁 |
-| onPrepared | 准备完成回调 |
-| onCompletion | 播放完成 / 结束 |
-| onBufferingUpdate | 缓存进度 |
-| onSeekComplete | 滑动进度加载成功 |
-| onError | 播放出错回调 |
-| onVideoSizeChanged | 视频大小改变通知 |
 | setMediaListener | 设置播放监听事件 |
 | pausePlayer | 暂停播放 |
 | stopPlayer | 停止播放 |
@@ -1941,9 +1963,6 @@ DevUtils.openDebug();
 | getApWifiSSID | 获取 wifi 热点名 |
 | getApWifiPwd | 获取 wifi 热点密码 |
 | setOnWifiAPListener | 设置 wifi 热点监听事件 |
-| onStarted | 开启热点回调 |
-| onStopped | 关闭热点回调 |
-| onFailed | 失败回调 |
 
 
 * **Wifi 工具类 ->** [WifiUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/app/wifi/WifiUtils.java)
@@ -2400,7 +2419,6 @@ DevUtils.openDebug();
 | listFilesInDirWithFilter | 获取目录下所有过滤的文件 - 不递归进子目录 |
 | getFileMD5 | 获取文件 MD5 值 |
 | getFileMD5ToHexString | 获取文件 MD5 值 - 小写 |
-| onReplace | 是否覆盖 / 替换文件 |
 
 
 * **Http 参数工具类 ->** [HttpParamsUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/HttpParamsUtils.java)
@@ -2424,8 +2442,6 @@ DevUtils.openDebug();
 | doPostAsyn | 异步的 Post 请求 |
 | request | 发送请求 |
 | getNetTime | 获取网络时间 - 默认使用百度链接 |
-| onResponse | 请求响应回调 |
-| onFail | 请求失败 |
 
 
 * **Map 工具类 ->** [MapUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/MapUtils.java)
@@ -2704,7 +2720,6 @@ DevUtils.openDebug();
 | :- | :- |
 | waitForEndAsyn | 设置等待一段时间后, 通知方法 ( 异步 ) |
 | waitForEnd | 设置等待一段时间后, 通知方法 ( 同步 ) |
-| onEnd | 结束触发通知方法 |
 
 
 ## <span id="devutilscommonassistsearch">**`dev.utils.common.assist.search`**</span>
@@ -2725,9 +2740,6 @@ DevUtils.openDebug();
 | getDelayTime | 获取延迟校验时间 ( 毫秒 ) |
 | setDelayTime | 设置延迟校验时间 ( 毫秒 ) |
 | query | 搜索目录 |
-| isHandlerFile | 判断是否处理该文件 |
-| isAddToList | 是否添加到集合 |
-| OnEndListener | 搜索结束监听 |
 
 
 * **文件深度优先搜索算法 ( 递归搜索某个目录下的全部文件 ) ->** [FileDepthFirstSearchUtils.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/assist/search/FileDepthFirstSearchUtils.java)
@@ -2741,9 +2753,6 @@ DevUtils.openDebug();
 | getStartTime | 获取开始搜索时间 ( 毫秒 ) |
 | getEndTime | 获取结束搜索时间 ( 毫秒 ) |
 | query | 搜索目录 |
-| isHandlerFile | 判断是否处理该文件 |
-| isAddToList | 是否添加到集合 |
-| OnEndListener | 搜索结束监听 |
 
 
 ## <span id="devutilscommoncipher">**`dev.utils.common.cipher`**</span>
@@ -2772,20 +2781,6 @@ DevUtils.openDebug();
 | :- | :- |
 | encrypt | 加密方法 |
 | decrypt | 解密方法 |
-
-
-* **解密 ( 解码 ) 接口 ->** [Decrypt.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/cipher/Decrypt.java)
-
-| 方法 | 注释 |
-| :- | :- |
-| decrypt | 解密 ( 解码 ) 方法 |
-
-
-* **加密 ( 编码 ) 接口 ->** [Encrypt.java](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/common/cipher/Encrypt.java)
-
-| 方法 | 注释 |
-| :- | :- |
-| encrypt | 加密 ( 编码 ) 方法 |
 
 
 ## <span id="devutilscommonencrypt">**`dev.utils.common.encrypt`**</span>
