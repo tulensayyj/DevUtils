@@ -261,3 +261,10 @@
 
 * [Android 屏幕适配方案](https://github.com/JessYanCoding/AndroidAutoSize/blob/master/README-zh.md)
 
+#### 疑难问题
+
+* [RecyclerView 列表使用 Timer 定时器复用错乱的问题](https://blog.csdn.net/qq_26665903/article/details/78033117)
+
+#### 规范
+
+* [编码 5 分钟, 命名 2 小时? 史上最全的 Java 命名规范参考!](https://mp.weixin.qq.com/s?__biz=MzIxNjA5MTM2MA==&mid=2652436955&idx=1&sn=eaa2cb9d3e3730f6a7566028e8667cb2&chksm=8c620654bb158f42c2f3f3f62826eed38589e82185668e984f38a7da90dc91ea5ff8440c523e&scene=126&sessionid=1586394630&key=b6688ee520fd1b6c7a60cea2d66b5dbec48187185fcf27ebe02ecd1aa6e185ac92650444088170684ab9d8a6aac2eb141328da225a51666c01109472cb36103c3dba959a1ba6f38a0faa373cd9228a87&ascene=14&uin=MjYzNjY5MTIzNA%3D%3D&devicetype=Windows+7+x64&version=62090070&lang=zh_CN&exportkey=A5YIpBeyG7wuT8NGyrXGU2Q%3D&pass_ticket=u4da2d5YKGOBypbY2jCbP0B9wJMzn0v7OetyMpDLVvvQHkNPqJzJtr3zMYNUdacs)
