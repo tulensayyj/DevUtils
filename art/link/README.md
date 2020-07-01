@@ -185,12 +185,6 @@
 
 * [Android 屏幕适配 : 最全面的解决方案](https://www.jianshu.com/p/ec5a1a30694b)
 
-#### RxJava
-
-* [给 Android 开发者的 RxJava 详解](http://gank.io/post/560e15be2dca930e00da1083)
-
-* [这可能是最好的 RxJava 2.x 教程](https://www.jianshu.com/p/0cd258eecf60)
-
 #### 插件化、热修复
 
 * [360 RePlugin](https://github.com/Qihoo360/RePlugin/blob/master/README_CN.md)
