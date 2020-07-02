@@ -27,8 +27,6 @@
 
 * [Maven Repository appcompat-v7](https://mvnrepository.com/artifact/com.android.support/appcompat-v7)
 
-* [Maven Repository com.afkt](https://mvnrepository.com/artifact/com.afkt)
-
 * [AliRepo 仓库服务](https://maven.aliyun.com/mvn/search)
 
 ### 功能
@@ -96,12 +94,6 @@
 * [Android 进程保活招数概览](https://www.jianshu.com/p/c1a9e3e86666)
 
 * [Android 守护进程的实现方式](https://www.jianshu.com/p/b16631a2fe3c)
-
-#### 图片压缩
-
-* [Android 图片压缩 Luban 鲁班压缩](https://www.jianshu.com/p/b16631a2fe3c)
-
-* [Luban](https://github.com/Curzibn/Luban)
 
 #### UI
 
@@ -231,8 +223,6 @@
 
 * [一份涵盖大部分 Java 程序员所需要掌握的核心知识](https://github.com/Snailclimb/JavaGuide)
 
-* [软件工程技术面试个人指南 interviews](https://www.wanandroid.com/blog/show/2318)
-
 #### 算法、面试
 
 * [Android 校招面试指南](https://github.com/LRH1993/android_interview)
@@ -242,6 +232,8 @@
 * [Android开发工程师面试指南 ( 面试题集附答案、简历模板)](https://juejin.im/post/5ac1f77cf265da238155cbb7)
 
 * [Awesome-Android-Interview](https://github.com/JsonChao/Awesome-Android-Interview)
+
+* [软件工程技术面试个人指南 interviews](https://www.wanandroid.com/blog/show/2318)
 
 #### 第三方库
 
