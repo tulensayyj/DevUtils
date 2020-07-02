@@ -203,8 +203,6 @@
 
 * [新架构组件 WorkManager](https://juejin.im/post/5af4aa91f265da0b8d41f714)
 
-* [关于 RxJava 背压](http://flyou.ren/2017/04/05/%E5%85%B3%E4%BA%8ERxJava%E8%83%8C%E5%8E%8B/?utm_source=tuicool&utm_medium=referral)
-
 * [Android EditText 两种方法限制输入两位小数](https://www.jianshu.com/p/dc2419de0abf)
 
 * [玩转 AppBarLayout 更酷炫的顶部栏](https://www.jianshu.com/p/d159f0176576)
@@ -244,10 +242,6 @@
 * [Android开发工程师面试指南 ( 面试题集附答案、简历模板)](https://juejin.im/post/5ac1f77cf265da238155cbb7)
 
 * [Awesome-Android-Interview](https://github.com/JsonChao/Awesome-Android-Interview)
-
-* [数据结构和算法必知必会的 50 个代码实现](https://github.com/wangzheng0822/algo)
-
-* [常用排序算法总结 : 冒泡、选择、插入排序、希尔排序、归并排序、堆排序、快排](https://mp.weixin.qq.com/s?__biz=MzI2NjA3NTc4Ng==&mid=2652080141&idx=1&sn=8f2c0db4d304fcf1e22cd002df3a530f&chksm=f17483e8c6030afe9d83fabbd3419526b6020c5cf8a6fca5452a9caed75ecbf508ce8f8578c3&scene=0#rd)
 
 #### 第三方库
 
