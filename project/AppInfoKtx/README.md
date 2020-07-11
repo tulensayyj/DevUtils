@@ -13,4 +13,4 @@ Kotlin 实现获取手机安装的应用信息（用户应用、系统应用）�
 | ![img](https://github.com/afkT/DevUtils/raw/master/art/appinfo_img7.png) | ![img](https://github.com/afkT/DevUtils/raw/master/art/appinfo_img8.png) | ![img](https://github.com/afkT/DevUtils/raw/master/art/appinfo_img9.png) |
 |:-|:-|:-|
 
-![img](https://github.com/afkT/DevUtils/raw/master/art/appinfo_img10.png)
+![img](https://github.com/afkT/DevUtils/raw/master/art/appinfo_img10.png)  |   |  
