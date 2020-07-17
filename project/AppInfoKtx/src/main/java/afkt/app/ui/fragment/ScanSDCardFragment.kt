@@ -233,22 +233,12 @@ class ScanSDCardFragment : BaseFragment() {
     }
 
     // =
-
-    /**
-     * 请求读写权限
-     */
-
     /**
      * 请求读写权限
      */
     fun requestReadWrite() {
         requestReadWrite(false)
     }
-
-    /**
-     * 请求读写权限
-     * @param refresh 是否刷新
-     */
 
     /**
      * 请求读写权限

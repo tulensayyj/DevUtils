@@ -12,7 +12,6 @@ import android.view.View
 import androidx.multidex.MultiDexApplication
 import dev.DevUtils
 import dev.utils.app.ActivityUtils
-import dev.utils.app.ClickUtils
 import dev.utils.app.CrashUtils
 import dev.utils.app.logger.DevLogger
 import dev.utils.app.logger.LogConfig
@@ -44,9 +43,6 @@ class BaseApplication : MultiDexApplication() {
 
         // 初始化文件夹
         PathConfig.createFolder()
-
-        // 设置双击间隔
-        ClickUtils.setIntervalTime(1000L)
 
         // 可不调用, 默认开启 DP 转换
         AutoSizeConfig.getInstance().unitsManager.isSupportDP = true
