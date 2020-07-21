@@ -71,7 +71,7 @@ class AppDetailsActivity : AppCompatActivity(), View.OnClickListener {
     fun init() {
         try {
             appInfoItem =
-                AppInfoUtils.getAppInfoItem(getIntent().getStringExtra(Constants.Key.KEY_PACKNAME));
+                AppInfoUtils.getAppInfoItem(getIntent().getStringExtra(Constants.Key.KEY_PACKNAME))
         } catch (e: Exception) {
             DevLogger.e(e)
         }
