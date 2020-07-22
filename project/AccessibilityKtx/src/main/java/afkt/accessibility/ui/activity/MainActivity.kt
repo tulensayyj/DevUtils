@@ -16,8 +16,6 @@ import dev.utils.app.IntentUtils
 import dev.utils.app.toast.ToastUtils
 
 /**
- * detail:
- * @author Ttt
  * <pre>
  *     具体代码 copy Github ActivityTracker 库
  *     @see <a href="https://github.com/fashare2015/ActivityTracker"/>
@@ -27,12 +25,6 @@ import dev.utils.app.toast.ToastUtils
  * </pre>
  */
 class MainActivity : AppCompatActivity(), View.OnClickListener {
-
-    // = View =
-
-//    @JvmField
-//    @BindView(R.id.vid_am_drawer_layout)
-//    var vid_am_drawer_layout: DrawerLayout? = null
 
     // = Object =
 
