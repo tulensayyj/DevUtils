@@ -89,8 +89,8 @@ class FloatingView : LinearLayout {
         EventBusUtils.unregister(this)
     }
 
-    var preP: Point? = null
-    var curP: Point? = null
+    private var preP: Point? = null
+    private var curP: Point? = null
 
     override fun onTouchEvent(event: MotionEvent): Boolean {
         when (event.action) {
@@ -112,10 +112,10 @@ class FloatingView : LinearLayout {
     @Subscribe(threadMode = ThreadMode.MAIN)
     fun onEvent(event: ActivityChangedEvent) {
         event?.let {
-            var packageName = it.packageName
-            var className = it.className
+            val packageName = it.packageName
+            val className = it.className
 
-            var trimName =
+            val trimName =
                 if (className.startsWith(packageName)) className.substring(packageName.length) else className
 
             DevLogger.dTag(TAG, "%s -> %s", packageName, trimName)
