@@ -8,9 +8,8 @@ import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
 import android.view.View
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import butterknife.ButterKnife
-import butterknife.OnClick
 import dev.utils.app.ActivityUtils
 import dev.utils.app.IntentUtils
 import dev.utils.app.toast.ToastUtils
@@ -33,7 +32,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        ButterKnife.bind(this)
+
+        findViewById<Button>(R.id.vid_am_activity_tracker_btn)
+            .setOnClickListener(this)
 
         checkOverlayPermission()
     }
@@ -42,7 +43,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     // = OnClick =
     // ===========
 
-    @OnClick(R.id.vid_am_activity_tracker_btn)
     override fun onClick(v: View) {
         when (v.id) {
             R.id.vid_am_activity_tracker_btn -> {

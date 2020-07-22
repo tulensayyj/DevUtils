@@ -19,9 +19,6 @@ dependencies {
     // = 快捷开发库 =
     // ==============
 
-    // View 注入框架 https://github.com/JakeWharton/butterknife
-    implementation deps.lib.butterknife
-    kapt deps.lib.butterknife_compiler
     // EventBus 事件订阅分发 https://github.com/greenrobot/EventBus
     implementation deps.lib.eventbus
 }
