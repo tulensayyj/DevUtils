@@ -1,0 +1,254 @@
+@startuml
+
+title __RECEIVER's Class Diagram__\n
+
+  namespace dev.receiver {
+    class dev.receiver.AppStateReceiver {
+        {static} - TAG : String
+        {static} - sListener : AppStateListener
+        {static} - sReceiver : AppStateReceiver
+        + onReceive()
+        {static} + registerReceiver()
+        {static} + setAppStateListener()
+        {static} + unregisterReceiver()
+        - AppStateReceiver()
+    }
+  }
+  
+
+  namespace dev.receiver {
+    interface dev.receiver.AppStateReceiver.AppStateListener {
+        {abstract} + onAdded()
+        {abstract} + onRemoved()
+        {abstract} + onReplaced()
+    }
+  }
+  
+
+  namespace dev.receiver {
+    class dev.receiver.BatteryReceiver {
+        {static} - TAG : String
+        {static} - sListener : BatteryListener
+        {static} - sReceiver : BatteryReceiver
+        + onReceive()
+        {static} + registerReceiver()
+        {static} + setBatteryListener()
+        {static} + unregisterReceiver()
+        - BatteryReceiver()
+    }
+  }
+  
+
+  namespace dev.receiver {
+    interface dev.receiver.BatteryReceiver.BatteryListener {
+        {abstract} + onBatteryChanged()
+        {abstract} + onBatteryLow()
+        {abstract} + onBatteryOkay()
+        {abstract} + onPowerConnected()
+        {abstract} + onPowerUsageSummary()
+    }
+  }
+  
+
+  namespace dev.receiver {
+    class dev.receiver.NetWorkReceiver {
+        {static} + NET_MOBILE : int
+        {static} + NET_WIFI : int
+        {static} + NO_NETWORK : int
+        {static} - BASE : int
+        {static} - TAG : String
+        {static} - mConnectState : int
+        {static} - sListener : NetwordStateListener
+        {static} - sReceiver : NetWorkReceiver
+        {static} + getConnectType()
+        {static} + isConnectNetWork()
+        + onReceive()
+        {static} + registerReceiver()
+        {static} + setNetListener()
+        {static} + unregisterReceiver()
+        - NetWorkReceiver()
+    }
+  }
+  
+
+  namespace dev.receiver {
+    interface dev.receiver.NetWorkReceiver.NetwordStateListener {
+        {abstract} + onNetworkState()
+    }
+  }
+  
+
+  namespace dev.receiver {
+    class dev.receiver.PhoneReceiver {
+        {static} - IDLE : String
+        {static} - NEW_OUTGOING_CALL : String
+        {static} - OFFHOOK : String
+        {static} - PHONE_STATE : String
+        {static} - RINGING : String
+        {static} - TAG : String
+        - mIsDialOut : boolean
+        - mNumber : String
+        {static} - sListener : PhoneListener
+        {static} - sReceiver : PhoneReceiver
+        + onReceive()
+        {static} + registerReceiver()
+        {static} + setPhoneListener()
+        {static} + unregisterReceiver()
+        - PhoneReceiver()
+    }
+  }
+  
+
+  namespace dev.receiver {
+    enum CallState {
+      Incoming
+      IncomingEnd
+      IncomingRing
+      Outgoing
+      OutgoingEnd
+    }
+  }
+  
+
+  namespace dev.receiver {
+    interface dev.receiver.PhoneReceiver.PhoneListener {
+        {abstract} + onPhoneStateChanged()
+    }
+  }
+  
+
+  namespace dev.receiver {
+    class dev.receiver.ScreenReceiver {
+        {static} - TAG : String
+        {static} - sListener : ScreenListener
+        {static} - sReceiver : ScreenReceiver
+        + onReceive()
+        {static} + registerReceiver()
+        {static} + setScreenListener()
+        {static} + unregisterReceiver()
+        - ScreenReceiver()
+    }
+  }
+  
+
+  namespace dev.receiver {
+    interface dev.receiver.ScreenReceiver.ScreenListener {
+        {abstract} + screenOff()
+        {abstract} + screenOn()
+        {abstract} + userPresent()
+    }
+  }
+  
+
+  namespace dev.receiver {
+    class dev.receiver.SmsReceiver {
+        {static} - TAG : String
+        {static} - sListener : SmsListener
+        {static} - sReceiver : SmsReceiver
+        {static} + getMessageData()
+        + onReceive()
+        {static} + registerReceiver()
+        {static} + setSmsListener()
+        {static} + unregisterReceiver()
+        - SmsReceiver()
+    }
+  }
+  
+
+  namespace dev.receiver {
+    abstract class dev.receiver.SmsReceiver.SmsListener {
+        {abstract} + onMessage()
+        + onMessage()
+    }
+  }
+  
+
+  namespace dev.receiver {
+    class dev.receiver.TimeReceiver {
+        {static} - TAG : String
+        {static} - sListener : TimeListener
+        {static} - sReceiver : TimeReceiver
+        + onReceive()
+        {static} + registerReceiver()
+        {static} + setTimeListener()
+        {static} + unregisterReceiver()
+        - TimeReceiver()
+    }
+  }
+  
+
+  namespace dev.receiver {
+    interface dev.receiver.TimeReceiver.TimeListener {
+        {abstract} + onTimeChanged()
+        {abstract} + onTimeTick()
+        {abstract} + onTimeZoneChanged()
+    }
+  }
+  
+
+  namespace dev.receiver {
+    class dev.receiver.WifiReceiver {
+        {static} + CONNECTED : int
+        {static} + CONNECTING : int
+        {static} + DISCONNECTED : int
+        {static} + SUSPENDED : int
+        {static} + UNKNOWN : int
+        {static} + WIFI_ERROR_AUTHENTICATING : int
+        {static} + WIFI_ERROR_UNKNOWN : int
+        {static} + WIFI_RSSI_CHANGED : int
+        {static} + WIFI_SCAN_FINISH : int
+        {static} + WIFI_STATE_DISABLED : int
+        {static} + WIFI_STATE_DISABLING : int
+        {static} + WIFI_STATE_ENABLED : int
+        {static} + WIFI_STATE_ENABLING : int
+        {static} + WIFI_STATE_UNKNOWN : int
+        {static} - BASE : int
+        {static} - TAG : String
+        {static} - sListener : WifiListener
+        {static} - sReceiver : WifiReceiver
+        + onReceive()
+        {static} + registerReceiver()
+        {static} + setWifiListener()
+        {static} + unregisterReceiver()
+        - WifiReceiver()
+    }
+  }
+  
+
+  namespace dev.receiver {
+    abstract class dev.receiver.WifiReceiver.WifiListener {
+        + onIntoTrigger()
+        {abstract} + onTrigger()
+        {abstract} + onTrigger()
+        {abstract} + onWifiSwitch()
+    }
+  }
+  
+
+  dev.receiver.AppStateReceiver -up-|> android.content.BroadcastReceiver
+  dev.receiver.AppStateReceiver +-down- dev.receiver.AppStateReceiver.AppStateListener
+  dev.receiver.BatteryReceiver -up-|> android.content.BroadcastReceiver
+  dev.receiver.BatteryReceiver +-down- dev.receiver.BatteryReceiver.BatteryListener
+  dev.receiver.NetWorkReceiver -up-|> android.content.BroadcastReceiver
+  dev.receiver.NetWorkReceiver +-down- dev.receiver.NetWorkReceiver.NetwordStateListener
+  dev.receiver.PhoneReceiver -up-|> android.content.BroadcastReceiver
+  dev.receiver.PhoneReceiver +-down- dev.receiver.PhoneReceiver.CallState
+  dev.receiver.PhoneReceiver +-down- dev.receiver.PhoneReceiver.PhoneListener
+  dev.receiver.ScreenReceiver -up-|> android.content.BroadcastReceiver
+  dev.receiver.ScreenReceiver +-down- dev.receiver.ScreenReceiver.ScreenListener
+  dev.receiver.SmsReceiver -up-|> android.content.BroadcastReceiver
+  dev.receiver.SmsReceiver +-down- dev.receiver.SmsReceiver.SmsListener
+  dev.receiver.TimeReceiver -up-|> android.content.BroadcastReceiver
+  dev.receiver.TimeReceiver +-down- dev.receiver.TimeReceiver.TimeListener
+  dev.receiver.WifiReceiver -up-|> android.content.BroadcastReceiver
+  dev.receiver.WifiReceiver +-down- dev.receiver.WifiReceiver.WifiListener
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

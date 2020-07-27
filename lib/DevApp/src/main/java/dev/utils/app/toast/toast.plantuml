@@ -1,0 +1,392 @@
+@startuml
+
+title __TOAST's Class Diagram__\n
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace toast {
+          class dev.utils.app.toast.ToastTintUtils {
+              {static} - TAG : String
+              {static} - sDefaultStyle : Style
+              {static} - sErrorDrawable : Drawable
+              {static} - sErrorStyle : Style
+              {static} - sGravity : int
+              {static} - sHandler : Handler
+              {static} - sHorizontalMargin : float
+              {static} - sInfoDrawable : Drawable
+              {static} - sInfoStyle : Style
+              {static} - sIsHandler : boolean
+              {static} - sNormalStyle : Style
+              {static} - sNullText : String
+              {static} - sPriToastFilter : Filter
+              {static} - sSuccessDrawable : Drawable
+              {static} - sSuccessStyle : Style
+              {static} - sToast : Toast
+              {static} - sToastFilter : Filter
+              {static} - sUseConfig : boolean
+              {static} - sVerticalMargin : float
+              {static} - sWarningDrawable : Drawable
+              {static} - sWarningStyle : Style
+              {static} - sX : int
+              {static} - sY : int
+              {static} + custom()
+              {static} + custom()
+              {static} + custom()
+              {static} + custom()
+              {static} + custom()
+              {static} + custom()
+              {static} + custom()
+              {static} + custom()
+              {static} + custom()
+              {static} + custom()
+              {static} + custom()
+              {static} + custom()
+              {static} + custom()
+              {static} + custom()
+              {static} + custom()
+              {static} + custom()
+              {static} + error()
+              {static} + error()
+              {static} + error()
+              {static} + error()
+              {static} + error()
+              {static} + error()
+              {static} + error()
+              {static} + error()
+              {static} + getDefaultStyle()
+              {static} + getErrorDrawable()
+              {static} + getErrorStyle()
+              {static} + getInfoDrawable()
+              {static} + getInfoStyle()
+              {static} + getNormalStyle()
+              {static} + getSuccessDrawable()
+              {static} + getSuccessStyle()
+              {static} + getWarningDrawable()
+              {static} + getWarningStyle()
+              {static} + info()
+              {static} + info()
+              {static} + info()
+              {static} + info()
+              {static} + info()
+              {static} + info()
+              {static} + info()
+              {static} + info()
+              {static} + normal()
+              {static} + normal()
+              {static} + normal()
+              {static} + normal()
+              {static} + normal()
+              {static} + normal()
+              {static} + normal()
+              {static} + normal()
+              {static} + reset()
+              {static} + setErrorStyle()
+              {static} + setGravity()
+              {static} + setInfoStyle()
+              {static} + setIsHandler()
+              {static} + setMargin()
+              {static} + setNormalStyle()
+              {static} + setNullText()
+              {static} + setSuccessStyle()
+              {static} + setToastFilter()
+              {static} + setUseConfig()
+              {static} + setWarningStyle()
+              {static} + success()
+              {static} + success()
+              {static} + success()
+              {static} + success()
+              {static} + success()
+              {static} + success()
+              {static} + success()
+              {static} + success()
+              {static} + warning()
+              {static} + warning()
+              {static} + warning()
+              {static} + warning()
+              {static} + warning()
+              {static} + warning()
+              {static} + warning()
+              {static} + warning()
+              - ToastTintUtils()
+              {static} - inflaterView()
+              {static} - newToastView()
+              {static} - reflectToastHandler()
+              {static} - showToastView()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace toast {
+          class dev.utils.app.toast.ToastTintUtils.DefaultStyle {
+              + getBackground()
+              + getBackgroundTintColor()
+              + getEllipsize()
+              + getMaxLines()
+              + getTextColor()
+              + getTextSize()
+              + getTintIconColor()
+              + getTypeface()
+              + isTintIcon()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace toast {
+          class dev.utils.app.toast.ToastTintUtils.ErrorStyle {
+              + getBackgroundTintColor()
+              + isTintIcon()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace toast {
+          interface dev.utils.app.toast.ToastTintUtils.Filter {
+              {abstract} + filter()
+              {abstract} + handlerContent()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace toast {
+          class dev.utils.app.toast.ToastTintUtils.InfoStyle {
+              + getBackgroundTintColor()
+              + isTintIcon()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace toast {
+          class dev.utils.app.toast.ToastTintUtils.NormalStyle {
+              + getBackgroundTintColor()
+              + isTintIcon()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace toast {
+          class dev.utils.app.toast.ToastTintUtils.SafeHandler {
+              - mHandler : Handler
+              + dispatchMessage()
+              + handleMessage()
+              ~ SafeHandler()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace toast {
+          interface dev.utils.app.toast.ToastTintUtils.Style {
+              {abstract} + getBackground()
+              {abstract} + getBackgroundTintColor()
+              {abstract} + getEllipsize()
+              {abstract} + getMaxLines()
+              {abstract} + getTextColor()
+              {abstract} + getTextSize()
+              {abstract} + getTintIconColor()
+              {abstract} + getTypeface()
+              {abstract} + isTintIcon()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace toast {
+          class dev.utils.app.toast.ToastTintUtils.SuccessStyle {
+              + getBackgroundTintColor()
+              + isTintIcon()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace toast {
+          class dev.utils.app.toast.ToastTintUtils.WarningStyle {
+              + getBackgroundTintColor()
+              + isTintIcon()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace toast {
+          class dev.utils.app.toast.ToastUtils {
+              {static} - TAG : String
+              {static} - sGravity : int
+              {static} - sHandler : Handler
+              {static} - sHorizontalMargin : float
+              {static} - sIsHandler : boolean
+              {static} - sNullText : String
+              {static} - sPriToastFilter : Filter
+              {static} - sToast : Toast
+              {static} - sToastFilter : Filter
+              {static} - sUseConfig : boolean
+              {static} - sVerticalMargin : float
+              {static} - sX : int
+              {static} - sY : int
+              {static} + newToastText()
+              {static} + newToastView()
+              {static} + reset()
+              {static} + setGravity()
+              {static} + setIsHandler()
+              {static} + setMargin()
+              {static} + setNullText()
+              {static} + setToastFilter()
+              {static} + setUseConfig()
+              {static} + showLong()
+              {static} + showLong()
+              {static} + showLong()
+              {static} + showLong()
+              {static} + showLongNew()
+              {static} + showLongNew()
+              {static} + showLongNew()
+              {static} + showLongNew()
+              {static} + showShort()
+              {static} + showShort()
+              {static} + showShort()
+              {static} + showShort()
+              {static} + showShortNew()
+              {static} + showShortNew()
+              {static} + showShortNew()
+              {static} + showShortNew()
+              {static} + showToast()
+              {static} + showToast()
+              {static} + showToast()
+              {static} + showToast()
+              {static} + showToastNew()
+              {static} + showToastNew()
+              {static} + showToastNew()
+              {static} + showToastNew()
+              {static} + showToastView()
+              {static} + showToastView()
+              {static} + showToastView()
+              {static} + showToastView()
+              {static} + showToastView()
+              - ToastUtils()
+              {static} - handlerToastRes()
+              {static} - handlerToastStr()
+              {static} - priShowToastText()
+              {static} - reflectToastHandler()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace toast {
+          interface dev.utils.app.toast.ToastUtils.Filter {
+              {abstract} + filter()
+              {abstract} + filter()
+              {abstract} + handlerContent()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace toast {
+          class dev.utils.app.toast.ToastUtils.SafeHandler {
+              - mHandler : Handler
+              + dispatchMessage()
+              + handleMessage()
+              ~ SafeHandler()
+          }
+        }
+      }
+    }
+  }
+  
+
+  dev.utils.app.toast.ToastTintUtils +-down- dev.utils.app.toast.ToastTintUtils.DefaultStyle
+  dev.utils.app.toast.ToastTintUtils +-down- dev.utils.app.toast.ToastTintUtils.ErrorStyle
+  dev.utils.app.toast.ToastTintUtils +-down- dev.utils.app.toast.ToastTintUtils.Filter
+  dev.utils.app.toast.ToastTintUtils +-down- dev.utils.app.toast.ToastTintUtils.InfoStyle
+  dev.utils.app.toast.ToastTintUtils +-down- dev.utils.app.toast.ToastTintUtils.NormalStyle
+  dev.utils.app.toast.ToastTintUtils +-down- dev.utils.app.toast.ToastTintUtils.SafeHandler
+  dev.utils.app.toast.ToastTintUtils +-down- dev.utils.app.toast.ToastTintUtils.Style
+  dev.utils.app.toast.ToastTintUtils +-down- dev.utils.app.toast.ToastTintUtils.SuccessStyle
+  dev.utils.app.toast.ToastTintUtils +-down- dev.utils.app.toast.ToastTintUtils.WarningStyle
+  dev.utils.app.toast.ToastTintUtils.DefaultStyle .up.|> dev.utils.app.toast.ToastTintUtils.Style
+  dev.utils.app.toast.ToastTintUtils.ErrorStyle -up-|> dev.utils.app.toast.ToastTintUtils.DefaultStyle
+  dev.utils.app.toast.ToastTintUtils.InfoStyle -up-|> dev.utils.app.toast.ToastTintUtils.DefaultStyle
+  dev.utils.app.toast.ToastTintUtils.NormalStyle -up-|> dev.utils.app.toast.ToastTintUtils.DefaultStyle
+  dev.utils.app.toast.ToastTintUtils.SafeHandler -up-|> android.os.Handler
+  dev.utils.app.toast.ToastTintUtils.SuccessStyle -up-|> dev.utils.app.toast.ToastTintUtils.DefaultStyle
+  dev.utils.app.toast.ToastTintUtils.WarningStyle -up-|> dev.utils.app.toast.ToastTintUtils.DefaultStyle
+  dev.utils.app.toast.ToastUtils +-down- dev.utils.app.toast.ToastUtils.Filter
+  dev.utils.app.toast.ToastUtils +-down- dev.utils.app.toast.ToastUtils.SafeHandler
+  dev.utils.app.toast.ToastUtils.SafeHandler -up-|> android.os.Handler
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

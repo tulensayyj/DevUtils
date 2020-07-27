@@ -1,0 +1,194 @@
+@startuml
+
+title __ASSIST's Class Diagram__\n
+
+  namespace dev.assist {
+    class dev.assist.WebViewAssist {
+        {static} - TAG : String
+        - mWebView : WebView
+        {static} - sGlobalBuilder : Builder
+        + WebViewAssist()
+        + WebViewAssist()
+        + addJavascriptInterface()
+        + apply()
+        + canGoBack()
+        + canGoBackOrForward()
+        + canGoForward()
+        + clearCache()
+        + clearFormData()
+        + clearHistory()
+        + destroy()
+        + evaluateJavascript()
+        + getBuilder()
+        + getContentHeight()
+        {static} + getCookie()
+        {static} + getGlobalBuilder()
+        + getHeight()
+        + getHitTestResult()
+        + getOriginalUrl()
+        + getScale()
+        + getScaleHeight()
+        + getScaleHeight()
+        + getScrollX()
+        + getScrollY()
+        + getSettings()
+        + getUrl()
+        + getUserAgentString()
+        + getWebChromeClient()
+        + getWebView()
+        + getWebViewClient()
+        + goBack()
+        + goBackOrForward()
+        + goForward()
+        + handlerKeyDown()
+        + isWebViewNotEmpty()
+        + loadData()
+        + loadDataWithBaseURL()
+        + loadDataWithBaseURL()
+        + loadDataWithBaseURL()
+        + loadUrl()
+        + loadUrl()
+        + pageDown()
+        + pageUp()
+        + postUrl()
+        + reload()
+        {static} + removeAllCookie()
+        {static} + removeCookie()
+        + removeJavascriptInterface()
+        {static} + removeSessionCookie()
+        + setBuilder()
+        + setBuilder()
+        {static} + setCookie()
+        {static} + setGlobalBuilder()
+        + setLayerType()
+        + setLayerTypeSoftware()
+        + setUserAgentString()
+        + setWebChromeClient()
+        + setWebView()
+        + setWebViewClient()
+        + stopLoading()
+    }
+  }
+  
+
+  namespace dev.assist {
+    class dev.assist.WebViewAssist.Builder {
+        - mAllowFileAccess : boolean
+        - mAllowFileAccessFromFileURLs : boolean
+        - mAllowUniversalAccessFromFileURLs : boolean
+        - mAppCacheEnabled : boolean
+        - mAppCacheMaxSize : long
+        - mAppCachePath : String
+        - mBuiltInZoomControls : boolean
+        - mCacheMode : int
+        - mDatabaseEnabled : boolean
+        - mDatabasePath : String
+        - mDefaultFontSize : int
+        - mDefaultTextEncodingName : String
+        - mDisplayZoomControls : boolean
+        - mDomStorageEnabled : boolean
+        - mGeolocationEnabled : boolean
+        - mJavaScriptCanOpenWindowsAutomatically : boolean
+        - mJavaScriptEnabled : boolean
+        - mLayoutAlgorithm : LayoutAlgorithm
+        - mLoadWithOverviewMode : boolean
+        - mLoadsImagesAutomatically : boolean
+        - mMinimumFontSize : int
+        - mMixedContentMode : int
+        - mRenderPriority : RenderPriority
+        - mStandardFontFamily : String
+        - mSupportZoom : boolean
+        - mTextZoom : int
+        - mUseWideViewPort : boolean
+        - mUserAgentString : String
+        + Builder()
+        + Builder()
+        + apply()
+        + clone()
+        + getAppCacheMaxSize()
+        + getAppCachePath()
+        + getApplyListener()
+        + getCacheMode()
+        + getDatabasePath()
+        + getDefaultFontSize()
+        + getDefaultTextEncodingName()
+        + getLayoutAlgorithm()
+        + getMinimumFontSize()
+        + getMixedContentMode()
+        + getRenderPriority()
+        + getStandardFontFamily()
+        + getTextZoom()
+        + getUserAgentString()
+        + isAllowFileAccess()
+        + isAllowFileAccessFromFileURLs()
+        + isAllowUniversalAccessFromFileURLs()
+        + isAppCacheEnabled()
+        + isBuiltInZoomControls()
+        + isDatabaseEnabled()
+        + isDisplayZoomControls()
+        + isDomStorageEnabled()
+        + isGeolocationEnabled()
+        + isJavaScriptCanOpenWindowsAutomatically()
+        + isJavaScriptEnabled()
+        + isLoadWithOverviewMode()
+        + isLoadsImagesAutomatically()
+        + isSupportZoom()
+        + isUseWideViewPort()
+        + reset()
+        + setAllowFileAccess()
+        + setAllowFileAccessFromFileURLs()
+        + setAllowUniversalAccessFromFileURLs()
+        + setAppCacheEnabled()
+        + setAppCacheMaxSize()
+        + setAppCachePath()
+        + setBuiltInZoomControls()
+        + setCacheMode()
+        + setDatabaseEnabled()
+        + setDatabasePath()
+        + setDefaultFontSize()
+        + setDefaultTextEncodingName()
+        + setDisplayZoomControls()
+        + setDomStorageEnabled()
+        + setGeolocationEnabled()
+        + setJavaScriptCanOpenWindowsAutomatically()
+        + setJavaScriptEnabled()
+        + setLayoutAlgorithm()
+        + setLoadWithOverviewMode()
+        + setLoadsImagesAutomatically()
+        + setMinimumFontSize()
+        + setMixedContentMode()
+        + setOnApplyListener()
+        + setRenderPriority()
+        + setStandardFontFamily()
+        + setSupportZoom()
+        + setTextZoom()
+        + setUseWideViewPort()
+        + setUserAgentString()
+        - applyPri()
+        - setWebViewAssist()
+    }
+  }
+  
+
+  namespace dev.assist {
+    interface dev.assist.WebViewAssist.Builder.OnApplyListener {
+        {abstract} + onApply()
+    }
+  }
+  
+
+  dev.assist.WebViewAssist o-- dev.assist.WebViewAssist.Builder : mBuilder
+  dev.assist.WebViewAssist +-down- dev.assist.WebViewAssist.Builder
+  dev.assist.WebViewAssist.Builder o-- dev.assist.WebViewAssist.Builder.OnApplyListener : mApplyListener
+  dev.assist.WebViewAssist.Builder o-- dev.assist.WebViewAssist : mWebViewAssist
+  dev.assist.WebViewAssist.Builder +-down- dev.assist.WebViewAssist.Builder.OnApplyListener
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

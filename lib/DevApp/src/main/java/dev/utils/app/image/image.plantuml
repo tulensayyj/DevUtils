@@ -1,0 +1,274 @@
+@startuml
+
+title __IMAGE's Class Diagram__\n
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace image {
+          class dev.utils.app.image.BitmapUtils {
+              {static} - TAG : String
+              {static} + addBorder()
+              {static} + addCircleBorder()
+              {static} + addCornerBorder()
+              {static} + addImageWatermark()
+              {static} + addTextWatermark()
+              {static} + calculateInSampleSize()
+              {static} + calculateQuality()
+              {static} + clip()
+              {static} + clip()
+              {static} + combine()
+              {static} + combine()
+              {static} + combine()
+              {static} + combineToCenter()
+              {static} + combineToCenter()
+              {static} + combineToSameSize()
+              {static} + combineToSameSize()
+              {static} + compressByByteSize()
+              {static} + compressByByteSize()
+              {static} + compressByByteSize()
+              {static} + compressByQuality()
+              {static} + compressByQuality()
+              {static} + compressByQuality()
+              {static} + compressBySampleSize()
+              {static} + compressBySampleSize()
+              {static} + compressBySampleSize()
+              {static} + compressBySampleSize()
+              {static} + compressByScale()
+              {static} + compressByZoom()
+              {static} + copy()
+              {static} + copy()
+              {static} + crop()
+              {static} + crop()
+              {static} + extractAlpha()
+              {static} + getBitmapHeight()
+              {static} + getBitmapWidth()
+              {static} + getBitmapWidthHeight()
+              {static} + getBitmapWidthHeight()
+              {static} + getBitmapWidthHeight()
+              {static} + getBitmapWidthHeight()
+              {static} + getBitmapWidthHeight()
+              {static} + getBitmapWidthHeight()
+              {static} + getBitmapWidthHeight()
+              {static} + getRotateDegree()
+              {static} + isEmpty()
+              {static} + isImage()
+              {static} + isImage()
+              {static} + isNotEmpty()
+              {static} + recode()
+              {static} + recode()
+              {static} + recycle()
+              {static} + reflection()
+              {static} + reflection()
+              {static} + reflection()
+              {static} + reverse()
+              {static} + reverseByHorizontal()
+              {static} + reverseByVertical()
+              {static} + rotate()
+              {static} + rotate()
+              {static} + round()
+              {static} + round()
+              {static} + roundCorner()
+              {static} + roundCorner()
+              {static} + roundCorner()
+              {static} + roundCornerBottom()
+              {static} + roundCornerTop()
+              {static} + scale()
+              {static} + scale()
+              {static} + skew()
+              {static} + skew()
+              {static} + zoom()
+              {static} + zoom()
+              - BitmapUtils()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace image {
+          class dev.utils.app.image.ImageConvertUtils {
+              {static} - TAG : String
+              {static} + convertBMP()
+              - ImageConvertUtils()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace image {
+          class dev.utils.app.image.ImageConvertUtils.BMP {
+              {static} + convertBMP()
+              - BMP()
+              {static} - addBMPImageHeader()
+              {static} - addBMPImageInfosHeader()
+              {static} - addBMP_ARGB_8888()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace image {
+          class dev.utils.app.image.ImageFilterUtils {
+              {static} - TAG : String
+              {static} + blur()
+              {static} + emboss()
+              {static} + fastBlur()
+              {static} + film()
+              {static} + hue()
+              {static} + lum()
+              {static} + lumHueSaturation()
+              {static} + nostalgic()
+              {static} + saturation()
+              {static} + sharpen()
+              {static} + soften()
+              {static} + sunshine()
+              {static} + toGray()
+              {static} + yuvLandscapeToPortrait()
+              - ImageFilterUtils()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace image {
+          class dev.utils.app.image.ImageUtils {
+              {static} - TAG : String
+              {static} + bitmapToByte()
+              {static} + bitmapToByte()
+              {static} + bitmapToByte()
+              {static} + bitmapToDrawable()
+              {static} + byteToBitmap()
+              {static} + byteToDrawable()
+              {static} + decodeByteArray()
+              {static} + decodeByteArray()
+              {static} + decodeByteArray()
+              {static} + decodeByteArray()
+              {static} + decodeFile()
+              {static} + decodeFile()
+              {static} + decodeFile()
+              {static} + decodeFile()
+              {static} + decodeFileDescriptor()
+              {static} + decodeFileDescriptor()
+              {static} + decodeResource()
+              {static} + decodeResource()
+              {static} + decodeStream()
+              {static} + decodeStream()
+              {static} + drawableToBitmap()
+              {static} + drawableToByte()
+              {static} + drawableToByte()
+              {static} + drawableToByte()
+              {static} + get9PatchDrawable()
+              {static} + getBitmap()
+              {static} + getBitmap()
+              {static} + getBitmap()
+              {static} + getBitmap()
+              {static} + getBitmap()
+              {static} + getBitmap()
+              {static} + getBitmapFromView()
+              {static} + getBitmapFromViewCache()
+              {static} + getImageType()
+              {static} + getImageType()
+              {static} + getImageType()
+              {static} + getImageType()
+              {static} + isBMP()
+              {static} + isEmpty()
+              {static} + isEmpty()
+              {static} + isGif()
+              {static} + isICO()
+              {static} + isImageFormats()
+              {static} + isImageFormats()
+              {static} + isImageFormats()
+              {static} + isJPEG()
+              {static} + isNotEmpty()
+              {static} + isNotEmpty()
+              {static} + isPNG()
+              {static} + isTIFF()
+              {static} + isWEBP()
+              {static} + saveBitmapToSDCard()
+              {static} + saveBitmapToSDCard()
+              {static} + saveBitmapToSDCardJPEG()
+              {static} + saveBitmapToSDCardJPEG()
+              {static} + saveBitmapToSDCardJPEG()
+              {static} + saveBitmapToSDCardJPEG()
+              {static} + saveBitmapToSDCardPNG()
+              {static} + saveBitmapToSDCardPNG()
+              {static} + saveBitmapToSDCardPNG()
+              {static} + saveBitmapToSDCardPNG()
+              {static} + saveBitmapToSDCardWEBP()
+              {static} + saveBitmapToSDCardWEBP()
+              {static} + saveBitmapToSDCardWEBP()
+              {static} + saveBitmapToSDCardWEBP()
+              {static} + saveBitmapToStream()
+              {static} + saveBitmapToStreamJPEG()
+              {static} + saveBitmapToStreamJPEG()
+              {static} + saveBitmapToStreamPNG()
+              {static} + saveBitmapToStreamPNG()
+              {static} + saveBitmapToStreamWEBP()
+              {static} + saveBitmapToStreamWEBP()
+              {static} + setBounds()
+              {static} + setBounds()
+              {static} + setBounds()
+              {static} + setColorFilter()
+              {static} + setColorFilter()
+              {static} + setColorFilter()
+              - ImageUtils()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace image {
+          enum ImageType {
+            TYPE_BMP
+            TYPE_GIF
+            TYPE_ICO
+            TYPE_JPG
+            TYPE_PNG
+            TYPE_TIFF
+            TYPE_UNKNOWN
+            TYPE_WEBP
+            value
+          }
+        }
+      }
+    }
+  }
+  
+
+  dev.utils.app.image.ImageConvertUtils +-down- dev.utils.app.image.ImageConvertUtils.BMP
+  dev.utils.app.image.ImageUtils +-down- dev.utils.app.image.ImageUtils.ImageType
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

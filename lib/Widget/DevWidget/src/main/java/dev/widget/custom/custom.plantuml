@@ -1,0 +1,291 @@
+@startuml
+
+title __CUSTOM's Class Diagram__\n
+
+  namespace dev.widget {
+    namespace custom {
+      class dev.widget.custom.CustomGallery {
+          - mIsSlide : boolean
+          - mMaxHeight : int
+          - mMaxWidth : int
+          + CustomGallery()
+          + CustomGallery()
+          + CustomGallery()
+          + CustomGallery()
+          + getMaxHeight()
+          + getMaxWidth()
+          + isSlide()
+          + onFling()
+          + onInterceptTouchEvent()
+          + onTouchEvent()
+          + setMaxHeight()
+          + setMaxWidth()
+          + setSlide()
+          + toggleSlide()
+          # onMeasure()
+          - initAttrs()
+          - isScrollingLeft()
+      }
+    }
+  }
+  
+
+  namespace dev.widget {
+    namespace custom {
+      class dev.widget.custom.CustomHorizontalScrollView {
+          - mIsSlide : boolean
+          - mMaxHeight : int
+          - mMaxWidth : int
+          + CustomHorizontalScrollView()
+          + CustomHorizontalScrollView()
+          + CustomHorizontalScrollView()
+          + CustomHorizontalScrollView()
+          + getMaxHeight()
+          + getMaxWidth()
+          + isSlide()
+          + onInterceptTouchEvent()
+          + onTouchEvent()
+          + setMaxHeight()
+          + setMaxWidth()
+          + setScrollCallBack()
+          + setSlide()
+          + toggleSlide()
+          # computeScrollDeltaToGetChildRectOnScreen()
+          # onMeasure()
+          # onScrollChanged()
+          - initAttrs()
+      }
+    }
+  }
+  
+
+  namespace dev.widget {
+    namespace custom {
+      interface dev.widget.custom.CustomHorizontalScrollView.ScrollCallBack {
+          {abstract} + onScrollChanged()
+      }
+    }
+  }
+  
+
+  namespace dev.widget {
+    namespace custom {
+      class dev.widget.custom.CustomNestedScrollView {
+          - mIsSlide : boolean
+          - mMaxHeight : int
+          - mMaxWidth : int
+          + CustomNestedScrollView()
+          + CustomNestedScrollView()
+          + CustomNestedScrollView()
+          + getMaxHeight()
+          + getMaxWidth()
+          + isSlide()
+          + onInterceptTouchEvent()
+          + onTouchEvent()
+          + setMaxHeight()
+          + setMaxWidth()
+          + setScrollCallBack()
+          + setSlide()
+          + toggleSlide()
+          # computeScrollDeltaToGetChildRectOnScreen()
+          # onMeasure()
+          # onScrollChanged()
+          - initAttrs()
+      }
+    }
+  }
+  
+
+  namespace dev.widget {
+    namespace custom {
+      interface dev.widget.custom.CustomNestedScrollView.ScrollCallBack {
+          {abstract} + onScrollChanged()
+      }
+    }
+  }
+  
+
+  namespace dev.widget {
+    namespace custom {
+      class dev.widget.custom.CustomRecyclerView {
+          - mIsSlide : boolean
+          - mMaxHeight : int
+          - mMaxWidth : int
+          - mScrollX : int
+          - mScrollY : int
+          + CustomRecyclerView()
+          + CustomRecyclerView()
+          + CustomRecyclerView()
+          + getMaxHeight()
+          + getMaxWidth()
+          + isSlide()
+          + onInterceptTouchEvent()
+          + onScrollStateChanged()
+          + onScrolled()
+          + onTouchEvent()
+          + setMaxHeight()
+          + setMaxWidth()
+          + setScrollCallBack()
+          + setSlide()
+          + toggleSlide()
+          # onMeasure()
+          - initAttrs()
+      }
+    }
+  }
+  
+
+  namespace dev.widget {
+    namespace custom {
+      interface dev.widget.custom.CustomRecyclerView.ScrollCallBack {
+          {abstract} + onScrollChanged()
+          {abstract} + onScrollStateChanged()
+      }
+    }
+  }
+  
+
+  namespace dev.widget {
+    namespace custom {
+      class dev.widget.custom.CustomScrollView {
+          - mIsSlide : boolean
+          - mMaxHeight : int
+          - mMaxWidth : int
+          + CustomScrollView()
+          + CustomScrollView()
+          + CustomScrollView()
+          + CustomScrollView()
+          + getMaxHeight()
+          + getMaxWidth()
+          + isSlide()
+          + onInterceptTouchEvent()
+          + onTouchEvent()
+          + setMaxHeight()
+          + setMaxWidth()
+          + setScrollCallBack()
+          + setSlide()
+          + toggleSlide()
+          # computeScrollDeltaToGetChildRectOnScreen()
+          # onMeasure()
+          # onScrollChanged()
+          - initAttrs()
+      }
+    }
+  }
+  
+
+  namespace dev.widget {
+    namespace custom {
+      interface dev.widget.custom.CustomScrollView.ScrollCallBack {
+          {abstract} + onScrollChanged()
+      }
+    }
+  }
+  
+
+  namespace dev.widget {
+    namespace custom {
+      class dev.widget.custom.CustomViewPager {
+          - mIsSlide : boolean
+          - mMaxHeight : int
+          - mMaxWidth : int
+          + CustomViewPager()
+          + CustomViewPager()
+          + getMaxHeight()
+          + getMaxWidth()
+          + isSlide()
+          + onInterceptTouchEvent()
+          + onTouchEvent()
+          + setMaxHeight()
+          + setMaxWidth()
+          + setSlide()
+          + toggleSlide()
+          # onMeasure()
+          - initAttrs()
+      }
+    }
+  }
+  
+
+  namespace dev.widget {
+    namespace custom {
+      abstract class dev.widget.custom.CustomViewPager.OnDirectionListener {
+          # mLeftScroll : boolean
+          - mIsLeft : boolean
+          - mIsRight : boolean
+          - mIsScrolling : boolean
+          - mLastValue : int
+          + onPageScrollStateChanged()
+          + onPageScrolled()
+          {abstract} + onSlideDirection()
+      }
+    }
+  }
+  
+
+  namespace dev.widget {
+    namespace custom {
+      class dev.widget.custom.CustomWebView {
+          - mIsSlide : boolean
+          - mMaxHeight : int
+          - mMaxWidth : int
+          + CustomWebView()
+          + CustomWebView()
+          + CustomWebView()
+          + CustomWebView()
+          + getMaxHeight()
+          + getMaxWidth()
+          + isSlide()
+          + onInterceptTouchEvent()
+          + onTouchEvent()
+          + setMaxHeight()
+          + setMaxWidth()
+          + setScrollCallBack()
+          + setSlide()
+          + toggleSlide()
+          # onMeasure()
+          # onScrollChanged()
+          - initAttrs()
+      }
+    }
+  }
+  
+
+  namespace dev.widget {
+    namespace custom {
+      interface dev.widget.custom.CustomWebView.ScrollCallBack {
+          {abstract} + onScrollChanged()
+      }
+    }
+  }
+  
+
+  dev.widget.custom.CustomGallery -up-|> android.widget.Gallery
+  dev.widget.custom.CustomHorizontalScrollView -up-|> android.widget.HorizontalScrollView
+  dev.widget.custom.CustomHorizontalScrollView o-- dev.widget.custom.CustomHorizontalScrollView.ScrollCallBack : mScrollCallBack
+  dev.widget.custom.CustomHorizontalScrollView +-down- dev.widget.custom.CustomHorizontalScrollView.ScrollCallBack
+  dev.widget.custom.CustomNestedScrollView -up-|> androidx.core.widget.NestedScrollView
+  dev.widget.custom.CustomNestedScrollView o-- dev.widget.custom.CustomNestedScrollView.ScrollCallBack : mScrollCallBack
+  dev.widget.custom.CustomNestedScrollView +-down- dev.widget.custom.CustomNestedScrollView.ScrollCallBack
+  dev.widget.custom.CustomRecyclerView -up-|> androidx.recyclerview.widget.RecyclerView
+  dev.widget.custom.CustomRecyclerView o-- dev.widget.custom.CustomRecyclerView.ScrollCallBack : mScrollCallBack
+  dev.widget.custom.CustomRecyclerView +-down- dev.widget.custom.CustomRecyclerView.ScrollCallBack
+  dev.widget.custom.CustomScrollView -up-|> android.widget.ScrollView
+  dev.widget.custom.CustomScrollView o-- dev.widget.custom.CustomScrollView.ScrollCallBack : mScrollCallBack
+  dev.widget.custom.CustomScrollView +-down- dev.widget.custom.CustomScrollView.ScrollCallBack
+  dev.widget.custom.CustomViewPager -up-|> androidx.viewpager.widget.ViewPager
+  dev.widget.custom.CustomViewPager +-down- dev.widget.custom.CustomViewPager.OnDirectionListener
+  dev.widget.custom.CustomViewPager.OnDirectionListener .up.|> androidx.viewpager.widget.ViewPager.OnPageChangeListener
+  dev.widget.custom.CustomWebView -up-|> android.webkit.WebView
+  dev.widget.custom.CustomWebView o-- dev.widget.custom.CustomWebView.ScrollCallBack : mScrollCallBack
+  dev.widget.custom.CustomWebView +-down- dev.widget.custom.CustomWebView.ScrollCallBack
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

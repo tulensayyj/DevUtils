@@ -1,0 +1,168 @@
+@startuml
+
+title __WIFI's Class Diagram__\n
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace wifi {
+          class dev.utils.app.wifi.WifiHotUtils {
+              {static} + WIFI_AP_STATE_DISABLED : int
+              {static} + WIFI_AP_STATE_DISABLING : int
+              {static} + WIFI_AP_STATE_ENABLED : int
+              {static} + WIFI_AP_STATE_ENABLING : int
+              {static} + WIFI_AP_STATE_FAILED : int
+              {static} - TAG : String
+              - mAPWifiConfig : WifiConfiguration
+              - mAPWifiPwd : String
+              - mAPWifiSSID : String
+              - mReservation : LocalOnlyHotspotReservation
+              - mWifiManager : WifiManager
+              + WifiHotUtils()
+              + closeWifiAp()
+              + closeWifiApCheck()
+              {static} + createWifiConfigToAp()
+              {static} + createWifiConfigToAp()
+              + getApWifiPwd()
+              + getApWifiSSID()
+              + getConnectHotspotMsg()
+              + getHotspotAllotIp()
+              + getHotspotServiceIp()
+              + getHotspotSplitIpMask()
+              + getWifiApConfiguration()
+              + getWifiApState()
+              + isConnectHot()
+              + isOpenWifiAp()
+              + setOnWifiAPListener()
+              + setWifiApConfiguration()
+              + stratWifiAp()
+              - intToString()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace wifi {
+          interface dev.utils.app.wifi.WifiHotUtils.OnWifiAPListener {
+              {abstract} + onFailed()
+              {abstract} + onStarted()
+              {abstract} + onStopped()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace wifi {
+          class dev.utils.app.wifi.WifiUtils {
+              {static} + NOPWD : int
+              {static} + SECURITY_EAP : int
+              {static} + SECURITY_NONE : int
+              {static} + SECURITY_PSK : int
+              {static} + SECURITY_WEP : int
+              {static} + WEP : int
+              {static} + WPA : int
+              {static} - TAG : String
+              - mWifiManager : WifiManager
+              + WifiUtils()
+              + closeWifi()
+              {static} + createWifiConfig()
+              {static} + delWifiConfig()
+              + disconnectWifi()
+              {static} + formatSSID()
+              {static} + formatSSID()
+              {static} + getBSSID()
+              + getConfiguration()
+              {static} + getIPAddress()
+              {static} + getMacAddress()
+              {static} + getNetworkId()
+              {static} + getPassword()
+              {static} + getSSID()
+              {static} + getSSID()
+              {static} + getSecurity()
+              + getWifiInfo()
+              + getWifiList()
+              + getWifiState()
+              {static} + getWifiType()
+              {static} + getWifiType()
+              {static} + getWifiTypeInt()
+              {static} + getWifiTypeStr()
+              {static} + isConnNull()
+              {static} + isConnectAphot()
+              + isExists()
+              + isExists()
+              {static} + isExistsPwd()
+              {static} + isHexWepKey()
+              + isOpenWifi()
+              + openWifi()
+              + quickConnWifi()
+              + quickConnWifi()
+              + removeWifiConfig()
+              + startScan()
+              + toggleWifiEnabled()
+              - getDeclaredField()
+              - getField()
+              - inetAddressToInt()
+              - setDNS()
+              - setEnumField()
+              - setGateway()
+              - setIpAddress()
+              - setStaticIpConfig()
+              - setStaticWifiConfig()
+              - setStaticWifiConfig()
+              - setValueField()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace wifi {
+          class dev.utils.app.wifi.WifiVo {
+              {static} + CREATOR : Creator<WifiVo>
+              + wifiLevel : int
+              + wifiPwd : String
+              + wifiSSID : String
+              + wifiType : int
+              {static} - TAG : String
+              + WifiVo()
+              {static} + createWifiVo()
+              {static} + createWifiVo()
+              + describeContents()
+              {static} + scanWifiVos()
+              {static} + scanWifiVos()
+              + writeToParcel()
+              # WifiVo()
+          }
+        }
+      }
+    }
+  }
+  
+
+  dev.utils.app.wifi.WifiHotUtils o-- dev.utils.app.wifi.WifiHotUtils.OnWifiAPListener : mWifiAPListener
+  dev.utils.app.wifi.WifiHotUtils +-down- dev.utils.app.wifi.WifiHotUtils.OnWifiAPListener
+  dev.utils.app.wifi.WifiVo .up.|> android.os.Parcelable
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

@@ -1,0 +1,323 @@
+@startuml
+
+title __ADAPTER's Class Diagram__\n
+
+  namespace afkt.project {
+    namespace ui {
+      namespace adapter {
+        class afkt.project.ui.adapter.ArticleAdapter {
+            + ArticleAdapter()
+            # convert()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace adapter {
+        class afkt.project.ui.adapter.ButtonAdapter {
+            + ButtonAdapter()
+            # convert()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace adapter {
+        class afkt.project.ui.adapter.EditsAdapter {
+            - editTextWatcherAssist : EditTextWatcherAssist<EvaluateItem>
+            + EditsAdapter()
+            # convert()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace adapter {
+        class afkt.project.ui.adapter.GPUFilterACVAdapter {
+            ~ context : Context
+            ~ listACVFiles : List<ACVFileBean>
+            ~ selectPosition : int
+            + GPUFilterACVAdapter()
+            + getCount()
+            + getItem()
+            + getItemId()
+            + getView()
+            + setSelectPosition()
+            - createTextView()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace adapter {
+        class afkt.project.ui.adapter.GPUFilterAdapter {
+            ~ context : Context
+            ~ selectPosition : int
+            + GPUFilterAdapter()
+            + getCount()
+            + getItem()
+            + getItemId()
+            + getView()
+            + setSelectPosition()
+            - createTextView()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace adapter {
+        class afkt.project.ui.adapter.GreenDaoAdapter {
+            + GreenDaoAdapter()
+            # convert()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace adapter {
+        class afkt.project.ui.adapter.GreenDaoAdapter.ImageAdapter {
+            + ImageAdapter()
+            # convert()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace adapter {
+        class afkt.project.ui.adapter.ItemSlideAdapter {
+            + ItemSlideAdapter()
+            # convert()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace adapter {
+        class afkt.project.ui.adapter.ItemStickyAdapter {
+            + ItemStickyAdapter()
+            # convert()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace adapter {
+        class afkt.project.ui.adapter.LinearSnapAdapter {
+            ~ roundOptions : RequestOptions
+            + LinearSnapAdapter()
+            # convert()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace adapter {
+        class afkt.project.ui.adapter.LinearSnapMAXAdapter {
+            ~ context : Context
+            ~ data : List<ItemBean>
+            ~ roundOptions : RequestOptions
+            + LinearSnapMAXAdapter()
+            + getItemCount()
+            + getRealIndex()
+            + onBindViewHolder()
+            + onCreateViewHolder()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace adapter {
+        class afkt.project.ui.adapter.LinearSnapMAXAdapter.ItemViewHolder {
+            + ItemViewHolder()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace adapter {
+        class afkt.project.ui.adapter.MultiSelectAdapter {
+            - isEdit : boolean
+            - multiSelectMapAssist : MultiSelectMapAssist<Integer, CommodityEvaluateBean>
+            + MultiSelectAdapter()
+            + clearSelectAll()
+            + getDataCount()
+            + getSelectSize()
+            + getmultiSelectMapAssist()
+            + inverseSelect()
+            + isEditState()
+            + isNotSelect()
+            + isSelect()
+            + isSelectAll()
+            + selectAll()
+            + setEditState()
+            + setSelectListener()
+            + toggleEditState()
+            # convert()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace adapter {
+        interface afkt.project.ui.adapter.MultiSelectAdapter.OnSelectListener {
+            {abstract} + onClickSelect()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace adapter {
+        class afkt.project.ui.adapter.PagerSnapAdapter {
+            ~ roundOptions : RequestOptions
+            + PagerSnapAdapter()
+            # convert()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace adapter {
+        class afkt.project.ui.adapter.PagerSnapMAXAdapter {
+            ~ context : Context
+            ~ data : List<ItemBean>
+            ~ roundOptions : RequestOptions
+            + PagerSnapMAXAdapter()
+            + getItemCount()
+            + getRealIndex()
+            + onBindViewHolder()
+            + onCreateViewHolder()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace adapter {
+        class afkt.project.ui.adapter.PagerSnapMAXAdapter.ItemViewHolder {
+            + ItemViewHolder()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace adapter {
+        class afkt.project.ui.adapter.RecyclerLoadingAdapter {
+            + RecyclerLoadingAdapter()
+            # convert()
+            - loadImage()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace adapter {
+        class afkt.project.ui.adapter.ViewPagerAdapter {
+            - lists : List<String>
+            + ViewPagerAdapter()
+            + destroyItem()
+            + getCount()
+            + instantiateItem()
+            + isViewFromObject()
+        }
+      }
+    }
+  }
+  
+
+  afkt.project.ui.adapter.ArticleAdapter -up-|> com.chad.library.adapter.base.BaseQuickAdapter
+  afkt.project.ui.adapter.ButtonAdapter -up-|> com.chad.library.adapter.base.BaseQuickAdapter
+  afkt.project.ui.adapter.EditsAdapter -up-|> com.chad.library.adapter.base.BaseQuickAdapter
+  afkt.project.ui.adapter.GPUFilterACVAdapter -up-|> android.widget.BaseAdapter
+  afkt.project.ui.adapter.GPUFilterAdapter -up-|> android.widget.BaseAdapter
+  afkt.project.ui.adapter.GreenDaoAdapter -up-|> com.chad.library.adapter.base.BaseQuickAdapter
+  afkt.project.ui.adapter.GreenDaoAdapter +-down- afkt.project.ui.adapter.GreenDaoAdapter.ImageAdapter
+  afkt.project.ui.adapter.GreenDaoAdapter.ImageAdapter -up-|> com.chad.library.adapter.base.BaseQuickAdapter
+  afkt.project.ui.adapter.ItemSlideAdapter -up-|> com.chad.library.adapter.base.BaseQuickAdapter
+  afkt.project.ui.adapter.ItemStickyAdapter -up-|> com.chad.library.adapter.base.BaseQuickAdapter
+  afkt.project.ui.adapter.LinearSnapAdapter -up-|> com.chad.library.adapter.base.BaseQuickAdapter
+  afkt.project.ui.adapter.LinearSnapMAXAdapter -up-|> androidx.recyclerview.widget.RecyclerView.Adapter
+  afkt.project.ui.adapter.LinearSnapMAXAdapter +-down- afkt.project.ui.adapter.LinearSnapMAXAdapter.ItemViewHolder
+  afkt.project.ui.adapter.LinearSnapMAXAdapter.ItemViewHolder -up-|> androidx.recyclerview.widget.RecyclerView.ViewHolder
+  afkt.project.ui.adapter.LinearSnapMAXAdapter.ItemViewHolder o-- afkt.project.ui.widget.BaseImageView : vid_als_igview
+  afkt.project.ui.adapter.LinearSnapMAXAdapter.ItemViewHolder o-- afkt.project.ui.widget.BaseTextView : vid_als_index_tv
+  afkt.project.ui.adapter.LinearSnapMAXAdapter.ItemViewHolder o-- afkt.project.ui.widget.BaseTextView : vid_als_subtitle_tv
+  afkt.project.ui.adapter.LinearSnapMAXAdapter.ItemViewHolder o-- afkt.project.ui.widget.BaseTextView : vid_als_time_tv
+  afkt.project.ui.adapter.LinearSnapMAXAdapter.ItemViewHolder o-- afkt.project.ui.widget.BaseTextView : vid_als_title_tv
+  afkt.project.ui.adapter.MultiSelectAdapter .up.|> dev.assist.multiselect.edit.IMultiSelectEdit
+  afkt.project.ui.adapter.MultiSelectAdapter -up-|> com.chad.library.adapter.base.BaseQuickAdapter
+  afkt.project.ui.adapter.MultiSelectAdapter o-- afkt.project.ui.adapter.MultiSelectAdapter.OnSelectListener : selectListener
+  afkt.project.ui.adapter.MultiSelectAdapter +-down- afkt.project.ui.adapter.MultiSelectAdapter.OnSelectListener
+  afkt.project.ui.adapter.PagerSnapAdapter -up-|> com.chad.library.adapter.base.BaseQuickAdapter
+  afkt.project.ui.adapter.PagerSnapMAXAdapter -up-|> androidx.recyclerview.widget.RecyclerView.Adapter
+  afkt.project.ui.adapter.PagerSnapMAXAdapter +-down- afkt.project.ui.adapter.PagerSnapMAXAdapter.ItemViewHolder
+  afkt.project.ui.adapter.PagerSnapMAXAdapter.ItemViewHolder -up-|> androidx.recyclerview.widget.RecyclerView.ViewHolder
+  afkt.project.ui.adapter.PagerSnapMAXAdapter.ItemViewHolder o-- afkt.project.ui.widget.BaseImageView : vid_ags_igview
+  afkt.project.ui.adapter.PagerSnapMAXAdapter.ItemViewHolder o-- afkt.project.ui.widget.BaseTextView : vid_ags_index_tv
+  afkt.project.ui.adapter.PagerSnapMAXAdapter.ItemViewHolder o-- afkt.project.ui.widget.BaseTextView : vid_ags_subtitle_tv
+  afkt.project.ui.adapter.PagerSnapMAXAdapter.ItemViewHolder o-- afkt.project.ui.widget.BaseTextView : vid_ags_time_tv
+  afkt.project.ui.adapter.PagerSnapMAXAdapter.ItemViewHolder o-- afkt.project.ui.widget.BaseTextView : vid_ags_title_tv
+  afkt.project.ui.adapter.RecyclerLoadingAdapter -up-|> com.chad.library.adapter.base.BaseQuickAdapter
+  afkt.project.ui.adapter.ViewPagerAdapter -up-|> androidx.viewpager.widget.PagerAdapter
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

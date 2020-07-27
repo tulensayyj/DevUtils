@@ -1,0 +1,177 @@
+@startuml
+
+title __SEARCH's Class Diagram__\n
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        namespace assist {
+          namespace search {
+            class dev.utils.common.assist.search.FileBreadthFirstSearchUtils {
+                {static} - TAG : String
+                - mDelayTime : long
+                - mEndTime : long
+                - mExecutor : ExecutorService
+                - mIsRunning : boolean
+                - mIsStop : boolean
+                - mQueueSameTimeNumber : int
+                - mStartTime : long
+                - mTaskQueue : LinkedBlockingQueue<FileQueue>
+                + FileBreadthFirstSearchUtils()
+                + FileBreadthFirstSearchUtils()
+                + getDelayTime()
+                + getEndTime()
+                + getQueueSameTimeNumber()
+                + getStartTime()
+                + isRunning()
+                + isStop()
+                + query()
+                + setDelayTime()
+                + setQueueSameTimeNumber()
+                + setSearchHandler()
+                + stop()
+                - queryFile()
+                - whileQueue()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        namespace assist {
+          namespace search {
+            class dev.utils.common.assist.search.FileBreadthFirstSearchUtils.FileItem {
+                + file : File
+                + mapChilds : Map<String, FileItem>
+                + FileItem()
+                - put()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        namespace assist {
+          namespace search {
+            class dev.utils.common.assist.search.FileBreadthFirstSearchUtils.FileQueue {
+                - file : File
+                + FileQueue()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        namespace assist {
+          namespace search {
+            interface dev.utils.common.assist.search.FileBreadthFirstSearchUtils.SearchHandler {
+                {abstract} + OnEndListener()
+                {abstract} + isAddToList()
+                {abstract} + isHandlerFile()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        namespace assist {
+          namespace search {
+            class dev.utils.common.assist.search.FileDepthFirstSearchUtils {
+                {static} - TAG : String
+                - mEndTime : long
+                - mIsRunning : boolean
+                - mIsStop : boolean
+                - mStartTime : long
+                + FileDepthFirstSearchUtils()
+                + FileDepthFirstSearchUtils()
+                + getEndTime()
+                + getStartTime()
+                + isRunning()
+                + isStop()
+                + query()
+                + setSearchHandler()
+                + stop()
+                - queryFile()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        namespace assist {
+          namespace search {
+            class dev.utils.common.assist.search.FileDepthFirstSearchUtils.FileItem {
+                + file : File
+                + listChilds : List<FileItem>
+                + FileItem()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        namespace assist {
+          namespace search {
+            interface dev.utils.common.assist.search.FileDepthFirstSearchUtils.SearchHandler {
+                {abstract} + OnEndListener()
+                {abstract} + isAddToList()
+                {abstract} + isHandlerFile()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  dev.utils.common.assist.search.FileBreadthFirstSearchUtils o-- dev.utils.common.assist.search.FileBreadthFirstSearchUtils.SearchHandler : mInsideHandler
+  dev.utils.common.assist.search.FileBreadthFirstSearchUtils o-- dev.utils.common.assist.search.FileBreadthFirstSearchUtils.FileItem : mRootFileItem
+  dev.utils.common.assist.search.FileBreadthFirstSearchUtils o-- dev.utils.common.assist.search.FileBreadthFirstSearchUtils.SearchHandler : mSearchHandler
+  dev.utils.common.assist.search.FileBreadthFirstSearchUtils +-down- dev.utils.common.assist.search.FileBreadthFirstSearchUtils.FileItem
+  dev.utils.common.assist.search.FileBreadthFirstSearchUtils +-down- dev.utils.common.assist.search.FileBreadthFirstSearchUtils.FileQueue
+  dev.utils.common.assist.search.FileBreadthFirstSearchUtils +-down- dev.utils.common.assist.search.FileBreadthFirstSearchUtils.SearchHandler
+  dev.utils.common.assist.search.FileBreadthFirstSearchUtils.FileQueue o-- dev.utils.common.assist.search.FileBreadthFirstSearchUtils.FileItem : fileItem
+  dev.utils.common.assist.search.FileDepthFirstSearchUtils o-- dev.utils.common.assist.search.FileDepthFirstSearchUtils.SearchHandler : mInsideHandler
+  dev.utils.common.assist.search.FileDepthFirstSearchUtils o-- dev.utils.common.assist.search.FileDepthFirstSearchUtils.SearchHandler : mSearchHandler
+  dev.utils.common.assist.search.FileDepthFirstSearchUtils +-down- dev.utils.common.assist.search.FileDepthFirstSearchUtils.FileItem
+  dev.utils.common.assist.search.FileDepthFirstSearchUtils +-down- dev.utils.common.assist.search.FileDepthFirstSearchUtils.SearchHandler
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

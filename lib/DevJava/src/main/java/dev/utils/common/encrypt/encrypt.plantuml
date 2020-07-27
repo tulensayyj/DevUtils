@@ -1,0 +1,233 @@
+@startuml
+
+title __ENCRYPT's Class Diagram__\n
+
+  namespace dev.utils {
+    namespace common {
+      namespace encrypt {
+        class dev.utils.common.encrypt.AESUtils {
+            {static} - TAG : String
+            {static} + decrypt()
+            {static} + encrypt()
+            {static} + initKey()
+            - AESUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev.utils {
+    namespace common {
+      namespace encrypt {
+        class dev.utils.common.encrypt.CRCUtils {
+            {static} - TAG : String
+            {static} + getCRC32()
+            {static} + getCRC32ToHexString()
+            {static} + getFileCRC32()
+            - CRCUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev.utils {
+    namespace common {
+      namespace encrypt {
+        class dev.utils.common.encrypt.DESUtils {
+            {static} - TAG : String
+            {static} + decrypt()
+            {static} + encrypt()
+            {static} + getDESKey()
+            - DESUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev.utils {
+    namespace common {
+      namespace encrypt {
+        class dev.utils.common.encrypt.EncryptUtils {
+            {static} - TAG : String
+            {static} + decrypt3DES()
+            {static} + decrypt3DESToBase64()
+            {static} + decrypt3DESToHexString()
+            {static} + decryptAES()
+            {static} + decryptAESToBase64()
+            {static} + decryptAESToHexString()
+            {static} + decryptDES()
+            {static} + decryptDESToBase64()
+            {static} + decryptDESToHexString()
+            {static} + decryptRSA()
+            {static} + decryptRSAToBase64()
+            {static} + decryptRSAToHexString()
+            {static} + encrypt3DES()
+            {static} + encrypt3DESToBase64()
+            {static} + encrypt3DESToHexString()
+            {static} + encryptAES()
+            {static} + encryptAESToBase64()
+            {static} + encryptAESToHexString()
+            {static} + encryptDES()
+            {static} + encryptDESToBase64()
+            {static} + encryptDESToHexString()
+            {static} + encryptHmacMD5()
+            {static} + encryptHmacMD5ToHexString()
+            {static} + encryptHmacMD5ToHexString()
+            {static} + encryptHmacSHA1()
+            {static} + encryptHmacSHA1ToHexString()
+            {static} + encryptHmacSHA1ToHexString()
+            {static} + encryptHmacSHA224()
+            {static} + encryptHmacSHA224ToHexString()
+            {static} + encryptHmacSHA224ToHexString()
+            {static} + encryptHmacSHA256()
+            {static} + encryptHmacSHA256ToHexString()
+            {static} + encryptHmacSHA256ToHexString()
+            {static} + encryptHmacSHA384()
+            {static} + encryptHmacSHA384ToHexString()
+            {static} + encryptHmacSHA384ToHexString()
+            {static} + encryptHmacSHA512()
+            {static} + encryptHmacSHA512ToHexString()
+            {static} + encryptHmacSHA512ToHexString()
+            {static} + encryptMD2()
+            {static} + encryptMD2ToHexString()
+            {static} + encryptMD2ToHexString()
+            {static} + encryptMD5()
+            {static} + encryptMD5File()
+            {static} + encryptMD5File()
+            {static} + encryptMD5FileToHexString()
+            {static} + encryptMD5FileToHexString()
+            {static} + encryptMD5ToHexString()
+            {static} + encryptMD5ToHexString()
+            {static} + encryptMD5ToHexString()
+            {static} + encryptMD5ToHexString()
+            {static} + encryptRSA()
+            {static} + encryptRSAToBase64()
+            {static} + encryptRSAToHexString()
+            {static} + encryptSHA1()
+            {static} + encryptSHA1ToHexString()
+            {static} + encryptSHA1ToHexString()
+            {static} + encryptSHA224()
+            {static} + encryptSHA224ToHexString()
+            {static} + encryptSHA224ToHexString()
+            {static} + encryptSHA256()
+            {static} + encryptSHA256ToHexString()
+            {static} + encryptSHA256ToHexString()
+            {static} + encryptSHA384()
+            {static} + encryptSHA384ToHexString()
+            {static} + encryptSHA384ToHexString()
+            {static} + encryptSHA512()
+            {static} + encryptSHA512ToHexString()
+            {static} + encryptSHA512ToHexString()
+            {static} + hashTemplate()
+            {static} + hmacTemplate()
+            {static} + rsaTemplate()
+            {static} + symmetricTemplate()
+            - EncryptUtils()
+            {static} - base64Decode()
+            {static} - base64Encode()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev.utils {
+    namespace common {
+      namespace encrypt {
+        class dev.utils.common.encrypt.EscapeUtils {
+            {static} - BYTE_VALUES : byte[]
+            {static} - HEX : String[]
+            {static} + escape()
+            {static} + unescape()
+            - EscapeUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev.utils {
+    namespace common {
+      namespace encrypt {
+        class dev.utils.common.encrypt.MD5Utils {
+            {static} - TAG : String
+            {static} + getFileMD5()
+            {static} + getFileMD5()
+            {static} + getFileMD5ToHexString()
+            {static} + getFileMD5ToHexString()
+            {static} + md5()
+            {static} + md5()
+            {static} + md5Upper()
+            {static} + md5Upper()
+            - MD5Utils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev.utils {
+    namespace common {
+      namespace encrypt {
+        class dev.utils.common.encrypt.SHAUtils {
+            {static} - TAG : String
+            {static} + getFileSHA()
+            {static} + getFileSHA1()
+            {static} + getFileSHA1()
+            {static} + getFileSHA256()
+            {static} + getFileSHA256()
+            {static} + sha1()
+            {static} + sha224()
+            {static} + sha256()
+            {static} + sha384()
+            {static} + sha512()
+            {static} + shaHex()
+            - SHAUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev.utils {
+    namespace common {
+      namespace encrypt {
+        class dev.utils.common.encrypt.TripleDESUtils {
+            {static} - TAG : String
+            {static} + decrypt()
+            {static} + encrypt()
+            {static} + initKey()
+            - TripleDESUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev.utils {
+    namespace common {
+      namespace encrypt {
+        class dev.utils.common.encrypt.XorUtils {
+            {static} + decrypt()
+            {static} + encrypt()
+            {static} + encryptAsFix()
+            - XorUtils()
+        }
+      }
+    }
+  }
+  
+
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

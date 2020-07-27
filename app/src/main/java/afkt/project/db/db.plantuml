@@ -1,0 +1,278 @@
+@startuml
+
+title __DB's Class Diagram__\n
+
+  namespace afkt.project {
+    namespace db {
+      class afkt.project.db.DaoMaster {
+          {static} + SCHEMA_VERSION : int
+          + DaoMaster()
+          + DaoMaster()
+          {static} + createAllTables()
+          {static} + dropAllTables()
+          {static} + newDevSession()
+          + newSession()
+          + newSession()
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace db {
+      class afkt.project.db.DaoMaster.DevOpenHelper {
+          + DevOpenHelper()
+          + DevOpenHelper()
+          + onUpgrade()
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace db {
+      abstract class afkt.project.db.DaoMaster.OpenHelper {
+          + OpenHelper()
+          + OpenHelper()
+          + onCreate()
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace db {
+      class afkt.project.db.DaoSession {
+          - noteDaoConfig : DaoConfig
+          - notePictureDaoConfig : DaoConfig
+          + DaoSession()
+          + clear()
+          + getNoteDao()
+          + getNotePictureDao()
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace db {
+      class afkt.project.db.GreenManager {
+          {static} - TAG : String
+          {static} - daoMaster : DaoMaster
+          {static} - daoSession : DaoSession
+          {static} - db : Database
+          {static} - helper : UpgradeHelper
+          {static} + getDaoMaster()
+          {static} + getDaoSession()
+          {static} + getDatabase()
+          {static} + getHelper()
+          {static} + getNoteDao()
+          {static} + getNotePictureDao()
+          {static} + init()
+          - GreenManager()
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace db {
+      class afkt.project.db.GreenManager.UpgradeHelper {
+          + UpgradeHelper()
+          + UpgradeHelper()
+          + onUpgrade()
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace db {
+      class afkt.project.db.MigrationHelper {
+          {static} + migrate()
+          {static} + migrate()
+          {static} - createAllTables()
+          {static} - dropAllTables()
+          {static} - generateNewTablesIfNotExists()
+          {static} - generateTempTables()
+          {static} - getColumns()
+          {static} - reflectMethod()
+          {static} - restoreData()
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace db {
+      class afkt.project.db.Note {
+          - comment : String
+          - date : Date
+          - id : Long
+          - pictures : List<NotePicture>
+          - tempStr : String
+          - text : String
+          + Note()
+          + Note()
+          + __setDaoSession()
+          + delete()
+          + getComment()
+          + getDate()
+          + getId()
+          + getPictures()
+          + getText()
+          + getType()
+          + refresh()
+          + resetPictures()
+          + setComment()
+          + setDate()
+          + setId()
+          + setText()
+          + setType()
+          + update()
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace db {
+      class afkt.project.db.NoteDao {
+          {static} + TABLENAME : String
+          + NoteDao()
+          + NoteDao()
+          {static} + createTable()
+          {static} + dropTable()
+          + getKey()
+          + hasKey()
+          + readEntity()
+          + readEntity()
+          + readKey()
+          # attachEntity()
+          # bindValues()
+          # bindValues()
+          # isEntityUpdateable()
+          # updateKeyAfterInsert()
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace db {
+      class afkt.project.db.NoteDao.Properties {
+          {static} + Comment : Property
+          {static} + Date : Property
+          {static} + Id : Property
+          {static} + Text : Property
+          {static} + Type : Property
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace db {
+      class afkt.project.db.NotePicture {
+          - id : Long
+          - noteId : Long
+          - picture : String
+          + NotePicture()
+          + NotePicture()
+          + getId()
+          + getNoteId()
+          + getPicture()
+          + setId()
+          + setNoteId()
+          + setPicture()
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace db {
+      class afkt.project.db.NotePictureDao {
+          {static} + TABLENAME : String
+          - note_PicturesQuery : Query<NotePicture>
+          + NotePictureDao()
+          + NotePictureDao()
+          + _queryNote_Pictures()
+          {static} + createTable()
+          {static} + dropTable()
+          + getKey()
+          + hasKey()
+          + readEntity()
+          + readEntity()
+          + readKey()
+          # bindValues()
+          # bindValues()
+          # isEntityUpdateable()
+          # updateKeyAfterInsert()
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace db {
+      class afkt.project.db.NotePictureDao.Properties {
+          {static} + Id : Property
+          {static} + NoteId : Property
+          {static} + Picture : Property
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace db {
+      enum NoteType {
+        ALL
+        PICTURE
+        TEXT
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace db {
+      class afkt.project.db.NoteTypeConverter {
+          + convertToDatabaseValue()
+          + convertToEntityProperty()
+      }
+    }
+  }
+  
+
+  afkt.project.db.DaoMaster -up-|> org.greenrobot.greendao.AbstractDaoMaster
+  afkt.project.db.DaoMaster +-down- afkt.project.db.DaoMaster.DevOpenHelper
+  afkt.project.db.DaoMaster +-down- afkt.project.db.DaoMaster.OpenHelper
+  afkt.project.db.DaoMaster.DevOpenHelper -up-|> afkt.project.db.DaoMaster.OpenHelper
+  afkt.project.db.DaoMaster.OpenHelper -up-|> org.greenrobot.greendao.database.DatabaseOpenHelper
+  afkt.project.db.DaoSession -up-|> org.greenrobot.greendao.AbstractDaoSession
+  afkt.project.db.DaoSession o-- afkt.project.db.NoteDao : noteDao
+  afkt.project.db.DaoSession o-- afkt.project.db.NotePictureDao : notePictureDao
+  afkt.project.db.GreenManager +-down- afkt.project.db.GreenManager.UpgradeHelper
+  afkt.project.db.GreenManager.UpgradeHelper -up-|> afkt.project.db.DaoMaster.OpenHelper
+  afkt.project.db.Note o-- afkt.project.db.DaoSession : daoSession
+  afkt.project.db.Note o-- afkt.project.db.NoteDao : myDao
+  afkt.project.db.Note o-- afkt.project.db.NoteType : type
+  afkt.project.db.NoteDao -up-|> org.greenrobot.greendao.AbstractDao
+  afkt.project.db.NoteDao o-- afkt.project.db.DaoSession : daoSession
+  afkt.project.db.NoteDao o-- afkt.project.db.NoteTypeConverter : typeConverter
+  afkt.project.db.NoteDao +-down- afkt.project.db.NoteDao.Properties
+  afkt.project.db.NotePictureDao -up-|> org.greenrobot.greendao.AbstractDao
+  afkt.project.db.NotePictureDao +-down- afkt.project.db.NotePictureDao.Properties
+  afkt.project.db.NoteTypeConverter .up.|> org.greenrobot.greendao.converter.PropertyConverter
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

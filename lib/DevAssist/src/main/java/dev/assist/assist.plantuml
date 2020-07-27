@@ -1,0 +1,239 @@
+@startuml
+
+title __ASSIST's Class Diagram__\n
+
+  namespace dev {
+    namespace assist {
+      class dev.assist.EditTextWatcherAssist {
+          - mFocusEdit : EditText
+          - mFocusPos : int
+          - mTextWatcher : TextWatcher
+          + bindListener()
+          + bindListener()
+          - focusChange()
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace assist {
+      class dev.assist.EditTextWatcherAssist.FocusListener {
+          - editText : EditText
+          - listener : InputListener<T>
+          - position : int
+          + FocusListener()
+          + onFocusChange()
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace assist {
+      interface dev.assist.EditTextWatcherAssist.InputListener {
+          {abstract} + onTextChanged()
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace assist {
+      class dev.assist.NumberControlAssist {
+          - mCurrentNumber : int
+          - mIsAllowNegative : boolean
+          - mMaxNumber : int
+          - mMinNumber : int
+          - mObject : Object
+          - mResetNumber : int
+          + NumberControlAssist()
+          + NumberControlAssist()
+          + NumberControlAssist()
+          + addNumber()
+          + getCurrentNumber()
+          + getMaxNumber()
+          + getMinNumber()
+          + getNumberListener()
+          + getObject()
+          + getResetNumber()
+          + isAllowNegative()
+          + isGreaterThanMaxNumber()
+          + isGreaterThanMinNumber()
+          + isLessThanMaxNumber()
+          + isLessThanMinNumber()
+          + isMaxNumber()
+          + isMaxNumber()
+          + isMinNumber()
+          + isMinNumber()
+          + numberChange()
+          + setAllowNegative()
+          + setCurrentNumber()
+          + setCurrentNumber()
+          + setMaxNumber()
+          + setMinMaxNumber()
+          + setMinNumber()
+          + setNumberListener()
+          + setObject()
+          + setResetNumber()
+          + subtractionNumber()
+          - checkUpdate()
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace assist {
+      interface dev.assist.NumberControlAssist.INumberListener {
+          {abstract} + onNumberChanged()
+          {abstract} + onPrepareChanged()
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace assist {
+      interface dev.assist.NumberControlAssist.INumberOperate {
+          {abstract} + addNumber()
+          {abstract} + getCurrentNumber()
+          {abstract} + getMaxNumber()
+          {abstract} + getMinNumber()
+          {abstract} + getNumberListener()
+          {abstract} + getObject()
+          {abstract} + getResetNumber()
+          {abstract} + isAllowNegative()
+          {abstract} + isGreaterThanMaxNumber()
+          {abstract} + isGreaterThanMinNumber()
+          {abstract} + isLessThanMaxNumber()
+          {abstract} + isLessThanMinNumber()
+          {abstract} + isMaxNumber()
+          {abstract} + isMaxNumber()
+          {abstract} + isMinNumber()
+          {abstract} + isMinNumber()
+          {abstract} + numberChange()
+          {abstract} + setAllowNegative()
+          {abstract} + setCurrentNumber()
+          {abstract} + setCurrentNumber()
+          {abstract} + setMaxNumber()
+          {abstract} + setMinMaxNumber()
+          {abstract} + setMinNumber()
+          {abstract} + setNumberListener()
+          {abstract} + setObject()
+          {abstract} + setResetNumber()
+          {abstract} + subtractionNumber()
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace assist {
+      class dev.assist.PageAssist {
+          {static} + DF_PAGE_NUM : int
+          {static} + DF_PAGE_SIZE : int
+          - config_page_num : int
+          - config_page_size : int
+          - mLastPage : boolean
+          - mPageNum : int
+          - mPageSize : int
+          - mTotalRow : int
+          + PageAssist()
+          + PageAssist()
+          + PageAssist()
+          + getNextPage()
+          + getPageNum()
+          + getPageNum()
+          + getPageSize()
+          + getPageSize()
+          + getTotalRow()
+          + getTotalRow()
+          {static} + initPageConfig()
+          + isAllowNextPage()
+          + isFirstPage()
+          + isFirstPage()
+          + isLastPage()
+          + isLastPage()
+          + isLessThanPageSize()
+          + nextPage()
+          + reset()
+          + setLastPage()
+          + setPageNum()
+          + setPageSize()
+          + setTotalRow()
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace assist {
+      class dev.assist.RequestStateAssist {
+          {static} + REQUEST_ERROR : int
+          {static} + REQUEST_FAIL : int
+          {static} + REQUEST_ING : int
+          {static} + REQUEST_NEVER : int
+          {static} + REQUEST_NORMAL : int
+          {static} + REQUEST_SUC : int
+          {static} - BASE : int
+          - mRequestHashCode : long
+          - mRequestState : int
+          + equalsHashCode()
+          + equalsRequestType()
+          + getRequestHashCode()
+          + getRequestHashCodeRandom()
+          + getRequestState()
+          + getRequestState()
+          + getRequestType()
+          + getRequestType()
+          + isRequestError()
+          + isRequestFail()
+          + isRequestIng()
+          + isRequestNever()
+          + isRequestNormal()
+          + isRequestSuccess()
+          + setRequestError()
+          + setRequestFail()
+          + setRequestIng()
+          + setRequestNever()
+          + setRequestNormal()
+          + setRequestState()
+          + setRequestSuccess()
+          + setRequestType()
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace assist {
+      class dev.assist.VariableAssist {
+          - mBooleanVariable : DevBaseVariable<Object, Boolean>
+          - mObjectVariable : DevBaseVariable<Object, Object>
+          + getBooleanVariable()
+          + getObjectVariable()
+      }
+    }
+  }
+  
+
+  dev.assist.EditTextWatcherAssist +-down- dev.assist.EditTextWatcherAssist.FocusListener
+  dev.assist.EditTextWatcherAssist +-down- dev.assist.EditTextWatcherAssist.InputListener
+  dev.assist.EditTextWatcherAssist.FocusListener .up.|> android.view.View.OnFocusChangeListener
+  dev.assist.EditTextWatcherAssist.FocusListener o-- T : object
+  dev.assist.NumberControlAssist o-- dev.assist.NumberControlAssist.INumberListener : mINumberListener
+  dev.assist.NumberControlAssist +-down- dev.assist.NumberControlAssist.INumberListener
+  dev.assist.NumberControlAssist +-down- dev.assist.NumberControlAssist.INumberOperate
+  dev.assist.PageAssist -up-|> dev.assist.RequestStateAssist
+  dev.assist.RequestStateAssist o-- T : mRequestType
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

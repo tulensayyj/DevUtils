@@ -1,0 +1,165 @@
+@startuml
+
+title __PLAYER's Class Diagram__\n
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace player {
+          class dev.utils.app.player.DevMediaManager {
+              {static} - TAG : String
+              - mMediaPlayer : MediaPlayer
+              - mPlayRawId : int
+              - mPlayUri : String
+              - mStreamType : int
+              - mVideoHeight : int
+              - mVideoWidth : int
+              - mVolume : float
+              {static} - sInstance : DevMediaManager
+              + getCurrentPosition()
+              + getDuration()
+              {static} + getInstance()
+              + getMediaPlayer()
+              + getPlayPercent()
+              + getPlayRawId()
+              + getPlayUri()
+              + getVideoHeight()
+              + getVideoWidth()
+              + getVolume()
+              {static} + isIgnoreWhat()
+              + isNotNullMediaPlayer()
+              + isNullMediaPlayer()
+              + isPlaying()
+              + onBufferingUpdate()
+              + onCompletion()
+              + onError()
+              + onPrepared()
+              + onSeekComplete()
+              + onVideoSizeChanged()
+              + pause()
+              + playPrepare()
+              + playPrepare()
+              + playPrepare()
+              + playPrepareAssets()
+              + playPrepareAssets()
+              + playPrepareRaw()
+              + playPrepareRaw()
+              + setAudioStreamType()
+              + setMediaPlayer()
+              + setMeidaListener()
+              + setTAG()
+              + setVolume()
+              + stop()
+              - DevMediaManager()
+              - bindListener()
+              - clearMediaPlayerData()
+              - createMedia()
+              - destroyMedia()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace player {
+          interface dev.utils.app.player.DevMediaManager.MediaListener {
+              {abstract} + onBufferingUpdate()
+              {abstract} + onCompletion()
+              {abstract} + onError()
+              {abstract} + onPrepared()
+              {abstract} + onSeekComplete()
+              {abstract} + onVideoSizeChanged()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace player {
+          abstract class dev.utils.app.player.DevMediaManager.MediaSet {
+              + getVolume()
+              + isLooping()
+              {abstract} + setMediaConfig()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace player {
+          class dev.utils.app.player.DevVideoPlayerControl {
+              - TAG : String
+              - mAutoPlay : boolean
+              - mSurfaceHolder : SurfaceHolder
+              - mSurfaceview : SurfaceView
+              + DevVideoPlayerControl()
+              + DevVideoPlayerControl()
+              + getCurrentPosition()
+              + getDuration()
+              + getPlayPercent()
+              + getPlayUri()
+              + getSurfaceview()
+              + getVideoHeight()
+              + getVideoWidth()
+              + isAutoPlay()
+              + isPlaying()
+              + isPlaying()
+              + onBufferingUpdate()
+              + onCompletion()
+              + onError()
+              + onPrepared()
+              + onSeekComplete()
+              + onVideoSizeChanged()
+              + pausePlayer()
+              + setAutoPlay()
+              + setMediaListener()
+              + startPlayer()
+              + startPlayer()
+              + startPlayer()
+              + stopPlayer()
+              + surfaceChanged()
+              + surfaceCreated()
+              + surfaceDestroyed()
+              - resetOperate()
+          }
+        }
+      }
+    }
+  }
+  
+
+  dev.utils.app.player.DevMediaManager .up.|> android.media.MediaPlayer.OnBufferingUpdateListener
+  dev.utils.app.player.DevMediaManager .up.|> android.media.MediaPlayer.OnCompletionListener
+  dev.utils.app.player.DevMediaManager .up.|> android.media.MediaPlayer.OnErrorListener
+  dev.utils.app.player.DevMediaManager .up.|> android.media.MediaPlayer.OnPreparedListener
+  dev.utils.app.player.DevMediaManager .up.|> android.media.MediaPlayer.OnSeekCompleteListener
+  dev.utils.app.player.DevMediaManager .up.|> android.media.MediaPlayer.OnVideoSizeChangedListener
+  dev.utils.app.player.DevMediaManager o-- dev.utils.app.player.DevMediaManager.MediaListener : mMeidaListener
+  dev.utils.app.player.DevMediaManager +-down- dev.utils.app.player.DevMediaManager.MediaListener
+  dev.utils.app.player.DevMediaManager +-down- dev.utils.app.player.DevMediaManager.MediaSet
+  dev.utils.app.player.DevVideoPlayerControl .up.|> android.view.SurfaceHolder.Callback
+  dev.utils.app.player.DevVideoPlayerControl .up.|> dev.utils.app.player.DevMediaManager.MediaListener
+  dev.utils.app.player.DevVideoPlayerControl o-- dev.utils.app.player.DevMediaManager.MediaListener : mMediaListener
+  dev.utils.app.player.DevVideoPlayerControl o-- dev.utils.app.player.DevMediaManager.MediaSet : mMediaSet
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

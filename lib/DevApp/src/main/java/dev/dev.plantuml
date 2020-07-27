@@ -1,0 +1,170 @@
+@startuml
+
+title __DEV's Class Diagram__\n
+
+  namespace dev {
+    class dev.DevUtils {
+        {static} + LIB_FILE_PROVIDER : String
+        {static} + PERMISSION_ACTIVITY_CLASS_NAME : String
+        {static} - ACTIVITY_LIFECYCLE : ActivityLifecycleImpl
+        {static} - ACTIVITY_LIFECYCLE_FILTER : ActivityLifecycleFilter
+        {static} - TAG : String
+        {static} - sAbstractActivityLifecycle : AbstractActivityLifecycle
+        {static} - sActivityLifecycleFilter : ActivityLifecycleFilter
+        {static} - sApplication : Application
+        {static} - sContext : Context
+        {static} - sDebug : boolean
+        {static} + getActivityLifecycleGet()
+        {static} + getActivityLifecycleNotify()
+        {static} + getApplication()
+        {static} + getAuthority()
+        {static} + getContext()
+        {static} + getContext()
+        {static} + getDevAppUtilsVersion()
+        {static} + getDevAppUtilsVersionCode()
+        {static} + getDevJavaUtilsVersion()
+        {static} + getDevJavaUtilsVersionCode()
+        {static} + getHandler()
+        {static} + getTopActivity()
+        {static} + getUriForFile()
+        {static} + getUriForPath()
+        {static} + init()
+        {static} + isDebug()
+        {static} + openDebug()
+        {static} + openLog()
+        {static} + runOnUiThread()
+        {static} + runOnUiThread()
+        {static} + setAbstractActivityLifecycle()
+        {static} + setActivityLifecycleFilter()
+        - DevUtils()
+        {static} - getApplicationByReflect()
+        {static} - initApplication()
+        {static} - initContext()
+        {static} - registerActivityLifecycleCallbacks()
+        {static} - unregisterActivityLifecycleCallbacks()
+    }
+  }
+  
+
+  namespace dev {
+    abstract class dev.DevUtils.AbstractActivityLifecycle {
+        + onActivityCreated()
+        + onActivityDestroyed()
+        + onActivityPaused()
+        + onActivityResumed()
+        + onActivitySaveInstanceState()
+        + onActivityStarted()
+        + onActivityStopped()
+    }
+  }
+  
+
+  namespace dev {
+    interface dev.DevUtils.ActivityLifecycleFilter {
+        {abstract} + filter()
+    }
+  }
+  
+
+  namespace dev {
+    interface dev.DevUtils.ActivityLifecycleGet {
+        {abstract} + getActivityCount()
+        {abstract} + getTopActivity()
+        {abstract} + isBackground()
+        {abstract} + isTopActivity()
+        {abstract} + isTopActivity()
+    }
+  }
+  
+
+  namespace dev {
+    class dev.DevUtils.ActivityLifecycleImpl {
+        - mActivityLists : LinkedList<Activity>
+        - mConfigCount : int
+        - mDestroyedListenerMaps : Map<Activity, Set<OnActivityDestroyedListener>>
+        - mForegroundCount : int
+        - mIsBackground : boolean
+        - mStatusListenerMaps : Map<Object, OnAppStatusChangedListener>
+        + addOnActivityDestroyedListener()
+        + addOnAppStatusChangedListener()
+        + getActivityCount()
+        + getTopActivity()
+        + isBackground()
+        + isTopActivity()
+        + isTopActivity()
+        + onActivityCreated()
+        + onActivityDestroyed()
+        + onActivityPaused()
+        + onActivityResumed()
+        + onActivitySaveInstanceState()
+        + onActivityStarted()
+        + onActivityStopped()
+        + removeAllOnActivityDestroyedListener()
+        + removeAllOnAppStatusChangedListener()
+        + removeOnActivityDestroyedListener()
+        + removeOnAppStatusChangedListener()
+        - consumeOnActivityDestroyedListener()
+        - getTopActivityByReflect()
+        - postStatus()
+        - setTopActivity()
+    }
+  }
+  
+
+  namespace dev {
+    interface dev.DevUtils.ActivityLifecycleNotify {
+        {abstract} + addOnActivityDestroyedListener()
+        {abstract} + addOnAppStatusChangedListener()
+        {abstract} + removeAllOnActivityDestroyedListener()
+        {abstract} + removeAllOnAppStatusChangedListener()
+        {abstract} + removeOnActivityDestroyedListener()
+        {abstract} + removeOnAppStatusChangedListener()
+    }
+  }
+  
+
+  namespace dev {
+    class dev.DevUtils.FileProviderDevApp {
+        + onCreate()
+    }
+  }
+  
+
+  namespace dev {
+    interface dev.DevUtils.OnActivityDestroyedListener {
+        {abstract} + onActivityDestroyed()
+    }
+  }
+  
+
+  namespace dev {
+    interface dev.DevUtils.OnAppStatusChangedListener {
+        {abstract} + onBackground()
+        {abstract} + onForeground()
+    }
+  }
+  
+
+  dev.DevUtils +-down- dev.DevUtils.AbstractActivityLifecycle
+  dev.DevUtils +-down- dev.DevUtils.ActivityLifecycleFilter
+  dev.DevUtils +-down- dev.DevUtils.ActivityLifecycleGet
+  dev.DevUtils +-down- dev.DevUtils.ActivityLifecycleImpl
+  dev.DevUtils +-down- dev.DevUtils.ActivityLifecycleNotify
+  dev.DevUtils +-down- dev.DevUtils.FileProviderDevApp
+  dev.DevUtils +-down- dev.DevUtils.OnActivityDestroyedListener
+  dev.DevUtils +-down- dev.DevUtils.OnAppStatusChangedListener
+  dev.DevUtils.AbstractActivityLifecycle .up.|> android.app.Application.ActivityLifecycleCallbacks
+  dev.DevUtils.ActivityLifecycleImpl .up.|> android.app.Application.ActivityLifecycleCallbacks
+  dev.DevUtils.ActivityLifecycleImpl .up.|> dev.DevUtils.ActivityLifecycleGet
+  dev.DevUtils.ActivityLifecycleImpl .up.|> dev.DevUtils.ActivityLifecycleNotify
+  dev.DevUtils.FileProviderDevApp -up-|> androidx.core.content.FileProvider
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

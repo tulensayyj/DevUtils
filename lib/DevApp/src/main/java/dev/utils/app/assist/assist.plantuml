@@ -1,0 +1,204 @@
+@startuml
+
+title __ASSIST's Class Diagram__\n
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace assist {
+          class dev.utils.app.assist.AsyncExecutor {
+              - TAG : String
+              - mHandler : Handler
+              - mThreadPool : ExecutorService
+              + AsyncExecutor()
+              + AsyncExecutor()
+              + execute()
+              + execute()
+              + shutdownNow()
+              - postCancel()
+              - postResult()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace assist {
+          abstract class dev.utils.app.assist.AsyncExecutor.Worker {
+              # abort()
+              {abstract} # doInBackground()
+              # onCanceled()
+              # onPostExecute()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace assist {
+          class dev.utils.app.assist.BeepVibrateAssist {
+              {static} - TAG : String
+              - mActivity : Activity
+              - mIsVibrate : boolean
+              - mMediaPlayer : MediaPlayer
+              - mVibrateDuration : long
+              + BeepVibrateAssist()
+              + BeepVibrateAssist()
+              + BeepVibrateAssist()
+              {static} + buildMediaPlayer()
+              {static} + buildMediaPlayer()
+              {static} + buildMediaPlayer()
+              {static} + buildMediaPlayer()
+              + close()
+              + isPlayBeep()
+              + isVibrate()
+              + playBeepSoundAndVibrate()
+              + setMediaPlayer()
+              + setVibrate()
+              + setVibrate()
+              - shouldBeep()
+              - streamUpdate()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace assist {
+          class dev.utils.app.assist.InactivityTimerAssist {
+              - mActivity : Activity
+              - mInactivityTask : AsyncTask<Object, Object, Object>
+              - mInactivityTime : long
+              - mPowerStateReceiver : BroadcastReceiver
+              + InactivityTimerAssist()
+              + InactivityTimerAssist()
+              + onDestroy()
+              + onPause()
+              + onResume()
+              - cancel()
+              - start()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace assist {
+          class dev.utils.app.assist.InactivityTimerAssist.InactivityAsyncTask {
+              # doInBackground()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace assist {
+          class dev.utils.app.assist.InactivityTimerAssist.PowerStateReceiver {
+              + onReceive()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace assist {
+          class dev.utils.app.assist.ScreenSensorAssist {
+              {static} + CHANGE_ORIENTATION_WHAT : int
+              - DATA_X : int
+              - DATA_Y : int
+              - DATA_Z : int
+              - ORIENTATION_UNKNOWN : int
+              {static} - TAG : String
+              - mAllowChange : boolean
+              - mHandler : Handler
+              - mPortrait : boolean
+              - mRotateHandler : Handler
+              - mSensor : Sensor
+              - mSensorManager : SensorManager
+              - mSensorManagerChange : SensorManager
+              + isAllowChange()
+              + isPortrait()
+              + start()
+              + stop()
+              - init()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace assist {
+          class dev.utils.app.assist.ScreenSensorAssist.OrientationSensorChangeListener {
+              + onAccuracyChanged()
+              + onSensorChanged()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace assist {
+          class dev.utils.app.assist.ScreenSensorAssist.OrientationSensorListener {
+              + onAccuracyChanged()
+              + onSensorChanged()
+          }
+        }
+      }
+    }
+  }
+  
+
+  dev.utils.app.assist.AsyncExecutor +-down- dev.utils.app.assist.AsyncExecutor.Worker
+  dev.utils.app.assist.BeepVibrateAssist .up.|> java.io.Closeable
+  dev.utils.app.assist.InactivityTimerAssist +-down- dev.utils.app.assist.InactivityTimerAssist.InactivityAsyncTask
+  dev.utils.app.assist.InactivityTimerAssist +-down- dev.utils.app.assist.InactivityTimerAssist.PowerStateReceiver
+  dev.utils.app.assist.InactivityTimerAssist.InactivityAsyncTask -up-|> android.os.AsyncTask
+  dev.utils.app.assist.InactivityTimerAssist.PowerStateReceiver -up-|> android.content.BroadcastReceiver
+  dev.utils.app.assist.ScreenSensorAssist o-- dev.utils.app.assist.ScreenSensorAssist.OrientationSensorListener : mListener
+  dev.utils.app.assist.ScreenSensorAssist o-- dev.utils.app.assist.ScreenSensorAssist.OrientationSensorChangeListener : mListenerChange
+  dev.utils.app.assist.ScreenSensorAssist +-down- dev.utils.app.assist.ScreenSensorAssist.OrientationSensorChangeListener
+  dev.utils.app.assist.ScreenSensorAssist +-down- dev.utils.app.assist.ScreenSensorAssist.OrientationSensorListener
+  dev.utils.app.assist.ScreenSensorAssist.OrientationSensorChangeListener .up.|> android.hardware.SensorEventListener
+  dev.utils.app.assist.ScreenSensorAssist.OrientationSensorListener .up.|> android.hardware.SensorEventListener
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

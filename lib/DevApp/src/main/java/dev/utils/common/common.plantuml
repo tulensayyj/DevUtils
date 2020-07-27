@@ -1,0 +1,2092 @@
+@startuml
+
+title __COMMON's Class Diagram__\n
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        class dev.utils.common.ArrayUtils {
+            {static} - TAG : String
+            {static} + appendToString()
+            {static} + appendToString()
+            {static} + appendToString()
+            {static} + appendToString()
+            {static} + appendToString()
+            {static} + appendToString()
+            {static} + appendToString()
+            {static} + appendToString()
+            {static} + appendToString()
+            {static} + arraycopy()
+            {static} + arraycopy()
+            {static} + arraycopy()
+            {static} + arraycopy()
+            {static} + arraycopy()
+            {static} + arraycopy()
+            {static} + arraycopy()
+            {static} + arraycopy()
+            {static} + arraycopy()
+            {static} + asList()
+            {static} + asList()
+            {static} + asList()
+            {static} + asList()
+            {static} + asList()
+            {static} + asList()
+            {static} + asList()
+            {static} + asList()
+            {static} + asList()
+            {static} + booleansToBooleans()
+            {static} + booleansToBooleans()
+            {static} + bytesToBytes()
+            {static} + bytesToBytes()
+            {static} + charactersToChars()
+            {static} + charsToCharacters()
+            {static} + doublesToDoubles()
+            {static} + doublesToDoubles()
+            {static} + equals()
+            {static} + floatsToFloats()
+            {static} + floatsToFloats()
+            {static} + get()
+            {static} + get()
+            {static} + get()
+            {static} + get()
+            {static} + get()
+            {static} + get()
+            {static} + get()
+            {static} + get()
+            {static} + get()
+            {static} + get()
+            {static} + get()
+            {static} + get()
+            {static} + get()
+            {static} + get()
+            {static} + get()
+            {static} + get()
+            {static} + get()
+            {static} + get()
+            {static} + get()
+            {static} + get()
+            {static} + get()
+            {static} + get()
+            {static} + get()
+            {static} + get()
+            {static} + get()
+            {static} + get()
+            {static} + get()
+            {static} + get()
+            {static} + get()
+            {static} + get()
+            {static} + get()
+            {static} + get()
+            {static} + getCount()
+            {static} + getFirst()
+            {static} + getFirst()
+            {static} + getFirst()
+            {static} + getFirst()
+            {static} + getFirst()
+            {static} + getFirst()
+            {static} + getFirst()
+            {static} + getFirst()
+            {static} + getFirst()
+            {static} + getLast()
+            {static} + getLast()
+            {static} + getLast()
+            {static} + getLast()
+            {static} + getLast()
+            {static} + getLast()
+            {static} + getLast()
+            {static} + getLast()
+            {static} + getLast()
+            {static} + getMaximum()
+            {static} + getMaximum()
+            {static} + getMaximum()
+            {static} + getMaximum()
+            {static} + getMaximumIndex()
+            {static} + getMaximumIndex()
+            {static} + getMaximumIndex()
+            {static} + getMaximumIndex()
+            {static} + getMinimum()
+            {static} + getMinimum()
+            {static} + getMinimum()
+            {static} + getMinimum()
+            {static} + getMinimumIndex()
+            {static} + getMinimumIndex()
+            {static} + getMinimumIndex()
+            {static} + getMinimumIndex()
+            {static} + getNotNull()
+            {static} + getNotNull()
+            {static} + getPosition()
+            {static} + getPosition()
+            {static} + getPosition()
+            {static} + getPosition()
+            {static} + getPosition()
+            {static} + getPosition()
+            {static} + getPosition()
+            {static} + getPosition()
+            {static} + getPosition()
+            {static} + getPosition()
+            {static} + getPosition()
+            {static} + getPosition()
+            {static} + getPosition()
+            {static} + getPositionNotNull()
+            {static} + getPositionNotNull()
+            {static} + integersToInts()
+            {static} + intsToIntegers()
+            {static} + isEmpty()
+            {static} + isEmpty()
+            {static} + isEmpty()
+            {static} + isEmpty()
+            {static} + isEmpty()
+            {static} + isEmpty()
+            {static} + isEmpty()
+            {static} + isEmpty()
+            {static} + isEmpty()
+            {static} + isEmpty()
+            {static} + isLength()
+            {static} + isLength()
+            {static} + isLength()
+            {static} + isLength()
+            {static} + isLength()
+            {static} + isLength()
+            {static} + isLength()
+            {static} + isLength()
+            {static} + isLength()
+            {static} + isLength()
+            {static} + isNotEmpty()
+            {static} + isNotEmpty()
+            {static} + isNotEmpty()
+            {static} + isNotEmpty()
+            {static} + isNotEmpty()
+            {static} + isNotEmpty()
+            {static} + isNotEmpty()
+            {static} + isNotEmpty()
+            {static} + isNotEmpty()
+            {static} + isNotEmpty()
+            {static} + length()
+            {static} + length()
+            {static} + length()
+            {static} + length()
+            {static} + length()
+            {static} + length()
+            {static} + length()
+            {static} + length()
+            {static} + length()
+            {static} + length()
+            {static} + length()
+            {static} + length()
+            {static} + length()
+            {static} + length()
+            {static} + length()
+            {static} + length()
+            {static} + length()
+            {static} + length()
+            {static} + length()
+            {static} + length()
+            {static} + longsToLongs()
+            {static} + longsToLongs()
+            {static} + newarray()
+            {static} + newarray()
+            {static} + newarray()
+            {static} + newarray()
+            {static} + newarray()
+            {static} + newarray()
+            {static} + newarray()
+            {static} + newarray()
+            {static} + newarray()
+            {static} + shortsToShorts()
+            {static} + shortsToShorts()
+            {static} + subarray()
+            {static} + subarray()
+            {static} + subarray()
+            {static} + subarray()
+            {static} + subarray()
+            {static} + subarray()
+            {static} + subarray()
+            {static} + subarray()
+            {static} + subarray()
+            {static} + sumarray()
+            {static} + sumarray()
+            {static} + sumarray()
+            {static} + sumarray()
+            {static} + sumarray()
+            {static} + sumarray()
+            {static} + sumarray()
+            {static} + sumarray()
+            {static} + sumarray()
+            {static} + sumarray()
+            {static} + sumarray()
+            {static} + sumarray()
+            {static} + sumarray()
+            {static} + sumarray()
+            {static} + sumarray()
+            {static} + sumarray()
+            - ArrayUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        class dev.utils.common.BigDecimalUtils {
+            {static} - NEW_SCALE : int
+            {static} - ROUNDING_MODE : int
+            {static} - TAG : String
+            {static} + add()
+            {static} + add()
+            {static} + add()
+            {static} + add()
+            {static} + add()
+            {static} + add()
+            {static} + adjustDouble()
+            {static} + compareTo()
+            {static} + compareTo()
+            {static} + compareTo()
+            {static} + divide()
+            {static} + divide()
+            {static} + divide()
+            {static} + divide()
+            {static} + divide()
+            {static} + divide()
+            {static} + formatMoney()
+            {static} + formatMoney()
+            {static} + formatMoney()
+            {static} + formatMoney()
+            {static} + formatMoney()
+            {static} + getBigDecimal()
+            {static} + getBigDecimal()
+            {static} + getBigDecimal()
+            {static} + getBigDecimal()
+            {static} + getBigDecimal()
+            {static} + multiply()
+            {static} + multiply()
+            {static} + multiply()
+            {static} + multiply()
+            {static} + multiply()
+            {static} + multiply()
+            {static} + remainder()
+            {static} + remainder()
+            {static} + remainder()
+            {static} + remainder()
+            {static} + remainder()
+            {static} + remainder()
+            {static} + round()
+            {static} + round()
+            {static} + round()
+            {static} + round()
+            {static} + round()
+            {static} + round()
+            {static} + setRoundingMode()
+            {static} + setScale()
+            {static} + subtract()
+            {static} + subtract()
+            {static} + subtract()
+            {static} + subtract()
+            {static} + subtract()
+            {static} + subtract()
+            {static} + toEngineeringString()
+            {static} + toPlainString()
+            {static} + toString()
+            - BigDecimalUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        class dev.utils.common.ClassUtils {
+            {static} - TAG : String
+            {static} + getClass()
+            {static} + getClass()
+            {static} + getDefaultPrimiticeValue()
+            {static} + getGenericInterfaces()
+            {static} + getGenericInterfaces()
+            {static} + getGenericInterfaces()
+            {static} + getGenericInterfaces()
+            {static} + getGenericParamType()
+            {static} + getGenericSuperclass()
+            {static} + getGenericSuperclass()
+            {static} + getGenericSuperclass()
+            {static} + getGenericSuperclass()
+            {static} + isArray()
+            {static} + isCollection()
+            {static} + isGenericParamType()
+            {static} + isMap()
+            {static} + isPrimitive()
+            {static} + newInstance()
+            - ClassUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        class dev.utils.common.CloneUtils {
+            {static} - TAG : String
+            {static} + deepClone()
+            {static} + deepClone()
+            {static} + deepClone()
+            {static} + serializableToBytes()
+            - CloneUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        class dev.utils.common.CloseUtils {
+            {static} - TAG : String
+            {static} + closeIO()
+            {static} + closeIOQuietly()
+            - CloseUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        class dev.utils.common.CollectionUtils {
+            {static} - TAG : String
+            {static} + add()
+            {static} + add()
+            {static} + add()
+            {static} + add()
+            {static} + addAll()
+            {static} + addAll()
+            {static} + addAll()
+            {static} + addAll()
+            {static} + addAllNotNull()
+            {static} + addAllNotNull()
+            {static} + addNotNull()
+            {static} + addNotNull()
+            {static} + clear()
+            {static} + clearAll()
+            {static} + clearNotBelong()
+            {static} + clearNull()
+            {static} + disjunction()
+            {static} + equals()
+            {static} + get()
+            {static} + get()
+            {static} + getCount()
+            {static} + getFirst()
+            {static} + getLast()
+            {static} + getMaximumD()
+            {static} + getMaximumF()
+            {static} + getMaximumI()
+            {static} + getMaximumIndexD()
+            {static} + getMaximumIndexF()
+            {static} + getMaximumIndexI()
+            {static} + getMaximumIndexL()
+            {static} + getMaximumL()
+            {static} + getMinimumD()
+            {static} + getMinimumF()
+            {static} + getMinimumI()
+            {static} + getMinimumIndexD()
+            {static} + getMinimumIndexF()
+            {static} + getMinimumIndexI()
+            {static} + getMinimumIndexL()
+            {static} + getMinimumL()
+            {static} + getNext()
+            {static} + getNext()
+            {static} + getNext()
+            {static} + getNext()
+            {static} + getNextNotNull()
+            {static} + getNextNotNull()
+            {static} + getPosition()
+            {static} + getPosition()
+            {static} + getPosition()
+            {static} + getPosition()
+            {static} + getPosition()
+            {static} + getPositionNotNull()
+            {static} + getPositionNotNull()
+            {static} + getPrevious()
+            {static} + getPrevious()
+            {static} + getPrevious()
+            {static} + getPrevious()
+            {static} + getPreviousNotNull()
+            {static} + getPreviousNotNull()
+            {static} + greaterThan()
+            {static} + greaterThanOrEqual()
+            {static} + intersection()
+            {static} + isEmpty()
+            {static} + isEqualCollection()
+            {static} + isEqualCollections()
+            {static} + isLength()
+            {static} + isNotEmpty()
+            {static} + length()
+            {static} + length()
+            {static} + lessThan()
+            {static} + lessThanOrEqual()
+            {static} + remove()
+            {static} + remove()
+            {static} + removeAll()
+            {static} + reverse()
+            {static} + subtract()
+            {static} + sumlistD()
+            {static} + sumlistD()
+            {static} + sumlistD()
+            {static} + sumlistD()
+            {static} + sumlistF()
+            {static} + sumlistF()
+            {static} + sumlistF()
+            {static} + sumlistF()
+            {static} + sumlistI()
+            {static} + sumlistI()
+            {static} + sumlistI()
+            {static} + sumlistI()
+            {static} + sumlistL()
+            {static} + sumlistL()
+            {static} + sumlistL()
+            {static} + sumlistL()
+            {static} + toArray()
+            {static} + toArrayT()
+            {static} + union()
+            {static} + unions()
+            - CollectionUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        class dev.utils.common.CollectionUtils.ArrayWithTypeToken {
+            - array : T[]
+            + ArrayWithTypeToken()
+            + ArrayWithTypeToken()
+            + create()
+            + get()
+            + put()
+            - newInstance()
+            - newInstance()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        class dev.utils.common.ColorUtils {
+            {static} + BLACK : int
+            {static} + BLACK_TRANSLUCENT : int
+            {static} + BLUE : int
+            {static} + BLUE_TRANSLUCENT : int
+            {static} + CHOCOLATE : int
+            {static} + CYAN : int
+            {static} + DKGRAY : int
+            {static} + FUCHSIA : int
+            {static} + GOLD : int
+            {static} + GRAY : int
+            {static} + GRAYWHITE : int
+            {static} + GRAY_TRANSLUCENT : int
+            {static} + GREEN : int
+            {static} + GREEN_TRANSLUCENT : int
+            {static} + HIGHLIGHT : int
+            {static} + LOWLIGHT : int
+            {static} + LTGRAY : int
+            {static} + MAGENTA : int
+            {static} + ORANGE : int
+            {static} + ORANGERED : int
+            {static} + PINK : int
+            {static} + PURPLE : int
+            {static} + RED : int
+            {static} + RED_TRANSLUCENT : int
+            {static} + SILVER : int
+            {static} + SKYBLUE : int
+            {static} + TOMATO : int
+            {static} + TRANSPARENT : int
+            {static} + WHITE : int
+            {static} + WHITE_TRANSLUCENT : int
+            {static} + YELLOW : int
+            {static} - TAG : String
+            {static} - sColorNameMaps : HashMap<String, Integer>
+            {static} - sParser : Parser
+            {static} + alpha()
+            {static} + alphaPercent()
+            {static} + argb()
+            {static} + argb()
+            {static} + blue()
+            {static} + bluePercent()
+            {static} + getARGB()
+            {static} + getRandomColor()
+            {static} + getRandomColor()
+            {static} + grayLevel()
+            {static} + grayLevel()
+            {static} + green()
+            {static} + greenPercent()
+            {static} + intToArgbString()
+            {static} + intToRgbString()
+            {static} + isARGB()
+            {static} + isRGB()
+            {static} + judgeColorString()
+            {static} + parseColor()
+            {static} + red()
+            {static} + redPercent()
+            {static} + rgb()
+            {static} + rgb()
+            {static} + setAlpha()
+            {static} + setAlpha()
+            {static} + setAlphaDark()
+            {static} + setAlphaDark()
+            {static} + setAlphaLight()
+            {static} + setAlphaLight()
+            {static} + setBlue()
+            {static} + setBlue()
+            {static} + setDark()
+            {static} + setDark()
+            {static} + setGreen()
+            {static} + setGreen()
+            {static} + setLight()
+            {static} + setLight()
+            {static} + setParser()
+            {static} + setRed()
+            {static} + setRed()
+            {static} + sortGray()
+            {static} + sortHSB()
+            {static} + toHexAlpha()
+            - ColorUtils()
+            {static} - priParseColor()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        class dev.utils.common.ColorUtils.ColorInfo {
+            - alpha : int
+            - blue : int
+            - brightness : float
+            - grayLevel : int
+            - green : int
+            - hue : float
+            - key : String
+            - red : int
+            - saturation : float
+            - value : String
+            - valueColor : long
+            - valueParser : String
+            + ColorInfo()
+            + ColorInfo()
+            + getAlpha()
+            + getBlue()
+            + getBrightness()
+            + getGrayLevel()
+            + getGreen()
+            + getHue()
+            + getKey()
+            + getRed()
+            + getSaturation()
+            + getValue()
+            + getValueColor()
+            + getValueParser()
+            + toString()
+            {static} - RGBtoHSB()
+            - priConvert()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        class dev.utils.common.ColorUtils.ColorInfo.ColorParser {
+            + handleColor()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        interface dev.utils.common.ColorUtils.ColorInfo.Parser {
+            {abstract} + handleColor()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        class dev.utils.common.ConvertUtils {
+            {static} - HEX_DIGITS : char[]
+            {static} - HEX_DIGITS_UPPER : char[]
+            {static} - TAG : String
+            {static} + bytesBitwiseAND()
+            {static} + bytesToChars()
+            {static} + bytesToObject()
+            {static} + charAt()
+            {static} + charAt()
+            {static} + charsToBytes()
+            {static} + convert()
+            {static} + decodeBinary()
+            {static} + decodeHex()
+            {static} + decodeHex()
+            {static} + decodeHex()
+            {static} + doublesToInts()
+            {static} + doublesToInts()
+            {static} + doublesToInts()
+            {static} + doublesToStrings()
+            {static} + doublesToStrings()
+            {static} + doublesToStrings()
+            {static} + floatsToInts()
+            {static} + floatsToInts()
+            {static} + floatsToInts()
+            {static} + floatsToStrings()
+            {static} + floatsToStrings()
+            {static} + floatsToStrings()
+            {static} + hexToInt()
+            {static} + intsToDoubles()
+            {static} + intsToDoubles()
+            {static} + intsToDoubles()
+            {static} + intsToFloats()
+            {static} + intsToFloats()
+            {static} + intsToFloats()
+            {static} + intsToLongs()
+            {static} + intsToLongs()
+            {static} + intsToLongs()
+            {static} + intsToStrings()
+            {static} + intsToStrings()
+            {static} + intsToStrings()
+            {static} + isHex()
+            {static} + longsToInts()
+            {static} + longsToInts()
+            {static} + longsToInts()
+            {static} + longsToStrings()
+            {static} + longsToStrings()
+            {static} + longsToStrings()
+            {static} + newString()
+            {static} + newString()
+            {static} + objectToBytes()
+            {static} + parseInt()
+            {static} + parseLong()
+            {static} + stringsToDoubles()
+            {static} + stringsToDoubles()
+            {static} + stringsToDoubles()
+            {static} + stringsToDoubles()
+            {static} + stringsToFloats()
+            {static} + stringsToFloats()
+            {static} + stringsToFloats()
+            {static} + stringsToFloats()
+            {static} + stringsToInts()
+            {static} + stringsToInts()
+            {static} + stringsToInts()
+            {static} + stringsToInts()
+            {static} + stringsToLongs()
+            {static} + stringsToLongs()
+            {static} + stringsToLongs()
+            {static} + stringsToLongs()
+            {static} + toBigDecimal()
+            {static} + toBigDecimal()
+            {static} + toBigInteger()
+            {static} + toBigInteger()
+            {static} + toBinaryString()
+            {static} + toBoolean()
+            {static} + toBoolean()
+            {static} + toByte()
+            {static} + toByte()
+            {static} + toBytes()
+            {static} + toChar()
+            {static} + toChar()
+            {static} + toCharInt()
+            {static} + toChars()
+            {static} + toDouble()
+            {static} + toDouble()
+            {static} + toFloat()
+            {static} + toFloat()
+            {static} + toHexChars()
+            {static} + toHexChars()
+            {static} + toHexChars()
+            {static} + toHexChars()
+            {static} + toHexString()
+            {static} + toHexString()
+            {static} + toHexString()
+            {static} + toHexString()
+            {static} + toHexString()
+            {static} + toHexString()
+            {static} + toHexString()
+            {static} + toHexString()
+            {static} + toInt()
+            {static} + toInt()
+            {static} + toLong()
+            {static} + toLong()
+            {static} + toShort()
+            {static} + toShort()
+            {static} + toString()
+            {static} + toString()
+            {static} + toString()
+            {static} + toString()
+            {static} + toString()
+            {static} + toString()
+            {static} + valueOf()
+            {static} + valueOf()
+            - ConvertUtils()
+            {static} - toDigit()
+            {static} - toHexChars()
+            {static} - toHexString()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        class dev.utils.common.CoordinateUtils {
+            {static} - A : double
+            {static} - EARTH_RADIUS : double
+            {static} - EE : double
+            {static} - X_PI : double
+            {static} + bd09ToGcj02()
+            {static} + bd09ToWGS84()
+            {static} + gcj02ToBd09()
+            {static} + gcj02ToWGS84()
+            {static} + getAngle()
+            {static} + getDirection()
+            {static} + getDirection()
+            {static} + getDistance()
+            {static} + outOfChina()
+            {static} + wgs84ToBd09()
+            {static} + wgs84ToGcj02()
+            - CoordinateUtils()
+            {static} - rad()
+            {static} - transformLat()
+            {static} - transformLng()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        enum Direction {
+          BOTTOM
+          LEFT
+          LEFT_BOTTOM
+          LEFT_TOP
+          RIGHT
+          RIGHT_BOTTOM
+          RIGHT_TOP
+          SAME
+          TOP
+          value
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        class dev.utils.common.DateUtils {
+            {static} + DAY : long
+            {static} + DAY_S : int
+            {static} + HHmm : String
+            {static} + HHmm2 : String
+            {static} + HHmmss : String
+            {static} + HHmmss2 : String
+            {static} + HOUR : long
+            {static} + HOUR_S : int
+            {static} + MIN : long
+            {static} + MINUTE_S : int
+            {static} + MMdd : String
+            {static} + MMdd2 : String
+            {static} + MMdd3 : String
+            {static} + MONTH : long
+            {static} + SEC : long
+            {static} + WEEK : long
+            {static} + YEAR : long
+            {static} + hhmmMMDDyyyy : String
+            {static} + hhmmssMMDDyyyy : String
+            {static} + yyyy : String
+            {static} + yyyyMMdd : String
+            {static} + yyyyMMdd2 : String
+            {static} + yyyyMMdd3 : String
+            {static} + yyyyMMddHHmmss : String
+            {static} + yyyyMMddHHmmss_2 : String
+            {static} + yyyyMMdd_HHmmss : String
+            {static} - TAG : String
+            {static} + convertTime()
+            {static} + convertTime()
+            {static} + convertTimeArys()
+            {static} + formatDate()
+            {static} + formatTime()
+            {static} + get12Hour()
+            {static} + get12Hour()
+            {static} + get24Hour()
+            {static} + get24Hour()
+            {static} + getArrayToHH()
+            {static} + getArrayToHHMM()
+            {static} + getArrayToMM()
+            {static} + getDateNow()
+            {static} + getDateNow()
+            {static} + getDay()
+            {static} + getDay()
+            {static} + getEndTimeDiff()
+            {static} + getEndTimeDiff()
+            {static} + getEndTimeDiffHHmm()
+            {static} + getEndTimeDiffHHmm()
+            {static} + getListToHH()
+            {static} + getListToHHMM()
+            {static} + getListToHHMMPosition()
+            {static} + getListToMM()
+            {static} + getMinute()
+            {static} + getMinute()
+            {static} + getMonth()
+            {static} + getMonth()
+            {static} + getMonthDayNumber()
+            {static} + getMonthDayNumberAll()
+            {static} + getSecond()
+            {static} + getSecond()
+            {static} + getTimeDiff()
+            {static} + getTimeDiff()
+            {static} + getTimeDiff()
+            {static} + getTimeDiffDay()
+            {static} + getTimeDiffHour()
+            {static} + getTimeDiffMinute()
+            {static} + getWeek()
+            {static} + getWeek()
+            {static} + getYear()
+            {static} + getYear()
+            {static} + getYearMonthNumber()
+            {static} + isInDate()
+            {static} + isInTime()
+            {static} + isInTime()
+            {static} + isInTimeHHmm()
+            {static} + isInTimeHHmm()
+            {static} + isInTimeHHmmss()
+            {static} + isInTimeHHmmss()
+            {static} + isLeapYear()
+            {static} + millisToFitTimeSpan()
+            {static} + millisToTimeArys()
+            {static} + parseDate()
+            {static} + parseDate()
+            {static} + parseDate()
+            {static} + parseLong()
+            {static} + parseLong()
+            {static} + parseToString()
+            {static} + secToTimeRetain()
+            {static} + secToTimeRetain()
+            - DateUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        class dev.utils.common.DevCommonUtils {
+            {static} - NEW_LINE_STR : String
+            {static} - TAG : String
+            {static} + appendLine()
+            {static} + appendSpace()
+            {static} + appendTab()
+            {static} + appends()
+            {static} + appendsIgnoreLast()
+            {static} + converHideMobile()
+            {static} + converHideMobile()
+            {static} + converSymbolHide()
+            {static} + equals()
+            {static} + getAutoFormatString()
+            {static} + getAutoFormatString2()
+            {static} + getFormatString()
+            {static} + getOperateTime()
+            {static} + getOperateTime()
+            {static} + getRandomUUID()
+            {static} + getRandomUUIDToString()
+            {static} + isContains()
+            {static} + isContains()
+            {static} + isEmpty()
+            {static} + isEmpty()
+            {static} + isEmpty()
+            {static} + isEmpty()
+            {static} + isEmpty()
+            {static} + isEmpty()
+            {static} + isEmpty()
+            {static} + isEmpty()
+            {static} + isEmpty()
+            {static} + isEmpty()
+            {static} + isEmpty()
+            {static} + isEmpty()
+            {static} + isEmpty()
+            {static} + isEmpty()
+            {static} + isEmpty()
+            {static} + isEndsWith()
+            {static} + isEndsWith()
+            {static} + isEquals()
+            {static} + isEquals()
+            {static} + isHttpRes()
+            {static} + isLength()
+            {static} + isLength()
+            {static} + isLength()
+            {static} + isLength()
+            {static} + isLength()
+            {static} + isLength()
+            {static} + isLength()
+            {static} + isLength()
+            {static} + isLength()
+            {static} + isLength()
+            {static} + isLength()
+            {static} + isLength()
+            {static} + isNotEmpty()
+            {static} + isNotEmpty()
+            {static} + isNotEmpty()
+            {static} + isNotEmpty()
+            {static} + isNotEmpty()
+            {static} + isNotEmpty()
+            {static} + isNotEmpty()
+            {static} + isNotEmpty()
+            {static} + isNotEmpty()
+            {static} + isNotEmpty()
+            {static} + isNotEmpty()
+            {static} + isNotEmpty()
+            {static} + isNotEmpty()
+            {static} + isNotEmpty()
+            {static} + isOrEquals()
+            {static} + isOrEquals()
+            {static} + isSpace()
+            {static} + isStartsWith()
+            {static} + isStartsWith()
+            {static} + length()
+            {static} + length()
+            {static} + length()
+            {static} + length()
+            {static} + length()
+            {static} + length()
+            {static} + length()
+            {static} + length()
+            {static} + length()
+            {static} + length()
+            {static} + length()
+            {static} + length()
+            {static} + length()
+            {static} + length()
+            {static} + length()
+            {static} + length()
+            {static} + length()
+            {static} + length()
+            {static} + length()
+            {static} + length()
+            {static} + length()
+            {static} + length()
+            {static} + length()
+            {static} + length()
+            {static} + randomUUID()
+            {static} + randomUUIDToHashCode()
+            {static} + randomUUIDToHashCode()
+            {static} + replaceAll()
+            {static} + replaceAllToNull()
+            {static} + replaceAlls()
+            {static} + sleepOperate()
+            {static} + sleepOperate()
+            {static} + split()
+            {static} + split()
+            {static} + split()
+            {static} + subEllipsize()
+            {static} + subSetSymbol()
+            {static} + subSymbolHide()
+            {static} + substring()
+            {static} + substring()
+            {static} + substring()
+            {static} + timeRecord()
+            {static} + timeRecord()
+            {static} + toCheckValue()
+            {static} + toCheckValue()
+            {static} + toCheckValue()
+            {static} + toCheckValues()
+            {static} + toCheckValuesSpace()
+            {static} + toClearEndsWith()
+            {static} + toClearSEWiths()
+            {static} + toClearSpace()
+            {static} + toClearSpaceTrim()
+            {static} + toClearStartsWith()
+            {static} + toReplaceEndsWith()
+            {static} + toReplaceEndsWith()
+            {static} + toReplaceSEWith()
+            {static} + toReplaceSEWith()
+            {static} + toReplaceStartsWith()
+            {static} + toReplaceStartsWith()
+            {static} + whileMD5()
+            - DevCommonUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        class dev.utils.common.EncodeUtils {
+            {static} + base64Decode()
+            {static} + base64Decode()
+            {static} + base64Decode()
+            {static} + base64Decode()
+            {static} + base64DecodeToString()
+            {static} + base64DecodeToString()
+            {static} + base64DecodeToString()
+            {static} + base64DecodeToString()
+            {static} + base64Encode()
+            {static} + base64Encode()
+            {static} + base64Encode()
+            {static} + base64Encode()
+            {static} + base64EncodeToString()
+            {static} + base64EncodeToString()
+            {static} + base64EncodeToString()
+            {static} + base64EncodeToString()
+            {static} + htmlEncode()
+            - EncodeUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        class dev.utils.common.FieldUtils {
+            {static} - TAG : String
+            {static} + get()
+            {static} + getAllDeclaredFields()
+            {static} + getComponentType()
+            {static} + getDeclaredField()
+            {static} + getDeclaredField()
+            {static} + getDeclaredFields()
+            {static} + getDeclaredFields()
+            {static} + getField()
+            {static} + getField()
+            {static} + getFields()
+            {static} + getFields()
+            {static} + getGenericType()
+            {static} + isBoolean()
+            {static} + isByte()
+            {static} + isCharacter()
+            {static} + isDouble()
+            {static} + isFinal()
+            {static} + isFloat()
+            {static} + isInteger()
+            {static} + isInvalid()
+            {static} + isLong()
+            {static} + isSerializable()
+            {static} + isShort()
+            {static} + isStatic()
+            {static} + isStaticFinal()
+            {static} + isString()
+            {static} + isSynthetic()
+            {static} + set()
+            - FieldUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        class dev.utils.common.FileIOUtils {
+            {static} + EOF : int
+            {static} - NEW_LINE_STR : String
+            {static} - TAG : String
+            {static} - sBufferSize : int
+            {static} + copyLarge()
+            {static} + getFileInputStream()
+            {static} + getFileInputStream()
+            {static} + getFileOutputStream()
+            {static} + getFileOutputStream()
+            {static} + getFileOutputStream()
+            {static} + getFileOutputStream()
+            {static} + readFileToBytesByChannel()
+            {static} + readFileToBytesByChannel()
+            {static} + readFileToBytesByMap()
+            {static} + readFileToBytesByMap()
+            {static} + readFileToBytesByStream()
+            {static} + readFileToBytesByStream()
+            {static} + readFileToList()
+            {static} + readFileToList()
+            {static} + readFileToList()
+            {static} + readFileToList()
+            {static} + readFileToList()
+            {static} + readFileToList()
+            {static} + readFileToList()
+            {static} + readFileToList()
+            {static} + readFileToString()
+            {static} + readFileToString()
+            {static} + readFileToString()
+            {static} + readFileToString()
+            {static} + setBufferSize()
+            {static} + writeFileFromBytesByChannel()
+            {static} + writeFileFromBytesByChannel()
+            {static} + writeFileFromBytesByChannel()
+            {static} + writeFileFromBytesByChannel()
+            {static} + writeFileFromBytesByMap()
+            {static} + writeFileFromBytesByMap()
+            {static} + writeFileFromBytesByMap()
+            {static} + writeFileFromBytesByMap()
+            {static} + writeFileFromBytesByStream()
+            {static} + writeFileFromBytesByStream()
+            {static} + writeFileFromBytesByStream()
+            {static} + writeFileFromBytesByStream()
+            {static} + writeFileFromIS()
+            {static} + writeFileFromIS()
+            {static} + writeFileFromIS()
+            {static} + writeFileFromIS()
+            {static} + writeFileFromString()
+            {static} + writeFileFromString()
+            {static} + writeFileFromString()
+            {static} + writeFileFromString()
+            - FileIOUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        class dev.utils.common.FileRecordUtils {
+            {static} - INSERT_INFO : String
+            {static} - NEW_LINE_STR : String
+            {static} - NEW_LINE_STR_X2 : String
+            {static} - RECORD_CALLBACK : CallBack
+            {static} + saveErrorLog()
+            {static} + saveErrorLog()
+            {static} + saveErrorLog()
+            {static} + saveErrorLog()
+            {static} + saveLog()
+            {static} + saveLog()
+            {static} + saveLog()
+            {static} + saveLog()
+            {static} + setCallBack()
+            {static} + setInsertInfo()
+            - FileRecordUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        interface dev.utils.common.FileRecordUtils.CallBack {
+            {abstract} + callback()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        class dev.utils.common.FileUtils {
+            {static} - AUDIO_FORMATS : String[]
+            {static} - IMAGE_FORMATS : String[]
+            {static} - NEW_LINE_STR : String
+            {static} - TAG : String
+            {static} - VIDEO_FORMATS : String[]
+            {static} + appendFile()
+            {static} + appendFile()
+            {static} + copyDir()
+            {static} + copyDir()
+            {static} + copyFile()
+            {static} + copyFile()
+            {static} + copyFile()
+            {static} + copyFile()
+            {static} + copyFolder()
+            {static} + copyOrMoveDir()
+            {static} + copyOrMoveDir()
+            {static} + copyOrMoveFile()
+            {static} + copyOrMoveFile()
+            {static} + createFileByDeleteOldFile()
+            {static} + createFileByDeleteOldFile()
+            {static} + createFolder()
+            {static} + createFolder()
+            {static} + createFolderByPath()
+            {static} + createFolderByPath()
+            {static} + createFolderByPaths()
+            {static} + createFolderByPaths()
+            {static} + createOrExistsDir()
+            {static} + createOrExistsDir()
+            {static} + createOrExistsFile()
+            {static} + createOrExistsFile()
+            {static} + deleteAllInDir()
+            {static} + deleteAllInDir()
+            {static} + deleteDir()
+            {static} + deleteDir()
+            {static} + deleteFile()
+            {static} + deleteFile()
+            {static} + deleteFiles()
+            {static} + deleteFiles()
+            {static} + deleteFilesInDir()
+            {static} + deleteFilesInDir()
+            {static} + deleteFilesInDirWithFilter()
+            {static} + deleteFilesInDirWithFilter()
+            {static} + deleteFolder()
+            {static} + deleteFolder()
+            {static} + formatByteMemorySize()
+            {static} + formatByteMemorySize()
+            {static} + formatFileSize()
+            {static} + formatFileSize()
+            {static} + formatFileSize()
+            {static} + getAbsolutePath()
+            {static} + getDirLength()
+            {static} + getDirLength()
+            {static} + getDirName()
+            {static} + getDirName()
+            {static} + getDirSize()
+            {static} + getDirSize()
+            {static} + getFile()
+            {static} + getFile()
+            {static} + getFileByPath()
+            {static} + getFileCharsetSimple()
+            {static} + getFileCharsetSimple()
+            {static} + getFileCreateFolder()
+            {static} + getFileExtension()
+            {static} + getFileExtension()
+            {static} + getFileLastModified()
+            {static} + getFileLastModified()
+            {static} + getFileLength()
+            {static} + getFileLength()
+            {static} + getFileLengthNetwork()
+            {static} + getFileLines()
+            {static} + getFileLines()
+            {static} + getFileMD5()
+            {static} + getFileMD5()
+            {static} + getFileMD5ToHexString()
+            {static} + getFileMD5ToHexString()
+            {static} + getFileName()
+            {static} + getFileName()
+            {static} + getFileNameNoExtension()
+            {static} + getFileNameNoExtension()
+            {static} + getFileNotSuffix()
+            {static} + getFileNotSuffix()
+            {static} + getFileNotSuffixToPath()
+            {static} + getFilePathCreateFolder()
+            {static} + getFileSize()
+            {static} + getFileSize()
+            {static} + getFileSuffix()
+            {static} + getFileSuffix()
+            {static} + getName()
+            {static} + getName()
+            {static} + getName()
+            {static} + getPath()
+            {static} + isAudioFormats()
+            {static} + isAudioFormats()
+            {static} + isAudioFormats()
+            {static} + isDirectory()
+            {static} + isDirectory()
+            {static} + isFile()
+            {static} + isFile()
+            {static} + isFileExists()
+            {static} + isFileExists()
+            {static} + isFileExists()
+            {static} + isFileFormats()
+            {static} + isFileFormats()
+            {static} + isHidden()
+            {static} + isHidden()
+            {static} + isImageFormats()
+            {static} + isImageFormats()
+            {static} + isImageFormats()
+            {static} + isVideoFormats()
+            {static} + isVideoFormats()
+            {static} + isVideoFormats()
+            {static} + listFilesInDir()
+            {static} + listFilesInDir()
+            {static} + listFilesInDir()
+            {static} + listFilesInDir()
+            {static} + listFilesInDirBean()
+            {static} + listFilesInDirBean()
+            {static} + listFilesInDirBean()
+            {static} + listFilesInDirBean()
+            {static} + listFilesInDirWithFilter()
+            {static} + listFilesInDirWithFilter()
+            {static} + listFilesInDirWithFilter()
+            {static} + listFilesInDirWithFilter()
+            {static} + listFilesInDirWithFilterBean()
+            {static} + listFilesInDirWithFilterBean()
+            {static} + listFilesInDirWithFilterBean()
+            {static} + listFilesInDirWithFilterBean()
+            {static} + moveDir()
+            {static} + moveDir()
+            {static} + moveFile()
+            {static} + moveFile()
+            {static} + moveFile()
+            {static} + moveFolder()
+            {static} + readFile()
+            {static} + readFile()
+            {static} + readFile()
+            {static} + readFile()
+            {static} + readFileBytes()
+            {static} + readFileBytes()
+            {static} + readFileBytes()
+            {static} + rename()
+            {static} + rename()
+            {static} + saveFile()
+            {static} + saveFile()
+            - FileUtils()
+            {static} - copyFolder()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        class dev.utils.common.FileUtils.FileList {
+            - mFile : File
+            - mSubFiles : List<FileList>
+            + FileList()
+            + FileList()
+            + getFile()
+            + getSubFiles()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        interface dev.utils.common.FileUtils.OnReplaceListener {
+            {abstract} + onReplace()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        class dev.utils.common.HtmlUtils {
+            {static} + addHtmlBold()
+            {static} + addHtmlColor()
+            {static} + addHtmlColor()
+            {static} + addHtmlColorAndBlod()
+            {static} + addHtmlDIV()
+            {static} + addHtmlDIVByMargin()
+            {static} + addHtmlDIVByMarginPadding()
+            {static} + addHtmlDIVByPadding()
+            {static} + addHtmlIMG()
+            {static} + addHtmlIMG()
+            {static} + addHtmlIMGByHeight()
+            {static} + addHtmlIMGByWidth()
+            {static} + addHtmlIncline()
+            {static} + addHtmlOverline()
+            {static} + addHtmlP()
+            {static} + addHtmlSPAN()
+            {static} + addHtmlStrikeThruline()
+            {static} + addHtmlUnderline()
+            {static} + keywordReplaceHtmlColor()
+            - HtmlUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        class dev.utils.common.HttpParamsUtils {
+            {static} - TAG : String
+            {static} + joinParams()
+            {static} + joinParams()
+            {static} + joinParamsObj()
+            {static} + joinParamsObj()
+            {static} + splitParams()
+            {static} + splitParams()
+            {static} + toConvertObjToMO()
+            {static} + toConvertObjToMS()
+            {static} + toUrlEncode()
+            {static} + toUrlEncode()
+            - HttpParamsUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        class dev.utils.common.HttpURLConnectionUtils {
+            {static} + BAIDU_URL : String
+            {static} - TAG : String
+            {static} - TIMEOUT_IN_MILLIONS : int
+            {static} + doGetAsyn()
+            {static} + doPostAsyn()
+            {static} + getNetTime()
+            {static} + getNetTime()
+            {static} + request()
+            - HttpURLConnectionUtils()
+            {static} - reqNetTime()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        interface dev.utils.common.HttpURLConnectionUtils.CallBack {
+            {abstract} + onFail()
+            {abstract} + onResponse()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        interface dev.utils.common.HttpURLConnectionUtils.TimeCallBack {
+            {abstract} + onFail()
+            {abstract} + onResponse()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        class dev.utils.common.MapUtils {
+            {static} - TAG : String
+            {static} + containsKey()
+            {static} + containsValue()
+            {static} + equals()
+            {static} + get()
+            {static} + get()
+            {static} + getCount()
+            {static} + getFirst()
+            {static} + getKeyByValue()
+            {static} + getKeys()
+            {static} + getKeysByValue()
+            {static} + getKeysToArrays()
+            {static} + getLast()
+            {static} + getLast()
+            {static} + getNext()
+            {static} + getPrevious()
+            {static} + getValues()
+            {static} + getValuesToArrays()
+            {static} + greaterThan()
+            {static} + greaterThanOrEqual()
+            {static} + isEmpty()
+            {static} + isLength()
+            {static} + isNotEmpty()
+            {static} + isNullToValue()
+            {static} + length()
+            {static} + length()
+            {static} + lessThan()
+            {static} + lessThanOrEqual()
+            {static} + put()
+            {static} + put()
+            {static} + put()
+            {static} + put()
+            {static} + putAll()
+            {static} + putAll()
+            {static} + putAll()
+            {static} + putAll()
+            {static} + putAll()
+            {static} + putAll()
+            {static} + putAllNotNull()
+            {static} + putAllNotNull()
+            {static} + putAllNotNull()
+            {static} + putNotNull()
+            {static} + putNotNull()
+            {static} + putToList()
+            {static} + putToList()
+            {static} + remove()
+            {static} + remove()
+            {static} + removeToKeys()
+            {static} + removeToList()
+            {static} + removeToList()
+            {static} + removeToLists()
+            {static} + removeToMap()
+            {static} + removeToMap()
+            {static} + removeToValue()
+            {static} + removeToValues()
+            {static} + toggle()
+            - MapUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        class dev.utils.common.NumberUtils {
+            {static} - CHN_NUMBER_UNITS : String[]
+            {static} - CHN_NUMBER_UPPER_UNITS : String[]
+            {static} - NUMBER_UNITS : double[]
+            {static} - TAG : String
+            {static} - TEN_POS : int
+            {static} - ZERO : int
+            {static} + calculateUnit()
+            {static} + clamp()
+            {static} + clamp()
+            {static} + clamp()
+            {static} + clamp()
+            {static} + getMultiple()
+            {static} + getMultiple()
+            {static} + getMultiple()
+            {static} + getMultiple()
+            {static} + getMultipleD()
+            {static} + getMultipleD()
+            {static} + getMultipleD()
+            {static} + getMultipleD()
+            {static} + getMultipleF()
+            {static} + getMultipleF()
+            {static} + getMultipleF()
+            {static} + getMultipleF()
+            {static} + getMultipleI()
+            {static} + getMultipleI()
+            {static} + getMultipleI()
+            {static} + getMultipleI()
+            {static} + getMultipleL()
+            {static} + getMultipleL()
+            {static} + getMultipleL()
+            {static} + getMultipleL()
+            {static} + isNumber()
+            {static} + isNumberDecimal()
+            {static} + numberToCHN()
+            {static} + numberToCHN()
+            {static} + numberToCHN()
+            {static} + percentD()
+            {static} + percentD()
+            {static} + percentD()
+            {static} + percentD()
+            {static} + percentD2()
+            {static} + percentD2()
+            {static} + percentD2()
+            {static} + percentD2()
+            {static} + percentF()
+            {static} + percentF()
+            {static} + percentF()
+            {static} + percentF()
+            {static} + percentF2()
+            {static} + percentF2()
+            {static} + percentF2()
+            {static} + percentF2()
+            {static} + percentI()
+            {static} + percentI()
+            {static} + percentI()
+            {static} + percentI()
+            {static} + percentI2()
+            {static} + percentI2()
+            {static} + percentI2()
+            {static} + percentI2()
+            {static} + percentL()
+            {static} + percentL()
+            {static} + percentL()
+            {static} + percentL()
+            {static} + percentL2()
+            {static} + percentL2()
+            {static} + percentL2()
+            {static} + percentL2()
+            - NumberUtils()
+            {static} - numberToCHNNumber()
+            {static} - thousandConvertCHN()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        class dev.utils.common.ObjectUtils {
+            {static} - TAG : String
+            {static} + convert()
+            {static} + equals()
+            {static} + getObjectTag()
+            {static} + getOrDefault()
+            {static} + hashCode()
+            {static} + isEmpty()
+            {static} + isNotEmpty()
+            {static} + requireNonNull()
+            - ObjectUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        class dev.utils.common.RandomUtils {
+            {static} + CAPITAL_LETTERS : char[]
+            {static} + LETTERS : char[]
+            {static} + LOWER_CASE_LETTERS : char[]
+            {static} + NUMBERS : char[]
+            {static} + NUMBERS_AND_LETTERS : char[]
+            {static} - TAG : String
+            {static} + doubles()
+            {static} + getRandom()
+            {static} + getRandom()
+            {static} + getRandom()
+            {static} + getRandom()
+            {static} + getRandomCapitalLetters()
+            {static} + getRandomLetters()
+            {static} + getRandomLowerCaseLetters()
+            {static} + getRandomNumbers()
+            {static} + getRandomNumbersAndLetters()
+            {static} + ints()
+            {static} + longs()
+            {static} + nextBoolean()
+            {static} + nextBoolean()
+            {static} + nextBytes()
+            {static} + nextBytes()
+            {static} + nextDouble()
+            {static} + nextDouble()
+            {static} + nextDoubleRange()
+            {static} + nextFloat()
+            {static} + nextFloat()
+            {static} + nextGaussian()
+            {static} + nextGaussian()
+            {static} + nextInt()
+            {static} + nextInt()
+            {static} + nextInt()
+            {static} + nextInt()
+            {static} + nextIntRange()
+            {static} + nextLong()
+            {static} + nextLong()
+            {static} + nextLongRange()
+            {static} + shuffle()
+            {static} + shuffle()
+            {static} + shuffle()
+            {static} + shuffle()
+            {static} + shuffle2()
+            - RandomUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        class dev.utils.common.Reflect2Utils {
+            {static} - TAG : String
+            {static} + getArgsClass()
+            {static} + getDeclaredFieldParent()
+            {static} + getDeclaredFieldParent()
+            {static} + getProperty()
+            {static} + getProperty()
+            {static} + getPropertyByParent()
+            {static} + getPropertyByParent()
+            {static} + getStaticProperty()
+            {static} + getStaticProperty()
+            {static} + getStaticProperty()
+            {static} + invokeMethod()
+            {static} + invokeMethod()
+            {static} + invokeMethod()
+            {static} + invokeStaticMethod()
+            {static} + invokeStaticMethod()
+            {static} + invokeStaticMethod()
+            {static} + invokeStaticMethod()
+            {static} + invokeStaticMethod()
+            {static} + invokeStaticMethod()
+            {static} + invokeStaticMethod()
+            {static} + invokeStaticMethod()
+            {static} + invokeStaticMethod()
+            {static} + isInstance()
+            {static} + newInstance()
+            {static} + newInstance()
+            {static} + newInstance()
+            {static} + newInstance()
+            {static} + newInstance()
+            {static} + newInstance()
+            {static} + newInstance()
+            {static} + newInstance()
+            {static} + newInstance()
+            {static} + setProperty()
+            - Reflect2Utils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        class dev.utils.common.ReflectUtils {
+            {static} - TAG : String
+            - mObject : Object
+            - mType : Class<?>
+            + equals()
+            + field()
+            + field()
+            + get()
+            + hashCode()
+            + method()
+            + method()
+            + newInstance()
+            + newInstance()
+            + proxy()
+            {static} + reflect()
+            {static} + reflect()
+            {static} + reflect()
+            {static} + reflect()
+            + setEnumVal()
+            + toString()
+            + type()
+            - ReflectUtils()
+            - ReflectUtils()
+            - accessible()
+            - exactMethod()
+            {static} - forName()
+            {static} - forName()
+            - getAccessibleField()
+            - getArgsType()
+            - getField()
+            - isSimilarSignature()
+            - match()
+            - method()
+            - newInstance()
+            - property()
+            - similarMethod()
+            - sortConstructors()
+            - sortMethods()
+            - unwrap()
+            - wrapper()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        class dev.utils.common.ReflectUtils.NULL {
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        class dev.utils.common.ReflectUtils.ReflectException {
+            {static} - serialVersionUID : long
+            + ReflectException()
+            + ReflectException()
+            + ReflectException()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        class dev.utils.common.ScaleUtils {
+            {static} - TAG : String
+            {static} + calcHeightToScale()
+            {static} + calcHeightToScale()
+            {static} + calcHeightToScale()
+            {static} + calcHeightToScale()
+            {static} + calcScaleToHeight()
+            {static} + calcScaleToHeight()
+            {static} + calcScaleToHeight()
+            {static} + calcScaleToHeight()
+            {static} + calcScaleToWidth()
+            {static} + calcScaleToWidth()
+            {static} + calcScaleToWidth()
+            {static} + calcScaleToWidth()
+            {static} + calcWidthHeightToScale()
+            {static} + calcWidthHeightToScale()
+            {static} + calcWidthHeightToScale()
+            {static} + calcWidthHeightToScale()
+            {static} + calcWidthToScale()
+            {static} + calcWidthToScale()
+            {static} + calcWidthToScale()
+            {static} + calcWidthToScale()
+            - ScaleUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        class dev.utils.common.StreamUtils {
+            {static} - TAG : String
+            {static} + bytesToInputStream()
+            {static} + bytesToOutputStream()
+            {static} + inputStreamToBytes()
+            {static} + inputStreamToString()
+            {static} + inputToOutputStream()
+            {static} + outputStreamToBytes()
+            {static} + outputStreamToString()
+            {static} + outputToInputStream()
+            {static} + stringToInputStream()
+            {static} + stringToOutputStream()
+            - StreamUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        class dev.utils.common.StringUtils {
+            {static} + NEW_LINE_STR : String
+            {static} + NEW_LINE_STR_X2 : String
+            {static} - TAG : String
+            {static} + appendLine()
+            {static} + appendSpace()
+            {static} + appendTab()
+            {static} + appends()
+            {static} + appendsIgnoreLast()
+            {static} + camelCaseToUnderScoreCase()
+            {static} + checkChineseToString()
+            {static} + colonSplit()
+            {static} + concat()
+            {static} + concatSpiltWith()
+            {static} + converHideMobile()
+            {static} + converHideMobile()
+            {static} + converSymbolHide()
+            {static} + countMatches()
+            {static} + countMatches2()
+            {static} + equals()
+            {static} + getAutoFormatString()
+            {static} + getAutoFormatString2()
+            {static} + getBytes()
+            {static} + getFormatString()
+            {static} + isChinese()
+            {static} + isContains()
+            {static} + isContains()
+            {static} + isEmpty()
+            {static} + isEmpty()
+            {static} + isEmpty()
+            {static} + isEndsWith()
+            {static} + isEndsWith()
+            {static} + isEquals()
+            {static} + isEquals()
+            {static} + isLength()
+            {static} + isNotEmpty()
+            {static} + isNotEmpty()
+            {static} + isOrEquals()
+            {static} + isOrEquals()
+            {static} + isSpace()
+            {static} + isStartsWith()
+            {static} + isStartsWith()
+            {static} + length()
+            {static} + length()
+            {static} + lowerFirstLetter()
+            {static} + replaceAll()
+            {static} + replaceAllToNull()
+            {static} + replaceAlls()
+            {static} + reverse()
+            {static} + split()
+            {static} + split()
+            {static} + split()
+            {static} + sqliteEscape()
+            {static} + subEllipsize()
+            {static} + subSetSymbol()
+            {static} + subSymbolHide()
+            {static} + substring()
+            {static} + substring()
+            {static} + substring()
+            {static} + toASCII()
+            {static} + toCheckValue()
+            {static} + toCheckValue()
+            {static} + toCheckValue()
+            {static} + toCheckValues()
+            {static} + toCheckValuesSpace()
+            {static} + toClearEndsWith()
+            {static} + toClearSEWiths()
+            {static} + toClearSpace()
+            {static} + toClearSpaceTrim()
+            {static} + toClearStartsWith()
+            {static} + toDBC()
+            {static} + toGBK2312Encode()
+            {static} + toGBKEncode()
+            {static} + toReplaceEndsWith()
+            {static} + toReplaceEndsWith()
+            {static} + toReplaceSEWith()
+            {static} + toReplaceSEWith()
+            {static} + toReplaceStartsWith()
+            {static} + toReplaceStartsWith()
+            {static} + toSBC()
+            {static} + toStrEncode()
+            {static} + toUTF8Encode()
+            {static} + toUnicode()
+            {static} + toUnicodeString()
+            {static} + toUrlDecode()
+            {static} + toUrlDecode()
+            {static} + toUrlEncode()
+            {static} + toUrlEncode()
+            {static} + underScoreCaseToCamelCase()
+            {static} + upperFirstLetter()
+            - StringUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        class dev.utils.common.ThrowableUtils {
+            {static} - TAG : String
+            {static} + getThrowable()
+            {static} + getThrowable()
+            {static} + getThrowableStackTrace()
+            {static} + getThrowableStackTrace()
+            - ThrowableUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        class dev.utils.common.TypeUtils {
+            {static} - TAG : String
+            {static} + getArrayType()
+            {static} + getListType()
+            {static} + getMapType()
+            {static} + getSetType()
+            {static} + getType()
+            - TypeUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        class dev.utils.common.TypeUtils.ParameterizedTypeImpl {
+            - actualTypeArguments : Type[]
+            - ownerType : Type
+            - rawType : Type
+            + ParameterizedTypeImpl()
+            + equals()
+            + getActualTypeArguments()
+            + getOwnerType()
+            + getRawType()
+            + hashCode()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace common {
+        class dev.utils.common.ZipUtils {
+            {static} - BUFFER_LEN : int
+            {static} - TAG : String
+            {static} + getComments()
+            {static} + getComments()
+            {static} + getFilesPath()
+            {static} + getFilesPath()
+            {static} + unzipFile()
+            {static} + unzipFile()
+            {static} + unzipFileByKeyword()
+            {static} + unzipFileByKeyword()
+            {static} + zipFile()
+            {static} + zipFile()
+            {static} + zipFile()
+            {static} + zipFile()
+            {static} + zipFiles()
+            {static} + zipFiles()
+            {static} + zipFiles()
+            {static} + zipFiles()
+            - ZipUtils()
+            {static} - unzipChildFile()
+            {static} - zipFile()
+        }
+      }
+    }
+  }
+  
+
+  dev.utils.common.CollectionUtils +-down- dev.utils.common.CollectionUtils.ArrayWithTypeToken
+  dev.utils.common.ColorUtils +-down- dev.utils.common.ColorUtils.ColorInfo
+  dev.utils.common.ColorUtils.ColorInfo +-down- dev.utils.common.ColorUtils.ColorInfo.ColorParser
+  dev.utils.common.ColorUtils.ColorInfo +-down- dev.utils.common.ColorUtils.ColorInfo.Parser
+  dev.utils.common.ColorUtils.ColorInfo.ColorParser .up.|> dev.utils.common.ColorUtils.ColorInfo.Parser
+  dev.utils.common.CoordinateUtils +-down- dev.utils.common.CoordinateUtils.Direction
+  dev.utils.common.FileRecordUtils +-down- dev.utils.common.FileRecordUtils.CallBack
+  dev.utils.common.FileUtils +-down- dev.utils.common.FileUtils.FileList
+  dev.utils.common.FileUtils +-down- dev.utils.common.FileUtils.OnReplaceListener
+  dev.utils.common.HttpURLConnectionUtils +-down- dev.utils.common.HttpURLConnectionUtils.CallBack
+  dev.utils.common.HttpURLConnectionUtils +-down- dev.utils.common.HttpURLConnectionUtils.TimeCallBack
+  dev.utils.common.ReflectUtils +-down- dev.utils.common.ReflectUtils.NULL
+  dev.utils.common.ReflectUtils +-down- dev.utils.common.ReflectUtils.ReflectException
+  dev.utils.common.TypeUtils +-down- dev.utils.common.TypeUtils.ParameterizedTypeImpl
+  dev.utils.common.TypeUtils.ParameterizedTypeImpl .up.|> java.lang.reflect.ParameterizedType
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

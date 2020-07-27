@@ -1,0 +1,239 @@
+@startuml
+
+title __LOGGER's Class Diagram__\n
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace logger {
+          class dev.utils.app.logger.DevLogger {
+              {static} ~ sPrint : Print
+              {static} - sPrinter : IPrinter
+              {static} + d()
+              {static} + dTag()
+              {static} + e()
+              {static} + e()
+              {static} + e()
+              {static} + eTag()
+              {static} + eTag()
+              {static} + eTag()
+              {static} + getLogConfig()
+              {static} + i()
+              {static} + iTag()
+              {static} + init()
+              {static} + init()
+              {static} + json()
+              {static} + jsonTag()
+              {static} + other()
+              {static} + setPrint()
+              {static} + v()
+              {static} + vTag()
+              {static} + w()
+              {static} + wTag()
+              {static} + wtf()
+              {static} + wtfTag()
+              {static} + xml()
+              {static} + xmlTag()
+              - DevLogger()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace logger {
+          interface dev.utils.app.logger.DevLogger.Print {
+              {abstract} + printLog()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace logger {
+          interface dev.utils.app.logger.IPrinter {
+              {abstract} + d()
+              {abstract} + dTag()
+              {abstract} + e()
+              {abstract} + e()
+              {abstract} + e()
+              {abstract} + eTag()
+              {abstract} + eTag()
+              {abstract} + eTag()
+              {abstract} + getLogConfig()
+              {abstract} + i()
+              {abstract} + iTag()
+              {abstract} + init()
+              {abstract} + init()
+              {abstract} + json()
+              {abstract} + jsonTag()
+              {abstract} + other()
+              {abstract} + v()
+              {abstract} + vTag()
+              {abstract} + w()
+              {abstract} + wTag()
+              {abstract} + wtf()
+              {abstract} + wtfTag()
+              {abstract} + xml()
+              {abstract} + xmlTag()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace logger {
+          class dev.utils.app.logger.LogConfig {
+              + displayThreadInfo : boolean
+              + methodCount : int
+              + methodOffset : int
+              + outputMethodAll : boolean
+              + sortLog : boolean
+              + tag : String
+              + displayThreadInfo()
+              {static} + getDebugLogConfig()
+              {static} + getDebugLogConfig()
+              {static} + getLogConfig()
+              {static} + getReleaseLogConfig()
+              {static} + getReleaseLogConfig()
+              {static} + getSortLogConfig()
+              {static} + getSortLogConfig()
+              + logLevel()
+              + methodCount()
+              + methodOffset()
+              + outputMethodAll()
+              + sortLog()
+              + tag()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace logger {
+          class dev.utils.app.logger.LogConstants {
+              {static} + BOTTOM_BORDER : String
+              {static} + BOTTOM_LEFT_CORNER : char
+              {static} + CHUNK_SIZE : int
+              {static} + DEFAULT_LOG_LEVEL : LogLevel
+              {static} + DEFAULT_LOG_METHOD_COUNT : int
+              {static} + DEFAULT_LOG_METHOD_OFFSET : int
+              {static} + DEFAULT_LOG_TAG : String
+              {static} + DOUBLE_DIVIDER : String
+              {static} + HORIZONTAL_DOUBLE_LINE : char
+              {static} + JSON_INDENT : int
+              {static} + JUDGE_DISPLAY_THREAD_LOG : boolean
+              {static} + JUDGE_OUTPUT_METHOD_ALL : boolean
+              {static} + JUDGE_SORT_LOG : boolean
+              {static} + MIDDLE_BORDER : String
+              {static} + MIDDLE_CORNER : char
+              {static} + MIN_STACK_OFFSET : int
+              {static} + SINGLE_DIVIDER : String
+              {static} + TOP_BORDER : String
+              {static} + TOP_LEFT_CORNER : char
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace logger {
+          enum LogLevel {
+            DEBUG
+            ERROR
+            INFO
+            NONE
+            WARN
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace logger {
+          class dev.utils.app.logger.LoggerPrinter {
+              {static} - LOCAL_LOG_CONFIGS : ThreadLocal<LogConfig>
+              {static} - LOG_CONFIG : LogConfig
+              + d()
+              + dTag()
+              + e()
+              + e()
+              + e()
+              + eTag()
+              + eTag()
+              + eTag()
+              + getLogConfig()
+              + i()
+              + iTag()
+              + init()
+              + init()
+              + json()
+              + jsonTag()
+              + other()
+              + v()
+              + vTag()
+              + w()
+              + wTag()
+              + wtf()
+              + wtfTag()
+              + xml()
+              + xmlTag()
+              - checkLogLevel()
+              - createMessage()
+              - finalLogPrinter()
+              - getSimpleClassName()
+              - getStackOffset()
+              - getThreadLogConfig()
+              - isPrintLog()
+              - logBottomBorder()
+              - logContent()
+              - logDivider()
+              - logHandle()
+              - logHandle()
+              - logHandle()
+              - logHeaderContent()
+              - logTopBorder()
+          }
+        }
+      }
+    }
+  }
+  
+
+  dev.utils.app.logger.DevLogger +-down- dev.utils.app.logger.DevLogger.Print
+  dev.utils.app.logger.LogConfig o-- dev.utils.app.logger.LogLevel : logLevel
+  dev.utils.app.logger.LoggerPrinter .up.|> dev.utils.app.logger.IPrinter
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

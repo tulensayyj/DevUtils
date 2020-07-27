@@ -1,0 +1,215 @@
+@startuml
+
+title __FUNCTION's Class Diagram__\n
+
+  namespace dev.widget {
+    namespace function {
+      class dev.widget.function.LimitLayout {
+          - mMaxHeight : int
+          - mMaxWidth : int
+          + LimitLayout()
+          + LimitLayout()
+          + LimitLayout()
+          + LimitLayout()
+          + getMaxHeight()
+          + getMaxWidth()
+          + setMaxHeight()
+          + setMaxWidth()
+          # onMeasure()
+          - initAttrs()
+      }
+    }
+  }
+  
+
+  namespace dev.widget {
+    namespace function {
+      class dev.widget.function.LineTextView {
+          - mIsNewLine : boolean
+          + LineTextView()
+          + LineTextView()
+          + LineTextView()
+          + isNewLine()
+          + setNewLineCallBack()
+          # onDraw()
+      }
+    }
+  }
+  
+
+  namespace dev.widget {
+    namespace function {
+      interface dev.widget.function.LineTextView.OnNewLineCallBack {
+          {abstract} + onNewLine()
+      }
+    }
+  }
+  
+
+  namespace dev.widget {
+    namespace function {
+      class dev.widget.function.RightIconEditText {
+          - _listener : TextWatcher
+          - mBottom : Drawable
+          - mIsDrawRightIcon : boolean
+          - mLeft : Drawable
+          - mRangeMultiple : float
+          - mRight : Drawable
+          - mRightBounds : Rect
+          - mTextWatcher : TextWatcher
+          - mTop : Drawable
+          + RightIconEditText()
+          + RightIconEditText()
+          + RightIconEditText()
+          + getRangeMultiple()
+          + getRightIcon()
+          + isDrawRightIcon()
+          + onTouchEvent()
+          + setCompoundDrawables()
+          + setDrawRightIcon()
+          + setRangeMultiple()
+          + setRightIcon()
+          + setTextWatcher()
+          # finalize()
+          - drawOperate()
+          - init()
+      }
+    }
+  }
+  
+
+  namespace dev.widget {
+    namespace function {
+      class dev.widget.function.SignView {
+          - mIsClearCanvas : boolean
+          - mPaint : Paint
+          - mPath : Path
+          - mX : float
+          - mY : float
+          + SignView()
+          + SignView()
+          + SignView()
+          + SignView()
+          + clearCanvas()
+          + getPaint()
+          + getPath()
+          + onTouchEvent()
+          + setDrawCallBack()
+          + setPaint()
+          + setPath()
+          + snapshotByView()
+          # onDraw()
+          - _resetCanvas()
+      }
+    }
+  }
+  
+
+  namespace dev.widget {
+    namespace function {
+      abstract class dev.widget.function.SignView.OnDrawCallBack {
+          + onDraw()
+      }
+    }
+  }
+  
+
+  namespace dev.widget {
+    namespace function {
+      class dev.widget.function.StateLayout {
+          - TAG : String
+          {static} - sGlobal : Global
+          + StateLayout()
+          + StateLayout()
+          + StateLayout()
+          + StateLayout()
+          + getCurrentType()
+          + getCurrentView()
+          + getData()
+          + getData()
+          + getTag()
+          + getView()
+          + gone()
+          + notifyDataSetChanged()
+          + register()
+          + reset()
+          + setData()
+          + setData()
+          {static} + setGlobal()
+          + setListener()
+          + setTag()
+          + showEmptyData()
+          + showFailed()
+          + showIng()
+          + showSuccess()
+          + showType()
+          + unregister()
+          + unregister()
+          + visible()
+          - init()
+      }
+    }
+  }
+  
+
+  namespace dev.widget {
+    namespace function {
+      class dev.widget.function.StateLayout.Global {
+          - mapLayouts : Map<Integer, Integer>
+          + Global()
+          + register()
+          + unregister()
+      }
+    }
+  }
+  
+
+  namespace dev.widget {
+    namespace function {
+      interface dev.widget.function.StateLayout.Listener {
+          {abstract} + onChange()
+          {abstract} + onNotFound()
+          {abstract} + onRemove()
+      }
+    }
+  }
+  
+
+  namespace dev.widget {
+    namespace function {
+      class dev.widget.function.StateLayout.TypeAdapter {
+          - resource : int
+          + TypeAdapter()
+          + onBindView()
+          + onCreateView()
+      }
+    }
+  }
+  
+
+  dev.widget.function.LimitLayout -up-|> android.widget.FrameLayout
+  dev.widget.function.LineTextView -up-|> androidx.appcompat.widget.AppCompatTextView
+  dev.widget.function.LineTextView o-- dev.widget.function.LineTextView.OnNewLineCallBack : mNewLineCallBack
+  dev.widget.function.LineTextView +-down- dev.widget.function.LineTextView.OnNewLineCallBack
+  dev.widget.function.RightIconEditText -up-|> androidx.appcompat.widget.AppCompatEditText
+  dev.widget.function.SignView -up-|> android.view.View
+  dev.widget.function.SignView o-- dev.widget.function.SignView.OnDrawCallBack : mDrawCallBack
+  dev.widget.function.SignView +-down- dev.widget.function.SignView.OnDrawCallBack
+  dev.widget.function.StateLayout -up-|> android.widget.FrameLayout
+  dev.widget.function.StateLayout o-- dev.widget.assist.ViewAssist : mAssist
+  dev.widget.function.StateLayout o-- dev.widget.function.StateLayout.Listener : mListener
+  dev.widget.function.StateLayout +-down- dev.widget.function.StateLayout.Global
+  dev.widget.function.StateLayout +-down- dev.widget.function.StateLayout.Listener
+  dev.widget.function.StateLayout +-down- dev.widget.function.StateLayout.TypeAdapter
+  dev.widget.function.StateLayout.Global o-- dev.widget.function.StateLayout.Listener : listener
+  dev.widget.function.StateLayout.TypeAdapter .up.|> dev.widget.assist.ViewAssist.Adapter
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

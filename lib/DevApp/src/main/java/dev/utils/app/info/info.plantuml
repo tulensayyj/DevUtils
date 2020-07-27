@@ -1,0 +1,225 @@
+@startuml
+
+title __INFO's Class Diagram__\n
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace info {
+          class dev.utils.app.info.ApkInfoItem {
+              {static} - TAG : String
+              - apkLength : String
+              - appMD5 : String
+              - appSHA1 : String
+              - appSHA256 : String
+              - cert : X509Certificate
+              - certDercode : String
+              - certPrincipal : String
+              - certSerialnumber : String
+              - certSigalgname : String
+              - certSigalgoid : String
+              - certVersion : String
+              - effective : boolean
+              - listKeyValues : List<KeyValueBean>
+              - minSdkVersion : int
+              - notAfter : Date
+              - notBefore : Date
+              - targetSdkVersion : int
+              + getApkLength()
+              + getAppInfoBean()
+              + getAppMD5()
+              + getAppSHA1()
+              + getAppSHA256()
+              + getCertDercode()
+              + getCertPrincipal()
+              + getCertSerialnumber()
+              + getCertSigalgname()
+              + getCertSigalgoid()
+              + getCertVersion()
+              + getListKeyValues()
+              + getMinSdkVersion()
+              + getNotAfter()
+              + getNotBefore()
+              + getTargetSdkVersion()
+              + getX509Certificate()
+              + isEffective()
+              {static} # obtain()
+              - ApkInfoItem()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace info {
+          class dev.utils.app.info.AppInfoBean {
+              {static} - TAG : String
+              - apkSize : long
+              - appIcon : Drawable
+              - appName : String
+              - appPackName : String
+              - firstInstallTime : long
+              - lastUpdateTime : long
+              - sourceDir : String
+              - versionCode : long
+              - versionName : String
+              + getApkSize()
+              + getAppIcon()
+              + getAppName()
+              + getAppPackName()
+              + getAppType()
+              {static} + getAppType()
+              + getFirstInstallTime()
+              + getLastUpdateTime()
+              + getSourceDir()
+              + getVersionCode()
+              + getVersionName()
+              {static} + isSystemApp()
+              {static} + isSystemUpdateApp()
+              # AppInfoBean()
+              # AppInfoBean()
+              {static} # obtain()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace info {
+          enum AppType {
+            ALL
+            SYSTEM
+            USER
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace info {
+          class dev.utils.app.info.AppInfoItem {
+              {static} - TAG : String
+              - apkLength : String
+              - appMD5 : String
+              - appSHA1 : String
+              - appSHA256 : String
+              - cert : X509Certificate
+              - certDercode : String
+              - certPrincipal : String
+              - certSerialnumber : String
+              - certSigalgname : String
+              - certSigalgoid : String
+              - certVersion : String
+              - effective : boolean
+              - listKeyValues : List<KeyValueBean>
+              - minSdkVersion : int
+              - notAfter : Date
+              - notBefore : Date
+              - targetSdkVersion : int
+              + getApkLength()
+              + getAppInfoBean()
+              + getAppMD5()
+              + getAppSHA1()
+              + getAppSHA256()
+              + getCertDercode()
+              + getCertPrincipal()
+              + getCertSerialnumber()
+              + getCertSigalgname()
+              + getCertSigalgoid()
+              + getCertVersion()
+              + getListKeyValues()
+              + getMinSdkVersion()
+              + getNotAfter()
+              + getNotBefore()
+              + getTargetSdkVersion()
+              + getX509Certificate()
+              + isEffective()
+              {static} # obtain()
+              - AppInfoItem()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace info {
+          class dev.utils.app.info.AppInfoUtils {
+              {static} - NEW_LINE_STR : String
+              {static} - TAG : String
+              {static} + getApkInfoItem()
+              {static} + getApkInfoItem()
+              {static} + getAppInfoBean()
+              {static} + getAppInfoBean()
+              {static} + getAppInfoBeanToFile()
+              {static} + getAppInfoBeanToPath()
+              {static} + getAppInfoItem()
+              {static} + getAppInfoItem()
+              {static} + getAppLists()
+              {static} + getAppLists()
+              {static} + getAppPermission()
+              {static} + getAppPermission()
+              {static} + getAppPermissionToList()
+              {static} + getAppPermissionToSet()
+              {static} + getPackageInfo()
+              {static} + getPackageInfo()
+              {static} + getPackageInfoToFile()
+              {static} + getPackageInfoToPath()
+              {static} + printAppPermission()
+              - AppInfoUtils()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace info {
+          class dev.utils.app.info.KeyValueBean {
+              # key : String
+              # value : String
+              + KeyValueBean()
+              {static} + get()
+              + getKey()
+              + getValue()
+              + toString()
+          }
+        }
+      }
+    }
+  }
+  
+
+  dev.utils.app.info.ApkInfoItem o-- dev.utils.app.info.AppInfoBean : appInfoBean
+  dev.utils.app.info.AppInfoBean o-- dev.utils.app.info.AppInfoBean.AppType : appType
+  dev.utils.app.info.AppInfoBean +-down- dev.utils.app.info.AppInfoBean.AppType
+  dev.utils.app.info.AppInfoItem o-- dev.utils.app.info.AppInfoBean : appInfoBean
+  dev.utils.app.info.KeyValueBean .up.|> java.io.Serializable
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

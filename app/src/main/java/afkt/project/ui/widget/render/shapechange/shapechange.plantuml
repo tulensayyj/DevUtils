@@ -1,0 +1,244 @@
+@startuml
+
+title __SHAPECHANGE's Class Diagram__\n
+
+  namespace afkt.project {
+    namespace ui {
+      namespace widget {
+        namespace render {
+          namespace shapechange {
+            class afkt.project.ui.widget.render.shapechange.CircleBroodLoadingRenderer {
+                - ACCELERATE_INTERPOLATOR03 : Interpolator
+                - ACCELERATE_INTERPOLATOR05 : Interpolator
+                - ACCELERATE_INTERPOLATOR08 : Interpolator
+                - ACCELERATE_INTERPOLATOR10 : Interpolator
+                - ANIMATION_DURATION : long
+                - CHILD_MOVE_INTERPOLATOR : Interpolator
+                - DECELERATE_INTERPOLATOR03 : Interpolator
+                - DECELERATE_INTERPOLATOR05 : Interpolator
+                - DECELERATE_INTERPOLATOR08 : Interpolator
+                - DECELERATE_INTERPOLATOR10 : Interpolator
+                - DEFAULT_BACKGROUND_COLOR : int
+                - DEFAULT_BACKGROUND_DEEP_COLOR : int
+                - DEFAULT_HEIGHT : float
+                - DEFAULT_OVAL_COLOR : int
+                - DEFAULT_OVAL_DEEP_COLOR : int
+                - DEFAULT_WIDTH : float
+                - MAX_MATHER_OVAL_SIZE : float
+                - MAX_MATHER_SHAPE_CHANGE_FACTOR : float
+                - MIN_CHILD_OVAL_RADIUS : float
+                - MOTHER_MOVE_INTERPOLATOR : Interpolator
+                - OVAL_BEZIER_FACTOR : float
+                - STAGE_CHILD_BACKWARD_BOTTOM_LEFT : float
+                - STAGE_CHILD_BACKWARD_TOP_LEFT : float
+                - STAGE_CHILD_DELAY : float
+                - STAGE_CHILD_FORWARD_BOTTOM_LEFT : float
+                - STAGE_CHILD_FORWARD_TOP_LEFT : float
+                - STAGE_CHILD_PRE_BACKWARD_TOP_LEFT : float
+                - STAGE_CHILD_PRE_FORWARD_TOP_LEFT : float
+                - STAGE_MOTHER_BACKWARD_BOTTOM_LEFT : float
+                - STAGE_MOTHER_BACKWARD_TOP_LEFT : float
+                - STAGE_MOTHER_FORWARD_BOTTOM_LEFT : float
+                - STAGE_MOTHER_FORWARD_TOP_LEFT : float
+                - mBackgroundColor : int
+                - mBackgroundDeepColor : int
+                - mBasicChildOvalRadius : float
+                - mChildLeftXOffset : float
+                - mChildLeftYOffset : float
+                - mChildMovePath : Path
+                - mChildMovePathMeasure : PathMeasure
+                - mChildOvalRadius : float
+                - mChildPosition : float[]
+                - mChildRightXOffset : float
+                - mChildRightYOffset : float
+                - mCurrentBackgroundColor : int
+                - mCurrentBounds : RectF
+                - mCurrentOvalColor : int
+                - mMaxMotherOvalSize : float
+                - mMaxRevealCircleRadius : int
+                - mMotherMovePath : Path
+                - mMotherMovePathMeasure : PathMeasure
+                - mMotherOvalHalfHeight : float
+                - mMotherOvalHalfWidth : float
+                - mMotherOvalPath : Path
+                - mMotherPosition : float[]
+                - mOvalColor : int
+                - mOvalDeepColor : int
+                - mPaint : Paint
+                - mRevealCircleRadius : int
+                - mRotateDegrees : int
+                - mStageChildBackwardBottomLeftLength : float
+                - mStageChildBackwardTopLeftLength : float
+                - mStageChildForwardBottomLeftLength : float
+                - mStageChildForwardTopLeftLength : float
+                - mStageChildPreBackwardTopLeftLength : float
+                - mStageChildPreForwardTopLeftLength : float
+                - mStageMotherBackwardBottomLeftLength : float
+                - mStageMotherBackwardTopLeftLength : float
+                - mStageMotherForwardBottomLeftLength : float
+                - mStageMotherForwardTopLeftLength : float
+                # computeRender()
+                # draw()
+                # reset()
+                # setAlpha()
+                # setColorFilter()
+                - CircleBroodLoadingRenderer()
+                - createChildMovePath()
+                - createChildPath()
+                - createLinkPath()
+                - createMotherMovePath()
+                - createMotherPath()
+                - evaluateColorChange()
+                - getCurrentBackgroundColor()
+                - getCurrentChildMoveLength()
+                - getCurrentMotherMoveLength()
+                - getCurrentOvalColor()
+                - getCurrentRevealCircleRadius()
+                - getMotherShapeFactor()
+                - getRestLength()
+                - init()
+                - setupChildParams()
+                - setupPaint()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace widget {
+        namespace render {
+          namespace shapechange {
+            class afkt.project.ui.widget.render.shapechange.CircleBroodLoadingRenderer.Builder {
+                - mContext : Context
+                + Builder()
+                + build()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace widget {
+        namespace render {
+          namespace shapechange {
+            class afkt.project.ui.widget.render.shapechange.CircleBroodLoadingRenderer.ChildMoveInterpolator {
+                + getInterpolation()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace widget {
+        namespace render {
+          namespace shapechange {
+            class afkt.project.ui.widget.render.shapechange.CircleBroodLoadingRenderer.MotherMoveInterpolator {
+                + getInterpolation()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace widget {
+        namespace render {
+          namespace shapechange {
+            class afkt.project.ui.widget.render.shapechange.CoolWaitLoadingRenderer {
+                {static} - ACCELERATE_DECELERATE_INTERPOLATOR : Interpolator
+                - ACCELERATE_INTERPOLATOR08 : Interpolator
+                - ACCELERATE_INTERPOLATOR10 : Interpolator
+                - ACCELERATE_INTERPOLATOR15 : Interpolator
+                - ANIMATION_DURATION : long
+                - DECELERATE_INTERPOLATOR03 : Interpolator
+                - DECELERATE_INTERPOLATOR05 : Interpolator
+                - DECELERATE_INTERPOLATOR08 : Interpolator
+                - DECELERATE_INTERPOLATOR10 : Interpolator
+                - DEFAULT_HEIGHT : float
+                - DEFAULT_STROKE_WIDTH : float
+                - DEFAULT_WIDTH : float
+                {static} - END_TRIM_DURATION_OFFSET : float
+                - WAIT_CIRCLE_RADIUS : float
+                {static} - WAIT_TRIM_DURATION_OFFSET : float
+                - mBottomColor : int
+                - mCurrentBottomWaitPath : Path
+                - mCurrentBounds : RectF
+                - mCurrentMiddleWaitPath : Path
+                - mCurrentTopWaitPath : Path
+                - mMiddleColor : int
+                - mOriginEndDistance : float
+                - mOriginStartDistance : float
+                - mPaint : Paint
+                - mStrokeWidth : float
+                - mTopColor : int
+                - mWaitCircleRadius : float
+                - mWaitPath : Path
+                - mWaitPathLength : float
+                - mWaitPathMeasure : PathMeasure
+                # computeRender()
+                # draw()
+                # reset()
+                # setAlpha()
+                # setColorFilter()
+                - CoolWaitLoadingRenderer()
+                - createWaitPath()
+                - init()
+                - setupPaint()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace widget {
+        namespace render {
+          namespace shapechange {
+            class afkt.project.ui.widget.render.shapechange.CoolWaitLoadingRenderer.Builder {
+                - mContext : Context
+                + Builder()
+                + build()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  afkt.project.ui.widget.render.shapechange.CircleBroodLoadingRenderer -up-|> afkt.project.ui.widget.render.LoadingRenderer
+  afkt.project.ui.widget.render.shapechange.CircleBroodLoadingRenderer +-down- afkt.project.ui.widget.render.shapechange.CircleBroodLoadingRenderer.Builder
+  afkt.project.ui.widget.render.shapechange.CircleBroodLoadingRenderer +-down- afkt.project.ui.widget.render.shapechange.CircleBroodLoadingRenderer.ChildMoveInterpolator
+  afkt.project.ui.widget.render.shapechange.CircleBroodLoadingRenderer +-down- afkt.project.ui.widget.render.shapechange.CircleBroodLoadingRenderer.MotherMoveInterpolator
+  afkt.project.ui.widget.render.shapechange.CircleBroodLoadingRenderer.ChildMoveInterpolator .up.|> android.view.animation.Interpolator
+  afkt.project.ui.widget.render.shapechange.CircleBroodLoadingRenderer.MotherMoveInterpolator .up.|> android.view.animation.Interpolator
+  afkt.project.ui.widget.render.shapechange.CoolWaitLoadingRenderer -up-|> afkt.project.ui.widget.render.LoadingRenderer
+  afkt.project.ui.widget.render.shapechange.CoolWaitLoadingRenderer +-down- afkt.project.ui.widget.render.shapechange.CoolWaitLoadingRenderer.Builder
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

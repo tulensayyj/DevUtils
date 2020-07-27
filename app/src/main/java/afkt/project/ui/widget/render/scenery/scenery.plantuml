@@ -1,0 +1,207 @@
+@startuml
+
+title __SCENERY's Class Diagram__\n
+
+  namespace afkt.project {
+    namespace ui {
+      namespace widget {
+        namespace render {
+          namespace scenery {
+            class afkt.project.ui.widget.render.scenery.ElectricFanLoadingRenderer {
+                {static} + MODE_LEAF_COUNT : int
+                {static} + MODE_NORMAL : int
+                {static} - ACCELERATE_DURATION_PERCENTAGE : float
+                {static} - ACCELERATE_INTERPOLATOR : Interpolator
+                {static} - ANIMATION_DURATION : long
+                {static} - DECELERATE_DURATION_PERCENTAGE : float
+                {static} - DECELERATE_INTERPOLATOR : Interpolator
+                {static} - DEFAULT_CENTER_RADIUS : float
+                {static} - DEFAULT_ELECTRIC_FAN_BGCOLOR : int
+                {static} - DEFAULT_ELECTRIC_FAN_OUTLINE_COLOR : int
+                {static} - DEFAULT_HEIGHT : float
+                {static} - DEFAULT_LEAF_FLY_DURATION_FACTOR : float
+                {static} - DEFAULT_PROGRESS_BGCOLOR : int
+                {static} - DEFAULT_PROGRESS_CENTER_RADIUS : float
+                {static} - DEFAULT_PROGRESS_COLOR : int
+                {static} - DEFAULT_STROKE_INTERVAL : float
+                {static} - DEFAULT_STROKE_WIDTH : float
+                {static} - DEFAULT_TEXT_SIZE : float
+                {static} - DEFAULT_WIDTH : float
+                {static} - DEGREE_180 : int
+                {static} - DEGREE_360 : int
+                {static} - FASTOUTLINEARIN_INTERPOLATOR : Interpolator
+                {static} - FULL_GROUP_ROTATION : int
+                {static} - INTERPOLATORS : Interpolator[]
+                {static} - LEAF_COUNT : int
+                {static} - LEAF_CREATE_DURATION_INTERVAL : float
+                {static} - LINEAR_INTERPOLATOR : Interpolator
+                {static} - MATERIAL_INTERPOLATOR : Interpolator
+                {static} - PERCENTAGE_100 : String
+                - mAnimatorListener : AnimatorListener
+                - mCenterRadius : float
+                - mCurrentLeafCount : int
+                - mCurrentProgressBounds : RectF
+                - mElectricFanBgColor : int
+                - mElectricFanDrawable : Drawable
+                - mElectricFanOutlineColor : int
+                - mLeafDrawable : Drawable
+                {static} - mLeafHolders : List<LeafHolder>
+                - mLoadingDrawable : Drawable
+                - mMode : int
+                - mNextLeafCreateThreshold : float
+                - mPaint : Paint
+                - mProgress : float
+                - mProgressBgColor : int
+                - mProgressCenterRadius : float
+                - mProgressColor : int
+                {static} - mRandom : Random
+                - mRotation : float
+                - mScale : float
+                - mStrokeWidth : float
+                - mStrokeXInset : float
+                - mStrokeYInset : float
+                - mTempBounds : RectF
+                - mTextSize : float
+                # computeRender()
+                # draw()
+                # reset()
+                # setAlpha()
+                # setColorFilter()
+                # setInsets()
+                - ElectricFanLoadingRenderer()
+                - addLeaf()
+                - createProgressPath()
+                - getAnimator()
+                - getBezierValueAnimator()
+                - getPoint1()
+                - getPoint2()
+                - init()
+                - setupPaint()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace widget {
+        namespace render {
+          namespace scenery {
+            class afkt.project.ui.widget.render.scenery.ElectricFanLoadingRenderer.AnimEndListener {
+                + AnimEndListener()
+                + onAnimationEnd()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace widget {
+        namespace render {
+          namespace scenery {
+            class afkt.project.ui.widget.render.scenery.ElectricFanLoadingRenderer.BezierEvaluator {
+                - point1 : PointF
+                - point2 : PointF
+                + BezierEvaluator()
+                + evaluate()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace widget {
+        namespace render {
+          namespace scenery {
+            class afkt.project.ui.widget.render.scenery.ElectricFanLoadingRenderer.BezierListener {
+                + BezierListener()
+                + onAnimationUpdate()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace widget {
+        namespace render {
+          namespace scenery {
+            class afkt.project.ui.widget.render.scenery.ElectricFanLoadingRenderer.Builder {
+                - mContext : Context
+                + Builder()
+                + build()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace widget {
+        namespace render {
+          namespace scenery {
+            class afkt.project.ui.widget.render.scenery.ElectricFanLoadingRenderer.LeafHolder {
+                + mLeafRect : Rect
+                + mLeafRotation : float
+                + mMaxRotation : float
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace widget {
+        namespace render {
+          namespace scenery {
+            interface afkt.project.ui.widget.render.scenery.ElectricFanLoadingRenderer.MODE {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  afkt.project.ui.widget.render.scenery.ElectricFanLoadingRenderer -up-|> afkt.project.ui.widget.render.LoadingRenderer
+  afkt.project.ui.widget.render.scenery.ElectricFanLoadingRenderer +-down- afkt.project.ui.widget.render.scenery.ElectricFanLoadingRenderer.AnimEndListener
+  afkt.project.ui.widget.render.scenery.ElectricFanLoadingRenderer +-down- afkt.project.ui.widget.render.scenery.ElectricFanLoadingRenderer.BezierEvaluator
+  afkt.project.ui.widget.render.scenery.ElectricFanLoadingRenderer +-down- afkt.project.ui.widget.render.scenery.ElectricFanLoadingRenderer.BezierListener
+  afkt.project.ui.widget.render.scenery.ElectricFanLoadingRenderer +-down- afkt.project.ui.widget.render.scenery.ElectricFanLoadingRenderer.Builder
+  afkt.project.ui.widget.render.scenery.ElectricFanLoadingRenderer +-down- afkt.project.ui.widget.render.scenery.ElectricFanLoadingRenderer.LeafHolder
+  afkt.project.ui.widget.render.scenery.ElectricFanLoadingRenderer +-down- afkt.project.ui.widget.render.scenery.ElectricFanLoadingRenderer.MODE
+  afkt.project.ui.widget.render.scenery.ElectricFanLoadingRenderer.AnimEndListener -up-|> android.animation.AnimatorListenerAdapter
+  afkt.project.ui.widget.render.scenery.ElectricFanLoadingRenderer.AnimEndListener o-- afkt.project.ui.widget.render.scenery.ElectricFanLoadingRenderer.LeafHolder : target
+  afkt.project.ui.widget.render.scenery.ElectricFanLoadingRenderer.BezierEvaluator .up.|> android.animation.TypeEvaluator
+  afkt.project.ui.widget.render.scenery.ElectricFanLoadingRenderer.BezierListener .up.|> android.animation.ValueAnimator.AnimatorUpdateListener
+  afkt.project.ui.widget.render.scenery.ElectricFanLoadingRenderer.BezierListener o-- afkt.project.ui.widget.render.scenery.ElectricFanLoadingRenderer.LeafHolder : target
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

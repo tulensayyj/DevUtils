@@ -1,0 +1,419 @@
+@startuml
+
+title __OTHER's Class Diagram__\n
+
+  namespace dev.other {
+    class dev.other.EventBusUtils {
+        {static} + cancelEventDelivery()
+        {static} + post()
+        {static} + postSticky()
+        {static} + register()
+        {static} + removeAllStickyEvents()
+        {static} + removeStickyEvent()
+        {static} + unregister()
+        - EventBusUtils()
+    }
+  }
+  
+
+  namespace dev.other {
+    class dev.other.FastjsonUtils {
+        {static} - TAG : String
+        {static} + fromJson()
+        {static} + fromJson()
+        {static} + getArrayType()
+        {static} + getListType()
+        {static} + getMapType()
+        {static} + getSetType()
+        {static} + getType()
+        {static} + isJSON()
+        {static} + isJSONArray()
+        {static} + isJSONObject()
+        {static} + toJson()
+        {static} + toJsonIndent()
+        {static} + toJsonIndent()
+        - FastjsonUtils()
+    }
+  }
+  
+
+  namespace dev.other {
+    class dev.other.GlideTransformUtils {
+        - GlideTransformUtils()
+    }
+  }
+  
+
+  namespace dev.other {
+    class dev.other.GlideTransformUtils.GlideBlurformation {
+        - mContext : Context
+        + GlideBlurformation()
+        + blurBitmap()
+        + updateDiskCacheKey()
+        # transform()
+    }
+  }
+  
+
+  namespace dev.other {
+    class dev.other.GlideTransformUtils.GlideCircleTransform {
+        + updateDiskCacheKey()
+        # transform()
+        - circleCrop()
+    }
+  }
+  
+
+  namespace dev.other {
+    class dev.other.GlideTransformUtils.GlideRoundTransform {
+        - radius : float
+        + GlideRoundTransform()
+        + updateDiskCacheKey()
+        # transform()
+        - roundCrop()
+    }
+  }
+  
+
+  namespace dev.other {
+    class dev.other.GlideTransformUtils.RotateTransformation {
+        - rotateRotationAngle : float
+        + RotateTransformation()
+        + updateDiskCacheKey()
+        # transform()
+    }
+  }
+  
+
+  namespace dev.other {
+    class dev.other.GlideUtils {
+        {static} - DF_OPTIONS : RequestOptions
+        {static} - TAG : String
+        {static} - sContext : Context
+        {static} - sGlideLoader : GlideLoader
+        {static} - sImageFailRes : int
+        {static} - sImageLoadingRes : int
+        {static} - sImageUriErrorRes : int
+        {static} + clearDiskCache()
+        {static} + clearMemoryCache()
+        {static} + cloneImageOptions()
+        {static} + defaultOptions()
+        {static} + emptyOptions()
+        {static} + getDiskCache()
+        {static} + getLoadResOptions()
+        {static} + getLoadResOptions()
+        {static} + init()
+        {static} + onLowMemory()
+        {static} + skipCacheOptions()
+        {static} + skipCacheOptions()
+        {static} + transformationOptions()
+        {static} + transformationOptions()
+        {static} + with()
+        {static} + with()
+        {static} + with()
+        {static} + with()
+        {static} + with()
+        {static} + with()
+        {static} + with()
+        - GlideUtils()
+    }
+  }
+  
+
+  namespace dev.other {
+    class dev.other.GlideUtils.GlideLoader {
+        - mRequestManager : RequestManager
+        + GlideLoader()
+        + cancelDisplayTask()
+        + cancelDisplayTask()
+        + destroy()
+        + displayImage()
+        + displayImage()
+        + displayImage()
+        + displayImage()
+        + displayImageToDrawable()
+        + displayImageToDrawable()
+        + displayImageToDrawable()
+        + displayImageToDrawable()
+        + displayImageToFile()
+        + displayImageToFile()
+        + displayImageToFile()
+        + displayImageToFile()
+        + displayImageToGif()
+        + displayImageToGif()
+        + displayImageToGif()
+        + displayImageToGif()
+        + loadImageBitmap()
+        + loadImageBitmap()
+        + loadImageDrawable()
+        + loadImageDrawable()
+        + loadImageFile()
+        + loadImageFile()
+        + loadImageGif()
+        + loadImageGif()
+        + pause()
+        + preload()
+        + preload()
+        + resume()
+        + start()
+        + stop()
+    }
+  }
+  
+
+  namespace dev.other {
+    class dev.other.GsonUtils {
+        {static} - FROM_GSON : Gson
+        {static} - INDENT_GSON : Gson
+        {static} - TAG : String
+        {static} - TO_GSON : Gson
+        {static} + createGson()
+        {static} + createGsonExcludeFields()
+        {static} + fromJson()
+        {static} + fromJson()
+        {static} + fromJson()
+        {static} + fromJson()
+        {static} + getArrayType()
+        {static} + getListType()
+        {static} + getMapType()
+        {static} + getSetType()
+        {static} + getType()
+        {static} + isJSON()
+        {static} + isJSONArray()
+        {static} + isJSONObject()
+        {static} + toJson()
+        {static} + toJson()
+        {static} + toJsonIndent()
+        {static} + toJsonIndent()
+        {static} + toJsonIndent()
+        {static} + toJsonIndent()
+        - GsonUtils()
+    }
+  }
+  
+
+  namespace dev.other {
+    class dev.other.ImageLoaderUtils {
+        {static} - DF_OPTIONS : DisplayImageOptions
+        {static} - sImageFailRes : int
+        {static} - sImageLoadingRes : int
+        {static} - sImageUriErrorRes : int
+        {static} + cancelDisplayTask()
+        {static} + clearDiskCache()
+        {static} + clearMemoryCache()
+        {static} + cloneImageOptions()
+        {static} + defaultOptions()
+        {static} + denyNetworkDownloads()
+        {static} + destroy()
+        {static} + displayImage()
+        {static} + displayImage()
+        {static} + displayImage()
+        {static} + displayImage()
+        {static} + displayImage()
+        {static} + displayImage()
+        {static} + displayImage()
+        {static} + displayImage()
+        {static} + getBitmapDisplayerOptions()
+        {static} + getCacheImageOptions()
+        {static} + getCacheImageOptions()
+        {static} + getDefaultImageOptions()
+        {static} + getDiskCache()
+        {static} + getFadeInBitmapDisplayer()
+        {static} + getFadeInBitmapDisplayer()
+        {static} + getLoadingUriForView()
+        {static} + getMemoryCache()
+        {static} + getNoCacheImageOptions()
+        {static} + getNoCacheImageOptions()
+        {static} + getRoundedBitmapDisplayer()
+        {static} + getRoundedBitmapDisplayer()
+        {static} + handleSlowNetwork()
+        {static} + init()
+        {static} + loadImage()
+        {static} + loadImage()
+        {static} + loadImage()
+        {static} + loadImage()
+        {static} + loadImage()
+        {static} + loadImage()
+        {static} + loadImageSync()
+        {static} + loadImageSync()
+        {static} + loadImageSync()
+        {static} + loadImageSync()
+        {static} + pause()
+        {static} + resume()
+        {static} + setDefaultLoadingListener()
+        {static} + stop()
+        - ImageLoaderUtils()
+    }
+  }
+  
+
+  namespace dev.other {
+    class dev.other.LubanUtils {
+        {static} - sFocusAlpha : boolean
+        {static} - sIgnoreSize : int
+        {static} - sTargetDir : String
+        {static} + compress()
+        {static} + compress()
+        {static} + compress()
+        {static} + compress()
+        {static} + compress()
+        {static} + compress()
+        {static} + compress()
+        {static} + setConfig()
+        - LubanUtils()
+        {static} - getContext()
+    }
+  }
+  
+
+  namespace dev.other {
+    interface dev.other.LubanUtils.OnCompressListener {
+        {abstract} + onComplete()
+        {abstract} + onError()
+        {abstract} + onStart()
+        {abstract} + onSuccess()
+    }
+  }
+  
+
+  namespace dev.other {
+    class dev.other.PictureSelectorUtils {
+        {static} + PIC_CONFIG : PicConfig
+        {static} + PIC_REQUEST_CODE : int
+        {static} - CAMERA_SAVA_PATH : String
+        {static} - COMPRESS_SAVA_PATH : String
+        {static} - MINIMUM_COMPRESS_SIZE : int
+        {static} - TAG : String
+        {static} + deleteCacheDirFile()
+        {static} + getCameraSavePath()
+        {static} + getCompressSavePath()
+        {static} + getLocalMediaPath()
+        {static} + getLocalMediaPath()
+        {static} + getLocalMediaPath()
+        {static} + getLocalMediaPaths()
+        {static} + getLocalMediaPaths()
+        {static} + getLocalMedias()
+        {static} + getMinimumCompressSize()
+        {static} + getPicConfig()
+        {static} + getPictureSelectionModel()
+        {static} + getSingleMedia()
+        {static} + openCamera()
+        {static} + openCamera()
+        {static} + openGallery()
+        {static} + openGallery()
+        {static} + setMinimumCompressSize()
+        {static} + setPicConfig()
+        {static} + setSavePath()
+        - PictureSelectorUtils()
+    }
+  }
+  
+
+  namespace dev.other {
+    class dev.other.PictureSelectorUtils.PicConfig {
+        - cameraSavePath : String
+        - compressSavePath : String
+        - imageSpanCount : int
+        - isCamera : boolean
+        - isCircleCrop : boolean
+        - isCompress : boolean
+        - isCrop : boolean
+        - isGif : boolean
+        - localMedia : List<LocalMedia>
+        - maxSelectNum : int
+        - mimeType : int
+        - minSelectNum : int
+        - minimumCompressSize : int
+        - selectionMode : int
+        - withAspectRatio : int[]
+        + clone()
+        + getCameraSavePath()
+        + getCompressSavePath()
+        + getImageSpanCount()
+        + getLocalMedia()
+        + getMaxSelectNum()
+        + getMimeType()
+        + getMinSelectNum()
+        + getMinimumCompressSize()
+        + getSelectionMode()
+        + getWithAspectRatio()
+        + isCamera()
+        + isCircleCrop()
+        + isCompress()
+        + isCrop()
+        + isGif()
+        + set()
+        + setCamera()
+        + setCameraSavePath()
+        + setCircleCrop()
+        + setCompress()
+        + setCompressSavePath()
+        + setCrop()
+        + setGif()
+        + setImageSpanCount()
+        + setLocalMedia()
+        + setMaxSelectNum()
+        + setMimeType()
+        + setMinSelectNum()
+        + setMinimumCompressSize()
+        + setSelectionMode()
+        + setWithAspectRatio()
+    }
+  }
+  
+
+  namespace dev.other {
+    class dev.other.ZXingQRCodeUtils {
+        {static} - DECODE_HINTS : Map<DecodeHintType, Object>
+        {static} - ENCODE_HINTS : Map<EncodeHintType, Object>
+        {static} - TAG : String
+        {static} + addLogoToQRCode()
+        {static} + createQRCodeImage()
+        {static} + createQRCodeImage()
+        {static} + createQRCodeImage()
+        {static} + decodeQRCode()
+        {static} + getResultData()
+        {static} + syncEncodeQRCode()
+        {static} + syncEncodeQRCode()
+        - ZXingQRCodeUtils()
+    }
+  }
+  
+
+  namespace dev.other {
+    interface dev.other.ZXingQRCodeUtils.QRResultCallBack {
+        {abstract} + onResult()
+    }
+  }
+  
+
+  namespace dev.other {
+    interface dev.other.ZXingQRCodeUtils.QRScanCallBack {
+        {abstract} + onResult()
+    }
+  }
+  
+
+  dev.other.GlideTransformUtils +-down- dev.other.GlideTransformUtils.GlideBlurformation
+  dev.other.GlideTransformUtils +-down- dev.other.GlideTransformUtils.GlideCircleTransform
+  dev.other.GlideTransformUtils +-down- dev.other.GlideTransformUtils.GlideRoundTransform
+  dev.other.GlideTransformUtils +-down- dev.other.GlideTransformUtils.RotateTransformation
+  dev.other.GlideTransformUtils.GlideBlurformation -up-|> com.bumptech.glide.load.resource.bitmap.BitmapTransformation
+  dev.other.GlideTransformUtils.GlideCircleTransform -up-|> com.bumptech.glide.load.resource.bitmap.BitmapTransformation
+  dev.other.GlideTransformUtils.GlideRoundTransform -up-|> com.bumptech.glide.load.resource.bitmap.BitmapTransformation
+  dev.other.GlideTransformUtils.RotateTransformation -up-|> com.bumptech.glide.load.resource.bitmap.BitmapTransformation
+  dev.other.GlideUtils +-down- dev.other.GlideUtils.GlideLoader
+  dev.other.LubanUtils +-down- dev.other.LubanUtils.OnCompressListener
+  dev.other.PictureSelectorUtils +-down- dev.other.PictureSelectorUtils.PicConfig
+  dev.other.ZXingQRCodeUtils +-down- dev.other.ZXingQRCodeUtils.QRResultCallBack
+  dev.other.ZXingQRCodeUtils +-down- dev.other.ZXingQRCodeUtils.QRScanCallBack
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

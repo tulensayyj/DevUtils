@@ -1,0 +1,458 @@
+@startuml
+
+title __UI's Class Diagram__\n
+
+  namespace dev.widget {
+    namespace ui {
+      class dev.widget.ui.CornerLabelView {
+          {static} - SQRT2 : float
+          - mHeight : int
+          - mIsLeft : boolean
+          - mIsTop : boolean
+          - mIsTriangle : boolean
+          - mPaddingBottom : float
+          - mPaddingCenter : float
+          - mPaddingTop : float
+          - mPaint : Paint
+          + CornerLabelView()
+          + CornerLabelView()
+          + CornerLabelView()
+          + CornerLabelView()
+          + bottom()
+          + getPainter1()
+          + getPainter2()
+          + left()
+          + refresh()
+          + right()
+          + setFillColor()
+          + setFillShader()
+          + setPaddingBottom()
+          + setPaddingCenter()
+          + setPaddingTop()
+          + setText1()
+          + setText2()
+          + setTextBold1()
+          + setTextBold2()
+          + setTextColor1()
+          + setTextColor2()
+          + setTextHeight1()
+          + setTextHeight2()
+          + top()
+          + triangle()
+          # onDraw()
+          # onMeasure()
+          - calcPath()
+          - initAttrs()
+      }
+    }
+  }
+  
+
+  namespace dev.widget {
+    namespace ui {
+      class dev.widget.ui.CornerLabelView.Painter {
+          - offset : float
+          - paint : TextPaint
+          - text : String
+          - textBold : boolean
+          - textColor : int
+          - textHeight : float
+          + getPaint()
+          + getText()
+          + getTextColor()
+          + getTextHeight()
+          + isTextBold()
+          ~ draw()
+          ~ init()
+          - Painter()
+      }
+    }
+  }
+  
+
+  namespace dev.widget {
+    namespace ui {
+      class dev.widget.ui.FlowLikeView {
+          - mAnimDuration : long
+          - mChildViewHeight : int
+          - mDrawables : List<Drawable>
+          - mIconHeight : int
+          - mIconWidth : int
+          - mLayoutParams : LayoutParams
+          - mRandom : Random
+          - mViewHeight : int
+          - mViewWidth : int
+          + FlowLikeView()
+          + FlowLikeView()
+          + FlowLikeView()
+          + FlowLikeView()
+          + getAnimDuration()
+          + getDrawables()
+          + getIconHeight()
+          + getIconWidth()
+          + like()
+          + setAnimDuration()
+          + setDrawables()
+          + setDrawablesById()
+          + setIconHeight()
+          + setIconWidth()
+          # onMeasure()
+          # onSizeChanged()
+          - generateCTRLPointF()
+          - generateCurveAnimation()
+          - generateEnterAnimation()
+          - initAttrs()
+          - resetLayoutParams()
+          - startAnimation()
+      }
+    }
+  }
+  
+
+  namespace dev.widget {
+    namespace ui {
+      class dev.widget.ui.FlowLikeView.AnimationEndListener {
+          - target : View
+          + AnimationEndListener()
+          + onAnimationEnd()
+      }
+    }
+  }
+  
+
+  namespace dev.widget {
+    namespace ui {
+      class dev.widget.ui.FlowLikeView.CurveEvaluator {
+          - ctrlPointF : PointF
+          + CurveEvaluator()
+          + evaluate()
+      }
+    }
+  }
+  
+
+  namespace dev.widget {
+    namespace ui {
+      class dev.widget.ui.FlowLikeView.CurveUpdateLister {
+          - target : View
+          + CurveUpdateLister()
+          + onAnimationUpdate()
+      }
+    }
+  }
+  
+
+  namespace dev.widget {
+    namespace ui {
+      class dev.widget.ui.LoadProgressBar {
+          - mInsideCircleWidth : float
+          - mIsCanvasNumber : boolean
+          - mMax : int
+          - mNumberTextColor : int
+          - mNumberTextSize : float
+          - mOuterRingColor : int
+          - mOuterRingWidth : float
+          - mPaint : Paint
+          - mProgress : int
+          - mProgressColor : int
+          - mTextPaint : Paint
+          + LoadProgressBar()
+          + LoadProgressBar()
+          + LoadProgressBar()
+          + LoadProgressBar()
+          + getInsideCircleWidth()
+          + getMax()
+          + getNumberTextColor()
+          + getNumberTextSize()
+          + getOuterRingColor()
+          + getOuterRingWidth()
+          + getProgress()
+          + getProgressColor()
+          + getProgressStyle()
+          + isCanvasNumber()
+          + reset()
+          + setCanvasNumber()
+          + setInsideCircleWidth()
+          + setMax()
+          + setNumberTextColor()
+          + setNumberTextSize()
+          + setOuterRingColor()
+          + setOuterRingWidth()
+          + setProgress()
+          + setProgressColor()
+          + setProgressStyle()
+          # onDraw()
+          - drawProgressText()
+          - drawProgressText()
+          - init()
+          - initAttrs()
+      }
+    }
+  }
+  
+
+  namespace dev.widget {
+    namespace ui {
+      enum ProgressStyle {
+        ARC_FAN_SHAPED
+        FAN_SHAPED
+        NUMBER
+        RINGS
+      }
+    }
+  }
+  
+
+  namespace dev.widget {
+    namespace ui {
+      class dev.widget.ui.ScanShapeView {
+          - START_ANIM : int
+          - STOP_ANIM : int
+          - TAG : String
+          - mAnimOffsetToAnnulus : float
+          - mAnimToAnnulus : ValueAnimator
+          - mAnimToHexagon : ValueAnimator
+          - mAnimToSquare : ValueAnimator
+          - mAnnulusAngles : int[]
+          - mAnnulusColors : int[]
+          - mAnnulusDraws : boolean[]
+          - mAnnulusLengths : int[]
+          - mAnnulusMargins : float[]
+          - mAnnulusPaints : Paint[]
+          - mAnnulusWidths : float[]
+          - mBackgroundPaint : Paint
+          - mBitmapToAnnulus : Bitmap
+          - mBitmapToHexagon : Bitmap
+          - mBitmapToSquare : Bitmap
+          - mBorderMargin : float
+          - mBorderPaint : Paint
+          - mBorderToSquare : int
+          - mBorderWidth : float
+          - mBorderWidthToSquare : float
+          - mCanvasToHexagon : Canvas
+          - mCenterToHexagon : float
+          - mDFCommonDP : float
+          - mEmptyPaint : Paint
+          - mEndLinePoint : float
+          - mIsAutoAnim : boolean
+          - mIsDrawAnim : boolean
+          - mIsDrawBackground : boolean
+          - mIsDrawBorder : boolean
+          - mIsOffsetMaxToAnnulus : boolean
+          - mIsReAnim : boolean
+          - mLineAnimDirection : boolean
+          - mLineBlue : int
+          - mLineColorArray : int[]
+          - mLineColorToAnnulus : int
+          - mLineColorToHexagon : int
+          - mLineColorToSquare : int
+          - mLineDurationToSquare : long
+          - mLineGreen : int
+          - mLineMarginLeftToSquare : float
+          - mLineMarginToHexagon : float
+          - mLineMarginTopToSquare : float
+          - mLineOffsetSpeedToAnnulus : float
+          - mLineOffsetToAnnulus : float
+          - mLineOffsetToSquare : int
+          - mLinePaintToHexagon : Paint
+          - mLinePaintToSquare : Paint
+          - mLinePathArray : float[]
+          - mLinePathToHexagon : Path
+          - mLineRed : int
+          - mLineTran00Color : int
+          - mLineTran255Color : int
+          - mLineWidthToHexagon : float
+          - mOffsetLinePoint : float
+          - mPointF : PointF
+          - mSpecialToSquare : boolean
+          - mStartLinePoint : float
+          - mTriAngleLength : float
+          + ScanShapeView()
+          + ScanShapeView()
+          + ScanShapeView()
+          + ScanShapeView()
+          + destroy()
+          + getAnnulusColors()
+          + getAnnulusDraws()
+          + getAnnulusLengths()
+          + getAnnulusMargins()
+          + getAnnulusWidths()
+          + getBGColor()
+          + getBitmapToAnnulus()
+          + getBitmapToSquare()
+          + getBorderColor()
+          + getBorderMargin()
+          + getBorderToSquare()
+          + getBorderWidth()
+          + getBorderWidthToSquare()
+          + getCornerRadius()
+          + getLineColorToAnnulus()
+          + getLineColorToHexagon()
+          + getLineColorToSquare()
+          + getLineDurationToSquare()
+          + getLineMarginLeftToSquare()
+          + getLineMarginToHexagon()
+          + getLineMarginTopToSquare()
+          + getLineOffsetSpeedToAnnulus()
+          + getLineWidthToHexagon()
+          + getRegion()
+          + getRegion()
+          + getRegionHeight()
+          + getRegionLeft()
+          + getRegionParent()
+          + getRegionTop()
+          + getRegionWidth()
+          + getShapeType()
+          + getTriAngleLength()
+          + isAnimRunning()
+          + isAutoAnim()
+          + isDrawAnim()
+          + isDrawBackground()
+          + isDrawBorder()
+          + isLineAnimDirection()
+          + isSpecialToSquare()
+          + setAnnulusColors()
+          + setAnnulusDraws()
+          + setAnnulusLengths()
+          + setAnnulusMargins()
+          + setAnnulusWidths()
+          + setAutoAnim()
+          + setBGColor()
+          + setBitmapToAnnulus()
+          + setBitmapToSquare()
+          + setBorderColor()
+          + setBorderMargin()
+          + setBorderToSquare()
+          + setBorderWidth()
+          + setBorderWidthToSquare()
+          + setCornerEffect()
+          + setDrawAnim()
+          + setDrawBackground()
+          + setDrawBorder()
+          + setLineAnimDirection()
+          + setLineColorToAnnulus()
+          + setLineColorToHexagon()
+          + setLineColorToSquare()
+          + setLineDurationToSquare()
+          + setLineMarginLeftToSquare()
+          + setLineMarginToHexagon()
+          + setLineMarginTopToSquare()
+          + setLineOffsetSpeedToAnnulus()
+          + setLineWidthToHexagon()
+          + setRegion()
+          + setRegion()
+          + setRegion()
+          + setShapeType()
+          + setSpecialToSquare()
+          + setTriAngleLength()
+          + startAnim()
+          + stopAnim()
+          # onDraw()
+          - animSwitch()
+          - calcShapeRegion()
+          - calcShapeRegion()
+          - drawAnim()
+          - getRegionMarginLeft()
+          - getRegionMarginTop()
+          - handlerCornerPathEffect()
+          - init()
+          - initAnim()
+          - makeAnim()
+          - makeBackground()
+          - makeShape()
+          - refLineColorToAnnulus()
+          - refLineColorToHexagon()
+          - refLineColorToSquare()
+          - refPaintToAnnulus()
+          - resetAnim()
+          - sin()
+      }
+    }
+  }
+  
+
+  namespace dev.widget {
+    namespace ui {
+      class dev.widget.ui.ScanShapeView.CornerEffect {
+          - radius : float
+          + CornerEffect()
+          + getRadius()
+      }
+    }
+  }
+  
+
+  namespace dev.widget {
+    namespace ui {
+      enum Shape {
+        Annulus
+        Hexagon
+        Square
+      }
+    }
+  }
+  
+
+  namespace dev.widget {
+    namespace ui {
+      class dev.widget.ui.WrapView {
+          - mMaxLine : int
+          - mRowFristLeftMargin : int
+          - mRowLine : int
+          - mRowTopMargin : int
+          - mViewLeftMargin : int
+          + WrapView()
+          + WrapView()
+          + WrapView()
+          + WrapView()
+          + getMaxLine()
+          + getRowFristLeftMargin()
+          + getRowLine()
+          + getRowTopMargin()
+          + getViewLeftMargin()
+          + refreshDraw()
+          + setMaxLine()
+          + setRowFristLeftMargin()
+          + setRowTopMargin()
+          + setRowViewMargin()
+          + setViewLeftMargin()
+          # onLayout()
+          # onMeasure()
+          - calc()
+          - initAttrs()
+      }
+    }
+  }
+  
+
+  dev.widget.ui.CornerLabelView -up-|> android.view.View
+  dev.widget.ui.CornerLabelView o-- dev.widget.ui.CornerLabelView.Painter : mText1
+  dev.widget.ui.CornerLabelView o-- dev.widget.ui.CornerLabelView.Painter : mText2
+  dev.widget.ui.CornerLabelView +-down- dev.widget.ui.CornerLabelView.Painter
+  dev.widget.ui.FlowLikeView -up-|> android.widget.FrameLayout
+  dev.widget.ui.FlowLikeView +-down- dev.widget.ui.FlowLikeView.AnimationEndListener
+  dev.widget.ui.FlowLikeView +-down- dev.widget.ui.FlowLikeView.CurveEvaluator
+  dev.widget.ui.FlowLikeView +-down- dev.widget.ui.FlowLikeView.CurveUpdateLister
+  dev.widget.ui.FlowLikeView.AnimationEndListener -up-|> android.animation.AnimatorListenerAdapter
+  dev.widget.ui.FlowLikeView.CurveEvaluator .up.|> android.animation.TypeEvaluator
+  dev.widget.ui.FlowLikeView.CurveUpdateLister .up.|> android.animation.ValueAnimator.AnimatorUpdateListener
+  dev.widget.ui.LoadProgressBar -up-|> android.view.View
+  dev.widget.ui.LoadProgressBar o-- dev.widget.ui.LoadProgressBar.ProgressStyle : mProgressStyle
+  dev.widget.ui.LoadProgressBar +-down- dev.widget.ui.LoadProgressBar.ProgressStyle
+  dev.widget.ui.ScanShapeView -up-|> android.view.View
+  dev.widget.ui.ScanShapeView o-- dev.widget.ui.ScanShapeView.CornerEffect : mCornerEffect
+  dev.widget.ui.ScanShapeView o-- dev.widget.ui.ScanShapeView.Shape : mShapeType
+  dev.widget.ui.ScanShapeView +-down- dev.widget.ui.ScanShapeView.CornerEffect
+  dev.widget.ui.ScanShapeView +-down- dev.widget.ui.ScanShapeView.Shape
+  dev.widget.ui.ScanShapeView.CornerEffect -up-|> android.graphics.CornerPathEffect
+  dev.widget.ui.WrapView -up-|> android.view.ViewGroup
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

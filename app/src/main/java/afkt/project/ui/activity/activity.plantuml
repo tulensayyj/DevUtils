@@ -1,0 +1,987 @@
+@startuml
+
+title __ACTIVITY's Class Diagram__\n
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.AccessibilityListenerServiceActivity {
+            ~ vid_bvr_recy : RecyclerView
+            + getLayoutId()
+            + initListeners()
+            + initValues()
+            # onDestroy()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.ActivityResultCallBackActivity {
+            + getLayoutId()
+            + onClick()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.AdapterEditsActivity {
+            ~ vid_bvr_recy : RecyclerView
+            + getLayoutId()
+            + initValues()
+            # onCreate()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.CacheActivity {
+            ~ vid_bvr_recy : RecyclerView
+            + getLayoutId()
+            + initValues()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.CacheActivity.CacheVo {
+            ~ name : String
+            ~ time : long
+            + CacheVo()
+            + CacheVo()
+            + toString()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.CapturePictureActivity {
+            ~ vid_acp_linear : LinearLayout
+            + getLayoutId()
+            + initValues()
+            + onClick()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.CapturePictureGridActivity {
+            + getLayoutId()
+            + initValues()
+            # onCreate()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.CapturePictureListActivity {
+            ~ vid_acp_list : ListView
+            + getLayoutId()
+            + initValues()
+            # onCreate()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.CapturePictureRecyActivity {
+            ~ vid_acp_recy : RecyclerView
+            + getLayoutId()
+            + initValues()
+            # onCreate()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.CapturePictureWebActivity {
+            ~ vid_acp_webview : WebView
+            + getLayoutId()
+            + initValues()
+            # onCreate()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.CornerLabelActivity {
+            {static} ~ TEXTS : String[]
+            ~ convertPx : float
+            ~ mIsLeft : boolean
+            ~ mIsTop : boolean
+            ~ mIsTriangle : boolean
+            ~ mText1Height : float
+            ~ mText1Index : int
+            ~ mText2Height : float
+            ~ mText2Index : int
+            + getLayoutId()
+            + onClick()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.CrashCatchActivity {
+            ~ vid_bvr_recy : RecyclerView
+            + getLayoutId()
+            + initValues()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.DevEnvironmentLibActivity {
+            ~ vid_bvr_recy : RecyclerView
+            + getLayoutId()
+            + initValues()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.DevExtendActivity {
+            ~ dealResultCallback : DevExResultCallback<String>
+            ~ vid_bvr_recy : RecyclerView
+            + getLayoutId()
+            + initOtherOperate()
+            + initValues()
+            {static} - saveFile()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.DevExtendActivity.CallParams {
+            + hashMap : HashMap<Integer, String>
+            + type : String
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.DevExtendActivity.UserInfo {
+            + name : String
+            + UserInfo()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.EventBusActivity {
+            ~ vid_bvr_recy : RecyclerView
+            + getLayoutId()
+            + initValues()
+            + onEventBus()
+            + onEventBusSticky()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.FileRecordActivity {
+            ~ vid_bvr_recy : RecyclerView
+            + getLayoutId()
+            + initValues()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.FlowLikeActivity {
+            + getLayoutId()
+            + initValues()
+            + onClick()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.FunctionActivity {
+            ~ vid_bvr_recy : RecyclerView
+            + getLayoutId()
+            + initValues()
+            # onDestroy()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.GPUFilterACVActivity {
+            {static} ~ filterThread : Runnable
+            ~ listACVFiles : List<ACVFileBean>
+            ~ selectBitmap : Bitmap
+            + getLayoutId()
+            + initValues()
+            + onClick()
+            # onActivityResult()
+            # onDestroy()
+            - setFilter()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.GPUFilterActivity {
+            {static} ~ filterThread : Runnable
+            ~ selectBitmap : Bitmap
+            + getLayoutId()
+            + initValues()
+            + onClick()
+            # onActivityResult()
+            # onDestroy()
+            - setFilter()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.GreenDaoActivity {
+            + getLayoutId()
+            + initListeners()
+            + initValues()
+            + onClick()
+            - loadData()
+            - offsetLimitCalculate()
+            - randomData()
+            - randomData()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.ItemStickyActivity {
+            ~ vid_bvr_recy : RecyclerView
+            + getLayoutId()
+            + initValues()
+            - getList()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.LineActivity {
+            + getLayoutId()
+            + initValues()
+            + onClick()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.LinearSnapActivity {
+            ~ vid_bvr_recy : RecyclerView
+            + getLayoutId()
+            + initValues()
+            # onCreate()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.LinearSnapMAXActivity {
+            ~ vid_bvr_recy : RecyclerView
+            + getLayoutId()
+            + initListeners()
+            + initValues()
+            # onCreate()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.ListenerActivity {
+            ~ vid_act_linear : LinearLayout
+            ~ vid_bvr_recy : RecyclerView
+            - cOrientationTime : long
+            - isPortrait : boolean
+            - mOrientationEventListener : OrientationEventListener
+            - mRotationFlag : int
+            - mRotationRecord : int
+            + getLayoutId()
+            + initValues()
+            # onDestroy()
+            - appStateListener()
+            - batteryListener()
+            - netListener()
+            - phoneListener()
+            - rotaListener()
+            - rotaListener2()
+            - screenListener()
+            - smsListener()
+            - timeListener()
+            - wifiListener()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.LoggerActivity {
+            ~ vid_bvr_recy : RecyclerView
+            + getLayoutId()
+            + initValues()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.MultiSelectActivity {
+            ~ vid_bvr_recy : RecyclerView
+            + getLayoutId()
+            + initValues()
+            # onCreate()
+            - addToolbarButton()
+            - createTextView()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.NotificationServiceActivity {
+            ~ vid_bvr_recy : RecyclerView
+            + getLayoutId()
+            + initListeners()
+            + initValues()
+            # onDestroy()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.PagerSnapActivity {
+            ~ vid_bvr_recy : RecyclerView
+            + getLayoutId()
+            + initValues()
+            # onCreate()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.PagerSnapMAXActivity {
+            ~ vid_bvr_recy : RecyclerView
+            + getLayoutId()
+            + initListeners()
+            + initValues()
+            # onCreate()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.PathActivity {
+            ~ vid_bvr_recy : RecyclerView
+            + getLayoutId()
+            + initValues()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.ProgressBarActivity {
+            - handler : Handler
+            + getLayoutId()
+            + initValues()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.QRCodeCreateActivity {
+            ~ selectBitmap : Bitmap
+            + getLayoutId()
+            + onClick()
+            # onActivityResult()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.QRCodeImageActivity {
+            ~ selectBitmap : Bitmap
+            + getLayoutId()
+            + onClick()
+            # onActivityResult()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.QRCodeScanActivity {
+            ~ vid_ass_surface : SurfaceView
+            - mCropRect : Rect
+            - mDecodeMode : int
+            - mHolderCallBack : Callback
+            + getLayoutId()
+            + handleDecode()
+            + initValues()
+            + onClick()
+            # onActivityResult()
+            # onDestroy()
+            # onPause()
+            # onResume()
+            - checkPermission()
+            - setFlashlight()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.QRCodeScanActivity.CaptureHandler {
+            {static} - TAG : String
+            + CaptureHandler()
+            + handleMessage()
+            + quitSynchronously()
+            - requestPreviewFrame()
+            - restartPreviewAndDecode()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        enum State {
+          DONE
+          PREVIEW
+          SUCCESS
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.RecyItemSlideActivity {
+            ~ vid_bvr_recy : RecyclerView
+            + getLayoutId()
+            + initValues()
+            # onCreate()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.ScanShapeActivity {
+            ~ vid_ass_surface : SurfaceView
+            - mHolderCallBack : Callback
+            + getLayoutId()
+            + initValues()
+            + onClick()
+            # onDestroy()
+            # onPause()
+            # onResume()
+            - checkPermission()
+            - setFlashlight()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.SignActivity {
+            + contentView()
+            + getLayoutId()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.StatusBarActivity {
+            ~ isVisible : boolean
+            + getLayoutId()
+            + initValues()
+            + onClick()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.TextCalcActivity {
+            ~ vid_atc_linear : LinearLayout
+            + getLayoutId()
+            + initValues()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.TextViewActivity {
+            + getLayoutId()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.TimerActivity {
+            ~ NOTIFY : int
+            ~ vid_bvr_recy : RecyclerView
+            + getLayoutId()
+            + initListeners()
+            + initValues()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.ToastTintActivity {
+            ~ vid_bvr_recy : RecyclerView
+            + getLayoutId()
+            + initValues()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.ToastTintActivity.TempStyle {
+            + getBackground()
+            + getBackgroundTintColor()
+            + getEllipsize()
+            + getMaxLines()
+            + getTextColor()
+            + getTextSize()
+            + getTintIconColor()
+            + getTypeface()
+            + isTintIcon()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.UIEffectActivity {
+            ~ selectTabIndex : int
+            ~ vid_aue_5_0_view : View
+            ~ vid_aue_6_0_view : View
+            ~ vid_aue_7_0_linear : LinearLayout
+            ~ vid_aue_7_0_scroll : HorizontalScrollView
+            ~ vid_aue_8_0_tab : TabLayout
+            ~ vid_aue_9_0_tab : TabLayout
+            + getLayoutId()
+            + initValues()
+            + onClick()
+            - changeTab1()
+            - changeTab2()
+            - scrollTab()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.ViewAssistActivity {
+            ~ vid_ava_frame : FrameLayout
+            + getLayoutId()
+            + initValues()
+            - customType()
+            - emptyType()
+            - errorType()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.ViewAssistRecyclerViewLoadActivity {
+            ~ vid_bvr_recy : RecyclerView
+            + getLayoutId()
+            + initValues()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.ViewPagerActivity {
+            + getLayoutId()
+            + initValues()
+            + onClick()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.WebViewActivity {
+            ~ vid_aw_webview : WebView
+            + getLayoutId()
+            + initValues()
+            + onKeyDown()
+            # onDestroy()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.WifiActivity {
+            ~ handler : Handler
+            ~ isOpenAPING : boolean
+            ~ vid_bvr_recy : RecyclerView
+            ~ wifiHotPwd : String
+            ~ wifiHotSSID : String
+            - CHECK_HOTSOPT_STATE : int
+            + getLayoutId()
+            + initListeners()
+            + initValues()
+            # onDestroy()
+        }
+      }
+    }
+  }
+  
+
+  namespace afkt.project {
+    namespace ui {
+      namespace activity {
+        class afkt.project.ui.activity.WrapActivity {
+            + getLayoutId()
+            + initValues()
+            # onCreate()
+        }
+      }
+    }
+  }
+  
+
+  afkt.project.ui.activity.AccessibilityListenerServiceActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.ActivityResultCallBackActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.AdapterEditsActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.AdapterEditsActivity o-- afkt.project.ui.adapter.EditsAdapter : editsAdapter
+  afkt.project.ui.activity.CacheActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.CacheActivity +-down- afkt.project.ui.activity.CacheActivity.CacheVo
+  afkt.project.ui.activity.CacheActivity.CacheVo .up.|> java.io.Serializable
+  afkt.project.ui.activity.CapturePictureActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.CapturePictureActivity o-- dev.widget.custom.CustomNestedScrollView : vid_acp_scroll
+  afkt.project.ui.activity.CapturePictureGridActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.CapturePictureGridActivity o-- afkt.project.ui.widget.AutoGridView : vid_acp_grid
+  afkt.project.ui.activity.CapturePictureListActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.CapturePictureRecyActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.CapturePictureWebActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.CornerLabelActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.CornerLabelActivity o-- dev.widget.ui.CornerLabelView : labelView
+  afkt.project.ui.activity.CrashCatchActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.DevEnvironmentLibActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.DevExtendActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.DevExtendActivity +-down- afkt.project.ui.activity.DevExtendActivity.CallParams
+  afkt.project.ui.activity.DevExtendActivity +-down- afkt.project.ui.activity.DevExtendActivity.UserInfo
+  afkt.project.ui.activity.DevExtendActivity.CallParams -up-|> dev.callback.result.DevExResultCallback.ExpandResult
+  afkt.project.ui.activity.DevExtendActivity.CallParams o-- afkt.project.ui.activity.DevExtendActivity.UserInfo : userInfo
+  afkt.project.ui.activity.EventBusActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.FileRecordActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.FlowLikeActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.FlowLikeActivity o-- dev.widget.ui.FlowLikeView : vid_afl_flowlike
+  afkt.project.ui.activity.FunctionActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.GPUFilterACVActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.GPUFilterACVActivity o-- afkt.project.ui.adapter.GPUFilterACVAdapter : gpuFilterACVAdapter
+  afkt.project.ui.activity.GPUFilterACVActivity o-- dev.widget.custom.CustomGallery : vid_agf_gallery
+  afkt.project.ui.activity.GPUFilterACVActivity o-- afkt.project.ui.widget.BaseImageView : vid_agf_igview
+  afkt.project.ui.activity.GPUFilterActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.GPUFilterActivity o-- afkt.project.ui.adapter.GPUFilterAdapter : gpuFilterAdapter
+  afkt.project.ui.activity.GPUFilterActivity o-- dev.widget.custom.CustomGallery : vid_agf_gallery
+  afkt.project.ui.activity.GPUFilterActivity o-- afkt.project.ui.widget.BaseImageView : vid_agf_igview
+  afkt.project.ui.activity.GreenDaoActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.GreenDaoActivity o-- afkt.project.ui.widget.BaseRefreshView : vid_agd_refresh
+  afkt.project.ui.activity.ItemStickyActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.ItemStickyActivity o-- afkt.project.ui.adapter.ItemStickyAdapter : itemStickyAdapter
+  afkt.project.ui.activity.LineActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.LineActivity o-- dev.widget.function.LineTextView : vid_al_content_tv
+  afkt.project.ui.activity.LineActivity o-- afkt.project.ui.widget.BaseTextView : vid_al_tv
+  afkt.project.ui.activity.LinearSnapActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.LinearSnapActivity o-- afkt.project.ui.adapter.LinearSnapAdapter : linearSnapAdapter
+  afkt.project.ui.activity.LinearSnapMAXActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.LinearSnapMAXActivity o-- afkt.project.ui.adapter.LinearSnapMAXAdapter : linearSnapAdapter
+  afkt.project.ui.activity.ListenerActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.ListenerActivity o-- dev.utils.app.assist.ScreenSensorAssist : screenSensorAssist
+  afkt.project.ui.activity.LoggerActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.MultiSelectActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.MultiSelectActivity o-- afkt.project.ui.widget.BaseTextView : allSelectView
+  afkt.project.ui.activity.MultiSelectActivity o-- afkt.project.ui.widget.BaseTextView : cancelView
+  afkt.project.ui.activity.MultiSelectActivity o-- afkt.project.ui.widget.BaseTextView : confirmView
+  afkt.project.ui.activity.MultiSelectActivity o-- afkt.project.ui.widget.BaseTextView : editView
+  afkt.project.ui.activity.MultiSelectActivity o-- afkt.project.ui.widget.BaseTextView : inverseSelectView
+  afkt.project.ui.activity.MultiSelectActivity o-- afkt.project.ui.adapter.MultiSelectAdapter : multiSelectAdapter
+  afkt.project.ui.activity.MultiSelectActivity o-- afkt.project.ui.widget.BaseTextView : unAllSelectView
+  afkt.project.ui.activity.NotificationServiceActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.PagerSnapActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.PagerSnapActivity o-- afkt.project.ui.adapter.PagerSnapAdapter : pagerSnapAdapter
+  afkt.project.ui.activity.PagerSnapMAXActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.PagerSnapMAXActivity o-- afkt.project.ui.adapter.PagerSnapMAXAdapter : pagerSnapAdapter
+  afkt.project.ui.activity.PathActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.ProgressBarActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.ProgressBarActivity o-- dev.widget.ui.LoadProgressBar : vid_ap_bar1
+  afkt.project.ui.activity.ProgressBarActivity o-- dev.widget.ui.LoadProgressBar : vid_ap_bar2
+  afkt.project.ui.activity.ProgressBarActivity o-- dev.widget.ui.LoadProgressBar : vid_ap_bar3
+  afkt.project.ui.activity.ProgressBarActivity o-- dev.widget.ui.LoadProgressBar : vid_ap_bar4
+  afkt.project.ui.activity.QRCodeCreateActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.QRCodeCreateActivity o-- afkt.project.ui.widget.BaseEditText : vid_aqc_content_edit
+  afkt.project.ui.activity.QRCodeCreateActivity o-- afkt.project.ui.widget.BaseImageView : vid_aqc_igview
+  afkt.project.ui.activity.QRCodeImageActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.QRCodeImageActivity o-- afkt.project.ui.widget.BaseTextView : vid_aqi_tv
+  afkt.project.ui.activity.QRCodeScanActivity .up.|> afkt.project.util.zxing.decode.DecodeResult
+  afkt.project.ui.activity.QRCodeScanActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.QRCodeScanActivity o-- dev.utils.app.camera1.CameraAssist : cameraAssist
+  afkt.project.ui.activity.QRCodeScanActivity o-- afkt.project.ui.widget.BaseImageView : vid_ass_flashlight_igview
+  afkt.project.ui.activity.QRCodeScanActivity o-- dev.widget.ui.ScanShapeView : vid_ass_scanview
+  afkt.project.ui.activity.QRCodeScanActivity o-- dev.utils.app.assist.BeepVibrateAssist : mBeepVibrateAssist
+  afkt.project.ui.activity.QRCodeScanActivity o-- afkt.project.ui.activity.QRCodeScanActivity.CaptureHandler : mCaptureHandler
+  afkt.project.ui.activity.QRCodeScanActivity o-- dev.utils.app.assist.InactivityTimerAssist : mInactivityTimerAssist
+  afkt.project.ui.activity.QRCodeScanActivity o-- afkt.project.util.zxing.PreviewCallback : mPreviewCallback
+  afkt.project.ui.activity.QRCodeScanActivity +-down- afkt.project.ui.activity.QRCodeScanActivity.CaptureHandler
+  afkt.project.ui.activity.QRCodeScanActivity.CaptureHandler -up-|> android.os.Handler
+  afkt.project.ui.activity.QRCodeScanActivity.CaptureHandler o-- dev.utils.app.camera1.CameraAssist : mCameraAssist
+  afkt.project.ui.activity.QRCodeScanActivity.CaptureHandler o-- afkt.project.util.zxing.decode.DecodeResult : mDecodeResult
+  afkt.project.ui.activity.QRCodeScanActivity.CaptureHandler o-- afkt.project.util.zxing.decode.DecodeThread : mDecodeThread
+  afkt.project.ui.activity.QRCodeScanActivity.CaptureHandler o-- afkt.project.util.zxing.PreviewCallback : mPreviewCallback
+  afkt.project.ui.activity.QRCodeScanActivity.CaptureHandler o-- afkt.project.ui.activity.QRCodeScanActivity.CaptureHandler.State : mState
+  afkt.project.ui.activity.QRCodeScanActivity.CaptureHandler +-down- afkt.project.ui.activity.QRCodeScanActivity.CaptureHandler.State
+  afkt.project.ui.activity.RecyItemSlideActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.RecyItemSlideActivity o-- afkt.project.ui.adapter.ItemSlideAdapter : itemSlideAdapter
+  afkt.project.ui.activity.ScanShapeActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.ScanShapeActivity o-- dev.utils.app.camera1.CameraAssist : cameraAssist
+  afkt.project.ui.activity.ScanShapeActivity o-- afkt.project.ui.widget.BaseImageView : vid_ass_flashlight_igview
+  afkt.project.ui.activity.ScanShapeActivity o-- dev.widget.ui.ScanShapeView : vid_ass_scanview
+  afkt.project.ui.activity.SignActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.StatusBarActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.TextCalcActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.TextViewActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.TimerActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.TimerActivity o-- dev.utils.app.assist.manager.TimerManager.AbsTimer : absTimer
+  afkt.project.ui.activity.ToastTintActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.ToastTintActivity +-down- afkt.project.ui.activity.ToastTintActivity.TempStyle
+  afkt.project.ui.activity.ToastTintActivity.TempStyle .up.|> dev.utils.app.toast.ToastTintUtils.Style
+  afkt.project.ui.activity.UIEffectActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.UIEffectActivity o-- afkt.project.util.assist.TabLayoutAssist : tabLayoutAssist
+  afkt.project.ui.activity.UIEffectActivity o-- afkt.project.ui.widget.BaseTextView : vid_aue_1_0_tv
+  afkt.project.ui.activity.UIEffectActivity o-- afkt.project.ui.widget.BaseTextView : vid_aue_1_1_tv
+  afkt.project.ui.activity.UIEffectActivity o-- afkt.project.ui.widget.BaseTextView : vid_aue_2_0_tv
+  afkt.project.ui.activity.UIEffectActivity o-- afkt.project.ui.widget.BaseTextView : vid_aue_2_1_tv
+  afkt.project.ui.activity.UIEffectActivity o-- afkt.project.ui.widget.BaseTextView : vid_aue_3_0_tv
+  afkt.project.ui.activity.UIEffectActivity o-- afkt.project.ui.widget.BaseTextView : vid_aue_3_1_tv
+  afkt.project.ui.activity.UIEffectActivity o-- afkt.project.ui.widget.BaseButton : vid_aue_4_0_btn
+  afkt.project.ui.activity.UIEffectActivity o-- afkt.project.ui.widget.BaseButton : vid_aue_4_1_btn
+  afkt.project.ui.activity.ViewAssistActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.ViewAssistActivity o-- dev.widget.assist.ViewAssist : viewAssist
+  afkt.project.ui.activity.ViewAssistRecyclerViewLoadActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.ViewPagerActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.ViewPagerActivity o-- dev.widget.custom.CustomViewPager : vid_avp_viewpager
+  afkt.project.ui.activity.WebViewActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.WebViewActivity o-- dev.assist.WebViewAssist : mWebViewAssist
+  afkt.project.ui.activity.WifiActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.WifiActivity o-- dev.utils.app.wifi.WifiHotUtils : wifiHotUtils
+  afkt.project.ui.activity.WifiActivity o-- dev.utils.app.wifi.WifiUtils : wifiUtils
+  afkt.project.ui.activity.WrapActivity -up-|> afkt.project.base.app.BaseToolbarActivity
+  afkt.project.ui.activity.WrapActivity o-- dev.widget.ui.WrapView : vid_aw_wrapview
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

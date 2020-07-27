@@ -1,0 +1,181 @@
+@startuml
+
+title __CAMERA1's Class Diagram__\n
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace camera1 {
+          class dev.utils.app.camera1.AutoFocusAssist {
+              {static} + FOCUS_MODES : Collection<String>
+              - TAG : String
+              - mAutoFocus : boolean
+              - mCamera : Camera
+              - mFocusing : boolean
+              - mInterval : long
+              - mOutstandingTask : AsyncTask<?, ?, ?>
+              - mStopped : boolean
+              - mUseAutoFocus : boolean
+              + AutoFocusAssist()
+              + AutoFocusAssist()
+              + isAutoFocus()
+              + onAutoFocus()
+              + setAutoFocus()
+              {static} + setFocusModes()
+              + start()
+              + stop()
+              - autoFocusAgainLater()
+              - cancelOutstandingTask()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace camera1 {
+          class dev.utils.app.camera1.AutoFocusAssist.AutoFocusTask {
+              # doInBackground()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace camera1 {
+          class dev.utils.app.camera1.CameraAssist {
+              {static} - TAG : String
+              - mAutoInterval : long
+              - mCamera : Camera
+              - mPreviewSize : Size
+              - mPreviewing : boolean
+              + CameraAssist()
+              + CameraAssist()
+              + CameraAssist()
+              + closeDriver()
+              + getCamera()
+              + getCameraResolution()
+              + getCameraSizeAssist()
+              + getPreviewSize()
+              {static} + isFlashlightEnable()
+              + isFlashlightOn()
+              + isPreviewing()
+              + openDriver()
+              + setAutoFocus()
+              + setAutoInterval()
+              + setCamera()
+              + setFlashlightOff()
+              + setFlashlightOn()
+              + setPreviewNotify()
+              + startPreview()
+              + stopPreview()
+              - freeCameraResource()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace camera1 {
+          interface dev.utils.app.camera1.CameraAssist.PreviewNotify {
+              {abstract} + startPreviewNotify()
+              {abstract} + stopPreviewNotify()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace camera1 {
+          class dev.utils.app.camera1.CameraSizeAssist {
+              - MAX_ASPECT_DISTORTION : double
+              - MIN_PREVIEW_PIXELS : int
+              {static} - TAG : String
+              - mCamera : Camera
+              + CameraSizeAssist()
+              + getCamera()
+              + getPictureSize()
+              + getPictureSize()
+              + getPictureSize()
+              + getPictureSize()
+              + getPictureSize()
+              + getPictureSize()
+              + getPreviewSize()
+              + getPreviewSize()
+              + getPreviewSize()
+              + getPreviewSize()
+              + getVideoSize()
+              + getVideoSize()
+              + getVideoSize()
+              + getVideoSize()
+              + getVideoSize()
+              + getVideoSize()
+              + setPictureSize()
+              + setPictureSize()
+              + setPreviewSize()
+              + setPreviewSize()
+              - calcPictureSize()
+              - calcPreviewSize()
+              - calcVideoSize()
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace camera1 {
+          class dev.utils.app.camera1.CameraUtils {
+              {static} - TAG : String
+              {static} + checkCameraFacing()
+              {static} + freeCameraResource()
+              {static} + initCamera()
+              {static} + isBackCamera()
+              {static} + isFrontCamera()
+              {static} + isSupportReverse()
+              {static} + isUseCameraFacing()
+              {static} + open()
+              {static} + open()
+              - CameraUtils()
+          }
+        }
+      }
+    }
+  }
+  
+
+  dev.utils.app.camera1.AutoFocusAssist .up.|> android.hardware.Camera.AutoFocusCallback
+  dev.utils.app.camera1.AutoFocusAssist +-down- dev.utils.app.camera1.AutoFocusAssist.AutoFocusTask
+  dev.utils.app.camera1.AutoFocusAssist.AutoFocusTask -up-|> android.os.AsyncTask
+  dev.utils.app.camera1.CameraAssist o-- dev.utils.app.camera1.AutoFocusAssist : mAutoFocusAssist
+  dev.utils.app.camera1.CameraAssist o-- dev.utils.app.camera1.CameraSizeAssist : mCameraSizeAssist
+  dev.utils.app.camera1.CameraAssist o-- dev.utils.app.camera1.CameraAssist.PreviewNotify : mPreviewNotify
+  dev.utils.app.camera1.CameraAssist +-down- dev.utils.app.camera1.CameraAssist.PreviewNotify
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

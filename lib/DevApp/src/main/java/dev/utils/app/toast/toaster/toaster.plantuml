@@ -1,0 +1,346 @@
+@startuml
+
+title __TOASTER's Class Diagram__\n
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace toast {
+          namespace toaster {
+            class dev.utils.app.toast.toaster.DefaultToastStyle {
+                + getBackground()
+                + getBackgroundTintColor()
+                + getCornerRadius()
+                + getEllipsize()
+                + getGravity()
+                + getHorizontalMargin()
+                + getMaxLines()
+                + getPadding()
+                + getTextColor()
+                + getTextSize()
+                + getTypeface()
+                + getVerticalMargin()
+                + getXOffset()
+                + getYOffset()
+                + getZ()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace toast {
+          namespace toaster {
+            class dev.utils.app.toast.toaster.DevToast {
+                {static} - sToast : Operate
+                {static} + cancel()
+                {static} + defaultStyle()
+                {static} + getToastStyle()
+                {static} + init()
+                {static} + initStyle()
+                {static} + initToastFilter()
+                {static} + reset()
+                {static} + setIsHandler()
+                {static} + setNullText()
+                {static} + setTextLength()
+                {static} + setView()
+                {static} + setView()
+                {static} + show()
+                {static} + show()
+                {static} + show()
+                {static} + show()
+                {static} + style()
+                - DevToast()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace toast {
+          namespace toaster {
+            class dev.utils.app.toast.toaster.IToast {
+                - IToast()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace toast {
+          namespace toaster {
+            interface dev.utils.app.toast.toaster.IToast.Filter {
+                {abstract} + filter()
+                {abstract} + filter()
+                {abstract} + handlerContent()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace toast {
+          namespace toaster {
+            interface dev.utils.app.toast.toaster.IToast.Operate {
+                {abstract} + cancel()
+                {abstract} + defaultStyle()
+                {abstract} + getToastStyle()
+                {abstract} + init()
+                {abstract} + initStyle()
+                {abstract} + initToastFilter()
+                {abstract} + reset()
+                {abstract} + setIsHandler()
+                {abstract} + setNullText()
+                {abstract} + setTextLength()
+                {abstract} + setView()
+                {abstract} + setView()
+                {abstract} + show()
+                {abstract} + show()
+                {abstract} + show()
+                {abstract} + show()
+                {abstract} + style()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace toast {
+          namespace toaster {
+            interface dev.utils.app.toast.toaster.IToast.Style {
+                {abstract} + getBackground()
+                {abstract} + getBackgroundTintColor()
+                {abstract} + getCornerRadius()
+                {abstract} + getEllipsize()
+                {abstract} + getGravity()
+                {abstract} + getHorizontalMargin()
+                {abstract} + getMaxLines()
+                {abstract} + getPadding()
+                {abstract} + getTextColor()
+                {abstract} + getTextSize()
+                {abstract} + getTypeface()
+                {abstract} + getVerticalMargin()
+                {abstract} + getXOffset()
+                {abstract} + getYOffset()
+                {abstract} + getZ()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace toast {
+          namespace toaster {
+            class dev.utils.app.toast.toaster.IToastImpl {
+                - LOCAL_TOAST_STYLES : ThreadLocal<Style>
+                - TAG : String
+                - mApplication : Application
+                - mHandler : Handler
+                - mIsHandler : boolean
+                - mNullText : String
+                - mTextLengthConvertDuration : int
+                + cancel()
+                + defaultStyle()
+                + filter()
+                + filter()
+                + getToastStyle()
+                + handlerContent()
+                + init()
+                + initStyle()
+                + initToastFilter()
+                + reset()
+                + setIsHandler()
+                + setNullText()
+                + setTextLength()
+                + setView()
+                + setView()
+                + show()
+                + show()
+                + show()
+                + show()
+                + style()
+                - createView()
+                - getThreadToastStyle()
+                - newToastText()
+                - newToastView()
+                - priShowToastText()
+                - priShowToastView()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace toast {
+          namespace toaster {
+            class dev.utils.app.toast.toaster.ToastFactory {
+                {static} - TAG : String
+                {static} + create()
+                - ToastFactory()
+                {static} - getWindowManager()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace toast {
+          namespace toaster {
+            class dev.utils.app.toast.toaster.ToastFactory.BaseToast {
+                - mMessageView : TextView
+                + BaseToast()
+                + getMessageView()
+                + isEmptyMessageView()
+                + setText()
+                + setView()
+                - findTextView()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace toast {
+          namespace toaster {
+            class dev.utils.app.toast.toaster.ToastFactory.NotificationToast {
+                + NotificationToast()
+                + cancel()
+                + show()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace toast {
+          namespace toaster {
+            class dev.utils.app.toast.toaster.ToastFactory.SafeToast {
+                + SafeToast()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace toast {
+          namespace toaster {
+            class dev.utils.app.toast.toaster.ToastFactory.SafeToast.SafeHandler {
+                - mHandler : Handler
+                + dispatchMessage()
+                + handleMessage()
+                ~ SafeHandler()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        namespace toast {
+          namespace toaster {
+            class dev.utils.app.toast.toaster.ToastFactory.ToastHelper {
+                - mShow : boolean
+                - mToast : Toast
+                + handleMessage()
+                ~ ToastHelper()
+                ~ cancel()
+                ~ show()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  dev.utils.app.toast.toaster.DefaultToastStyle .up.|> dev.utils.app.toast.toaster.IToast.Style
+  dev.utils.app.toast.toaster.IToast +-down- dev.utils.app.toast.toaster.IToast.Filter
+  dev.utils.app.toast.toaster.IToast +-down- dev.utils.app.toast.toaster.IToast.Operate
+  dev.utils.app.toast.toaster.IToast +-down- dev.utils.app.toast.toaster.IToast.Style
+  dev.utils.app.toast.toaster.IToastImpl .up.|> dev.utils.app.toast.toaster.IToast.Filter
+  dev.utils.app.toast.toaster.IToastImpl .up.|> dev.utils.app.toast.toaster.IToast.Operate
+  dev.utils.app.toast.toaster.IToastImpl o-- dev.utils.app.toast.toaster.ToastFactory.BaseToast : mConfigToast
+  dev.utils.app.toast.toaster.IToastImpl o-- dev.utils.app.toast.toaster.IToast.Style : mDefaultStyle
+  dev.utils.app.toast.toaster.IToastImpl o-- dev.utils.app.toast.toaster.ToastFactory.BaseToast : mToast
+  dev.utils.app.toast.toaster.IToastImpl o-- dev.utils.app.toast.toaster.IToast.Filter : mToastFilter
+  dev.utils.app.toast.toaster.IToastImpl o-- dev.utils.app.toast.toaster.IToast.Style : mToastStyle
+  dev.utils.app.toast.toaster.ToastFactory +-down- dev.utils.app.toast.toaster.ToastFactory.BaseToast
+  dev.utils.app.toast.toaster.ToastFactory +-down- dev.utils.app.toast.toaster.ToastFactory.NotificationToast
+  dev.utils.app.toast.toaster.ToastFactory +-down- dev.utils.app.toast.toaster.ToastFactory.SafeToast
+  dev.utils.app.toast.toaster.ToastFactory +-down- dev.utils.app.toast.toaster.ToastFactory.ToastHelper
+  dev.utils.app.toast.toaster.ToastFactory.BaseToast -up-|> android.widget.Toast
+  dev.utils.app.toast.toaster.ToastFactory.NotificationToast -up-|> dev.utils.app.toast.toaster.ToastFactory.BaseToast
+  dev.utils.app.toast.toaster.ToastFactory.NotificationToast o-- dev.utils.app.toast.toaster.ToastFactory.ToastHelper : mToastHelper
+  dev.utils.app.toast.toaster.ToastFactory.SafeToast -up-|> dev.utils.app.toast.toaster.ToastFactory.BaseToast
+  dev.utils.app.toast.toaster.ToastFactory.SafeToast +-down- dev.utils.app.toast.toaster.ToastFactory.SafeToast.SafeHandler
+  dev.utils.app.toast.toaster.ToastFactory.SafeToast.SafeHandler -up-|> android.os.Handler
+  dev.utils.app.toast.toaster.ToastFactory.ToastHelper -up-|> android.os.Handler
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

@@ -1,0 +1,3731 @@
+@startuml
+
+title __APP's Class Diagram__\n
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.ADBUtils {
+            {static} - NEW_LINE_STR : String
+            {static} - REGEX_SPACE : String
+            {static} - TAG : String
+            {static} + clearAppDataCache()
+            {static} + closeAccessibility()
+            {static} + deleteHiddenApi()
+            {static} + disableADB()
+            {static} + getActivityCurrent()
+            {static} + getActivityToLauncher()
+            {static} + getActivityTopRepeatCount()
+            {static} + getActivityTopRepeatCount()
+            {static} + getActivitys()
+            {static} + getActivitys()
+            {static} + getActivitysToPackage()
+            {static} + getActivitysToPackageLists()
+            {static} + getAndroidId()
+            {static} + getAndroidVersion()
+            {static} + getAppHeapsize()
+            {static} + getAppInstallPath()
+            {static} + getAppList()
+            {static} + getAppListToFilter()
+            {static} + getAppMessage()
+            {static} + getBattery()
+            {static} + getBrand()
+            {static} + getCPU()
+            {static} + getCpuAbiList()
+            {static} + getDensity()
+            {static} + getDeviceName()
+            {static} + getDisableAppList()
+            {static} + getDisplays()
+            {static} + getEnableAppList()
+            {static} + getGlobalAutoTime()
+            {static} + getIMEI()
+            {static} + getIPAddress()
+            {static} + getInstallAppList()
+            {static} + getMac()
+            {static} + getMeminfo()
+            {static} + getModel()
+            {static} + getSDKVersion()
+            {static} + getScreenBrightness()
+            {static} + getScreenBrightnessMode()
+            {static} + getScreenOffTimeout()
+            {static} + getScreenSize()
+            {static} + getServices()
+            {static} + getServices()
+            {static} + getSystemAppList()
+            {static} + getUserAppList()
+            {static} + getVersionCode()
+            {static} + getVersionName()
+            {static} + getWindowCurrent()
+            {static} + getWindowCurrent2()
+            {static} + getWindowCurrentToPackage()
+            {static} + installApp()
+            {static} + installApp()
+            {static} + installAppSilent()
+            {static} + installAppSilent()
+            {static} + installAppSilent()
+            {static} + installAppSilent()
+            {static} + installAppSilent()
+            {static} + isActivityTopRepeat()
+            {static} + isActivityTopRepeat()
+            {static} + isDeviceRooted()
+            {static} + isGrantedRoot()
+            {static} + isInstalledApp()
+            {static} + keyevent()
+            {static} + kill()
+            {static} + openAccessibility()
+            {static} + putHiddenApi()
+            {static} + reboot()
+            {static} + reboot()
+            {static} + rebootToBootloader()
+            {static} + rebootToRecovery()
+            {static} + requestRoot()
+            {static} + resetDensity()
+            {static} + resetOverscan()
+            {static} + resetScreen()
+            {static} + screencap()
+            {static} + screencap()
+            {static} + screenrecord()
+            {static} + screenrecord()
+            {static} + screenrecord()
+            {static} + screenrecord()
+            {static} + sendBroadcast()
+            {static} + sendBroadcastToAll()
+            {static} + sendEventSlide()
+            {static} + sendTrimMemory()
+            {static} + setDensity()
+            {static} + setGlobalAutoTime()
+            {static} + setOverscan()
+            {static} + setScreenBrightness()
+            {static} + setScreenBrightnessMode()
+            {static} + setScreenOffTimeout()
+            {static} + setScreenSize()
+            {static} + setSystemTime()
+            {static} + setSystemTime2()
+            {static} + setSystemTime2()
+            {static} + shutdown()
+            {static} + startActivity()
+            {static} + startActivity()
+            {static} + startSelfApp()
+            {static} + startSelfApp()
+            {static} + startService()
+            {static} + startService()
+            {static} + stopService()
+            {static} + stopService()
+            {static} + swipe()
+            {static} + swipeClick()
+            {static} + swipeClick()
+            {static} + tap()
+            {static} + text()
+            {static} + uninstallApp()
+            {static} + uninstallApp()
+            {static} + uninstallAppSilent()
+            {static} + uninstallAppSilent()
+            {static} + uninstallAppSilent()
+            {static} + wifiConf()
+            {static} + wifiSwitch()
+            - ADBUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.AccessibilityUtils {
+            {static} - NEW_LINE_STR : String
+            {static} - TAG : String
+            {static} - sService : AccessibilityService
+            {static} + checkAccessibility()
+            {static} + checkAccessibility()
+            {static} + findAccessibilityNodeInfosByText()
+            {static} + findAccessibilityNodeInfosByText()
+            {static} + findAccessibilityNodeInfosByText()
+            {static} + findAccessibilityNodeInfosByText()
+            {static} + findAccessibilityNodeInfosByViewId()
+            {static} + findAccessibilityNodeInfosByViewId()
+            {static} + findAccessibilityNodeInfosByViewId()
+            {static} + findAccessibilityNodeInfosByViewId()
+            {static} + findFocus()
+            {static} + findFocus()
+            {static} + findFocus()
+            {static} + findFocus()
+            {static} + getService()
+            {static} + isAccessibilitySettingsOn()
+            {static} + performClick()
+            {static} + performClick()
+            {static} + performClick()
+            {static} + performGlobalAction()
+            {static} + performLongClick()
+            {static} + performLongClick()
+            {static} + performLongClick()
+            {static} + preformAction()
+            {static} + preformActionBack()
+            {static} + preformActionBack()
+            {static} + preformActionHome()
+            {static} + preformActionHome()
+            {static} + preformActionLockScreen()
+            {static} + preformActionLockScreen()
+            {static} + preformActionNotifications()
+            {static} + preformActionNotifications()
+            {static} + preformActionPowerDialog()
+            {static} + preformActionPowerDialog()
+            {static} + preformActionQuickSettings()
+            {static} + preformActionQuickSettings()
+            {static} + preformActionRecents()
+            {static} + preformActionRecents()
+            {static} + preformActionSplitScreen()
+            {static} + preformActionSplitScreen()
+            {static} + preformActionTakeScreenshot()
+            {static} + preformActionTakeScreenshot()
+            {static} + printAccessibilityEvent()
+            {static} + printAccessibilityEvent()
+            {static} + setService()
+            - AccessibilityUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.ActivityUtils {
+            {static} - TAG : String
+            - mActivityStacks : Stack<Activity>
+            {static} - sInstance : ActivityUtils
+            {static} - sResultCallbackMaps : Map<Integer, ResultCallback>
+            + addActivity()
+            + currentActivity()
+            + existActivitys()
+            + exitApplication()
+            + finishActivity()
+            + finishActivity()
+            + finishActivity()
+            + finishActivity()
+            + finishActivity()
+            + finishAllActivity()
+            + finishAllActivityToIgnore()
+            + finishAllActivityToIgnore()
+            {static} + getActivity()
+            {static} + getActivity()
+            {static} + getActivityIcon()
+            {static} + getActivityIcon()
+            {static} + getActivityLogo()
+            {static} + getActivityLogo()
+            + getActivityStacks()
+            {static} + getActivityToLauncher()
+            {static} + getActivityToLauncher()
+            {static} + getLauncherActivity()
+            {static} + getLauncherActivity()
+            {static} + getLauncherCategoryHomeToActivityName()
+            {static} + getLauncherCategoryHomeToPackageAndName()
+            {static} + getLauncherCategoryHomeToPackageName()
+            {static} + getLauncherCategoryHomeToResolveInfo()
+            {static} + getManager()
+            {static} + getOptionsBundle()
+            {static} + getOptionsBundle()
+            {static} + getWindow()
+            {static} + getWindow()
+            {static} + isActivityExists()
+            {static} + isActivityExists()
+            {static} + isFinishing()
+            {static} + isFinishing()
+            + removeActivity()
+            + removeActivity()
+            + restartApplication()
+            {static} + startActivityForResult()
+            {static} + startHomeActivity()
+            - ActivityUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.ActivityUtils.ResultActivity {
+            {static} - EXTRA_UUID : String
+            {static} - TAG : String
+            - mUUIDHash : Integer
+            # onActivityResult()
+            # onCreate()
+            # onDestroy()
+            {static} # start()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        interface dev.utils.app.ActivityUtils.ResultCallback {
+            {abstract} + onActivityResult()
+            {abstract} + onStartActivityForResult()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.AlarmUtils {
+            {static} - TAG : String
+            {static} + startAlarmActivity()
+            {static} + startAlarmBroadcast()
+            {static} + startAlarmForegroundService()
+            {static} + startAlarmForegroundService()
+            {static} + startAlarmIntent()
+            {static} + startAlarmIntent()
+            {static} + startAlarmService()
+            {static} + startAlarmService()
+            {static} + stopAlarmActivity()
+            {static} + stopAlarmBroadcast()
+            {static} + stopAlarmForegroundService()
+            {static} + stopAlarmForegroundService()
+            {static} + stopAlarmIntent()
+            {static} + stopAlarmService()
+            {static} + stopAlarmService()
+            - AlarmUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.AnalysisRecordUtils {
+            {static} + DEFAULT : int
+            {static} + HH : int
+            {static} + MM : int
+            {static} + SS : int
+            {static} - APP_VERSION_CODE : String
+            {static} - APP_VERSION_NAME : String
+            {static} - DEVICE_INFO_MAPS : Map<String, String>
+            {static} - DEVICE_INFO_STR : String
+            {static} - NEW_LINE_STR : String
+            {static} - NEW_LINE_STR_X2 : String
+            {static} - PACKAGE_NAME : String
+            {static} - RECORD_CALLBACK : CallBack
+            {static} - TAG : String
+            {static} - sAppendSpace : boolean
+            {static} - sIsHandler : boolean
+            {static} - sLogFolderName : String
+            {static} - sLogStoragePath : String
+            {static} + getLogFolderName()
+            {static} + getLogStoragePath()
+            {static} + init()
+            {static} + isAppendSpace()
+            {static} + isHandler()
+            {static} + record()
+            {static} + setAppendSpace()
+            {static} + setCallBack()
+            {static} + setHandler()
+            {static} + setLogFolderName()
+            {static} + setLogStoragePath()
+            - AnalysisRecordUtils()
+            {static} - handlerDeviceInfo()
+            {static} - saveLogRecord()
+            {static} - splitLog()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        interface dev.utils.app.AnalysisRecordUtils.CallBack {
+            {abstract} + callback()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.AnalysisRecordUtils.FileInfo {
+            - fileFunction : String
+            - fileIntervalTime : int
+            - fileName : String
+            - folderName : String
+            - handler : boolean
+            - storagePath : String
+            + getFileFunction()
+            + getFileIntervalTime()
+            + getFileName()
+            + getFolderName()
+            + getIntervalTimeFolder()
+            + getLogPath()
+            + getStoragePath()
+            + isHandler()
+            {static} + obtain()
+            {static} + obtain()
+            {static} + obtain()
+            {static} + obtain()
+            {static} + obtain()
+            {static} + obtain()
+            {static} + obtain()
+            + setHandler()
+            - FileInfo()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        interface dev.utils.app.AnalysisRecordUtils.TIME {
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.AppCommonUtils {
+            {static} - APP_DEVICE_INFO : String
+            {static} - TAG : String
+            {static} + convertSDKVersion()
+            {static} + convertSDKVersion()
+            {static} + getAppDeviceInfo()
+            {static} + getFormatRes()
+            {static} + getFormatRes()
+            {static} + getSDKVersion()
+            {static} + getUUID()
+            {static} + getUUIDDevice()
+            {static} + isFroyo()
+            {static} + isGingerbread()
+            {static} + isGingerbreadMR1()
+            {static} + isHoneycomb()
+            {static} + isHoneycombMR1()
+            {static} + isIceCreamSandwich()
+            {static} + isIceCreamSandwichMR1()
+            {static} + isJellyBean()
+            {static} + isJellyBeanMR1()
+            {static} + isJellyBeanMR2()
+            {static} + isKitkat()
+            {static} + isLollipop()
+            {static} + isM()
+            {static} + isN()
+            {static} + isN_MR1()
+            {static} + isO()
+            {static} + isO_MR1()
+            {static} + isP()
+            {static} + isQ()
+            {static} + refreshAppDeviceInfo()
+            - AppCommonUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.AppUtils {
+            {static} - TAG : String
+            {static} + deleteDatabase()
+            {static} + getActivityManager()
+            {static} + getAlarmManager()
+            {static} + getAppIcon()
+            {static} + getAppIcon()
+            {static} + getAppName()
+            {static} + getAppName()
+            {static} + getAppOpsManager()
+            {static} + getAppPath()
+            {static} + getAppPath()
+            {static} + getAppSignature()
+            {static} + getAppSignature()
+            {static} + getAppSignatureHash()
+            {static} + getAppSignatureMD5()
+            {static} + getAppSignatureMD5()
+            {static} + getAppSignatureSHA1()
+            {static} + getAppSignatureSHA1()
+            {static} + getAppSignatureSHA256()
+            {static} + getAppSignatureSHA256()
+            {static} + getAppVersionCode()
+            {static} + getAppVersionCode()
+            {static} + getAppVersionName()
+            {static} + getAppVersionName()
+            {static} + getApplicationInfo()
+            {static} + getApplicationInfo()
+            {static} + getAudioManager()
+            {static} + getClipboardManager()
+            {static} + getConnectivityManager()
+            {static} + getInputMethodManager()
+            {static} + getKeyguardManager()
+            {static} + getLocationManager()
+            {static} + getNotificationManager()
+            {static} + getPackageInfo()
+            {static} + getPackageInfo()
+            {static} + getPackageManager()
+            {static} + getPackageName()
+            {static} + getPowerManager()
+            {static} + getSensorManager()
+            {static} + getSharedPreferences()
+            {static} + getSharedPreferences()
+            {static} + getShortcutManager()
+            {static} + getStorageManager()
+            {static} + getSystemService()
+            {static} + getTelephonyManager()
+            {static} + getUsageStatsManager()
+            {static} + getVibrator()
+            {static} + getWifiManager()
+            {static} + getWindowManager()
+            {static} + installApp()
+            {static} + installApp()
+            {static} + installApp()
+            {static} + installApp()
+            {static} + installAppSilent()
+            {static} + installAppSilent()
+            {static} + installAppSilent()
+            {static} + installAppSilent()
+            {static} + installAppSilent()
+            {static} + isAppDebug()
+            {static} + isAppDebug()
+            {static} + isAppForeground()
+            {static} + isAppForeground()
+            {static} + isAppRelease()
+            {static} + isAppRelease()
+            {static} + isAppSystem()
+            {static} + isAppSystem()
+            {static} + isInstalledApp()
+            {static} + isInstalledApp()
+            {static} + isInstalledApp2()
+            {static} + launchApp()
+            {static} + launchApp()
+            {static} + launchAppDetails()
+            {static} + launchAppDetails()
+            {static} + launchAppDetailsSettings()
+            {static} + launchAppDetailsSettings()
+            {static} + openFile()
+            {static} + openFile()
+            {static} + openFileByApp()
+            {static} + openFileByApp()
+            {static} + openGpsSettings()
+            {static} + openOfficeByWPS()
+            {static} + openOfficeByWPS()
+            {static} + openPDFFile()
+            {static} + openPDFFile()
+            {static} + openWirelessSettings()
+            {static} + openWirelessSettings()
+            {static} + openWordFile()
+            {static} + openWordFile()
+            {static} + registerReceiver()
+            {static} + sendBroadcast()
+            {static} + sendBroadcast()
+            {static} + startActivity()
+            {static} + startActivityForResult()
+            {static} + startActivityForResult()
+            {static} + startService()
+            {static} + startSysSetting()
+            {static} + startSysSetting()
+            {static} + stopService()
+            {static} + uninstallApp()
+            {static} + uninstallApp()
+            {static} + uninstallAppSilent()
+            {static} + uninstallAppSilent()
+            {static} + uninstallAppSilent()
+            {static} + unregisterReceiver()
+            - AppUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.AudioManagerUtils {
+            {static} - TAG : String
+            {static} + abandonAudioFocus()
+            {static} + adjustStreamVolume()
+            {static} + adjustStreamVolumeLower()
+            {static} + adjustStreamVolumeRaise()
+            {static} + adjustSuggestedStreamVolume()
+            {static} + adjustVolume()
+            {static} + adjustVolumeLower()
+            {static} + adjustVolumeRaise()
+            {static} + getMode()
+            {static} + getParameters()
+            {static} + getRingerMode()
+            {static} + getStreamMaxVolume()
+            {static} + getStreamVolume()
+            {static} + getVibrateSetting()
+            {static} + isBluetoothA2dpOn()
+            {static} + isBluetoothScoAvailableOffCall()
+            {static} + isBluetoothScoOn()
+            {static} + isDoNotDisturb()
+            {static} + isMicrophoneMute()
+            {static} + isMusicActive()
+            {static} + isSpeakerphoneOn()
+            {static} + isWiredHeadsetOn()
+            {static} + loadSoundEffects()
+            {static} + playSoundEffect()
+            {static} + ringerNormal()
+            {static} + ringerSilent()
+            {static} + ringerVibrate()
+            {static} + setBluetoothScoOn()
+            {static} + setMicrophoneMute()
+            {static} + setMode()
+            {static} + setRingerMode()
+            {static} + setRingerMode()
+            {static} + setSpeakerphoneOn()
+            {static} + setStreamMute()
+            {static} + setStreamMuteByAlarm()
+            {static} + setStreamMuteByMusic()
+            {static} + setStreamMuteByNotification()
+            {static} + setStreamMuteByRing()
+            {static} + setStreamMuteBySystem()
+            {static} + setStreamMuteByVoiceCall()
+            {static} + setStreamVolume()
+            {static} + startBluetoothSco()
+            {static} + stopBluetoothSco()
+            {static} + unloadSoundEffects()
+            - AudioManagerUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.BarUtils {
+            {static} - KEY_OFFSET : int
+            {static} - TAG : String
+            {static} - TAG_OFFSET : String
+            {static} - TAG_STATUS_BAR : String
+            {static} + addMarginTopEqualStatusBarHeight()
+            {static} + getActionBarHeight()
+            {static} + getNavBarColor()
+            {static} + getNavBarColor()
+            {static} + getNavBarHeight()
+            {static} + getStatusBarHeight()
+            {static} + isNavBarLightMode()
+            {static} + isNavBarLightMode()
+            {static} + isNavBarVisible()
+            {static} + isNavBarVisible()
+            {static} + isStatusBarLightMode()
+            {static} + isStatusBarLightMode()
+            {static} + isStatusBarVisible()
+            {static} + isSupportNavBar()
+            {static} + setNavBarColor()
+            {static} + setNavBarColor()
+            {static} + setNavBarLightMode()
+            {static} + setNavBarLightMode()
+            {static} + setNavBarVisibility()
+            {static} + setNavBarVisibility()
+            {static} + setNotificationBarVisibility()
+            {static} + setStatusBarColor()
+            {static} + setStatusBarColor()
+            {static} + setStatusBarColor()
+            {static} + setStatusBarColor()
+            {static} + setStatusBarColor()
+            {static} + setStatusBarColorDrawer()
+            {static} + setStatusBarColorDrawer()
+            {static} + setStatusBarCustom()
+            {static} + setStatusBarLightMode()
+            {static} + setStatusBarLightMode()
+            {static} + setStatusBarVisibility()
+            {static} + setStatusBarVisibility()
+            {static} + subtractMarginTopEqualStatusBarHeight()
+            {static} + transparentStatusBar()
+            {static} + transparentStatusBar()
+            - BarUtils()
+            {static} - addMarginTopEqualStatusBarHeight()
+            {static} - applyStatusBarColor()
+            {static} - applyStatusBarColor()
+            {static} - createStatusBarView()
+            {static} - hideStatusBarView()
+            {static} - hideStatusBarView()
+            {static} - showStatusBarView()
+            {static} - subtractMarginTopEqualStatusBarHeight()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.BrightnessUtils {
+            {static} - TAG : String
+            {static} + getBrightness()
+            {static} + getWindowBrightness()
+            {static} + isAutoBrightnessEnabled()
+            {static} + setAutoBrightnessEnabled()
+            {static} + setBrightness()
+            {static} + setWindowBrightness()
+            - BrightnessUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.CPUUtils {
+            {static} - TAG : String
+            {static} + getCMDOutputString()
+            {static} + getCoresNumbers()
+            {static} + getCpuInfo()
+            {static} + getCpuModel()
+            {static} + getCpuName()
+            {static} + getCurCpuFreq()
+            {static} + getMaxCpuFreq()
+            {static} + getMinCpuFreq()
+            {static} + getProcessorsCount()
+            {static} + getSysCPUSerialNum()
+            - CPUUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.CapturePictureUtils {
+            {static} - BACKGROUND_COLOR : int
+            {static} - BITMAP_CONFIG : Config
+            {static} - PAINT : Paint
+            {static} - TAG : String
+            {static} + enableSlowWholeDocumentDraw()
+            {static} + setBackgroundColor()
+            {static} + setBitmapConfig()
+            {static} + setPaint()
+            {static} + snapshotByFrameLayout()
+            {static} + snapshotByFrameLayout()
+            {static} + snapshotByGridView()
+            {static} + snapshotByGridView()
+            {static} + snapshotByGridView()
+            {static} + snapshotByHorizontalScrollView()
+            {static} + snapshotByHorizontalScrollView()
+            {static} + snapshotByLinearLayout()
+            {static} + snapshotByLinearLayout()
+            {static} + snapshotByListView()
+            {static} + snapshotByListView()
+            {static} + snapshotByNestedScrollView()
+            {static} + snapshotByNestedScrollView()
+            {static} + snapshotByRecyclerView()
+            {static} + snapshotByRecyclerView()
+            {static} + snapshotByRecyclerView()
+            {static} + snapshotByRecyclerView()
+            {static} + snapshotByRecyclerView()
+            {static} + snapshotByRelativeLayout()
+            {static} + snapshotByRelativeLayout()
+            {static} + snapshotByScrollView()
+            {static} + snapshotByScrollView()
+            {static} + snapshotByView()
+            {static} + snapshotByView()
+            {static} + snapshotByViewCache()
+            {static} + snapshotByWebView()
+            {static} + snapshotByWebView()
+            {static} + snapshotByWebView()
+            {static} + snapshotByWebView()
+            {static} + snapshotByWebView()
+            {static} + snapshotWithStatusBar()
+            {static} + snapshotWithoutStatusBar()
+            - CapturePictureUtils()
+            {static} - canvasBitmap()
+            {static} - snapshotByRecyclerView_GridLayoutManager()
+            {static} - snapshotByRecyclerView_LinearLayoutManager()
+            {static} - snapshotByRecyclerView_StaggeredGridLayoutManager()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.CleanUtils {
+            {static} - TAG : String
+            {static} + cleanAppCache()
+            {static} + cleanAppDbByName()
+            {static} + cleanAppDbs()
+            {static} + cleanAppFiles()
+            {static} + cleanAppSp()
+            {static} + cleanAppSp()
+            {static} + cleanApplicationData()
+            {static} + cleanCache()
+            {static} + cleanCustomDir()
+            {static} + cleanCustomDir()
+            - CleanUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.ClickUtils {
+            {static} - TAG : String
+            {static} - sClickAssistMaps : Map<Object, ClickAssist>
+            {static} - sGlobalClickAssist : ClickAssist
+            {static} - sGlobalIntervalTime : long
+            {static} + addTouchArea()
+            {static} + addTouchArea()
+            {static} + clearRecord()
+            {static} + get()
+            {static} + getConfigTime()
+            {static} + initConfig()
+            {static} + isFastDoubleClick()
+            {static} + isFastDoubleClick()
+            {static} + isFastDoubleClick()
+            {static} + isFastDoubleClick()
+            {static} + isFastDoubleClick()
+            {static} + putConfig()
+            {static} + remove()
+            {static} + removeConfig()
+            {static} + removeRecord()
+            {static} + reset()
+            {static} + setGlobalIntervalTime()
+            {static} + setIntervalTime()
+            - ClickUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.ClickUtils.ClickAssist {
+            - mConfigMaps : Map<String, Long>
+            - mIntervalTime : long
+            - mLastClickTime : long
+            - mLastTagId : int
+            - mRecordMaps : Map<String, Long>
+            + ClickAssist()
+            + ClickAssist()
+            + clearRecord()
+            + getConfigTime()
+            + initConfig()
+            + isFastDoubleClick()
+            + isFastDoubleClick()
+            + isFastDoubleClick()
+            + isFastDoubleClick()
+            + isFastDoubleClick()
+            + putConfig()
+            + removeConfig()
+            + removeRecord()
+            + reset()
+            + setIntervalTime()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.ClipboardUtils {
+            {static} - TAG : String
+            {static} + copyIntent()
+            {static} + copyText()
+            {static} + copyUri()
+            {static} + getIntent()
+            {static} + getText()
+            {static} + getUri()
+            - ClipboardUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.ContentResolverUtils {
+            {static} + FILES_URI : Uri
+            {static} + MEDIA_QUERY_INFO : MediaQueryInfo
+            {static} + MEDIA_QUERY_INFO_URI : MediaQueryInfoUri
+            {static} - MEDIA_QUERY_URI : MediaQueryUri
+            {static} - TAG : String
+            {static} - VOLUME_EXTERNAL : String
+            {static} + delete()
+            {static} + deleteDocument()
+            {static} + getDataColumn()
+            {static} + getMediaUri()
+            {static} + getMediaUri()
+            {static} + getMediaUri()
+            {static} + getMediaUri()
+            {static} + mediaQuery()
+            {static} + mediaQuery()
+            {static} + mediaQuery()
+            {static} + mediaQuery()
+            {static} + query()
+            {static} + query()
+            {static} + update()
+            - ContentResolverUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        abstract class dev.utils.app.ContentResolverUtils.MediaQuery {
+            {abstract} + getProjection()
+            {abstract} + getResult()
+            {abstract} + getSelection()
+            {abstract} + getSelectionArgs()
+            + getSortOrder()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.ContentResolverUtils.MediaQueryInfo {
+            + getProjection()
+            + getResult()
+            + getSelection()
+            + getSelectionArgs()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.ContentResolverUtils.MediaQueryInfoUri {
+            + getSelection()
+            + getSelectionArgs()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.ContentResolverUtils.MediaQueryUri {
+            + getProjection()
+            + getResult()
+            + getSelection()
+            + getSelectionArgs()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.CrashUtils {
+            - mContext : Context
+            - mDefaultHandler : UncaughtExceptionHandler
+            {static} - sInstance : CrashUtils
+            {static} + getInstance()
+            + init()
+            + uncaughtException()
+            - CrashUtils()
+            - handleException()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        interface dev.utils.app.CrashUtils.CrashCatchListener {
+            {abstract} + handleException()
+            {abstract} + uncaughtException()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.DBUtils {
+            {static} + getAppDbPath()
+            {static} + getAppDbsPath()
+            {static} + startExportDatabase()
+            {static} + startExportDatabase()
+            {static} + startImportDatabase()
+            {static} + startImportDatabase()
+            {static} + startImportDatabase()
+            {static} + startImportDatabase()
+            - DBUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.DeviceUtils {
+            {static} - DEFAULT_MAC_ADDRESS : String
+            {static} - NEW_LINE_STR : String
+            {static} - TAG : String
+            {static} + getABIs()
+            {static} + getAndroidId()
+            {static} + getBaseband_Ver()
+            {static} + getBoard()
+            {static} + getBootloader()
+            {static} + getBrand()
+            {static} + getCPU_ABI()
+            {static} + getCPU_ABI2()
+            {static} + getCodename()
+            {static} + getDevice()
+            {static} + getDeviceInfo()
+            {static} + getDeviceInfo()
+            {static} + getDisplay()
+            {static} + getFingerprint()
+            {static} + getHardware()
+            {static} + getHost()
+            {static} + getID()
+            {static} + getIncremental()
+            {static} + getLinuxCore_Ver()
+            {static} + getMacAddress()
+            {static} + getManufacturer()
+            {static} + getModel()
+            {static} + getProduct()
+            {static} + getRadio()
+            {static} + getRelease()
+            {static} + getSDKVersion()
+            {static} + getSUPPORTED_32_BIT_ABIS()
+            {static} + getSUPPORTED_64_BIT_ABIS()
+            {static} + getTags()
+            {static} + getTime()
+            {static} + getType()
+            {static} + getUser()
+            {static} + handlerDeviceInfo()
+            {static} + isAdbEnabled()
+            {static} + isDeviceRooted()
+            {static} + isTablet()
+            {static} + reboot()
+            {static} + reboot()
+            {static} + rebootToBootloader()
+            {static} + rebootToRecovery()
+            {static} + shutdown()
+            - DeviceUtils()
+            {static} - getInetAddress()
+            {static} - getMacAddressByFile()
+            {static} - getMacAddressByInetAddress()
+            {static} - getMacAddressByNetworkInterface()
+            {static} - getMacAddressByWifiInfo()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.DialogUtils {
+            {static} - TAG : String
+            {static} + autoCloseDialog()
+            {static} + autoCloseDialog()
+            {static} + autoClosePopupWindow()
+            {static} + closeDialog()
+            {static} + closeDialog()
+            {static} + closeDialogs()
+            {static} + closeDialogs()
+            {static} + closePopupWindow()
+            {static} + closePopupWindows()
+            {static} + createAlertDialog()
+            {static} + createAlertDialog()
+            {static} + createAlertDialog()
+            {static} + createAlertDialog()
+            {static} + createMultiChoiceDialog()
+            {static} + createMultiChoiceDialog()
+            {static} + createMultiChoiceDialog()
+            {static} + createMultiChoiceDialog()
+            {static} + createMultiChoiceDialog()
+            {static} + createMultiChoiceDialog()
+            {static} + createProgressDialog()
+            {static} + createProgressDialog()
+            {static} + createProgressDialog()
+            {static} + createSingleChoiceDialog()
+            {static} + createSingleChoiceDialog()
+            {static} + createSingleChoiceDialog()
+            {static} + createSingleChoiceDialog()
+            {static} + createSingleChoiceDialog()
+            {static} + createSingleChoiceDialog()
+            {static} + createSingleChoiceListDialog()
+            {static} + createSingleChoiceListDialog()
+            {static} + createSingleChoiceListDialog()
+            {static} + createSingleChoiceListDialog()
+            {static} + createSingleChoiceListDialog()
+            {static} + createSingleChoiceListDialog()
+            {static} + createViewDialog()
+            {static} + createViewDialog()
+            {static} + createViewDialog()
+            {static} + createViewDialog()
+            {static} + getAttributes()
+            {static} + getWindow()
+            {static} + isShowing()
+            {static} + isShowing()
+            {static} + isShowing()
+            {static} + setAttributes()
+            {static} + setCancelable()
+            {static} + setCancelableAndTouchOutside()
+            {static} + setCanceledOnTouchOutside()
+            {static} + setDimAmount()
+            {static} + setGravity()
+            {static} + setHeight()
+            {static} + setWidth()
+            {static} + setWidthHeight()
+            {static} + setX()
+            {static} + setXY()
+            {static} + setY()
+            {static} + showDialog()
+            - DialogUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        abstract class dev.utils.app.DialogUtils.DialogListener {
+            + onDismiss()
+            + onLeftButton()
+            {abstract} + onRightButton()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        abstract class dev.utils.app.DialogUtils.MultiChoiceListener {
+            + onCancel()
+            + onDismiss()
+            + onMultiChoiceItems()
+            + onPositiveButton()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        abstract class dev.utils.app.DialogUtils.SingleChoiceListener {
+            + onCancel()
+            + onDismiss()
+            + onPositiveButton()
+            + onSingleChoiceItems()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        abstract class dev.utils.app.DialogUtils.ViewDialogListener {
+            + onCancel()
+            + onDismiss()
+            + onPositiveButton()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.EditTextUtils {
+            {static} - LETTERS : char[]
+            {static} - NUMBERS : char[]
+            {static} - NUMBERS_AND_LETTERS : char[]
+            {static} - TAG : String
+            {static} + addTextChangedListener()
+            {static} + createDigitsKeyListener()
+            {static} + createDigitsKeyListener()
+            {static} + createDigitsKeyListener()
+            {static} + createDigitsKeyListener()
+            {static} + getEditText()
+            {static} + getImeOptions()
+            {static} + getInputType()
+            {static} + getLettersKeyListener()
+            {static} + getNumberAndLettersKeyListener()
+            {static} + getNumberKeyListener()
+            {static} + getSelectionStart()
+            {static} + getText()
+            {static} + getTextLength()
+            {static} + getTransformationMethod()
+            {static} + insert()
+            {static} + insert()
+            {static} + isCursorVisible()
+            {static} + removeTextChangedListener()
+            {static} + setCursorVisible()
+            {static} + setImeOptions()
+            {static} + setInputType()
+            {static} + setKeyListener()
+            {static} + setKeyListener()
+            {static} + setKeyListener()
+            {static} + setMaxLength()
+            {static} + setMaxLengthAndText()
+            {static} + setSelection()
+            {static} + setSelectionToBottom()
+            {static} + setSelectionToTop()
+            {static} + setText()
+            {static} + setText()
+            {static} + setTexts()
+            {static} + setTexts()
+            {static} + setTransformationMethod()
+            {static} + setTransformationMethod()
+            {static} + setTransformationMethod()
+            - EditTextUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        abstract class dev.utils.app.EditTextUtils.DevTextWatcher {
+            - markId : int
+            - operate : boolean
+            - operateState : int
+            - type : int
+            + DevTextWatcher()
+            + DevTextWatcher()
+            + afterTextChanged()
+            + beforeTextChanged()
+            + getMarkId()
+            + getOperateState()
+            + getType()
+            + isOperate()
+            + onTextChanged()
+            + setOperate()
+            + setOperateState()
+            + setType()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.FlashlightUtils {
+            - TAG : String
+            - mCamera : Camera
+            {static} - sInstance : FlashlightUtils
+            {static} + getInstance()
+            {static} + isFlashlightEnable()
+            + isFlashlightOn()
+            + isFlashlightOn()
+            + register()
+            + setFlashlightOff()
+            + setFlashlightOff()
+            + setFlashlightOn()
+            + setFlashlightOn()
+            + unregister()
+            - FlashlightUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.HandlerUtils {
+            {static} - sMainHandler : Handler
+            {static} + getMainHandler()
+            {static} + postRunnable()
+            {static} + postRunnable()
+            {static} + postRunnable()
+            {static} + postRunnable()
+            {static} + removeRunnable()
+            - HandlerUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        interface dev.utils.app.HandlerUtils.OnEndListener {
+            {abstract} + onEnd()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.ImageViewUtils {
+            {static} - TAG : String
+            {static} + getAdjustViewBounds()
+            {static} + getDrawable()
+            {static} + getDrawable()
+            {static} + getImageMatrix()
+            {static} + getImageMatrix()
+            {static} + getImageTintList()
+            {static} + getImageTintList()
+            {static} + getImageTintMode()
+            {static} + getImageTintMode()
+            {static} + getImageView()
+            {static} + getImageViewSize()
+            {static} + getMaxHeight()
+            {static} + getMaxWidth()
+            {static} + getScaleType()
+            {static} + getScaleType()
+            {static} + setAdjustViewBounds()
+            {static} + setBackgroundResources()
+            {static} + setBackgroundResources()
+            {static} + setImageBitmap()
+            {static} + setImageBitmap()
+            {static} + setImageBitmaps()
+            {static} + setImageBitmaps()
+            {static} + setImageDrawable()
+            {static} + setImageDrawable()
+            {static} + setImageDrawables()
+            {static} + setImageDrawables()
+            {static} + setImageMatrix()
+            {static} + setImageMatrix()
+            {static} + setImageResource()
+            {static} + setImageResource()
+            {static} + setImageResources()
+            {static} + setImageResources()
+            {static} + setImageTintList()
+            {static} + setImageTintList()
+            {static} + setImageTintMode()
+            {static} + setImageTintMode()
+            {static} + setMaxHeight()
+            {static} + setMaxWidth()
+            {static} + setScaleType()
+            {static} + setScaleType()
+            {static} + setScaleTypes()
+            {static} + setScaleTypes()
+            - ImageViewUtils()
+            {static} - getImageViewFieldValue()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.IntentUtils {
+            {static} - TAG : String
+            {static} + getCallIntent()
+            {static} + getCallIntent()
+            {static} + getCaptureIntent()
+            {static} + getCaptureIntent()
+            {static} + getComponentIntent()
+            {static} + getComponentIntent()
+            {static} + getComponentIntent()
+            {static} + getComponentIntent()
+            {static} + getCreateDocumentIntent()
+            {static} + getDialIntent()
+            {static} + getDialIntent()
+            {static} + getInstallAppIntent()
+            {static} + getInstallAppIntent()
+            {static} + getInstallAppIntent()
+            {static} + getIntent()
+            {static} + getLaunchAppDetailIntent()
+            {static} + getLaunchAppDetailIntent()
+            {static} + getLaunchAppDetailsSettingsIntent()
+            {static} + getLaunchAppDetailsSettingsIntent()
+            {static} + getLaunchAppDetailsSettingsIntent()
+            {static} + getLaunchAppInstallPermissionSettingsIntent()
+            {static} + getLaunchAppInstallPermissionSettingsIntent()
+            {static} + getLaunchAppInstallPermissionSettingsIntent()
+            {static} + getLaunchAppIntent()
+            {static} + getLaunchAppIntent()
+            {static} + getLaunchAppNotificationListenSettingsIntent()
+            {static} + getLaunchAppNotificationListenSettingsIntent()
+            {static} + getLaunchAppNotificationSettingsIntent()
+            {static} + getLaunchAppNotificationSettingsIntent()
+            {static} + getLaunchAppNotificationSettingsIntent()
+            {static} + getManageOverlayPermissionIntent()
+            {static} + getManageOverlayPermissionIntent()
+            {static} + getOpenAndroidBrowserIntent()
+            {static} + getOpenBrowserIntent()
+            {static} + getOpenBrowserIntent()
+            {static} + getOpenDocumentIntent()
+            {static} + getOpenDocumentIntent()
+            {static} + getSendSmsIntent()
+            {static} + getSendSmsIntent()
+            {static} + getShareImageIntent()
+            {static} + getShareImageIntent()
+            {static} + getShareImageIntent()
+            {static} + getShareImageIntent()
+            {static} + getShareImageIntent()
+            {static} + getShareImageIntent()
+            {static} + getShareTextIntent()
+            {static} + getShareTextIntent()
+            {static} + getShutdownIntent()
+            {static} + getShutdownIntent()
+            {static} + getSystemSettingIntent()
+            {static} + getUninstallAppIntent()
+            {static} + getUninstallAppIntent()
+            {static} + isIntentAvailable()
+            - IntentUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.JSONObjectUtils {
+            {static} - TAG : String
+            {static} + fromJson()
+            {static} + get()
+            {static} + get()
+            {static} + getJSONArray()
+            {static} + getJSONArray()
+            {static} + getJSONArray()
+            {static} + getJSONObject()
+            {static} + getJSONObject()
+            {static} + getJSONObject()
+            {static} + isJSON()
+            {static} + isJSONArray()
+            {static} + isJSONObject()
+            {static} + jsonToList()
+            {static} + jsonToList()
+            {static} + jsonToMap()
+            {static} + jsonToMap()
+            {static} + opt()
+            {static} + opt()
+            {static} + stringJSONEscape()
+            {static} + toJson()
+            {static} + toJson()
+            {static} + wrap()
+            - JSONObjectUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.KeyBoardUtils {
+            {static} + KEYBOARD_DISPLAY : int
+            {static} + KEYBOARD_HIDE : int
+            {static} - DELAY_MILLIS : long
+            {static} - TAG : String
+            {static} + closeKeyBoardSpecial()
+            {static} + closeKeyBoardSpecial()
+            {static} + closeKeyBoardSpecial()
+            {static} + closeKeyboard()
+            {static} + closeKeyboard()
+            {static} + closeKeyboard()
+            {static} + closeKeyboard()
+            {static} + closeKeyboard()
+            {static} + closeKeyboard()
+            {static} + closeKeyboard()
+            {static} + closeKeyboard()
+            {static} + closeKeyboard()
+            {static} + closeKeyboard()
+            {static} + closeKeyboard()
+            {static} + closeKeyboard()
+            {static} + fixSoftInputLeaks()
+            {static} + isSoftInputVisible()
+            {static} + isSoftInputVisible()
+            {static} + judgeView()
+            {static} + openKeyboard()
+            {static} + openKeyboard()
+            {static} + openKeyboard()
+            {static} + openKeyboard()
+            {static} + openKeyboard()
+            {static} + openKeyboard()
+            {static} + registerSoftInputChangedListener()
+            {static} + registerSoftInputChangedListener2()
+            {static} + setDelayMillis()
+            {static} + toggleKeyboard()
+            - KeyBoardUtils()
+            {static} - getContentViewInvisibleHeight()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        interface dev.utils.app.KeyBoardUtils.OnSoftInputChangedListener {
+            {abstract} + onSoftInputChanged()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.KeyguardUtils {
+            {static} - TAG : String
+            - mKeyguardLock : KeyguardLock
+            - mKeyguardManager : KeyguardManager
+            {static} - sInstance : KeyguardUtils
+            + disableKeyguard()
+            {static} + getInstance()
+            + getKeyguardLock()
+            + getKeyguardManager()
+            + inKeyguardRestrictedInputMode()
+            + isKeyguardLocked()
+            + isKeyguardSecure()
+            + reenableKeyguard()
+            + release()
+            + setKeyguardLock()
+            + setKeyguardLock()
+            + setKeyguardManager()
+            - KeyguardUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.LanguageUtils {
+            {static} + CHINESE : String
+            {static} + ENGLISH : String
+            {static} + FRENCH : String
+            {static} + GERMAN : String
+            {static} + JAPAN : String
+            {static} + KOREA : String
+            {static} + SIMPLIFIED_CHINESE : String
+            {static} + TAIWAN_CHINESE : String
+            {static} + TRADITIONAL_CHINESE : String
+            {static} + UK : String
+            {static} + US : String
+            {static} - TAG : String
+            {static} - sSupportLanguageMaps : Map<String, Locale>
+            {static} + applyLanguage()
+            {static} + applyLanguage()
+            {static} + getSupportLanguage()
+            {static} + getSupportLanguages()
+            {static} + getSystemCountry()
+            {static} + getSystemLanguage()
+            {static} + getSystemPreferredLanguage()
+            {static} + isEn()
+            {static} + isLanguage()
+            {static} + isRegion()
+            {static} + isRegion()
+            {static} + isSupportLanguage()
+            {static} + isZh()
+            {static} + isZhCN()
+            {static} + isZhTW()
+            {static} + putSupportLanguage()
+            {static} + removeSupportLanguage()
+            - LanguageUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.ListViewUtils {
+            {static} - TAG : String
+            {static} + calcGridViewHeight()
+            {static} + calcGridViewHeight()
+            {static} + calcListViewHeight()
+            {static} + calcListViewHeight()
+            {static} + fullScroll()
+            {static} + getItemCount()
+            {static} + getItemView()
+            {static} + getScrollX()
+            {static} + getScrollY()
+            {static} + scrollBy()
+            {static} + scrollTo()
+            {static} + scrollToBottom()
+            {static} + scrollToPosition()
+            {static} + scrollToTop()
+            {static} + setDescendantFocusability()
+            {static} + setOverScrollMode()
+            {static} + setScrollX()
+            {static} + setScrollY()
+            {static} + smoothScrollBy()
+            {static} + smoothScrollTo()
+            {static} + smoothScrollToBottom()
+            {static} + smoothScrollToPosition()
+            {static} + smoothScrollToTop()
+            - ListViewUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.ListenerUtils {
+            {static} - TAG : String
+            {static} + getClickListener()
+            {static} + getListenerInfo()
+            {static} + getListenerInfoListener()
+            {static} + getTouchListener()
+            {static} + setOnClicks()
+            {static} + setOnClicks()
+            {static} + setOnClicks()
+            {static} + setOnLongClicks()
+            {static} + setOnLongClicks()
+            {static} + setOnLongClicks()
+            {static} + setOnTouchs()
+            {static} + setOnTouchs()
+            {static} + setOnTouchs()
+            - ListenerUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.LocationUtils {
+            {static} - MINUTES_TWO : int
+            {static} - TAG : String
+            {static} - sCustomLocationListener : CustomLocationListener
+            {static} - sListener : OnLocationChangeListener
+            {static} - sLocationManager : LocationManager
+            {static} + getAddress()
+            {static} + getCountryName()
+            {static} + getLocality()
+            {static} + getLocation()
+            {static} + getStreet()
+            {static} + isBetterLocation()
+            {static} + isGpsEnabled()
+            {static} + isLocationEnabled()
+            {static} + isSameProvider()
+            {static} + openGpsSettings()
+            {static} + register()
+            {static} + unregister()
+            - LocationUtils()
+            {static} - getCriteria()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.LocationUtils.CustomLocationListener {
+            + onLocationChanged()
+            + onProviderDisabled()
+            + onProviderEnabled()
+            + onStatusChanged()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        interface dev.utils.app.LocationUtils.OnLocationChangeListener {
+            {abstract} + getLastKnownLocation()
+            {abstract} + onLocationChanged()
+            {abstract} + onStatusChanged()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.ManifestUtils {
+            {static} - TAG : String
+            {static} + getAppVersion()
+            {static} + getAppVersion()
+            {static} + getAppVersionCode()
+            {static} + getAppVersionCode()
+            {static} + getAppVersionName()
+            {static} + getAppVersionName()
+            {static} + getMetaData()
+            {static} + getMetaData()
+            {static} + getMetaDataInActivity()
+            {static} + getMetaDataInActivity()
+            {static} + getMetaDataInActivity()
+            {static} + getMetaDataInProvider()
+            {static} + getMetaDataInProvider()
+            {static} + getMetaDataInProvider()
+            {static} + getMetaDataInReceiver()
+            {static} + getMetaDataInReceiver()
+            {static} + getMetaDataInReceiver()
+            {static} + getMetaDataInService()
+            {static} + getMetaDataInService()
+            {static} + getMetaDataInService()
+            - ManifestUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.MediaStoreUtils {
+            {static} + MIME_TYPE_AUDIO : String
+            {static} + MIME_TYPE_IMAGE : String
+            {static} + MIME_TYPE_IMAGE_JPG : String
+            {static} + MIME_TYPE_IMAGE_PNG : String
+            {static} + MIME_TYPE_VIDEO : String
+            {static} + RELATIVE_AUDIO_PATH : String
+            {static} + RELATIVE_IMAGE_PATH : String
+            {static} + RELATIVE_VIDEO_PATH : String
+            {static} - TAG : String
+            {static} + createAudioUri()
+            {static} + createAudioUri()
+            {static} + createAudioUri()
+            {static} + createAudioUri()
+            {static} + createImageUri()
+            {static} + createImageUri()
+            {static} + createImageUri()
+            {static} + createImageUri()
+            {static} + createMediaUri()
+            {static} + createMediaUri()
+            {static} + createVideoUri()
+            {static} + createVideoUri()
+            {static} + createVideoUri()
+            {static} + createVideoUri()
+            {static} + getAudioDisplayName()
+            {static} + getDisplayName()
+            {static} + getImageDisplayName()
+            {static} + getImageWidthHeight()
+            {static} + getImageWidthHeight()
+            {static} + getImageWidthHeight()
+            {static} + getMediaInfo()
+            {static} + getMediaInfo()
+            {static} + getVideoDisplayName()
+            {static} + getVideoDuration()
+            {static} + getVideoDuration()
+            {static} + getVideoDuration()
+            {static} + getVideoSize()
+            {static} + getVideoSize()
+            {static} + getVideoSize()
+            {static} + insertAudio()
+            {static} + insertImage()
+            {static} + insertImage()
+            {static} + insertImage()
+            {static} + insertMedia()
+            {static} + insertVideo()
+            {static} + notifyMediaStore()
+            {static} + notifyMediaStore()
+            - MediaStoreUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.MemoryUtils {
+            {static} - MEMAVAILABLE : String
+            {static} - MEMTOTAL : String
+            {static} - MEM_INFO_PATH : String
+            {static} - TAG : String
+            {static} + getAvailMemory()
+            {static} + getAvailMemoryFormat()
+            {static} + getMemInfoIype()
+            {static} + getMemoryAvailable()
+            {static} + getMemoryAvailableFormat()
+            {static} + getMemoryInfo()
+            {static} + getTotalMemory()
+            {static} + getTotalMemoryFormat()
+            {static} + printMemoryInfo()
+            {static} + printMemoryInfo2()
+            - MemoryUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.NetWorkUtils {
+            {static} - TAG : String
+            {static} + getActiveNetwork()
+            {static} + getActiveNetworkInfo()
+            {static} + getBroadcastIpAddress()
+            {static} + getConnectType()
+            {static} + getDomainAddress()
+            {static} + getGatewayByWifi()
+            {static} + getIPAddress()
+            {static} + getIpAddressByWifi()
+            {static} + getMobileDataEnabled()
+            {static} + getNetMaskByWifi()
+            {static} + getNetworkClass()
+            {static} + getNetworkOperatorName()
+            {static} + getNetworkType()
+            {static} + getServerAddressByWifi()
+            {static} + getWifiEnabled()
+            {static} + is4G()
+            {static} + isAvailable()
+            {static} + isAvailableByPing()
+            {static} + isAvailableByPing()
+            {static} + isConnMobileData()
+            {static} + isConnWifi()
+            {static} + isConnect()
+            {static} + isWifiAvailable()
+            {static} + setMobileDataEnabled()
+            - NetWorkUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        enum NetworkType {
+          NETWORK_2G
+          NETWORK_3G
+          NETWORK_4G
+          NETWORK_5G
+          NETWORK_NO
+          NETWORK_UNKNOWN
+          NETWORK_WIFI
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.NotificationUtils {
+            {static} - TAG : String
+            {static} - sNotificationManager : NotificationManager
+            {static} + cancel()
+            {static} + cancel()
+            {static} + cancelAll()
+            {static} + checkAndIntentSetting()
+            {static} + createNotification()
+            {static} + createNotification()
+            {static} + createNotification()
+            {static} + createPendingIntent()
+            {static} + getNotificationManager()
+            {static} + isNotificationEnabled()
+            {static} + isNotificationListenerEnabled()
+            {static} + isNotificationListenerEnabled()
+            {static} + notify()
+            {static} + notify()
+            {static} + startNotificationListenSettings()
+            - NotificationUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.NotificationUtils.LightPattern {
+            - argb : int
+            - durationMS : int
+            - startOffMS : int
+            {static} + obtain()
+            - LightPattern()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.NotificationUtils.VibratePattern {
+            - vibrates : long[]
+            + isEmpty()
+            {static} + obtain()
+            - VibratePattern()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.PathUtils {
+            {static} + EXTERNAL : String
+            {static} + INTERNAL : String
+            {static} - TAG : String
+            {static} - sAppExternalPath : AppExternalPath
+            {static} - sInternalPath : InternalPath
+            {static} - sSDCardPath : SDCardPath
+            {static} + getAppExternal()
+            {static} + getInternal()
+            {static} + getSDCard()
+            - PathUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.PathUtils.AppExternalPath {
+            + getAppAlarmsDir()
+            + getAppAlarmsPath()
+            + getAppAudiobooksDir()
+            + getAppAudiobooksPath()
+            + getAppCacheDir()
+            + getAppCacheDir()
+            + getAppCachePath()
+            + getAppCachePath()
+            + getAppDCIMDir()
+            + getAppDCIMPath()
+            + getAppDataDir()
+            + getAppDataDir()
+            + getAppDataPath()
+            + getAppDataPath()
+            + getAppDocumentsDir()
+            + getAppDocumentsPath()
+            + getAppDownloadDir()
+            + getAppDownloadPath()
+            + getAppFilesDir()
+            + getAppFilesDir()
+            + getAppFilesPath()
+            + getAppFilesPath()
+            + getAppMoviesDir()
+            + getAppMoviesPath()
+            + getAppMusicDir()
+            + getAppMusicPath()
+            + getAppNotificationsDir()
+            + getAppNotificationsPath()
+            + getAppObbDir()
+            + getAppObbPath()
+            + getAppPicturesDir()
+            + getAppPicturesPath()
+            + getAppPodcastsDir()
+            + getAppPodcastsPath()
+            + getAppRingtonesDir()
+            + getAppRingtonesPath()
+            + getExternalFilesDir()
+            + getExternalFilesPath()
+            - AppExternalPath()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.PathUtils.InternalPath {
+            + getAppAlarmsDir()
+            + getAppAlarmsPath()
+            + getAppAudiobooksDir()
+            + getAppAudiobooksPath()
+            + getAppCacheDir()
+            + getAppCacheDir()
+            + getAppCachePath()
+            + getAppCachePath()
+            + getAppCodeCacheDir()
+            + getAppCodeCachePath()
+            + getAppDCIMDir()
+            + getAppDCIMPath()
+            + getAppDataDir()
+            + getAppDataDir()
+            + getAppDataPath()
+            + getAppDataPath()
+            + getAppDbFile()
+            + getAppDbPath()
+            + getAppDbsDir()
+            + getAppDbsPath()
+            + getAppDocumentsDir()
+            + getAppDocumentsPath()
+            + getAppDownloadDir()
+            + getAppDownloadPath()
+            + getAppFilesDir()
+            + getAppFilesDir()
+            + getAppFilesPath()
+            + getAppFilesPath()
+            + getAppMoviesDir()
+            + getAppMoviesPath()
+            + getAppMusicDir()
+            + getAppMusicPath()
+            + getAppNoBackupFilesDir()
+            + getAppNoBackupFilesPath()
+            + getAppNotificationsDir()
+            + getAppNotificationsPath()
+            + getAppPicturesDir()
+            + getAppPicturesPath()
+            + getAppPodcastsDir()
+            + getAppPodcastsPath()
+            + getAppRingtonesDir()
+            + getAppRingtonesPath()
+            + getAppSpDir()
+            + getAppSpFile()
+            + getAppSpPath()
+            + getAppSpPath()
+            + getDataDirectory()
+            + getDataPath()
+            + getDownloadCacheDirectory()
+            + getDownloadCachePath()
+            + getRootDirectory()
+            + getRootPath()
+            - InternalPath()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.PathUtils.SDCardPath {
+            + getAlarmsDir()
+            + getAlarmsPath()
+            + getAudiobooksDir()
+            + getAudiobooksPath()
+            + getDCIMDir()
+            + getDCIMPath()
+            + getDocumentsDir()
+            + getDocumentsPath()
+            + getDownloadDir()
+            + getDownloadPath()
+            + getExternalStoragePublicDir()
+            + getExternalStoragePublicPath()
+            + getMoviesDir()
+            + getMoviesPath()
+            + getMusicDir()
+            + getMusicPath()
+            + getNotificationsDir()
+            + getNotificationsPath()
+            + getPicturesDir()
+            + getPicturesPath()
+            + getPodcastsDir()
+            + getPodcastsPath()
+            + getRingtonesDir()
+            + getRingtonesPath()
+            + getSDCardFile()
+            + getSDCardFile()
+            + getSDCardPath()
+            + getSDCardPath()
+            + isSDCardEnable()
+            - SDCardPath()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.PhoneUtils {
+            {static} - TAG : String
+            {static} + call()
+            {static} + checkSimCountry()
+            {static} + dial()
+            {static} + getAllContactInfo()
+            {static} + getAllContactInfo2()
+            {static} + getAllSMS()
+            {static} + getAndroidId()
+            {static} + getChinaOperatorByIMSI()
+            {static} + getChinaOperatorByIMSI()
+            {static} + getChinaOperatorBySimOperator()
+            {static} + getChinaOperatorBySimOperator()
+            {static} + getContactNum()
+            {static} + getDeviceId()
+            {static} + getDeviceId()
+            {static} + getIMEI()
+            {static} + getIMEI()
+            {static} + getIMSI()
+            {static} + getMEID()
+            {static} + getMEID()
+            {static} + getMtkTeleInfo()
+            {static} + getMtkTeleInfo2()
+            {static} + getNetworkCountryIso()
+            {static} + getPhoneStatus()
+            {static} + getPhoneType()
+            {static} + getQualcommTeleInfo()
+            {static} + getSerialNumber()
+            {static} + getSimCountry()
+            {static} + getSimCountryIso()
+            {static} + getSimOperator()
+            {static} + getSimOperatorName()
+            {static} + getSimSerialNumber()
+            {static} + getSimState()
+            {static} + getSimState()
+            {static} + getSpreadtrumTeleInfo()
+            {static} + getUUID()
+            {static} + isPhone()
+            {static} + isSimReady()
+            {static} + isSimReady()
+            {static} + sendSms()
+            {static} + sendSmsSilent()
+            - PhoneUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.PhoneUtils.TeleInfo {
+            + imei_1 : String
+            + imei_2 : String
+            + imsi_1 : String
+            + imsi_2 : String
+            + phoneType_1 : int
+            + phoneType_2 : int
+            + printInfo()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.PowerManagerUtils {
+            {static} - TAG : String
+            - mPowerManager : PowerManager
+            - mWakeLock : WakeLock
+            {static} - sInstance : PowerManagerUtils
+            {static} + getInstance()
+            + getPowerManager()
+            + getWakeLock()
+            + isScreenOn()
+            {static} + setBright()
+            {static} + setBright()
+            + setPowerManager()
+            + setWakeLock()
+            {static} + setWakeLockToBright()
+            + turnScreenOff()
+            + turnScreenOn()
+            - PowerManagerUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.ProcessUtils {
+            {static} - TAG : String
+            {static} + getAllBackgroundProcesses()
+            {static} + getCurProcessName()
+            {static} + getForegroundProcessName()
+            {static} + getPid()
+            {static} + getProcessName()
+            {static} + getRunningAppProcessInfo()
+            {static} + getRunningAppProcessInfo()
+            {static} + isCurProcess()
+            {static} + kill()
+            {static} + kill()
+            {static} + killAllBackgroundProcesses()
+            {static} + killBackgroundProcesses()
+            {static} + myPid()
+            - ProcessUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.ROMUtils {
+            {static} - ROM_360 : String[]
+            {static} - ROM_COOLPAD : String[]
+            {static} - ROM_GIONEE : String[]
+            {static} - ROM_GOOGLE : String[]
+            {static} - ROM_HTC : String[]
+            {static} - ROM_HUAWEI : String[]
+            {static} - ROM_LEECO : String[]
+            {static} - ROM_LENOVO : String[]
+            {static} - ROM_LG : String[]
+            {static} - ROM_MEIZU : String[]
+            {static} - ROM_MOTOROLA : String[]
+            {static} - ROM_NUBIA : String[]
+            {static} - ROM_ONEPLUS : String[]
+            {static} - ROM_OPPO : String[]
+            {static} - ROM_SAMSUNG : String[]
+            {static} - ROM_SMARTISAN : String[]
+            {static} - ROM_SONY : String[]
+            {static} - ROM_VIVO : String[]
+            {static} - ROM_XIAOMI : String[]
+            {static} - ROM_ZTE : String[]
+            {static} - UNKNOWN : String
+            {static} - VERSION_PROPERTY_360 : String
+            {static} - VERSION_PROPERTY_HUAWEI : String
+            {static} - VERSION_PROPERTY_LEECO : String
+            {static} - VERSION_PROPERTY_NUBIA : String
+            {static} - VERSION_PROPERTY_ONEPLUS : String
+            {static} - VERSION_PROPERTY_OPPO : String
+            {static} - VERSION_PROPERTY_VIVO : String
+            {static} - VERSION_PROPERTY_XIAOMI : String
+            {static} - VERSION_PROPERTY_ZTE : String
+            {static} - sBean : RomInfo
+            {static} + getRomInfo()
+            {static} + is360()
+            {static} + isCoolpad()
+            {static} + isGionee()
+            {static} + isGoogle()
+            {static} + isHtc()
+            {static} + isHuawei()
+            {static} + isLeeco()
+            {static} + isLenovo()
+            {static} + isLg()
+            {static} + isMeizu()
+            {static} + isMotorola()
+            {static} + isNubia()
+            {static} + isOneplus()
+            {static} + isOppo()
+            {static} + isSamsung()
+            {static} + isSmartisan()
+            {static} + isSony()
+            {static} + isVivo()
+            {static} + isXiaomi()
+            {static} + isZte()
+            - ROMUtils()
+            {static} - _getRomInfo()
+            {static} - getBrand()
+            {static} - getManufacturer()
+            {static} - getRomVersion()
+            {static} - getSystemProperty()
+            {static} - getSystemPropertyByReflect()
+            {static} - getSystemPropertyByShell()
+            {static} - getSystemPropertyByStream()
+            {static} - isRightRom()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.ROMUtils.RomInfo {
+            - name : String
+            - version : String
+            + getName()
+            + getVersion()
+            + toString()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.ResourceUtils {
+            {static} - TAG : String
+            {static} + geFileToListFromAssets()
+            {static} + geFileToListFromRaw()
+            {static} + getAnimId()
+            {static} + getAnimation()
+            {static} + getAssets()
+            {static} + getAttrId()
+            {static} + getBitmap()
+            {static} + getBitmap()
+            {static} + getBoolId()
+            {static} + getBoolean()
+            {static} + getColor()
+            {static} + getColorDrawable()
+            {static} + getColorDrawable()
+            {static} + getColorId()
+            {static} + getColorStateList()
+            {static} + getConfiguration()
+            {static} + getContentResolver()
+            {static} + getDimenId()
+            {static} + getDimension()
+            {static} + getDimensionInt()
+            {static} + getDisplayMetrics()
+            {static} + getDrawable()
+            {static} + getDrawableId()
+            {static} + getId()
+            {static} + getIdentifier()
+            {static} + getIdentifier()
+            {static} + getIntArray()
+            {static} + getInteger()
+            {static} + getIntegerId()
+            {static} + getLayoutId()
+            {static} + getMenuId()
+            {static} + getMipmapId()
+            {static} + getNinePatchDrawable()
+            {static} + getRawId()
+            {static} + getResourceName()
+            {static} + getResources()
+            {static} + getString()
+            {static} + getString()
+            {static} + getStringArray()
+            {static} + getStringId()
+            {static} + getStyleId()
+            {static} + getStyleableId()
+            {static} + getTextArray()
+            {static} + getTheme()
+            {static} + open()
+            {static} + openAssetFileDescriptor()
+            {static} + openFd()
+            {static} + openFileDescriptor()
+            {static} + openInputStream()
+            {static} + openNonAssetFd()
+            {static} + openOutputStream()
+            {static} + openOutputStream()
+            {static} + openRawResource()
+            {static} + openRawResourceFd()
+            {static} + readBytesFromAssets()
+            {static} + readBytesFromRaw()
+            {static} + readStringFromAssets()
+            {static} + readStringFromRaw()
+            {static} + saveAssetsFormFile()
+            {static} + saveRawFormFile()
+            - ResourceUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.SDCardUtils {
+            {static} - TAG : String
+            {static} + getAllBlockSize()
+            {static} + getAllBlockSize()
+            {static} + getAllBlockSizeFormat()
+            {static} + getAvailableBlocks()
+            {static} + getAvailableBlocks()
+            {static} + getAvailableBlocksFormat()
+            {static} + getBlockSizeInfos()
+            {static} + getBlockSizeInfos()
+            {static} + getSDCardFile()
+            {static} + getSDCardFile()
+            {static} + getSDCardPath()
+            {static} + getSDCardPath()
+            {static} + getSDCardPaths()
+            {static} + getSDCardPaths()
+            {static} + getUsedBlocks()
+            {static} + getUsedBlocks()
+            {static} + getUsedBlocksFormat()
+            {static} + isSDCardEnable()
+            {static} + isSDCardEnablePath()
+            - SDCardUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.ScreenUtils {
+            {static} - TAG : String
+            {static} + checkDeviceHasNavigationBar()
+            {static} + getDensity()
+            {static} + getDensityDpi()
+            {static} + getDisplayMetrics()
+            {static} + getHeightDpi()
+            {static} + getNavigationBarHeight()
+            {static} + getScaledDensity()
+            {static} + getScreenHeight()
+            {static} + getScreenInfo()
+            {static} + getScreenRotation()
+            {static} + getScreenSize()
+            {static} + getScreenSize()
+            {static} + getScreenSizeOfDevice()
+            {static} + getScreenWidth()
+            {static} + getScreenWidthHeight()
+            {static} + getScreenWidthHeightToPoint()
+            {static} + getSleepDuration()
+            {static} + getStatusBarHeight()
+            {static} + getWidthDpi()
+            {static} + getXDpi()
+            {static} + getYDpi()
+            {static} + isFullScreen()
+            {static} + isLandscape()
+            {static} + isLandscape()
+            {static} + isPortrait()
+            {static} + isPortrait()
+            {static} + isScreenLock()
+            {static} + isTablet()
+            {static} + setFullScreen()
+            {static} + setFullScreenNoTitle()
+            {static} + setLandscape()
+            {static} + setPortrait()
+            {static} + setSleepDuration()
+            {static} + setWindowSecure()
+            {static} + toggleScreenOrientation()
+            - ScreenUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.ServiceUtils {
+            {static} - TAG : String
+            {static} + bindService()
+            {static} + bindService()
+            {static} + getAllRunningService()
+            {static} + isServiceRunning()
+            {static} + isServiceRunning()
+            {static} + startService()
+            {static} + startService()
+            {static} + stopService()
+            {static} + stopService()
+            {static} + unbindService()
+            - ServiceUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.ShapeUtils {
+            {static} - TAG : String
+            - mDrawable : GradientDrawable
+            + getDrawable()
+            {static} + newBuilder()
+            {static} + newBuilder()
+            {static} + newBuilderToGradient()
+            {static} + newBuilderToGradient()
+            {static} + newBuilderToLeft()
+            {static} + newBuilderToLeft()
+            {static} + newBuilderToRight()
+            {static} + newBuilderToRight()
+            + setDrawable()
+            - ShapeUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.ShapeUtils.Builder {
+            - gradientDrawable : GradientDrawable
+            + Builder()
+            + Builder()
+            + Builder()
+            + Builder()
+            + build()
+            + getOrientation()
+            + setColor()
+            + setColor()
+            + setCornerRadii()
+            + setPadding()
+            + setRadius()
+            + setRadiusLeft()
+            + setRadiusLeft()
+            + setRadiusRight()
+            + setRadiusRight()
+            + setSize()
+            + setStroke()
+            + setStroke()
+            + setStroke()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.ShellUtils {
+            {static} - NEW_LINE_STR : String
+            {static} - SUCCESS : int
+            {static} - TAG : String
+            {static} + execCmd()
+            {static} + execCmd()
+            {static} + execCmd()
+            {static} + execCmd()
+            {static} + execCmd()
+            {static} + execCmd()
+            - ShellUtils()
+            {static} - consumeInputStream()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.ShellUtils.CommandResult {
+            + errorMsg : String
+            + result : int
+            + successMsg : String
+            + CommandResult()
+            + isSuccess()
+            + isSuccess2()
+            + isSuccess3()
+            + isSuccess4()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.ShortCutUtils {
+            {static} - TAG : String
+            {static} + addShortcut()
+            {static} + addShortcut()
+            {static} + addShortcut()
+            {static} + addShortcut()
+            {static} + deleteShortcut()
+            {static} + deleteShortcut()
+            {static} + getShortCutIntent()
+            {static} + getShortCutIntent()
+            {static} + hasShortcut()
+            - ShortCutUtils()
+            {static} - getAuthority()
+            {static} - getAuthorityFromPermission()
+            {static} - getAuthorityFromPermission()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.SignaturesUtils {
+            {static} - DEBUG_DN : X500Principal
+            {static} - TAG : String
+            {static} + getAppSignature()
+            {static} + getAppSignature()
+            {static} + getCertificateFromApk()
+            {static} + getSignaturesFromApk()
+            {static} + getX509Certificate()
+            {static} + getX509Certificate()
+            {static} + isDebuggable()
+            {static} + printSignatureInfo()
+            {static} + signatureMD5()
+            {static} + signatureSHA1()
+            {static} + signatureSHA256()
+            - SignaturesUtils()
+            {static} - loadCertificates()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.SizeUtils {
+            {static} - TAG : String
+            {static} + applyDimension()
+            {static} + applyDimension()
+            {static} + dipConvertPx()
+            {static} + dipConvertPxf()
+            {static} + forceGetViewSize()
+            {static} + getMeasuredHeight()
+            {static} + getMeasuredWidth()
+            {static} + measureView()
+            {static} + pxConvertDip()
+            {static} + pxConvertDipf()
+            {static} + pxConvertSp()
+            {static} + pxConvertSpf()
+            {static} + spConvertPx()
+            {static} + spConvertPxf()
+            - SizeUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        interface dev.utils.app.SizeUtils.onGetSizeListener {
+            {abstract} + onGetSize()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.SnackbarUtils {
+            - TAG : String
+            - mAppendTopMargin : int
+            - mAutoCalc : boolean
+            - mShadowMargin : int
+            - mViewGravity : int
+            - mViewHeight : int
+            - mViewLocations : int[]
+            {static} - sSnackbarReference : WeakReference<Snackbar>
+            + above()
+            + addView()
+            + addView()
+            + bellow()
+            + dismiss()
+            + dismiss()
+            + getActionButton()
+            + getShadowMargin()
+            + getSnackbar()
+            + getSnackbarView()
+            + getStyle()
+            + getTextView()
+            + isAutoCalc()
+            + setAction()
+            + setAction()
+            + setAction()
+            + setAction()
+            + setAutoCalc()
+            + setCallback()
+            + setShadowMargin()
+            + setSnackbarStyle()
+            + setSnackbarStyle()
+            + setStyle()
+            + showIndefinite()
+            + showIndefinite()
+            + showLong()
+            + showLong()
+            + showShort()
+            + showShort()
+            {static} + with()
+            {static} + with()
+            {static} + with()
+            {static} + with()
+            - SnackbarUtils()
+            - clearLocations()
+            - priShow()
+            - setSnackbarLocation()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        abstract class dev.utils.app.SnackbarUtils.Style {
+            + getActionBackground()
+            + getActionBackgroundTintColor()
+            + getActionColor()
+            + getActionCornerRadius()
+            + getActionGravity()
+            + getActionPadding()
+            + getActionSize()
+            + getRootAlpha()
+            + getRootBackground()
+            + getRootBackgroundTintColor()
+            + getRootCornerRadius()
+            + getRootGravity()
+            + getRootMargin()
+            + getTextColor()
+            + getTextEllipsize()
+            + getTextGravity()
+            + getTextMaxLines()
+            + getTextPadding()
+            + getTextSize()
+            + getTextTypeface()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.SnackbarUtils.StyleBuilder {
+            - actionBackground : Drawable
+            - actionBackgroundTintColor : int
+            - actionColor : int
+            - actionCornerRadius : float
+            - actionGravity : int
+            - actionPadding : int[]
+            - actionSize : float
+            - rootAlpha : float
+            - rootBackground : Drawable
+            - rootBackgroundTintColor : int
+            - rootCornerRadius : float
+            - rootGravity : int
+            - rootMargin : int[]
+            - textColor : int
+            - textEllipsize : TruncateAt
+            - textGravity : int
+            - textMaxLines : int
+            - textPadding : int[]
+            - textSize : float
+            - textTypeface : Typeface
+            + StyleBuilder()
+            + StyleBuilder()
+            + getActionBackground()
+            + getActionBackgroundTintColor()
+            + getActionColor()
+            + getActionCornerRadius()
+            + getActionGravity()
+            + getActionPadding()
+            + getActionSize()
+            + getRootAlpha()
+            + getRootBackground()
+            + getRootBackgroundTintColor()
+            + getRootCornerRadius()
+            + getRootGravity()
+            + getRootMargin()
+            + getTextColor()
+            + getTextEllipsize()
+            + getTextGravity()
+            + getTextMaxLines()
+            + getTextPadding()
+            + getTextSize()
+            + getTextTypeface()
+            + setActionBackground()
+            + setActionBackgroundTintColor()
+            + setActionColor()
+            + setActionCornerRadius()
+            + setActionGravity()
+            + setActionPadding()
+            + setActionSize()
+            + setRootAlpha()
+            + setRootBackground()
+            + setRootBackgroundTintColor()
+            + setRootCornerRadius()
+            + setRootGravity()
+            + setRootMargin()
+            + setTextColor()
+            + setTextEllipsize()
+            + setTextGravity()
+            + setTextMaxLines()
+            + setTextPadding()
+            + setTextSize()
+            + setTextTypeface()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.SpannableStringUtils {
+            {static} + ALIGN_BASELINE : int
+            {static} + ALIGN_BOTTOM : int
+            {static} + ALIGN_CENTER : int
+            {static} + ALIGN_TOP : int
+            {static} - COLOR_DEFAULT : int
+            {static} - NEW_LINE_STR : String
+            {static} - TAG : String
+            - alignImage : int
+            - alignLine : int
+            - alignment : Alignment
+            - backgroundColor : int
+            - blurRadius : float
+            - bulletColor : int
+            - bulletGapWidth : int
+            - bulletRadius : int
+            - clickSpan : ClickableSpan
+            - first : int
+            - flag : int
+            - fontFamily : String
+            - fontSize : int
+            - fontSizeIsDp : boolean
+            - foregroundColor : int
+            - imageBitmap : Bitmap
+            - imageDrawable : Drawable
+            - imageResourceId : int
+            - imageUri : Uri
+            - isBold : boolean
+            - isBoldItalic : boolean
+            - isItalic : boolean
+            - isStrikethrough : boolean
+            - isSubscript : boolean
+            - isSuperscript : boolean
+            - isUnderline : boolean
+            - lineHeight : int
+            - mText : CharSequence
+            - mTextView : TextView
+            - mType : int
+            - mTypeCharSequence : int
+            - mTypeImage : int
+            - mTypeSpace : int
+            - proportion : float
+            - quoteColor : int
+            - quoteGapWidth : int
+            - rest : int
+            - shader : Shader
+            - shadowColor : int
+            - shadowDx : float
+            - shadowDy : float
+            - shadowRadius : float
+            - spaceColor : int
+            - spaceSize : int
+            - spans : Object[]
+            - stripeWidth : int
+            - style : Blur
+            - typeface : Typeface
+            - url : String
+            - verticalAlign : int
+            - xProportion : float
+            + SpannableStringUtils()
+            + append()
+            + appendImage()
+            + appendImage()
+            + appendImage()
+            + appendImage()
+            + appendImage()
+            + appendImage()
+            + appendImage()
+            + appendImage()
+            + appendLine()
+            + appendLine()
+            + appendSpace()
+            + appendSpace()
+            + create()
+            + get()
+            + setBackgroundColor()
+            + setBlur()
+            + setBold()
+            + setBoldItalic()
+            + setBullet()
+            + setBullet()
+            + setClickSpan()
+            + setFlag()
+            + setFontFamily()
+            + setFontProportion()
+            + setFontSize()
+            + setFontSize()
+            + setFontXProportion()
+            + setForegroundColor()
+            + setHorizontalAlign()
+            + setItalic()
+            + setLeadingMargin()
+            + setLineHeight()
+            + setLineHeight()
+            + setQuoteColor()
+            + setQuoteColor()
+            + setShader()
+            + setShadow()
+            + setSpans()
+            + setStrikethrough()
+            + setSubscript()
+            + setSuperscript()
+            + setTypeface()
+            + setUnderline()
+            + setUrl()
+            + setVerticalAlign()
+            {static} + with()
+            - SpannableStringUtils()
+            - apply()
+            - applyLast()
+            {static} - getContext()
+            - setDefault()
+            - updateCharCharSequence()
+            - updateImage()
+            - updateSpace()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        interface dev.utils.app.SpannableStringUtils.Align {
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.SpannableStringUtils.CustomBulletSpan {
+            - color : int
+            - gapWidth : int
+            - radius : int
+            - sBulletPath : Path
+            + drawLeadingMargin()
+            + getLeadingMargin()
+            - CustomBulletSpan()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        abstract class dev.utils.app.SpannableStringUtils.CustomDynamicDrawableSpan {
+            {static} ~ ALIGN_BASELINE : int
+            {static} ~ ALIGN_BOTTOM : int
+            {static} ~ ALIGN_CENTER : int
+            {static} ~ ALIGN_TOP : int
+            ~ mVerticalAlignment : int
+            - mDrawableRef : WeakReference<Drawable>
+            + draw()
+            {abstract} + getDrawable()
+            + getSize()
+            - CustomDynamicDrawableSpan()
+            - CustomDynamicDrawableSpan()
+            - getCachedDrawable()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.SpannableStringUtils.CustomImageSpan {
+            - mContentUri : Uri
+            - mDrawable : Drawable
+            - mResourceId : int
+            + getDrawable()
+            - CustomImageSpan()
+            - CustomImageSpan()
+            - CustomImageSpan()
+            - CustomImageSpan()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.SpannableStringUtils.CustomLineHeightSpan {
+            {static} ~ ALIGN_CENTER : int
+            {static} ~ ALIGN_TOP : int
+            ~ mVerticalAlignment : int
+            {static} ~ sfm : FontMetricsInt
+            - height : int
+            + chooseHeight()
+            ~ CustomLineHeightSpan()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.SpannableStringUtils.CustomQuoteSpan {
+            - color : int
+            - gapWidth : int
+            - stripeWidth : int
+            + drawLeadingMargin()
+            + getLeadingMargin()
+            - CustomQuoteSpan()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.SpannableStringUtils.CustomTypefaceSpan {
+            - newType : Typeface
+            + updateDrawState()
+            + updateMeasureState()
+            - CustomTypefaceSpan()
+            - apply()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.SpannableStringUtils.SerializableSpannableStringBuilder {
+            {static} - serialVersionUID : long
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.SpannableStringUtils.ShaderSpan {
+            - mShader : Shader
+            + updateDrawState()
+            - ShaderSpan()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.SpannableStringUtils.ShadowSpan {
+            - dx : float
+            - dy : float
+            - radius : float
+            - shadowColor : int
+            + updateDrawState()
+            - ShadowSpan()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.SpannableStringUtils.SpaceSpan {
+            - paint : Paint
+            - width : int
+            + draw()
+            + getSize()
+            - SpaceSpan()
+            - SpaceSpan()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.SpannableStringUtils.VerticalAlignSpan {
+            {static} ~ ALIGN_CENTER : int
+            {static} ~ ALIGN_TOP : int
+            ~ mVerticalAlignment : int
+            + draw()
+            + getSize()
+            ~ VerticalAlignSpan()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.StateListUtils {
+            {static} - TAG : String
+            {static} + createColorStateList()
+            {static} + createColorStateList()
+            {static} + createColorStateList()
+            {static} + createColorStateList()
+            {static} + createColorStateList()
+            {static} + createColorStateList()
+            {static} + getColorStateList()
+            {static} + newSelector()
+            {static} + newSelector()
+            {static} + newSelector()
+            {static} + newSelector()
+            {static} + newSelector()
+            {static} + newSelector()
+            - StateListUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.TextViewUtils {
+            {static} - TAG : String
+            {static} + calcTextLine()
+            {static} + calcTextLine()
+            {static} + calcTextLine()
+            {static} + calcTextWidth()
+            {static} + calcTextWidth()
+            {static} + calcTextWidth()
+            {static} + clearFlags()
+            {static} + clearFlags()
+            {static} + getAutoLinkMask()
+            {static} + getCenterRectY()
+            {static} + getCompoundDrawablePadding()
+            {static} + getCompoundDrawables()
+            {static} + getEllipsize()
+            {static} + getGravity()
+            {static} + getHint()
+            {static} + getHint()
+            {static} + getHintTextColors()
+            {static} + getHintTextColors()
+            {static} + getHints()
+            {static} + getHints()
+            {static} + getImeOptions()
+            {static} + getIncludeFontPadding()
+            {static} + getInputType()
+            {static} + getLetterSpacing()
+            {static} + getLineSpacingExtra()
+            {static} + getLineSpacingMultiplier()
+            {static} + getMaxEms()
+            {static} + getMaxLines()
+            {static} + getMinEms()
+            {static} + getMinLines()
+            {static} + getPaint()
+            {static} + getPaint()
+            {static} + getText()
+            {static} + getText()
+            {static} + getTextColors()
+            {static} + getTextColors()
+            {static} + getTextHeight()
+            {static} + getTextHeight()
+            {static} + getTextScaleX()
+            {static} + getTextSize()
+            {static} + getTextSize()
+            {static} + getTextTopOffsetHeight()
+            {static} + getTextTopOffsetHeight()
+            {static} + getTextView()
+            {static} + getTextWidth()
+            {static} + getTextWidth()
+            {static} + getTextWidth()
+            {static} + getTextWidth()
+            {static} + getTextWidth()
+            {static} + getTextWidth()
+            {static} + getTextWidth()
+            {static} + getTextWidth()
+            {static} + getTextWidth()
+            {static} + getTexts()
+            {static} + getTexts()
+            {static} + getTransformationMethod()
+            {static} + getTypeface()
+            {static} + reckonTextSizeByHeight()
+            {static} + reckonTextSizeByHeight()
+            {static} + reckonTextSizeByWidth()
+            {static} + reckonTextSizeByWidth()
+            {static} + reckonTextSizeByWidth()
+            {static} + reckonTextSizeByWidth()
+            {static} + setAllCaps()
+            {static} + setAllCaps()
+            {static} + setAntiAliasFlag()
+            {static} + setAntiAliasFlag()
+            {static} + setAutoLinkMask()
+            {static} + setAutoLinkMask()
+            {static} + setBold()
+            {static} + setBold()
+            {static} + setBold()
+            {static} + setBold()
+            {static} + setBold()
+            {static} + setBold()
+            {static} + setCompoundDrawablePadding()
+            {static} + setCompoundDrawables()
+            {static} + setCompoundDrawablesByBottom()
+            {static} + setCompoundDrawablesByLeft()
+            {static} + setCompoundDrawablesByRight()
+            {static} + setCompoundDrawablesByTop()
+            {static} + setCompoundDrawablesWithIntrinsicBounds()
+            {static} + setCompoundDrawablesWithIntrinsicBoundsByBottom()
+            {static} + setCompoundDrawablesWithIntrinsicBoundsByLeft()
+            {static} + setCompoundDrawablesWithIntrinsicBoundsByRight()
+            {static} + setCompoundDrawablesWithIntrinsicBoundsByTop()
+            {static} + setEllipsize()
+            {static} + setEllipsize()
+            {static} + setEms()
+            {static} + setEms()
+            {static} + setGravity()
+            {static} + setGravity()
+            {static} + setHint()
+            {static} + setHint()
+            {static} + setHintTextColor()
+            {static} + setHintTextColor()
+            {static} + setHintTextColor()
+            {static} + setHintTextColor()
+            {static} + setHintTextColors()
+            {static} + setHintTextColors()
+            {static} + setHintTextColors()
+            {static} + setHintTextColors()
+            {static} + setHtmlText()
+            {static} + setHtmlText()
+            {static} + setHtmlTexts()
+            {static} + setHtmlTexts()
+            {static} + setImeOptions()
+            {static} + setImeOptions()
+            {static} + setIncludeFontPadding()
+            {static} + setIncludeFontPadding()
+            {static} + setInputType()
+            {static} + setInputType()
+            {static} + setLetterSpacing()
+            {static} + setLetterSpacing()
+            {static} + setLineSpacing()
+            {static} + setLineSpacing()
+            {static} + setLineSpacingAndMultiplier()
+            {static} + setLineSpacingAndMultiplier()
+            {static} + setLines()
+            {static} + setLines()
+            {static} + setMaxEms()
+            {static} + setMaxEms()
+            {static} + setMaxLength()
+            {static} + setMaxLength()
+            {static} + setMaxLengthAndText()
+            {static} + setMaxLengthAndText()
+            {static} + setMaxLines()
+            {static} + setMaxLines()
+            {static} + setMinEms()
+            {static} + setMinEms()
+            {static} + setMinLines()
+            {static} + setMinLines()
+            {static} + setPaintFlags()
+            {static} + setPaintFlags()
+            {static} + setStrikeThruText()
+            {static} + setStrikeThruText()
+            {static} + setStrikeThruText()
+            {static} + setStrikeThruText()
+            {static} + setText()
+            {static} + setText()
+            {static} + setTextColor()
+            {static} + setTextColor()
+            {static} + setTextColor()
+            {static} + setTextColor()
+            {static} + setTextColors()
+            {static} + setTextColors()
+            {static} + setTextColors()
+            {static} + setTextColors()
+            {static} + setTextScaleX()
+            {static} + setTextScaleX()
+            {static} + setTextSize()
+            {static} + setTextSize()
+            {static} + setTextSizeByDp()
+            {static} + setTextSizeByDp()
+            {static} + setTextSizeByIn()
+            {static} + setTextSizeByIn()
+            {static} + setTextSizeByPx()
+            {static} + setTextSizeByPx()
+            {static} + setTextSizeBySp()
+            {static} + setTextSizeBySp()
+            {static} + setTextSizes()
+            {static} + setTextSizes()
+            {static} + setTexts()
+            {static} + setTexts()
+            {static} + setTransformationMethod()
+            {static} + setTransformationMethod()
+            {static} + setTransformationMethod()
+            {static} + setTransformationMethod()
+            {static} + setTypeface()
+            {static} + setTypeface()
+            {static} + setTypeface()
+            {static} + setTypeface()
+            {static} + setUnderlineText()
+            {static} + setUnderlineText()
+            {static} + setUnderlineText()
+            {static} + setUnderlineText()
+            - TextViewUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.UriUtils {
+            {static} - TAG : String
+            {static} + getFilePathByUri()
+            {static} + getMediaUri()
+            {static} + getMediaUri()
+            {static} + getMediaUri()
+            {static} + getMediaUri()
+            {static} + getUriForFile()
+            {static} + getUriForFile()
+            {static} + getUriForFileToName()
+            {static} + getUriForPath()
+            {static} + isDownloadsDocument()
+            {static} + isExternalStorageDocument()
+            {static} + isGooglePhotosUri()
+            {static} + isMediaDocument()
+            {static} + isUriExists()
+            {static} + isUriExists()
+            - UriUtils()
+            {static} - getFilePathByUri()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.VibrationUtils {
+            {static} - TAG : String
+            {static} + cancel()
+            {static} + vibrate()
+            {static} + vibrate()
+            - VibrationUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.ViewUtils {
+            {static} - TAG : String
+            {static} + addRule()
+            {static} + addRule()
+            {static} + addRules()
+            {static} + addRules()
+            {static} + cancel()
+            {static} + clearAnimation()
+            {static} + clearFocus()
+            {static} + convertView()
+            {static} + findFocus()
+            {static} + findViewById()
+            {static} + findViewById()
+            {static} + findViewById()
+            {static} + getActivity()
+            {static} + getAlpha()
+            {static} + getAnimation()
+            {static} + getBackground()
+            {static} + getBackgroundTintList()
+            {static} + getBackgroundTintMode()
+            {static} + getChildAt()
+            {static} + getChildAt()
+            {static} + getChildCount()
+            {static} + getChilds()
+            {static} + getClipChildren()
+            {static} + getContentView()
+            {static} + getContentView()
+            {static} + getContext()
+            {static} + getForeground()
+            {static} + getForegroundGravity()
+            {static} + getForegroundTintList()
+            {static} + getForegroundTintMode()
+            {static} + getHeight()
+            {static} + getLayerType()
+            {static} + getLayoutGravity()
+            {static} + getLayoutParams()
+            {static} + getMargin()
+            {static} + getMarginBottom()
+            {static} + getMarginLeft()
+            {static} + getMarginRight()
+            {static} + getMarginTop()
+            {static} + getMeasuredHeight()
+            {static} + getMeasuredWidth()
+            {static} + getMinimumHeight()
+            {static} + getMinimumWidth()
+            {static} + getNextFocusDownId()
+            {static} + getNextFocusForwardId()
+            {static} + getNextFocusLeftId()
+            {static} + getNextFocusRightId()
+            {static} + getNextFocusUpId()
+            {static} + getPadding()
+            {static} + getPaddingBottom()
+            {static} + getPaddingLeft()
+            {static} + getPaddingRight()
+            {static} + getPaddingTop()
+            {static} + getParent()
+            {static} + getPivotX()
+            {static} + getPivotY()
+            {static} + getRootParent()
+            {static} + getRotation()
+            {static} + getRotationX()
+            {static} + getRotationY()
+            {static} + getRule()
+            {static} + getScaleX()
+            {static} + getScaleY()
+            {static} + getScrollX()
+            {static} + getScrollY()
+            {static} + getTag()
+            {static} + getTextAlignment()
+            {static} + getTextDirection()
+            {static} + getTranslationX()
+            {static} + getTranslationY()
+            {static} + getVisibility()
+            {static} + getVisibilityIN()
+            {static} + getWidth()
+            {static} + getWidthHeight()
+            {static} + hasFocus()
+            {static} + hasFocusable()
+            {static} + inflate()
+            {static} + inflate()
+            {static} + inflate()
+            {static} + inflate()
+            {static} + inflate()
+            {static} + inflate()
+            {static} + isClickable()
+            {static} + isEmpty()
+            {static} + isEmpty()
+            {static} + isEnabled()
+            {static} + isFocusable()
+            {static} + isFocusableInTouchMode()
+            {static} + isFocused()
+            {static} + isHorizontalScrollBarEnabled()
+            {static} + isLongClickable()
+            {static} + isNotEmpty()
+            {static} + isNotEmpty()
+            {static} + isScrollContainer()
+            {static} + isSelected()
+            {static} + isShown()
+            {static} + isShowns()
+            {static} + isTouchInView()
+            {static} + isVerticalScrollBarEnabled()
+            {static} + isVisibility()
+            {static} + isVisibility()
+            {static} + isVisibilityGone()
+            {static} + isVisibilityGone()
+            {static} + isVisibilityGones()
+            {static} + isVisibilityIN()
+            {static} + isVisibilityIN()
+            {static} + isVisibilityINs()
+            {static} + isVisibilitys()
+            {static} + measureView()
+            {static} + measureView()
+            {static} + measureView()
+            {static} + removeAllViews()
+            {static} + removeRule()
+            {static} + removeRules()
+            {static} + removeSelfFromParent()
+            {static} + requestFocus()
+            {static} + requestLayout()
+            {static} + requestLayoutParent()
+            {static} + reverseVisibilitys()
+            {static} + reverseVisibilitys()
+            {static} + reverseVisibilitys()
+            {static} + reverseVisibilitys()
+            {static} + scrollBy()
+            {static} + scrollTo()
+            {static} + setAlpha()
+            {static} + setAnimation()
+            {static} + setBackground()
+            {static} + setBackgroundColor()
+            {static} + setBackgroundResource()
+            {static} + setBackgroundTintList()
+            {static} + setBackgroundTintMode()
+            {static} + setClickable()
+            {static} + setClipChildren()
+            {static} + setColorFilter()
+            {static} + setColorFilter()
+            {static} + setColorFilter()
+            {static} + setColorFilter()
+            {static} + setDescendantFocusability()
+            {static} + setEnabled()
+            {static} + setFocusable()
+            {static} + setFocusableInTouchMode()
+            {static} + setForeground()
+            {static} + setForegroundGravity()
+            {static} + setForegroundTintList()
+            {static} + setForegroundTintMode()
+            {static} + setHeight()
+            {static} + setHeight()
+            {static} + setHorizontalScrollBarEnabled()
+            {static} + setLayerType()
+            {static} + setLayoutGravity()
+            {static} + setLayoutParams()
+            {static} + setLongClickable()
+            {static} + setMargin()
+            {static} + setMargin()
+            {static} + setMargin()
+            {static} + setMargin()
+            {static} + setMargin()
+            {static} + setMargin()
+            {static} + setMarginBottom()
+            {static} + setMarginBottom()
+            {static} + setMarginLeft()
+            {static} + setMarginLeft()
+            {static} + setMarginRight()
+            {static} + setMarginRight()
+            {static} + setMarginTop()
+            {static} + setMarginTop()
+            {static} + setMinimumHeight()
+            {static} + setMinimumWidth()
+            {static} + setNextFocusDownId()
+            {static} + setNextFocusForwardId()
+            {static} + setNextFocusLeftId()
+            {static} + setNextFocusRightId()
+            {static} + setNextFocusUpId()
+            {static} + setOverScrollMode()
+            {static} + setPadding()
+            {static} + setPadding()
+            {static} + setPadding()
+            {static} + setPadding()
+            {static} + setPadding()
+            {static} + setPadding()
+            {static} + setPaddingBottom()
+            {static} + setPaddingBottom()
+            {static} + setPaddingLeft()
+            {static} + setPaddingLeft()
+            {static} + setPaddingRight()
+            {static} + setPaddingRight()
+            {static} + setPaddingTop()
+            {static} + setPaddingTop()
+            {static} + setPivotX()
+            {static} + setPivotY()
+            {static} + setRotation()
+            {static} + setRotationX()
+            {static} + setRotationY()
+            {static} + setScaleX()
+            {static} + setScaleY()
+            {static} + setScrollContainer()
+            {static} + setScrollX()
+            {static} + setScrollY()
+            {static} + setSelected()
+            {static} + setTag()
+            {static} + setTextAlignment()
+            {static} + setTextDirection()
+            {static} + setTranslationX()
+            {static} + setTranslationY()
+            {static} + setVerticalScrollBarEnabled()
+            {static} + setVisibility()
+            {static} + setVisibility()
+            {static} + setVisibilitys()
+            {static} + setVisibilitys()
+            {static} + setWidth()
+            {static} + setWidth()
+            {static} + setWidthHeight()
+            {static} + setWidthHeight()
+            {static} + startAnimation()
+            {static} + startAnimation()
+            {static} + toggleClickable()
+            {static} + toggleEnabled()
+            {static} + toggleFocusable()
+            {static} + toggleLongClickable()
+            {static} + toggleSelected()
+            {static} + toggleView()
+            {static} + toggleViews()
+            {static} + toggleVisibilitys()
+            {static} + toggleVisibilitys()
+            {static} + toggleVisibilitys()
+            - ViewUtils()
+        }
+      }
+    }
+  }
+  
+
+  namespace dev {
+    namespace utils {
+      namespace app {
+        class dev.utils.app.WidgetUtils {
+            {static} + DEF_VALUE : int
+            {static} - TAG : String
+            {static} + calculateSize()
+            {static} + calculateSize()
+            {static} + getMeasuredHeight()
+            {static} + getMeasuredWidth()
+            {static} + getMode()
+            {static} + getSize()
+            {static} + measureView()
+            {static} + measureView()
+            {static} + measureView()
+            {static} + viewMeasure()
+            {static} + viewMeasure()
+            {static} + viewMeasure()
+            {static} + viewMeasure()
+            - WidgetUtils()
+        }
+      }
+    }
+  }
+  
+
+  dev.utils.app.ActivityUtils +-down- dev.utils.app.ActivityUtils.ResultActivity
+  dev.utils.app.ActivityUtils +-down- dev.utils.app.ActivityUtils.ResultCallback
+  dev.utils.app.ActivityUtils.ResultActivity -up-|> androidx.fragment.app.FragmentActivity
+  dev.utils.app.ActivityUtils.ResultActivity o-- dev.utils.app.ActivityUtils.ResultCallback : mResultCallback
+  dev.utils.app.AnalysisRecordUtils +-down- dev.utils.app.AnalysisRecordUtils.CallBack
+  dev.utils.app.AnalysisRecordUtils +-down- dev.utils.app.AnalysisRecordUtils.FileInfo
+  dev.utils.app.AnalysisRecordUtils +-down- dev.utils.app.AnalysisRecordUtils.TIME
+  dev.utils.app.ClickUtils +-down- dev.utils.app.ClickUtils.ClickAssist
+  dev.utils.app.ContentResolverUtils +-down- dev.utils.app.ContentResolverUtils.MediaQuery
+  dev.utils.app.ContentResolverUtils +-down- dev.utils.app.ContentResolverUtils.MediaQueryInfo
+  dev.utils.app.ContentResolverUtils +-down- dev.utils.app.ContentResolverUtils.MediaQueryInfoUri
+  dev.utils.app.ContentResolverUtils +-down- dev.utils.app.ContentResolverUtils.MediaQueryUri
+  dev.utils.app.ContentResolverUtils.MediaQueryInfo -up-|> dev.utils.app.ContentResolverUtils.MediaQuery
+  dev.utils.app.ContentResolverUtils.MediaQueryInfoUri -up-|> dev.utils.app.ContentResolverUtils.MediaQueryInfo
+  dev.utils.app.ContentResolverUtils.MediaQueryUri -up-|> dev.utils.app.ContentResolverUtils.MediaQuery
+  dev.utils.app.CrashUtils .up.|> java.lang.Thread.UncaughtExceptionHandler
+  dev.utils.app.CrashUtils o-- dev.utils.app.CrashUtils.CrashCatchListener : mCrashCatchListener
+  dev.utils.app.CrashUtils +-down- dev.utils.app.CrashUtils.CrashCatchListener
+  dev.utils.app.DialogUtils +-down- dev.utils.app.DialogUtils.DialogListener
+  dev.utils.app.DialogUtils +-down- dev.utils.app.DialogUtils.MultiChoiceListener
+  dev.utils.app.DialogUtils +-down- dev.utils.app.DialogUtils.SingleChoiceListener
+  dev.utils.app.DialogUtils +-down- dev.utils.app.DialogUtils.ViewDialogListener
+  dev.utils.app.EditTextUtils +-down- dev.utils.app.EditTextUtils.DevTextWatcher
+  dev.utils.app.EditTextUtils.DevTextWatcher .up.|> android.text.TextWatcher
+  dev.utils.app.HandlerUtils +-down- dev.utils.app.HandlerUtils.OnEndListener
+  dev.utils.app.KeyBoardUtils +-down- dev.utils.app.KeyBoardUtils.OnSoftInputChangedListener
+  dev.utils.app.LocationUtils +-down- dev.utils.app.LocationUtils.CustomLocationListener
+  dev.utils.app.LocationUtils +-down- dev.utils.app.LocationUtils.OnLocationChangeListener
+  dev.utils.app.LocationUtils.CustomLocationListener .up.|> android.location.LocationListener
+  dev.utils.app.NetWorkUtils +-down- dev.utils.app.NetWorkUtils.NetworkType
+  dev.utils.app.NotificationUtils +-down- dev.utils.app.NotificationUtils.LightPattern
+  dev.utils.app.NotificationUtils +-down- dev.utils.app.NotificationUtils.VibratePattern
+  dev.utils.app.PathUtils +-down- dev.utils.app.PathUtils.AppExternalPath
+  dev.utils.app.PathUtils +-down- dev.utils.app.PathUtils.InternalPath
+  dev.utils.app.PathUtils +-down- dev.utils.app.PathUtils.SDCardPath
+  dev.utils.app.PhoneUtils +-down- dev.utils.app.PhoneUtils.TeleInfo
+  dev.utils.app.ROMUtils +-down- dev.utils.app.ROMUtils.RomInfo
+  dev.utils.app.ShapeUtils +-down- dev.utils.app.ShapeUtils.Builder
+  dev.utils.app.ShellUtils +-down- dev.utils.app.ShellUtils.CommandResult
+  dev.utils.app.SizeUtils +-down- dev.utils.app.SizeUtils.onGetSizeListener
+  dev.utils.app.SnackbarUtils o-- dev.utils.app.SnackbarUtils.StyleBuilder : mStyleBuilder
+  dev.utils.app.SnackbarUtils +-down- dev.utils.app.SnackbarUtils.Style
+  dev.utils.app.SnackbarUtils +-down- dev.utils.app.SnackbarUtils.StyleBuilder
+  dev.utils.app.SnackbarUtils.StyleBuilder -up-|> dev.utils.app.SnackbarUtils.Style
+  dev.utils.app.SpannableStringUtils o-- dev.utils.app.SpannableStringUtils.SerializableSpannableStringBuilder : mBuilder
+  dev.utils.app.SpannableStringUtils +-down- dev.utils.app.SpannableStringUtils.Align
+  dev.utils.app.SpannableStringUtils +-down- dev.utils.app.SpannableStringUtils.CustomBulletSpan
+  dev.utils.app.SpannableStringUtils +-down- dev.utils.app.SpannableStringUtils.CustomDynamicDrawableSpan
+  dev.utils.app.SpannableStringUtils +-down- dev.utils.app.SpannableStringUtils.CustomImageSpan
+  dev.utils.app.SpannableStringUtils +-down- dev.utils.app.SpannableStringUtils.CustomLineHeightSpan
+  dev.utils.app.SpannableStringUtils +-down- dev.utils.app.SpannableStringUtils.CustomQuoteSpan
+  dev.utils.app.SpannableStringUtils +-down- dev.utils.app.SpannableStringUtils.CustomTypefaceSpan
+  dev.utils.app.SpannableStringUtils +-down- dev.utils.app.SpannableStringUtils.SerializableSpannableStringBuilder
+  dev.utils.app.SpannableStringUtils +-down- dev.utils.app.SpannableStringUtils.ShaderSpan
+  dev.utils.app.SpannableStringUtils +-down- dev.utils.app.SpannableStringUtils.ShadowSpan
+  dev.utils.app.SpannableStringUtils +-down- dev.utils.app.SpannableStringUtils.SpaceSpan
+  dev.utils.app.SpannableStringUtils +-down- dev.utils.app.SpannableStringUtils.VerticalAlignSpan
+  dev.utils.app.SpannableStringUtils.CustomBulletSpan .up.|> android.text.style.LeadingMarginSpan
+  dev.utils.app.SpannableStringUtils.CustomDynamicDrawableSpan -up-|> android.text.style.ReplacementSpan
+  dev.utils.app.SpannableStringUtils.CustomImageSpan -up-|> dev.utils.app.SpannableStringUtils.CustomDynamicDrawableSpan
+  dev.utils.app.SpannableStringUtils.CustomLineHeightSpan .up.|> android.text.style.LineHeightSpan
+  dev.utils.app.SpannableStringUtils.CustomQuoteSpan .up.|> android.text.style.LeadingMarginSpan
+  dev.utils.app.SpannableStringUtils.CustomTypefaceSpan -up-|> android.text.style.TypefaceSpan
+  dev.utils.app.SpannableStringUtils.SerializableSpannableStringBuilder .up.|> java.io.Serializable
+  dev.utils.app.SpannableStringUtils.SerializableSpannableStringBuilder -up-|> android.text.SpannableStringBuilder
+  dev.utils.app.SpannableStringUtils.ShaderSpan .up.|> android.text.style.UpdateAppearance
+  dev.utils.app.SpannableStringUtils.ShaderSpan -up-|> android.text.style.CharacterStyle
+  dev.utils.app.SpannableStringUtils.ShadowSpan .up.|> android.text.style.UpdateAppearance
+  dev.utils.app.SpannableStringUtils.ShadowSpan -up-|> android.text.style.CharacterStyle
+  dev.utils.app.SpannableStringUtils.SpaceSpan -up-|> android.text.style.ReplacementSpan
+  dev.utils.app.SpannableStringUtils.VerticalAlignSpan -up-|> android.text.style.ReplacementSpan
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml
